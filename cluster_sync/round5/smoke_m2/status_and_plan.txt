@@ -1,0 +1,49 @@
+# Stage A STATUS
+
+GPU-h used 0.23 of cap 25.0 (sacct, fx_* jobs); ledger rows 28 = 0.23 GPU-h; planned 0.00
+
+## Jobs
+  job     name     state    gpu_h
+24704 fx_smoke    FAILED 0.073889
+25014 fx_smoke COMPLETED 0.160000
+
+## Finished task rows
+                               tag  gpu_h
+          smokecpu/exp5/test/td_s0 0.0000
+        smokecpu/exp5/test/pg2k_s0 0.0000
+        smokecpu/exp5/test/pg4k_s0 0.0000
+            smokecpu/exp3/qm9/O_s0 0.0000
+             smoke/exp5/test/td_s0 0.0281
+           smoke/exp5/test/pg2k_s0 0.0125
+           smoke/exp5/test/pg4k_s0 0.0186
+               smoke/exp3/qm9/O_s0 0.0122
+       smokecpu/exp3/qm9/F_flip_s0 0.0000
+           smokecpu/exp3/qm9/K1_s0 0.0000
+     smokecpu/exp3/qm9/K1_wrong_s0 0.0000
+ smokecpu/exp3/qm9/K1_canonical_s0 0.0000
+       smokecpu/exp3/qm9/K2_inf_s0 0.0000
+     smokecpu/exp3/qm9/F_filter_s0 0.0000
+smokecpu/exp3/qm9/K1_unaffected_s0 0.0000
+             smoke/exp5/test/td_s0 0.0283
+           smoke/exp5/test/pg2k_s0 0.0117
+           smoke/exp5/test/pg4k_s0 0.0189
+               smoke/exp3/qm9/O_s0 0.0111
+          smoke/exp3/qm9/F_flip_s0 0.0025
+              smoke/exp3/qm9/K1_s0 0.0119
+        smoke/exp3/qm9/K1_wrong_s0 0.0125
+    smoke/exp3/qm9/K1_canonical_s0 0.0133
+          smoke/exp3/qm9/K2_inf_s0 0.0122
+        smoke/exp3/qm9/F_filter_s0 0.0122
+    smoke/exp3/qm9/O_unaffected_s0 0.0075
+   smoke/exp3/qm9/K1_unaffected_s0 0.0072
+   smoke/exp5/val/pg_inv_recall_s0 0.0086
+
+SWEEP thr=0.750 COV-R_mean=100.00 COV-R_median=100.00 COV-P_mean=98.51 COV-P_median=100.00
+SWEEP thr=1.000 COV-R_mean=100.00 COV-R_median=100.00 COV-P_mean=99.96 COV-P_median=100.00
+SWEEP thr=1.250 COV-R_mean=100.00 COV-R_median=100.00 COV-P_mean=100.00 COV-P_median=100.00
+SWEEP thr=0.750 COV-R_mean=1.66 COV-R_median=0.00 COV-P_mean=1.61 COV-P_median=0.00
+SWEEP thr=1.000 COV-R_mean=1.75 COV-R_median=0.00 COV-P_mean=1.76 COV-P_median=0.00
+SWEEP thr=1.250 COV-R_mean=1.80 COV-R_median=0.00 COV-P_mean=1.79 COV-P_median=0.00
+DRY_RUN est=4.100GPU-h sbatch --parsable --job-name=fx_inf --gres=gpu:1 --export=ALL,TASKS=/scratch/nishanth.r/tordiff/results/round5/tasks_resolved.tsv,ROWS=36+37+38+39+40+41+42 /scratch/nishanth.r/tordiff/experiments/common/infer.sbatch
+Exp 1 (milestone 3, not built yet): smoke + M1 + Gate-0 eval ~ 11.2 GPU-h
+STAGE A ESTIMATE: Exp 3 + Exp 5 13.76 GPU-h + Exp 1 11.20 = 24.95 GPU-h (cap 25)

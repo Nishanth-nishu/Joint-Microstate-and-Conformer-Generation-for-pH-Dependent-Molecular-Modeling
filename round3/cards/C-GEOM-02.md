@@ -1,0 +1,153 @@
+# C-GEOM-02: Training-set ring-template L (OMEGA-style pucker library from GEOM-QM9 training conformers)
+
+## 1. Idea (scout)
+Build a ring-conformation library from the **training split's** GEOM conformers: key = ring-system component (ring
+atoms and ring bonds with element/bond types; optionally plus first-shell substituent types), value = its distinct
+GT ring geometries (puckers) with frequencies. At test time, impose a sampled template pucker on each ETKDG seed's ring
+system (constrained re-embedding of ring atoms, or align-and-reattach substituents), fall back to ETKDG when there is no
+hit, and optionally xTB-relax the result (C-GEOM-01). Non-oracle: only training conformers are used.
+
+## 2. Where it comes from (scout)
+- OMEGA builds molecules from a fragment library, takes ring conformations from that library, detaches substituents,
+  re-attaches them to each ring conformation, and enumerates every combination of ring conformations
+  [E-GEOM-038, E-GEOM-044].
+- On GEOM-QM9, OMEGA's recall AMR median is 0.126 Å vs TD's 0.147 and RDKit's 0.199, and TD attributes this to
+  OMEGA's better local structures for small molecules [E-GEOM-025].
+- TD itself states that ring conformations are delegated to the L sampler and that this works less well for puckered
+  and fused rings [E-GEOM-024].
+- Ring conformations fall into relatively few canonical clusters, growing slowly with ring size [E-GEOM-042]; a
+  knowledge-based pucker sampler reproduced CREST/GFN2 lowest-energy ring conformers at 0.09 Å RMSD, with the residual
+  in bond lengths/angles, which local optimisation would fix [E-GEOM-043].
+- RDKit can constrain chosen atoms to given coordinates during embedding (`coordMap`) [E-GEOM-039].
+
+## 3. Why it could matter here (scout)
+- Revised after D-201/D-207: on the like-for-like λ = 0 base (955 molecules), true ring geometry alone takes CTRL from
+  0.197 to 0.119 and B1 from 0.261 to 0.188 (both gain ≈ 0.075 Å; B1 stays above CTRL) [E-GEOM-013], and the gain sits
+  in molecules with few rotors: rigid 0.184 → 0.043, one rotor 0.181 → 0.104 (CTRL) [E-GEOM-006]. A template carries
+  GT-level ring geometry (training GT is the same GFN2 level), so on a hit it approximates "true ring geometry from
+  another molecule" (INFERENCE).
+- The ETKDG pucker tail is large: 28.6% of ring seeds > 10° ring-dihedral RMSD (49.6% excluding the all-3-ring
+  molecules, whose ring dihedral is identically 0); 48–92% for molecules whose smallest ring has 4–7 atoms
+  [E-GEOM-002, E-GEOM-003]; 22% of the bad seeds are in fused/bridged/spiro systems, which a ring-system-level
+  template handles as one unit (unlike monocyclic pucker models) [E-GEOM-011].
+- Coverage proxy (key = ring atoms + ring bonds; isomeric / stereo-free): 534 / 421 distinct ring-system components
+  in the 885 test ring molecules; even within the 1000-molecule test set, 50.8% / 66.3% of ring molecules have all
+  components in another test molecule (45.2% / 58.6% among the 345 molecules with an ETKDG seed > 10°)
+  [E-GEOM-012]. The training split is
+  ~107× larger, so training coverage should be far higher (INFERENCE, UNVERIFIED).
+- Pairs with C-GEOM-01: template fixes the basin, xTB fixes bonds/angles (the residual named in [E-GEOM-043]); that
+  combination is the non-learned route to the λ = 0.75 spec (table in C-GEOM-01 §3).
+
+## 4. Assumptions that may not transfer (scout)
+- **Substituent effects.** Puckers and ring angles depend on substituents (axial/equatorial preference, exocyclic
+  C=O, heteroatoms). A substituent-free key may transplant the wrong preference; a key with first-shell substituents
+  lowers coverage. Choose the key level on validation molecules, not test.
+- **Coverage is unmeasured** against the real training split [E-GEOM-012]; if it is low for the bad-pucker molecules
+  the card degrades to ETKDG.
+- **Frequencies are not Boltzmann weights.** Template frequencies reflect how many training molecules/conformers carry a
+  pucker, not the test molecule's ensemble; TD will sample puckers in those proportions.
+- **Implementation risk.** `coordMap`-constrained embedding can fail or distort substituents for strained cages
+  (3-/4-rings, bridged bicycles common in QM9); the align-and-reattach route needs care at ring fusion atoms and
+  invertible nitrogens [E-GEOM-038]. Graph/stereo checks as in C-GEOM-01 [E-GEOM-047].
+- OMEGA's QM9 advantage [E-GEOM-025] is a whole-tool comparison; that its templates are the cause is an inference.
+
+## 5. Minimal experiment (scout)
+- **Step 1, library (CPU):** from the training pickles only (TD split; assert no val/test SMILES), extract ring-system
+  components and their GT ring coordinates; cluster per key by ring-atom RMSD after alignment (e.g. < 0.1 Å) and keep
+  cluster representatives with counts. Report coverage of test ring molecules overall and among the 345 molecules with
+  an ETKDG seed > 10° [E-GEOM-012].
+- **Step 2, seeds (CPU):** for the `L_etkdg2L` embeddings, impose a frequency-sampled template per ring system
+  (two key levels: ring-only, ring + first shell) → `L_tmpl`, and `L_tmpl_xtb` (if C-GEOM-01's xtb install passes).
+  Fallback to the unmodified seed on no hit or failure (count them).
+- **Step 3, CPU gate (pre-declared; revised after D-205):** the C-GEOM-01 gate design: all metrics scored on the seeds
+  directly (no model) on one common molecule set; rigid AMR-R on the common set of molecules with an empty TD
+  `edge_mask`; ETKDG / MMFF / λ references recomputed on that set in the same run [E-GEOM-004]. Go rule (non-oracle):
+  `L_tmpl` beats `L_etkdg2L` on the common rigid set by ≥ 0.010 Å AMR-R or lowers the > 10° share (excl. all-3-ring
+  basis) by ≥ 5 points; λ references for interpretation only.
+- **Step 4, GPU (inference only):** CTRL_rematch s0–2 and B1 s0–2 on the best template source = 6 runs (+ S3/S4 if
+  final). Controls: same checkpoints on `L_etkdg2L` / `L_etkdg2L_mmff` (exist), and on `L_etkdg2L_xtb` if C-GEOM-01
+  runs. Primary: paired AMR-R, CTRL-on-template vs CTRL-on-ETKDG (expected lower; scout range 0.135–0.165, bounded
+  below by A5ring's 0.119); secondary COV-R@0.1, rigid and ring-size strata, B1 − CTRL on `L_tmpl_xtb`.
+- **Cost:** 1.5–3 GPU-h; CPU library build over all training conformers (count not established here, UNVERIFIED;
+  runtime not measured); ~1–2 days coding
+  (library + transplant + tests).
+
+## 6. Scout's own call (scout)
+Worth trying: YES — directly attacks the measured pucker tail (true rings help both models by ≈ 0.075 Å) with training data only,
+needs no new model, and composes with C-GEOM-01; the CPU gate kills it cheaply if coverage or transplant fidelity is
+poor.
+
+## 7. Code grounding (grounder)
+- **Touchpoints:**
+  - New `tools/ring_templates.py` (~450–550 lines total).
+  - Library from the training split exactly as TD reads it (`sorted(split.npy[0])` into `sorted(glob(qm9/*.pickle))`,
+    `utils/dataset.py:167-179`; 133,232 raw files on gnode118).
+  - Ring-system key via `MolFragmentToSmiles`, both isomeric and stereo-free.
+  - Per-key instance cap.
+  - Leakage assert against test and validation SMILES.
+- **Transplant: reuse the A5ring recipe** rather than a new reattachment routine:
+  1. `coordMap`-embed the molecule with ring atoms pinned to a template [E-GEOM-039];
+  2. `lgeom.set_internal_subset(base, Y_template, X_seed)` copies the ETKDG acyclic bonds/angles while preserving the
+     template ring exactly (`lgeom.py:341-369`; same call as `L_A5ring_cyc_ORACLE`, `make_l_seed_pickles.py:236`).
+
+  The arm is then directly comparable to its ORACLE bound A5ring, with the known 0.58° residual [E-ROBUST-019].
+- **Transfer check:**
+  - TD never changes ring geometry: ring bonds are never rotatable (`utils/torsion.py:16-18`), so an imposed pucker
+    reaches the output intact.
+  - **Not in the card:** a template from another molecule can be the mirror image relative to the target's
+    stereocentres. Check `lgeom.stereo_labels` and retry the reflected template.
+  - `set_internal_subset` swallows failures (`lgeom.py:358-366`), so store the residual and fall back above a
+    pre-declared threshold.
+  - The key level "on validation" needs the missing validation set, or use training-split leave-one-out coverage.
+- **Tests:**
+  - leakage assert;
+  - self-template round-trip reproduces A5ring L error (ORACLE test only);
+  - mirror/stereo test.
+- **Verdict: IMPLEMENTABLE WITH CHANGES.**
+- **Cost:** 2–3 days coding (the card said 1–2); library 2–6 CPU-h (unmeasured) + ≈ 3 CPU-h transplant/xTB;
+  GPU 1.0–1.9.
+Detail, line numbers and cluster checks: `round3/grounding.md` §3 (shared pieces S-1…S-6 in §2.3).
+## 8. Predicted effect on our project (analyst)
+Data and model: `round3/impact.md` §3 (`impact_data/mixture_model.out`). Round-2 numbers are PRELIMINARY.
+- **Ceiling.**
+  - True rings with RDKit acyclic L (A5ring, ORACLE, λ0 base, 955 molecules) gives CTRL 0.119.
+  - CTRL barely uses acyclic L (A5acyc vs λ0: −0.014). Perfect templates on ETKDG seeds are therefore bounded by the
+    CTRL tail line at X = 0: 0.094 (with calibration) to 0.119.
+  - B1 with ETKDG acyclic L behaves like A5ring: 0.188, worse than CTRL. With xTB polish (`L_tmpl_xtb`) B1 follows
+    the reference-like line (floor 0.038).
+- **Expected effect: reasoning chain.**
+  1. The tail after templating is X ≈ 49.6 % × (1 − c·q).
+     - c = share of bad-pucker molecules whose ring systems the library covers. The test-set leave-one-out proxy is
+       45–59 % (E-GEOM-012); training coverage is likely higher (UNVERIFIED).
+     - q = chance that a frequency-sampled template pucker matches the GT conformer's pucker, given 2L seeds and the
+       minimum over seeds. Assumed 0.6–0.9.
+  2. With c·q between 0.3 and 0.85 (central 0.5), X ≈ 25 % (range 8–35 %).
+  3. CTRL ≈ **0.14** (0.11–0.16), against 0.178 on ETKDG and 0.1525 on MMFF (impact.md §3d, +0.008 calibration).
+  4. Transfer. OMEGA's QM9 advantage (recall AMR median 0.126 vs TD 0.147) is a whole-tool comparison. Transplants on
+     QM9's strained cages and fused systems are untested, and transplant distortions add bond/angle error. That error
+     is cheap for CTRL (≤ 0.008) but harmful for B1.
+- **Worst case.** Low coverage or failed transplants on cages leave the result ≈ ETKDG (0.178, or +0.005 from
+  distortions). The CPU gate catches this before any GPU time.
+- **Detectability.** Central −0.037 vs ETKDG and −0.012 vs MMFF. Both are clear with the existing 3 checkpoints
+  (paired L-source contrast ±0.005).
+- **Decision value.**
+  - If it works, the pucker tail is a sampling problem that training data alone can solve without learning. A
+    template/pucker-library stage becomes part of FlexiTors' L, and C-GEOM-04 is only needed for uncovered ring
+    systems.
+  - If not, C-GEOM-04's reopening conditions apply.
+  - Template + xTB polish is the arm with the largest predicted non-oracle gain: X ≈ 15–25 % with reference-like
+    acyclic L gives CTRL 0.12–0.14, and B1 0.07–0.09 if C-GEOM-01 lands in branch A.
+- **Worth trying: YES**, second after C-GEOM-01 (shared CPU gate; use the tail and pucker-coverage metrics). The gain
+  is ≈ 6 mÅ per GPU-h vs MMFF (≈ 19 vs ETKDG) for 1.0–1.9 GPU-h, but 2–3 days of coding (grounder) dominate the
+  cost.
+
+**Revised after cross-read (2026-10-11).**
+- The CTRL prediction is unchanged: it is tail-driven, and CTRL's other-conformer penalty is only ≈ 0.03 (noisy).
+- Template rings come from *other molecules*, so for B1 and S3 every template seed is non-own L in its ring part. With
+  ETKDG acyclic L, B1 stays A5ring-like (≥ 0.188).
+- The `L_tmpl_xtb` upside for B1 stated above ("B1 0.07–0.09 if C-GEOM-01 lands in branch A") is superseded. It needs
+  own-basin seeds after the xTB polish (impact.md §3g), so B1 is 0.10–0.22, as in C-GEOM-01.
+- Coding is 2–3 days (grounder).
+- Call unchanged: **YES** (driven by CTRL).
+
+## 9. Panel (judges)

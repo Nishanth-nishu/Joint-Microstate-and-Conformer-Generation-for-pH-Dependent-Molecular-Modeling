@@ -1,0 +1,14 @@
+TAG	DATASET	ARM	SEED	N	KEYS	BASE	POST	LIMIT	GPUH_EST	WAVE
+smoke/exp5/test/td_s0	qm9test	O	0	pool	-	-	eval,features,validity	20	0.029	smoke
+smoke/exp5/test/pg2k_s0	qm9test	PG:noninv_recall	0	2K	-	-	eval	20	0.009	smoke
+smoke/exp5/test/pg4k_s0	qm9test	PG:noninv_recall	0	4K	-	-	eval,features,validity	20	0.019	smoke
+smoke/exp3/qm9/O_s0	qm9test	O	0	2K	keys_double.txt	-	eval,stereo	20	0.0	smoke
+smoke/exp3/qm9/F_flip_s0	qm9test	F_flip	0	2K	keys_double.txt	smoke/exp3/qm9/O_s0	eval,stereo	20	0.0	smoke
+smoke/exp3/qm9/K1_s0	qm9test	K1	0	2K	keys_double.txt	smoke/exp3/qm9/O_s0	eval,stereo	20	0.001	smoke
+smoke/exp3/qm9/K1_wrong_s0	qm9test	K1_wrong	0	2K	keys_double.txt	smoke/exp3/qm9/O_s0	eval,stereo	20	0.001	smoke
+smoke/exp3/qm9/K1_canonical_s0	qm9test	K1_canonical	0	2K	keys_double_or_triple.txt	smoke/exp3/qm9/O_s0	eval,stereo	20	0.001	smoke
+smoke/exp3/qm9/K2_inf_s0	qm9test	K2_inf	0	2K	keys_double.txt	smoke/exp3/qm9/O_s0	eval,stereo	20	0.001	smoke
+smoke/exp3/qm9/F_filter_s0	qm9test	F_filter	0	2K	keys_double.txt	smoke/exp3/qm9/O_s0	eval,stereo	20	0.001	smoke
+smoke/exp3/qm9/O_unaffected_s0	qm9test	O	0	2K	keys_unaffected.txt	-	eval	5	0.002	smoke
+smoke/exp3/qm9/K1_unaffected_s0	qm9test	K1	0	2K	keys_unaffected.txt	smoke/exp3/qm9/O_unaffected_s0	identity	5	0.002	smoke
+smoke/exp5/val/pg_inv_recall_s0	qm9val	PG:inv_recall	0	2K	-	-	eval	20	0.006	smoke

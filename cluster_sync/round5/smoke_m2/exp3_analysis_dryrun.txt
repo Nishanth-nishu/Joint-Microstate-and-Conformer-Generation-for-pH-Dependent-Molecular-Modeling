@@ -1,0 +1,27 @@
+# Exp 3 qm9: arms ['F_filter', 'F_flip', 'K1', 'K1_wrong', 'K2_inf', 'O']; E/Z endpoint ez_gt_consistency on 6 molecules; planarity on 18
+# Exp 3 qm9: arms ['F_filter', 'F_flip', 'K1', 'K1_wrong', 'K2_inf', 'O']; E/Z endpoint ez_gt_consistency on 6 molecules; planarity on 18
+{"F_filter_s0": {"nfe": 6560, "extra_nfe": 0}, "F_flip_s0": {"nfe": null, "extra_nfe": null}, "K1_canonical_s0": {"nfe": 13000, "extra_nfe": 0}, "K1_s0": {"nfe": 6560, "e
+
+   contrast            metric  n     diff    ci_lo    ci_hi  p_boot                              family  p_holm  hier_lo  hier_hi  margin non_inferior  derived_all_molecu
+       K1-O ez_gt_consistency  6  0.00000  0.00000  0.00000  1.0000                             primary     1.0      NaN      NaN     NaN          NaN                    
+       K1-O   planarity_share 18 -0.00116 -0.00490  0.00141  0.7296                             primary     1.0      NaN      NaN     NaN          NaN                    
+   K2_inf-O ez_gt_consistency  6  0.01190  0.00000  0.03571  0.6700                             primary     1.0      NaN      NaN     NaN          NaN                    
+   K2_inf-O   planarity_share 18  0.00047  0.00000  0.00141  0.7192                             primary     1.0      NaN      NaN     NaN          NaN                    
+   F_flip-O ez_gt_consistency  6  0.00000  0.00000  0.00000  1.0000                             primary     1.0      NaN      NaN     NaN          NaN                    
+   F_flip-O   planarity_share 18  0.00000  0.00000  0.00000  1.0000                             primary     1.0      NaN      NaN     NaN          NaN                    
+ F_filter-O ez_gt_consistency  6  0.00000  0.00000  0.00000  1.0000                             primary     1.0      NaN      NaN     NaN          NaN                    
+ F_filter-O   planarity_share 18  0.00094  0.00000  0.00282  0.7192                             primary     1.0      NaN      NaN     NaN          NaN                    
+       K1-O             AMR-R 18 -0.00035 -0.00067 -0.00009  0.0060                     non-inferiority     NaN -0.00068 -0.00008   0.004         True                   -
+       K1-O         COV-R@0.5 18  0.00000  0.00000  0.00000  1.0000                     non-inferiority     NaN  0.00000  0.00000  -0.500         True                    
+   K2_inf-O             AMR-R 18 -0.00004 -0.00021  0.00018  0.6148                     non-inferiority     NaN -0.00022  0.00018   0.004         True                   -
+   K2_inf-O         COV-R@0.5 18  0.00000  0.00000  0.00000  1.0000                     non-inferiority     NaN  0.00000  0.00000  -0.500         True                    
+   F_flip-O             AMR-R 18  0.00000  0.00000  0.00000  1.0000                     non-inferiority     NaN  0.00000  0.00000   0.004         True                    
+   F_flip-O         COV-R@0.5 18  0.00000  0.00000  0.00000  1.0000                     non-inferiority     NaN  0.00000  0.00000  -0.500         True                    
+ F_filter-O             AMR-R 18 -0.00014 -0.00037  0.00014  0.2936                     non-inferiority     NaN -0.00037  0.00014   0.004         True                   -
+ F_filter-O         COV-R@0.5 18  0.00000  0.00000  0.00000  1.0000                     non-inferiority     NaN  0.00000  0.00000  -0.500         True                    
+K1_wrong-K1 ez_gt_consistency  6  0.00000  0.00000  0.00000  1.0000                           secondary     NaN      NaN      NaN     NaN          NaN                    
+K1_wrong-K1   planarity_share 18  0.00000  0.00000  0.00000  1.0000                           secondary     NaN      NaN      NaN     NaN          NaN                    
+       K1-O ez_gt_consistency  6  0.00000  0.00000  0.00000  1.0000 sensitivity (no mixed-GT molecules)     NaN      NaN      NaN     NaN          NaN                    
+   K2_inf-O ez_gt_consistency  6  0.01190  0.00000  0.03571  0.6760 sensitivity (no mixed-GT molecules)     NaN      NaN      NaN     NaN          NaN                    
+   F_flip-O ez_gt_consistency  6  0.00000  0.00000  0.00000  1.0000 sensitivity (no mixed-GT molecules)     NaN      NaN      NaN     NaN          NaN                    
+ F_filter-O ez_gt_consistency  6  0.00000  0.00000  0.00000  1.0000 sensitivity (no mixed-GT molecules)     NaN      NaN      NaN     NaN          NaN                    

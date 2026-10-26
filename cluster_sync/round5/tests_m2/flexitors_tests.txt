@@ -1,0 +1,13 @@
+........s.....s......................................................... [ 70%]
+................s.............                                           [100%]
+=============================== warnings summary ===============================
+flexitors/tests/test_exp5_analysis.py::test_validation_and_test_pipeline
+  /scratch/nishanth.r/tordiff/venv/lib/python3.9/site-packages/numpy/lib/function_base.py:4527: RuntimeWarning: invalid value encountered in subtract
+    diff_b_a = subtract(b, a)
+
+flexitors/tests/test_reverse.py::test_reverse_without_hooks_equals_td_sample
+  /scratch/nishanth.r/tordiff/venv/lib/python3.9/site-packages/torch/jit/_check.py:181: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+    warnings.warn("The TorchScript type system doesn't support "
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+99 passed, 3 skipped, 2 warnings in 66.84s (0:01:06)

@@ -1,0 +1,45 @@
+ROW 1 smoke/exp5/test/td_s0 qm9test O seed=0 n=pool keys=- base=- post=eval,features,validity limit=20 est=0.029 wave=smoke
+SUMMARY {"nfe": 57520, "extra_nfe": 0, "n_conformers": 2876, "pg_wall_s": 0.0, "wall_s": 80.2463059425354, "device": "cuda", "arm": "O", "n_mode": "pool", "seed": 0, "ez_violations": 0, "planarity_violations": 0, "fold_corrections": 0, "failures": 0, "commit": "31f002f9d319e10bbc245bb48138b843e0eb4abb"}
+SUMMARY features molecules 20; MMFF NaN 0; MMFF cpu s 0.4
+SUMMARY validity screen molecules 20; invalid conformers 420 of 2876
+ROW 2 smoke/exp5/test/pg2k_s0 qm9test PG:noninv_recall seed=0 n=2K keys=- base=- post=eval limit=20 est=0.009 wave=smoke
+SUMMARY {"nfe": 13000, "extra_nfe": 0, "n_conformers": 650, "pg_wall_s": 25.941200733184814, "wall_s": 30.94467830657959, "device": "cuda", "arm": "PG", "n_mode": "2K", "seed": 0, "ez_violations": 0, "planarity_violations": 0, "fold_corrections": 0, "failures": 0, "commit": "31f002f9d319e10bbc245bb48138b843e0eb4abb"}
+ROW 3 smoke/exp5/test/pg4k_s0 qm9test PG:noninv_recall seed=0 n=4K keys=- base=- post=eval,features,validity limit=20 est=0.019 wave=smoke
+SUMMARY {"nfe": 26000, "extra_nfe": 0, "n_conformers": 1300, "pg_wall_s": 39.400384187698364, "wall_s": 49.882463455200195, "device": "cuda", "arm": "PG", "n_mode": "4K", "seed": 0, "ez_violations": 0, "planarity_violations": 0, "fold_corrections": 0, "failures": 0, "commit": "31f002f9d319e10bbc245bb48138b843e0eb4abb"}
+SUMMARY features molecules 20; MMFF NaN 0; MMFF cpu s 0.2
+SUMMARY validity screen molecules 20; invalid conformers 215 of 1300
+ROW 4 smoke/exp3/qm9/O_s0 qm9test O seed=0 n=2K keys=keys_double.txt base=- post=eval,stereo limit=20 est=0.0 wave=smoke
+SUMMARY {"nfe": 6560, "extra_nfe": 0, "n_conformers": 328, "pg_wall_s": 0.0, "wall_s": 23.17168402671814, "device": "cuda", "arm": "O", "n_mode": "2K", "seed": 0, "ez_violations": 0, "planarity_violations": 222, "fold_corrections": 0, "failures": 2, "commit": "31f002f9d319e10bbc245bb48138b843e0eb4abb"}
+SUMMARY stereo_eval molecules 18; planarity share 0.6745; GT consistency 0.6627; fidelity nan
+ROW 5 smoke/exp3/qm9/F_flip_s0 qm9test F_flip seed=0 n=2K keys=keys_double.txt base=smoke/exp3/qm9/O_s0 post=eval,stereo limit=20 est=0.0 wave=smoke
+SUMMARY f_flip bonds 0 molecules 0
+SUMMARY stereo_eval molecules 18; planarity share 0.6745; GT consistency 0.6627; fidelity nan
+ROW 6 smoke/exp3/qm9/K1_s0 qm9test K1 seed=0 n=2K keys=keys_double.txt base=smoke/exp3/qm9/O_s0 post=eval,stereo limit=20 est=0.001 wave=smoke
+SUMMARY {"nfe": 6560, "extra_nfe": 0, "n_conformers": 328, "pg_wall_s": 0.0, "wall_s": 24.145381927490234, "device": "cuda", "arm": "K1", "n_mode": "2K", "seed": 0, "ez_violations": 0, "planarity_violations": 221, "fold_corrections": 0, "failures": 2, "commit": "31f002f9d319e10bbc245bb48138b843e0eb4abb"}
+SUMMARY splice affected 102; arm molecules 18; O molecules 18
+SUMMARY stereo_eval molecules 18; planarity share 0.6733; GT consistency 0.6627; fidelity nan
+ROW 7 smoke/exp3/qm9/K1_wrong_s0 qm9test K1_wrong seed=0 n=2K keys=keys_double.txt base=smoke/exp3/qm9/O_s0 post=eval,stereo limit=20 est=0.001 wave=smoke
+SUMMARY {"nfe": 6560, "extra_nfe": 0, "n_conformers": 328, "pg_wall_s": 0.0, "wall_s": 24.861037969589233, "device": "cuda", "arm": "K1_wrong", "n_mode": "2K", "seed": 0, "ez_violations": 0, "planarity_violations": 222, "fold_corrections": 0, "failures": 2, "commit": "31f002f9d319e10bbc245bb48138b843e0eb4abb"}
+SUMMARY splice affected 102; arm molecules 18; O molecules 18
+SUMMARY stereo_eval molecules 18; planarity share 0.6733; GT consistency 0.6627; fidelity nan
+ROW 8 smoke/exp3/qm9/K1_canonical_s0 qm9test K1_canonical seed=0 n=2K keys=keys_double_or_triple.txt base=smoke/exp3/qm9/O_s0 post=eval,stereo limit=20 est=0.001 wave=smoke
+SUMMARY {"nfe": 13000, "extra_nfe": 0, "n_conformers": 650, "pg_wall_s": 0.0, "wall_s": 32.43433475494385, "device": "cuda", "arm": "K1_canonical", "n_mode": "2K", "seed": 0, "ez_violations": 0, "planarity_violations": 0, "fold_corrections": 0, "failures": 0, "commit": "31f002f9d319e10bbc245bb48138b843e0eb4abb"}
+SUMMARY splice affected 211; arm molecules 20; O molecules 18
+SUMMARY stereo_eval molecules 0; planarity share nan; GT consistency nan; fidelity nan
+ROW 9 smoke/exp3/qm9/K2_inf_s0 qm9test K2_inf seed=0 n=2K keys=keys_double.txt base=smoke/exp3/qm9/O_s0 post=eval,stereo limit=20 est=0.001 wave=smoke
+SUMMARY {"nfe": 6560, "extra_nfe": 0, "n_conformers": 328, "pg_wall_s": 0.0, "wall_s": 24.621140718460083, "device": "cuda", "arm": "K2_inf", "n_mode": "2K", "seed": 0, "ez_violations": 0, "planarity_violations": 221, "fold_corrections": 7, "failures": 2, "commit": "31f002f9d319e10bbc245bb48138b843e0eb4abb"}
+SUMMARY splice affected 102; arm molecules 18; O molecules 18
+SUMMARY stereo_eval molecules 18; planarity share 0.6749; GT consistency 0.6746; fidelity nan
+ROW 10 smoke/exp3/qm9/F_filter_s0 qm9test F_filter seed=0 n=2K keys=keys_double.txt base=smoke/exp3/qm9/O_s0 post=eval,stereo limit=20 est=0.001 wave=smoke
+SUMMARY {"nfe": 6560, "extra_nfe": 0, "n_conformers": 328, "pg_wall_s": 0.0, "wall_s": 24.20828604698181, "device": "cuda", "arm": "F_filter", "n_mode": "2K", "seed": 0, "ez_violations": 0, "planarity_violations": 220, "fold_corrections": 0, "failures": 2, "commit": "31f002f9d319e10bbc245bb48138b843e0eb4abb"}
+SUMMARY splice affected 102; arm molecules 18; O molecules 18
+SUMMARY stereo_eval molecules 18; planarity share 0.6754; GT consistency 0.6627; fidelity nan
+ROW 11 smoke/exp3/qm9/O_unaffected_s0 qm9test O seed=0 n=2K keys=keys_unaffected.txt base=- post=eval limit=5 est=0.002 wave=smoke
+SUMMARY {"nfe": 4520, "extra_nfe": 0, "n_conformers": 226, "pg_wall_s": 0.0, "wall_s": 15.231945991516113, "device": "cuda", "arm": "O", "n_mode": "2K", "seed": 0, "ez_violations": 0, "planarity_violations": 0, "fold_corrections": 0, "failures": 0, "commit": "31f002f9d319e10bbc245bb48138b843e0eb4abb"}
+ROW 12 smoke/exp3/qm9/K1_unaffected_s0 qm9test K1 seed=0 n=2K keys=keys_unaffected.txt base=smoke/exp3/qm9/O_unaffected_s0 post=identity limit=5 est=0.002 wave=smoke
+SUMMARY splice affected 708; arm molecules 5; O molecules 5; unaffected max deviation vs O 2.65e-01 A
+SUMMARY {"nfe": 4520, "extra_nfe": 0, "n_conformers": 226, "pg_wall_s": 0.0, "wall_s": 15.150319576263428, "device": "cuda", "arm": "K1", "n_mode": "2K", "seed": 0, "ez_violations": 0, "planarity_violations": 0, "fold_corrections": 0, "failures": 0, "commit": "31f002f9d319e10bbc245bb48138b843e0eb4abb"}
+SUMMARY splice affected 708; arm molecules 5; O molecules 5; unaffected max deviation vs O 2.65e-01 A
+ROW 13 smoke/exp5/val/pg_inv_recall_s0 qm9val PG:inv_recall seed=0 n=2K keys=- base=- post=eval limit=20 est=0.006 wave=smoke
+SUMMARY {"nfe": 6280, "extra_nfe": 0, "n_conformers": 320, "pg_wall_s": 18.091192722320557, "wall_s": 19.768715381622314, "device": "cuda", "arm": "PG", "n_mode": "2K", "seed": 0, "ez_violations": 0, "planarity_violations": 0, "fold_corrections": 0, "failures": 0, "commit": "31f002f9d319e10bbc245bb48138b843e0eb4abb"}
+done ROWS=1+2+3+4+5+6+7+8+9+10+11+12+13
