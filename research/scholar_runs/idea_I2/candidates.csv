@@ -1,0 +1,13 @@
+id,title,year,venue,doi_or_url,code_url,relevance(0-3),fulltext_status,checked_utc
+rowan_pka_wagen2024,Efficient and Accurate pKa Prediction Enabled by Pre-Trained Machine-Learned Interatomic Potentials,2024,ChemRxiv,10.26434/chemrxiv-2024-8489b,proprietary (Rowan),3,full_text_read,2026-10-26
+unipka_2024,Bridging Machine Learning and Thermodynamics for Accurate pKa Prediction (Uni-pKa; code read),2024,JACS Au,10.1021/jacsau.4c00271,https://github.com/dptech-corp/Uni-pKa,3,full_text_read,2026-10-26
+starling_wagen2025,Physics-Informed Machine Learning Enables Rapid Macroscopic pKa Prediction (Starling),2025,ChemRxiv,https://chemrxiv.org/engage/chemrxiv/article-details/680998c4e561f77ed48f3704,none,3,full_text_read,2026-10-26
+wieder_2021_tautomer_ratios,Fitting quantum machine learning potentials to experimental free energy data: predicting tautomer ratios in solution,2021,Chem. Sci.,10.1039/D1SC01185E,https://github.com/choderalab/neutromeratio,3,full_text_read,2026-10-26
+pracht_2018_sampl6,High accuracy quantum-chemistry-based calculation and blind prediction of macroscopic pKa values in the context of the SAMPL6 challenge,2018,J. Comput.-Aided Mol. Des. 32:1139,https://oak.novartis.com/36542,none,2,abstract_only,2026-10-26
+urquhart_2024_ani_pka,ANI neural network potentials for small molecule pKa prediction,2024,PCCP 26:23934,10.1039/D4CP01982B,https://pureportal.strath.ac.uk/en/datasets/data-for-ani-neural-network-potentials-for-small-molecule-pka-pre/,2,abstract_only,2026-10-26
+harvey_2025_macrocycle_pka,Predicting pKa of flexible polybasic tetra-aza macrocycles,2025,RSC Adv.,https://pmc.ncbi.nlm.nih.gov/articles/PMC11973477/,none,1,full_text_read,2026-10-26
+sphysnet_taut_pan2025,Fast and Accurate Prediction of Tautomer Ratios in Aqueous Solution via a Siamese Neural Network,2025,JCTC 21:3132,10.1021/acs.jctc.5c00041,unknown,2,full_text_read,2026-10-26
+zheng_green_2024_nonaq_pka,pKa prediction in non-aqueous solvents,2024,J. Comput. Chem.,10.1002/jcc.27517,https://zenodo.org/record/14041273,1,abstract_only,2026-10-26
+agbaglo_2025_qm_workflows,Toward Validated Quantum Mechanical Workflows Predicting pH-Dependent Properties: Benchmarking Protocols for Conformational Sampling...,2025,J. Phys. Chem. A,10.1021/acs.jpca.5c01484,none,2,not_accessible,2026-10-26
+zeng_york_2023_semiemp_mlp,Modern semiempirical electronic structure methods and machine learning potentials for drug discovery: Conformers tautomers and protonation states,2023,J. Chem. Phys. 158:124110,10.1063/5.0139281,none,1,abstract_only,2026-10-26
+pkace_2024,PlayMolecule pKAce: Small Molecule Protonation through Equivariant Neural Networks,2024,arXiv,arXiv:2407.11103,unknown,1,full_text_read,2026-10-26

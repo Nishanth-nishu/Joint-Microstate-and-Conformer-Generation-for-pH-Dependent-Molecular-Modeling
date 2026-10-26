@@ -1,0 +1,17 @@
+cloudpickle==3.1.2
+dimorphite_dl==2.1.0
+joblib==1.6.0
+loguru==0.7.3
+numpy==2.2.6
+pandas==2.3.3
+pillow==12.3.0
+python-dateutil==3.0.0
+pytz==2026.5
+PyYAML==6.0.3
+rdkit==2026.9.1
+scikit-learn==1.7.2
+scipy==1.15.3
+six==1.17.0
+threadpoolctl==3.7.0
+tqdm==4.70.1
+tzdata==2026.5

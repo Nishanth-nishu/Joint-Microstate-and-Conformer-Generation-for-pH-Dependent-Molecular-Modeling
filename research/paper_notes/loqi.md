@@ -10,7 +10,16 @@
 - Date checked: 2026-10-26 08:26 UTC (13:56 IST)
 
 ## Fulltext status
-**Paper: abstract_only.** PDF blocked (ChemRxiv Cloudflare challenge/HTTP 403; OpenReview browser verification) — not bypassed. Not in Europe PMC.
+**Paper: abstract_only (Phase VIII retry 2026-10-26 10:50 UTC / 16:20 IST failed again).** Retry log: ChemRxiv
+article page HTTP 403; cambridge.org/engage mirror (689f756ea94eede154ec6217) shows abstract + metadata only;
+OpenReview API and PDF (Ei3eF8B8XH) return "Challenge verification required" (not bypassed); arXiv API search
+(title; au:Nikitin AND au:Isayev) finds no arXiv version; NeurIPS 2025 virtual page (129011) = workshop abstract only;
+no journal version found by web search; Semantic Scholar API rate-limited (429). Secondary: CMU thesis-defense page
+(F. Nikitin, 2026-08-18 13:00 UTC / 18:30 IST, "Generative Modeling of Molecular Geometry Across Equilibrium and
+Reactive Regimes") summarises the LoQI chapter as low-energy conformers with stereochemistry and protonation states
+handled explicitly — secondary, not verified against the paper. Abstract wording: ChEMBL3D molecules "in various
+protonation states and stereochemical configurations".
+Previous line: **Paper: abstract_only.** PDF blocked (ChemRxiv Cloudflare challenge/HTTP 403; OpenReview browser verification) — not bypassed. Not in Europe PMC.
 **Code: full_text_read** for the files relevant to inputs/featurisation/inference/configs (cited file:line below). Methodological claims below are from code + dataset README, not from the paper body. Paper-only details (e.g. ablations, whether the paper discusses protonation choice) remain Unknown.
 
 ## Problem

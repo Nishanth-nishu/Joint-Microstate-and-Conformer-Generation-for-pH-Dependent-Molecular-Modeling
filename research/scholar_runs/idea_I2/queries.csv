@@ -1,0 +1,51 @@
+timestamp_utc,family,query,backend,status,n_results,notes
+2026-10-26T12:00:00Z,idea_I2,(all queries),google_scholar,not_searched_no_tool,0,no Google Scholar tool on this host
+2026-10-26T10:20:00Z,idea_I2,pKa prediction Boltzmann-weighted conformer ensemble neural network potential AIMNet2 implicit solvent microstates,websearch,ok,9,Rowan AIMNet2 pKa (Wagen 2024) + Starling found
+2026-10-26T10:20:00Z,idea_I2,Rowan pKa workflow conformer search AIMNet2 microstates Starling,websearch,ok,9,Rowan blog posts; g-xTB pKa 2026
+2026-10-26T10:20:00Z,idea_I2,machine learning potential tautomer ratio conformational sampling free energy alchemical neural network 2024 2025,websearch,ok,10,Wieder 2021; sPhysNet-Taut (Pan JCTC 2025)
+2026-10-26T10:20:00Z,idea_I2,delta-learning pKa correction 3D conformers CREST xTB machine learning,websearch,ok,9,DelFTa (not pKa); ANI pKa PCCP 2024; RSC Adv 2025 macrocycle CREST+DFT+LEC
+2026-10-26T10:22:00Z,idea_I2,https://chemrxiv.org/doi/pdf/10.26434/chemrxiv-2024-8489b,webfetch,blocked_403,0,ChemRxiv PDF blocked; used rowansci publication mirror
+2026-10-26T10:22:00Z,idea_I2,https://www.rowansci.com/publications/pka-prediction,webfetch,ok,1,full text of Wagen&Wagen 2024 Rowan pKa
+2026-10-26T10:22:00Z,idea_I2,https://rowansci.com/publications/macroscopic-pka-prediction,webfetch,ok,1,Starling full text: Uni-pKa retrained; log-sum-exp over 10 ETKDG/MMFF conformers
+2026-10-26T10:22:00Z,idea_I2,https://docs.rowansci.com/science/workflows/pka,webfetch,ok,1,Rowan docs: AIMNet2 searches each state independently; ensemble free energies 298.15K
+2026-10-26T10:22:00Z,idea_I2,https://rowansci.substack.com/p/g-xtb-pka-and-website-redesign,webfetch,ok,1,g-xTB pKa 2026; ReSCoSS conformers; LFER fit to Dwar-iBond
+2026-10-26T10:22:00Z,idea_I2,"ANI Neural Network Potentials for Small Molecule pKa Prediction" PCCP 2024,websearch,ok,10,Urquhart/van Teijlingen/Tuttle d4cp01982b; RSC HTML 403
+2026-10-26T10:30:00Z,idea_I2,Pracht Grimme pKa prediction conformer ensemble free energies CREST GFN2-xTB SAMPL6 macroscopic,websearch,ok,9,Pracht et al. 2018 JCAMD SAMPL6 (abstract only)
+2026-10-26T10:30:00Z,idea_I2,sPhysNet-Taut tautomer ratio 3D neural network conformers Siamese fine-tuned experimental,websearch,ok,9,Pan JCTC 2025
+2026-10-26T10:30:00Z,idea_I2,https://pmc.ncbi.nlm.nih.gov/articles/PMC11948319/,webfetch,ok,1,sPhysNet-Taut full text: single MMFF min conformer; fine-tuned on Tautobase
+2026-10-26T10:31:00Z,idea_I2,3D graph neural network pKa prediction intramolecular hydrogen bond conformation-dependent zwitterion,websearch,ok,9,pKAce; MolGpKa-type; nothing IMHB-specific
+2026-10-26T10:31:00Z,idea_I2,machine learning correction to quantum chemical pKa conformer ensemble trained on experimental pKa residual learning 2025,websearch,ok,9,QupKake; Starling; pKaLearn; MARCEL-type ensemble learning
+2026-10-26T10:32:00Z,idea_I2,https://www.nature.com/articles/s42004-026-01983-y,webfetch,redirect_auth,0,pKaLearn paywall redirect; not followed
+2026-10-26T10:32:00Z,idea_I2,https://arxiv.org/html/2606.17077v1,webfetch,ok,1,2D XGBoost pKa augmentation; off-mechanism
+2026-10-26T10:33:00Z,idea_I2,citation_neighbours 10.1021/jacsau.4c00271 (Uni-pKa) cites=25,citation_neighbours,ok,25,of 38 citing; checked Rowan pKa; Liu/Luo Angew 2025 3D NCI descriptors; Agbaglo JPCA 2025; pKaLearn; TripKa; Sipos-Szabo benchmark
+2026-10-26T10:33:00Z,idea_I2,citation_neighbours 10.1021/acs.jctc.4c00328 (QupKake) cites=25,citation_neighbours,ok,25,of 40 citing; none averages conformers per microstate with learned correction; Wittmann/Grimme conformer-ensemble solvation benchmark noted
+2026-10-26T10:33:00Z,idea_I2,citation_neighbours 10.1039/D1SC01185E (Wieder 2021) cites=25,citation_neighbours,ok,25,of 48 citing; Teaching FE calcs (same group preprint); Zeng/York 2023 JCP; MolTaut; Tkaczyk reweighting ANI-2x
+2026-10-26T10:33:00Z,idea_I2,citation_neighbours 10.1021/acs.jcim.6c03037 (AcepKa) cites=25,citation_neighbours,ok,0,no citing works yet in OpenAlex
+2026-10-26T10:35:00Z,idea_I2,Highly Precise Prediction of Micro- and Supra-pKa Based on 3D Descriptors Integrating Non-Covalent Interactions,websearch,ok,10,metadata only; abstract not retrieved
+2026-10-26T10:35:00Z,idea_I2,Agbaglo Janesko Toward Validated QM Workflows pH-dependent conformational sampling,websearch,ok,9,title only
+2026-10-26T10:35:00Z,idea_I2,pKaLearn Genzling Moitessier conformers CREST,websearch,ok,9,vendor blog; rule-informed features not geometry
+2026-10-26T10:35:00Z,idea_I2,Zeng Tao Giese York modern semiempirical and MLPs conformers tautomers protonation states,websearch,ok,9,benchmark of energies not populations
+2026-10-26T10:37:00Z,idea_I2,https://arxiv.org/html/2407.11103v1 (pKAce),webfetch,ok,1,multiple conformers in training lower variability; no inference averaging described
+2026-10-26T10:37:00Z,idea_I2,tautomer free energy conformer ensemble neural network potential AIMNet2 OR ANI-2x OR MACE Tautobase benchmark Boltzmann,websearch,ok,9,AIMNet2 Tautobase MAE 0.86 kcal/mol electronic (2505.06462); ANI-2x/MACE-OFF RFE repeatability JCTC 2025
+2026-10-26T10:37:00Z,idea_I2,macroscopic pKa machine learned potential OMol25 eSEN UMA conformer ensemble microstates benchmark 2025 2026,websearch,ok,9,nothing pKa-specific
+2026-10-26T10:39:00Z,idea_I2,torsional diffusion OR generative conformers pKa prediction protonation state Boltzmann free energy,websearch,ok,9,no pKa use of generative conformers found
+2026-10-26T10:39:00Z,idea_I2,Jaguar pKa conformational search Boltzmann weighting multiple conformers empirical correction,websearch,ok,9,datasheets only
+2026-10-26T10:39:00Z,idea_I2,machine learning correction quantum chemistry tautomer ratio experimental Tautobase delta learning geometry features,websearch,ok,9,Wieder 2021 only
+2026-10-26T10:39:00Z,idea_I2,pKa intramolecular hydrogen bond machine learning conformation 3D descriptor correction Luo Angewandte 2025,websearch,ok,9,metadata only
+2026-10-26T10:41:00Z,idea_I2,https://www.optibrium.com/downloads/Predicting_pKa_preprint.pdf,webfetch,not_parsable_pdf,0,no PDF extractor on host
+2026-10-26T10:41:00Z,idea_I2,Axelrod Gomez-Bombarelli conformer ensembles OR Weinreich ensemble representations free energies,websearch,ok,10,MARCEL; Weinreich FML phase-space averages; 2606.08825
+2026-10-26T10:42:00Z,idea_I2,https://arxiv.org/html/2606.08825,webfetch,ok,1,3D ensembles vs 2D FPs; no pKa
+2026-10-26T10:44:00Z,idea_I2,https://github.com/dptech-corp/Uni-pKa (git clone + grep),webfetch,ok,1,code: 10 ETKDG/MMFF + 1 2D conformer per microstate; eval mean over conformers then LSE over microstates
+2026-10-26T10:46:00Z,idea_I2,AIMNet2 pKa prediction conformers ensemble benchmark -Rowan 2025,websearch,ok,9,only Rowan
+2026-10-26T10:46:00Z,idea_I2,euroSAMPL1 pKa challenge submissions conformer ensemble MLP xTB EC-RISM,websearch,ok,10,overview only; method breakdown not read
+2026-10-26T10:46:00Z,idea_I2,alchemical free energy pKa machine learning potential small molecule deprotonation ANI MACE NNP/MM,websearch,ok,10,Urquhart ANI pKa 2024; no MLP alchemical pKa found
+2026-10-26T10:46:00Z,idea_I2,MolGpKa OR Graph-pKa OR pKa-ANI 3D conformer input conformational averaging,websearch,ok,10,no conformer averaging found
+2026-10-26T10:50:00Z,idea_I2,https://www.biorxiv.org/content/10.1101/2021.08.24.457513v1,webfetch,http_429,0,rate limited; abstract via choderalab tag page instead
+2026-10-26T10:50:00Z,idea_I2,conformer pKa zwitterion OR intramolecular hydrogen bond Boltzmann ensemble MLP workflow drug-like macro pKa 2025 chemrxiv,websearch,ok,9,Starling chemrxiv; Zheng/Green non-aqueous CREST+COSMO-RS
+2026-10-26T10:51:00Z,idea_I2,https://chemrxiv.org/doi/full/10.26434/chemrxiv-2024-bpd53-v3 and chemrxiv-2024-vx797-v3,webfetch,blocked_403,0,ChemRxiv blocked
+2026-10-26T10:52:00Z,idea_I2,conformational ensemble pKa prediction / machine learned potential pKa conformers / tautomer ratio neural network potential free energy / pKa intramolecular hydrogen bond conformation / delta machine learning pKa correction,openalex,http_429,0,OpenAlex rate-limited (both local and hosted servers); title searches not completed
+2026-10-26T10:55:00Z,idea_I2,SAMPL7 pKa submissions conformer search Boltzmann xTB ML correction,websearch,ok,9,Raddi/Voelz GP stacking; IEFPCM/MST
+2026-10-26T10:55:00Z,idea_I2,constant pH MD machine learning potential small molecule pKa 2025,websearch,ok,10,none for drug-like small molecules
+2026-10-26T10:55:00Z,idea_I2,diffusion model generated conformers Boltzmann free energy protonation state tautomer population,websearch,ok,10,no hit combining both
+2026-10-26T10:57:00Z,idea_I2,https://pmc.ncbi.nlm.nih.gov/articles/PMC11973477/,webfetch,ok,1,Harvey/Janesko/Green 2025 macrocycles: CREST 5 conf/state; lowest conformer only; LEC
+2026-10-26T10:58:00Z,idea_I2,https://choderalab.org/publications/tag/tautomer+ratios,webfetch,ok,1,Teaching FE calcs = preprint of Wieder 2021 line

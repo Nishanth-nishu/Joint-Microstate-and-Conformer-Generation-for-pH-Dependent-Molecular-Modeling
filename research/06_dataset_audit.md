@@ -101,3 +101,11 @@ check) — i.e. over z marginals and tautomer ratios, from IUPAC/SAMPL/Tautobase
 benchmark over the *joint* (z, x) cannot be built from experimental data at all; it can only be
 synthesised computationally, and must never be derived from counts of generated or enumerated
 states.
+
+## E. Built stratified set (2026-10-26, job 40455; `data_manifests/sensitive_set_v2/manifest.json`)
+IUPAC v2.4a filtered to Reliable+Approximate, aqueous (no cosolvent), 20–25 °C, pKa/pKaH types, single fragment,
+≤50 heavy atoms, CHNOSPFClBrI: 8,956 rows → 6,395 (molecule, pKa-index) entries, 5,094 molecules (median of repeats;
+24 entries with spread >1 unit flagged). Tautobase: aqueous + measured (blank Meas/Calc/Est) + numeric log K → 221 pairs.
+Leakage flags vs Uni-pKa fine-tuning (Dwar-iBonD, protonation-invariant InChIKey block): clean pKa entries by
+stratum_v2 = sensitive 2,229 / control 678 / other 1,542 (Reliable-only: 74 / 39 / 19); Tautobase clean 35 / 37 / 67.
+Scaffold split (Murcko hash 70/15/15). Strata v1 rejected as non-discriminative (75 % sensitive) before any model run.

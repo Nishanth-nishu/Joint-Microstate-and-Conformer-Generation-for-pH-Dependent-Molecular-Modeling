@@ -1,0 +1,82 @@
+{
+ "inputs": {
+  "/scratch/nishanth.r/jmcg/ext/iupac_pka/iupac_v2_4.csv": "5cd5ca8bda1952be8b223bb1fbe681780de9335617f9f7c0ee2c8f8c6f01cbf3",
+  "/scratch/nishanth.r/jmcg/ext/tautobase/Tautobase_SMIRKS.txt": "bc49d1c912f232ac0199970dd58e38a7b0e03b2531f5f3a166938675521f89ad",
+  "/scratch/nishanth.r/jmcg/ext/sampl6_pka/pKa_experimental_values.csv": "c57ddd8864ae434b837d9674ae5d9584aab07952b411dadbbb7e5e6da7a2dc79"
+ },
+ "rdkit": "2026.09.1",
+ "filters_iupac": {
+  "rows_in": 24211,
+  "drop_assessment": 10858,
+  "rows_kept": 8956,
+  "drop_T_range": 3391,
+  "drop_pka_type": 30,
+  "drop_mol": 132,
+  "drop_cosolvent": 778,
+  "drop_T_or_value_nonnumeric": 66
+ },
+ "filters_tautobase": {
+  "rows_in": 1680,
+  "drop_not_aqueous": 753,
+  "rows_kept": 221,
+  "drop_not_measured": 437,
+  "drop_logK_nonnumeric": 269
+ },
+ "pka_rows": 6395,
+ "pka_molecules": 5094,
+ "pka_stratum_x_split": {
+  "control/test": 110,
+  "control/train": 492,
+  "control/val": 449,
+  "other/test": 75,
+  "other/train": 384,
+  "other/val": 107,
+  "sensitive/excluded_sampl_overlap": 1,
+  "sensitive/test": 649,
+  "sensitive/train": 2770,
+  "sensitive/val": 1358
+ },
+ "pka_reliable_stratum": {
+  "control": 121,
+  "other": 11,
+  "sensitive": 199
+ },
+ "pka_inconsistent_spread_gt1": 24,
+ "tautobase_rows": 221,
+ "tautobase_stratum_x_split": {
+  "control/test": 3,
+  "control/train": 30,
+  "control/val": 12,
+  "other/train": 10,
+  "other/val": 2,
+  "sensitive/test": 10,
+  "sensitive/train": 133,
+  "sensitive/val": 21
+ },
+ "sampl6_overlap_excluded": 1,
+ "unipka_keys": {
+  "dwar_ibond": 8625,
+  "testsets": 485
+ },
+ "pka_clean_of_unipka_finetune_by_stratum": {
+  "sensitive": 3533,
+  "control": 520,
+  "other": 396
+ },
+ "pka_clean_reliable_by_stratum": {
+  "other": 7,
+  "sensitive": 100,
+  "control": 25
+ },
+ "tautobase_clean_by_stratum": {
+  "control": 30,
+  "sensitive": 101,
+  "other": 8
+ },
+ "stratum_flag_counts_pka": {
+  "imhb_flexible": 3509,
+  "imhb_rigid": 1570,
+  "zwitterion_capable": 1592,
+  "close_site_pair": 3531
+ }
+}

@@ -3,8 +3,12 @@
 Zheng H., Luo W., Zhou G., Zhu Z., Yuan Y., Ke G., Wei Z., Gao Z., "Uni-pKa: An Accurate and Physically Consistent
 pKa Prediction through Protonation Ensemble Modeling", Research Square 2023, DOI 10.21203/rs.3.rs-3367941/v1
 (also ChemRxiv 64e8da3879853bbd786ca4eb). Code: github.com/dptech-corp/Uni-pKa. Checked 2026-10-26.
+> **SUPERSEDED 2026-10-26 by `unipka_2024.md`** (JACS Au 2024 full text via PMC11423309 + code read). Unknowns below are
+> resolved there: Uni-pKa uses 10 RDKit/MMFF + 1 2D conformers per microstate and averages per-conformer free energies
+> arithmetically at inference (one random conformer per step in training). Keep this file only for the preprint citation.
+
 ## Fulltext status
-abstract_only (plus secondary descriptions via web search and the AcepKa paper which re-implements it).
+abstract_only (this file). Full text: see unipka_2024.md (plus secondary descriptions via web search and the AcepKa paper which re-implements it).
 Do not treat mechanism details below beyond the stated ensemble formulation as verified.
 ## Problem
 pKa prediction that respects the full protonation (micro)state ensemble rather than regressing a single number.

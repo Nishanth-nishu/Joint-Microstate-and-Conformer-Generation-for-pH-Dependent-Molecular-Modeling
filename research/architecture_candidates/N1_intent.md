@@ -1,0 +1,3 @@
+# Narrowed claim N1 (from judge synthesis of I2/I4/I5, 2026-10-26)
+We hypothesize that for thermodynamically consistent microstate pKa models (Uni-pKa class), whether the input carries 3D conformers — and how they are generated and aggregated — changes experimental pKa and tautomer-ratio error by more than resampling noise only on conformationally sensitive molecules (flexible-IMHB-capable, zwitterion-capable, close multi-site), where error is also higher than on the matched rigid/single-site control stratum.
+Falsifier: in the sensitive stratum, the 2D-only arm lies within the paired-bootstrap 95% CI of every 3D arm.

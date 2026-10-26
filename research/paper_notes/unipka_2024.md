@@ -7,7 +7,9 @@ JACS Au, 2024. DOI 10.1021/jacsau.4c00271 (PMC11423309). Preprint: ChemRxiv 64e8
 Code: https://github.com/dptech-corp/Uni-pKa (Apache-2.0). Date checked 2026-10-26.
 
 ## Fulltext status
-full_text_read (PMC HTML, first ~100k chars; Supporting Information NOT read).
+full_text_read (PMC HTML, first ~100k chars; Supporting Information NOT read) **+ official code read 2026-10-26
+10:35 UTC (16:05 IST)**: github.com/dptech-corp/Uni-pKa HEAD 7cfbf6532d7e (commit 2025-04-01), cloned to scratch.
+Repo LICENSE file is Apache-2.0 (some source headers say MIT).
 
 ## Problem
 Predict macro-pKa, micro-pKa and pH-dependent microstate populations of small molecules in a
@@ -39,11 +41,27 @@ thermodynamically consistent way, rather than regressing a single pKa per site.
 ## Conformers
 - Conformers are used as *data augmentation* only: "swiftly generate multiple random conformations
   allows us to incorporate data augmentation" (Sec. 5.6). **Number not stated** in the main text.
-- No Boltzmann/ensemble aggregation over conformers is described; one free energy per microstate.
+- No Boltzmann/ensemble aggregation over conformers is described in the paper; one free energy per microstate.
+  (Code: arithmetic mean over 11 conformers at inference — see "Conformer handling — VERIFIED FROM CODE".)
 - No conformer-sensitivity study for Uni-pKa itself. The only conformer evidence is for the DFT
   baseline Jaguar: Table 2 footnote defines "Jaguar++" as "Jaguar with comprehensive conformational
   search, weighting 10 conformers"; on one harder system Jaguar improves "from MAE = 1.07 down to
   0.20" with exhaustive conformational modeling while Uni-pKa (no sampling) gets 0.70 (Sec. 2.5).
+
+## Conformer handling — VERIFIED FROM CODE (Phase VIII retry, 2026-10-26)
+- Conformer generation (`scripts/preprocess_pka.py` `smi2_3Dcoords`, `inner_smi2coords_pka`): per microstate SMILES,
+  `cnt = 10 # conformer num,all==11, 10 3d + 1 2d`; each 3D conformer = RDKit `EmbedMolecule(randomSeed=seed)` +
+  `MMFFOptimizeMolecule`, falling back to 2D coordinates on failure; one extra 2D-coordinate "conformer". All H kept
+  (`only_polar=-1` in all .sh scripts → `remove_polar_hydrogen=False`, `unimol/tasks/unimol_pka.py:134-139`).
+- Training: ONE conformer sampled uniformly at random per microstate per epoch (`ConformerSamplePKADataset`,
+  `unimol/data/conformer_sample_dataset.py:31-33`) — augmentation, matching the paper's Sec. 5.6 wording.
+- Evaluation/inference: all 11 conformers (`conf_size=11` in finetune/infer scripts; `TTADataset`), and the per-microstate
+  free energy is the **arithmetic mean over conformers** (`compute_agg_free_energy`: `torch.mean(x, dim=0)` over
+  `conf_size` chunks, `unimol/losses/reg_loss.py:69-76`; same in `mlm_loss.py:84-87`). Macro-pKa is then a
+  log-sum-exp over **microstates** (`reg_loss.py:86-89`).
+- Therefore: Uni-pKa DOES use a conformer set per microstate, but as test-time augmentation (mean of model outputs on
+  10 random MMFF conformers + 1 2D), NOT a Boltzmann/log-sum-exp conformational free energy, and conformers are
+  unweighted (no energies). Conformer sensitivity is never measured.
 
 ## Experiments & baselines
 MAE on external macro-pKa sets: Novartis 0.810, SAMPL6 0.493, SAMPL7 0.554, SAMPL8 0.619/0.631
@@ -67,3 +85,18 @@ Its Tautobase log K failure is the strongest evidence that microstate population
 - "swiftly generate multiple random conformations allows us to incorporate data augmentation" (Sec. 5.6)
 - "Jaguar with comprehensive conformational search, weighting 10 conformers" (Table 2 footnote)
 - "an MAE of 3.435 for log K" (Tautobase evaluation)
+
+## Addendum 2026-10-26 (Phase VIII novelty audit) — conformer handling read from the released code
+Source: github.com/dptech-corp/Uni-pKa, commit 7cfbf6532d7e14f427abaed5859bd1001b4b6377 (2025-04-01), read directly.
+This corrects "Number not stated" / "one free energy per microstate" above at the code level:
+- `scripts/preprocess_pka.py`: `cnt = 10 # conformer num,all==11, 10 3d + 1 2d` — for **each microstate SMILES** on both
+  sides of a `A>>B` pKa record, 10 RDKit ETKDG embeddings (seeds 0–9) + MMFF optimisation, plus one 2D-coordinate copy.
+  So conformers are state-specific (generated from the protonated/deprotonated graph), but ETKDG/MMFF, not energy-ranked.
+- `infer_pka.sh`, `finetune_pka.sh`: `conf_size=11`.
+- `unimol/losses/mlm_loss.py::compute_loss`: at evaluation (`if not self.training`) per-conformer free energies are
+  **arithmetic-averaged** over the 11 coordinate sets (`torch.mean(x, dim=0)`), then macro-pKa =
+  (logsumexp(−G_a) − logsumexp(−G_b))/ln10 over microstates. During training one conformer is sampled per pass
+  (augmentation). No Boltzmann weighting over conformers; no physical energy is used for conformers.
+- Starling (Rowan 2025, a retrained Uni-pKa) replaces the mean with log-sum-exp over the 10 conformers.
+Implication for I2/I5: Uni-pKa is already a *geometry-input, state-specific-conformer-set, experimentally fine-tuned*
+microstate free-energy model; what it lacks is energy-based (Boltzmann) weighting and any test of whether geometry matters.

@@ -1,0 +1,14 @@
+id,title,year,venue,doi_or_url,code_url,relevance(0-3),fulltext_status,checked_utc
+unipka_2024,Bridging Machine Learning and Thermodynamics for Accurate pKa Prediction (Uni-pKa; code read),2024,JACS Au,10.1021/jacsau.4c00271,https://github.com/dptech-corp/Uni-pKa,3,full_text_read,2026-10-26
+starling_wagen2025,Physics-Informed Machine Learning Enables Rapid Macroscopic pKa Prediction (Starling),2025,ChemRxiv,https://chemrxiv.org/engage/chemrxiv/article-details/680998c4e561f77ed48f3704,none,3,full_text_read,2026-10-26
+wieder_2021_tautomer_ratios,Fitting quantum machine learning potentials to experimental free energy data: predicting tautomer ratios in solution,2021,Chem. Sci.,10.1039/D1SC01185E,https://github.com/choderalab/neutromeratio,3,full_text_read,2026-10-26
+sphysnet_taut_pan2025,Fast and Accurate Prediction of Tautomer Ratios in Aqueous Solution via a Siamese Neural Network,2025,JCTC 21:3132,10.1021/acs.jctc.5c00041,unknown,3,full_text_read,2026-10-26
+qupkake_2024,QupKake: Integrating Machine Learning and Quantum Chemistry for Micro-pKa Predictions,2024,JCTC,10.1021/acs.jctc.4c00328,https://github.com/hutchisonlab/QupKake,2,full_text_read,2026-10-26
+liu_luo_2025_3d_nci_pka,Highly Precise Prediction of Micro- and Supra-pKa Based on 3D Descriptors Integrating Non-Covalent Interactions,2025,Angew. Chem. Int. Ed.,10.1002/anie.202424069,unknown,2,not_accessible,2026-10-26
+pkace_2024,PlayMolecule pKAce: Small Molecule Protonation through Equivariant Neural Networks,2024,arXiv,arXiv:2407.11103,unknown,2,full_text_read,2026-10-26
+rowan_pka_wagen2024,Efficient and Accurate pKa Prediction Enabled by Pre-Trained Machine-Learned Interatomic Potentials,2024,ChemRxiv,10.26434/chemrxiv-2024-8489b,proprietary (Rowan),2,full_text_read,2026-10-26
+harvey_2025_macrocycle_pka,Predicting pKa of flexible polybasic tetra-aza macrocycles,2025,RSC Adv.,https://pmc.ncbi.nlm.nih.gov/articles/PMC11973477/,none,1,full_text_read,2026-10-26
+marcel_2024,Learning Over Molecular Conformer Ensembles: Datasets and Benchmarks,2024,ICLR,arXiv:2310.00115,unknown,1,abstract_only,2026-10-26
+weinreich_2022_fml,Ab initio machine learning of phase space averages,2022,J. Chem. Phys.,arXiv:2203.17047,unknown,1,abstract_only,2026-10-26
+cheng_2026_3d_vs_2d,When Three-Dimensional Conformer Ensembles Improve Molecular Property Prediction Beyond Two-Dimensional Fingerprints,2026,arXiv,arXiv:2606.08825,unknown,1,full_text_read,2026-10-26
+pkalearn_2026,Development of a pKa predictor (pKaLearn) by leveraging teaching experience to improve machine learning,2026,Commun. Chem.,10.1038/s42004-026-01983-y,unknown,1,not_accessible,2026-10-26

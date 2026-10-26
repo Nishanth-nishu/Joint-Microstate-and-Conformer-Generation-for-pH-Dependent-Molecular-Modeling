@@ -1,0 +1,45 @@
+timestamp_utc,family,query,backend,status,n_results,notes
+2026-10-26T10:17:10Z,idea_I4,all I4 phrasings,google_scholar,not_searched_no_tool,0,no Google Scholar tool on this host
+2026-10-26T10:18:31Z,idea_I4,benchmark protonation state conformer generation,openalex,ok,15,AcepKa (JCIM+arXiv); LoQI; CONFORGE; Wittmann/Grimme solvation conformer-ensemble set; Pan 2026 tautomer crystallographic; rest off-topic
+2026-10-26T10:18:31Z,idea_I4,ligand preparation protonation tautomer benchmark,openalex,ok,15,mostly off-topic (organometallic tautomerism); Borbulevych 2020 QM/MM tautomer/protomer determination related
+2026-10-26T10:18:31Z,idea_I4,tautomer enumeration benchmark,openalex,ok,15,Zheng & Heid 2026 ChemRxiv atomistic workflow tautomer microstate populations (key); Champion 2024 multistate alchemical
+2026-10-26T10:18:31Z,idea_I4,conformer generation charged molecules zwitterion,openalex,error_http_429,0,rate limited; retried later
+2026-10-26T10:18:31Z,idea_I4,pKa prediction conformational effects intramolecular hydrogen bond,openalex,error_http_429,0,rate limited; retried later
+2026-10-26T10:19:37Z,idea_I4,Zheng Heid Atomistic Workflow tautomer microstate populations (title),websearch,ok_no_match,9,paper not indexed by web search; abstract retrieved via OpenAlex API (PEACE package)
+2026-10-26T10:19:37Z,idea_I4,https://chemrxiv.org/doi/full/10.26434/chemrxiv.15006747/v2,webfetch,http_403,0,ChemRxiv blocked; not bypassed; OpenAlex says closed / no repository fulltext
+2026-10-26T10:19:37Z,idea_I4,benchmark conformer generators protomers tautomers charged states pH ligand preparation evaluation,websearch,ok,9,no head-to-head benchmark; Auto3D tautomer/protomer notebook; ten Brink & Exner 2009; Hahn 2021 best practices
+2026-10-26T10:19:37Z,idea_I4,https://auto3d.readthedocs.io/en/latest/example/tautomer_protomer_analysis.html,webfetch,ok,1,tutorial: tautomer enum + AIMNet conformers + Boltzmann 298K; pH unused; no benchmark
+2026-10-26T10:19:37Z,idea_I4,pKa benchmark conformer ensembles flexible molecules conformational sensitivity pKa error,websearch,ok,9,FlexiSol (solvation; conformer ensembles); J Mol Model 2019 partition function vs state transition; 2017 flexible pKa case study; arXiv 2606.08825
+2026-10-26T10:19:37Z,idea_I4,conformer generation zwitterions charged molecules gas-phase salt bridge artifacts evaluation ETKDG CREST,websearch,ok_no_match,10,nothing specific to charged/zwitterion conformer evaluation
+2026-10-26T10:19:37Z,idea_I4,evaluation of ligand preparation tools LigPrep Epik MOE wash OpenEye QUACPAC protonation comparison,websearch,ok_no_match,9,vendor pages only; no independent head-to-head benchmark found
+2026-10-26T10:22:44Z,idea_I4,citing GEOM 10.1038/s41597-022-01288-4 (top 25 by citations),citation_neighbours,ok,25,top-cited citers are generic (CREST 2024; Uni-Mol; reviews); none a protomer-aware conformer benchmark; low-cited citers not enumerable (OpenAlex budget exhausted)
+2026-10-26T10:22:44Z,idea_I4,AcepKa arXiv 2604.00841 neighbours,citation_neighbours,ok,0,OpenAlex has no refs/citers recorded
+2026-10-26T10:22:44Z,idea_I4,AcepKa JCIM 10.1021/acs.jcim.6c03037 neighbours,citation_neighbours,ok,0,OpenAlex has no refs/citers recorded
+2026-10-26T10:22:44Z,idea_I4,Overview of the SAMPL6 pKa challenge (search),openalex,error_http_429,0,OpenAlex daily budget exhausted for this IP (resets 00:00 UTC / 05:30 IST)
+2026-10-26T10:22:44Z,idea_I4,citations of SAMPL6 pKa overview DOI 10.1007/s10822-020-00362-6,webfetch,ok,49,Semantic Scholar API (backend recorded as webfetch); key: 2025 QM workflow benchmarking conformational sampling for pH-dependent properties; 2026 Benchmarking pKa algorithms on public set; euroSAMPL1; kinase inhibitors change state upon binding
+2026-10-26T10:28:31Z,idea_I4,"Toward Validated QM Workflows Predicting pH-Dependent Properties (Agbaglo, Janesko 2025 JPCA)",websearch,ok,9,title confirmed; abstract via Europe PMC REST (DOI 10.1021/acs.jpca.5c01484); 20 SAMPL7 N-acylsulfonamides; 2 conformational sampling protocols among 3076 workflows
+2026-10-26T10:28:31Z,idea_I4,"Benchmarking pKa Prediction Algorithms against an Extensive, Public Data Set",websearch,ok,10,Sipos-Szabo...Keseru JCIM 2026; PDF fetch unreadable (no extractor); full text via Europe PMC fullTextXML PMC13126629 read
+2026-10-26T10:28:31Z,idea_I4,https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13126629/fullTextXML,webfetch,ok,1,full_text_read; 7 predictors; macro/micro pKa; no 3D/conformer analysis
+2026-10-26T10:28:31Z,idea_I4,pH-dependent ligand protonation state docking benchmark enumeration all protomers tautomers VS evaluation,websearch,ok_no_match,10,no benchmark of pH-dependent protomer enumeration in VS found; Dimorphite-DL; ten Brink & Exner 2009
+2026-10-26T10:28:31Z,idea_I4,machine learning pKa model 3D conformer ensemble averaging microstate free energy Boltzmann conformers 2025 2026,websearch,ok,9,Rowan Starling (Wagen 2025) LSE over 10 conformers per microstate; kentgorday qm-pka repo
+2026-10-26T10:28:31Z,idea_I4,Rowan Starling pKa microstate conformer benchmark macro-pKa evaluation,websearch,ok,9,Starling ChemRxiv 68388349; K-Dense third-party blog
+2026-10-26T10:28:31Z,idea_I4,https://rowansci.com/publications/macroscopic-pka-prediction,webfetch,ok,1,Starling full text (HTML): ETKDG+MMFF 10 conformers per microstate; E_micro = -log sum exp(-E_i); no conformer ablation
+2026-10-26T10:28:31Z,idea_I4,https://arxiv.org/abs/2502.13220,webfetch,ok,1,Adams & Coley conformer quality for ensemble learning; no pKa/protonation (different domain)
+2026-10-26T10:28:31Z,idea_I4,RETRY AcepKa https://arxiv.org/html/2604.00841v2,webfetch,ok_full_text,1,v2 read: eval = macro-pKa RMSE (Fig.1; datasets unnamed in text) + Platinum2017 conformer RMSD; conformer count/aggregation per microstate not stated; no licence; web app only
+2026-10-26T10:28:31Z,idea_I4,RETRY Uni-pKa code github.com/dptech-corp/Uni-pKa (git clone),webfetch,ok_code_read,1,HEAD 7cfbf65; 10 MMFF+1 2D conformers per microstate; arithmetic mean of per-conformer free energy at inference; random single conformer in training; Apache-2.0
+2026-10-26T10:31:00Z,idea_I4,RETRY LoQI semantic scholar API DOI 10.26434/chemrxiv-2025-k4h7v,webfetch,http_429,0,rate limited
+2026-10-26T10:31:00Z,idea_I4,RETRY LoQI arXiv API (title; au:Nikitin AND au:Isayev),webfetch,ok_no_match,2,no arXiv version; found GEOM-Drugs Revisited 2505.00169 (related to I4)
+2026-10-26T10:31:00Z,idea_I4,RETRY LoQI OpenReview api2 notes + pdf Ei3eF8B8XH,webfetch,challenge_403,0,challenge verification required; not bypassed
+2026-10-26T10:31:00Z,idea_I4,RETRY LoQI chemrxiv.org article page,webfetch,http_403,0,not bypassed
+2026-10-26T10:31:00Z,idea_I4,RETRY LoQI cambridge.org/engage mirror 689f756ea94eede154ec6217,webfetch,abstract_only,1,abstract + metadata only
+2026-10-26T10:31:00Z,idea_I4,RETRY LoQI neurips.cc/virtual/2025/129011 + CMU thesis-defense page,webfetch,abstract_only,2,workshop abstract; thesis summary mentions protonation handled explicitly (secondary)
+2026-10-26T10:31:00Z,idea_I4,RETRY LoQI journal version web search,websearch,ok_no_match,9,no journal version found
+2026-10-26T10:31:00Z,idea_I4,RETRY Epik7 Europe PMC search,webfetch,not_open_access,1,JCTC 2023 10.1021/acs.jctc.3c00044 PMID 37023332; no PMC
+2026-10-26T10:31:00Z,idea_I4,RETRY Epik7 chemrxiv 64188769 + cambridge mirror,webfetch,http_403/not_found,0,not bypassed
+2026-10-26T10:31:00Z,idea_I4,RETRY Epik7 Schrodinger white-paper PDF,webfetch,unreadable_pdf,1,no PDF text extractor; vendor HTML page used previously
+2026-10-26T10:31:00Z,idea_I4,RETRY TorsionalDiffusion arxiv.org/abs + html/2206.01729v2,webfetch,ok_full_text,1,already full_text_read in tordiff_jing2022.md; confirmed no charged-molecule filtering described
+2026-10-26T10:32:17Z,idea_I4,evaluation of ligand protonation and tautomer assignment tools against neutron crystallography structures benchmark,websearch,ok_no_match,9,XModeScore 2016; Protoss; Pan 2026 tautomer predictor (PDBbind); no tool-vs-neutron benchmark with conformers
+2026-10-26T10:32:17Z,idea_I4,tautomer ratio prediction 3D conformers benchmark Tautobase sPhysNet-Taut MolTaut conformer ensemble,websearch,ok,9,sPhysNet-Taut (JCTC 2025, MMFF geometries, single geometry per tautomer); MLIPAudit tautomer ranking (vacuum); Rowan tautomer workflow
+2026-10-26T10:32:17Z,idea_I4,https://arxiv.org/abs/2505.00169 (GEOM-Drugs Revisited),webfetch,abstract_only,1,valency tables + GFN2-xTB energy benchmark; charge/protonation handling not stated in abstract
+2026-10-26T10:32:17Z,idea_I4,arXiv API abs:protonation AND conformer AND benchmark; abs:protomer AND conformer; abs:tautomer AND conformer AND benchmark; abs:pKa AND conformer AND ensemble; abs:microstate AND conformer,webfetch,ok,24,only AcepKa relevant; acetyl-histidine protomer energetics 2018 (QM benchmark; different)
+2026-10-26T10:32:17Z,idea_I4,Europe PMC titles: Haworth 2017 flexible pKa; Tielker 2019 partition function; euroSAMPL1; sPhysNet-Taut,webfetch,ok,4,abstracts read; all geometry-aware pKa/tautomer METHODS or challenges; none is a (state x conformer) benchmark

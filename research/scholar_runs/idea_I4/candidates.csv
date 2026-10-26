@@ -1,0 +1,22 @@
+id,title,year,venue,doi_or_url,code_url,relevance(0-3),fulltext_status,checked_utc
+C1,AcepKa: Thermodynamics-Informed pKa Prediction and Protonation-State Generation in PlayMolecule AI,2026,J Chem Inf Model / arXiv 2604.00841v2,10.1021/acs.jcim.6c03037,none (web app; no licence),3,full_text_read,2026-10-26T10:40Z
+C2,Bridging Machine Learning and Thermodynamics for Accurate pKa Prediction (Uni-pKa),2024,JACS Au,10.1021/jacsau.4c00271,https://github.com/dptech-corp/Uni-pKa,2,full_text_read,2026-10-26T10:35Z
+C3,Physics-Informed Machine Learning Enables Rapid Macroscopic pKa Prediction (Starling; Wagen),2025,ChemRxiv 68388349 / rowansci.com,https://rowansci.com/publications/macroscopic-pka-prediction,Rowan platform,2,full_text_read,2026-10-26T10:30Z
+C4,Benchmarking pKa Prediction Algorithms against an Extensive Public Data Set (pKaHub; Sipos-Szabo...Keseru),2026,J Chem Inf Model 66(8):4607,10.1021/acs.jcim.6c00107,https://github.com/keserulab/pkahub,3,full_text_read,2026-10-26T10:25Z
+C5,Toward Validated QM Workflows Predicting pH-Dependent Properties: Benchmarking Protocols for Conformational Sampling...(Agbaglo; Janesko),2025,J Phys Chem A,10.1021/acs.jpca.5c01484,,3,abstract_only,2026-10-26T10:22Z
+C6,An Atomistic Workflow for Determining Acid-Base Prototropic Tautomer Microstate Populations (PEACE; Zheng & Heid),2026,ChemRxiv,10.26434/chemrxiv.15006747/v2,,2,abstract_only,2026-10-26T10:20Z
+C7,Overview of the SAMPL6 pKa challenge: evaluating small molecule microscopic and macroscopic pKa predictions,2021,J Comput Aided Mol Des,10.1007/s10822-020-00362-6,https://github.com/samplchallenges/SAMPL6,3,full_text_read (see paper_notes/sampl6_pka_2021.md),2026-10-26T10:20Z
+C8,GEOM energy-annotated molecular conformations,2022,Sci Data,10.1038/s41597-022-01288-4,https://github.com/learningmatter-mit/geom,3,full_text_read (see paper_notes/geom_axelrod2022.md),2026-10-26T10:20Z
+C9,A diverse and chemically relevant solvation model benchmark set with flexible molecules and conformer ensembles (FlexiSol; Wittmann Selzer Grimme),2025,Chem Sci,10.1039/d5sc06406f,,2,abstract_only,2026-10-26T10:20Z
+C10,The euroSAMPL1 pKa blind prediction and RDM challenge,2025,PCCP,10.1039/d5cp01448d,,2,abstract_only,2026-10-26T11:05Z
+C11,pKa calculations for tautomerizable and conformationally flexible molecules: partition function vs state transition (Tielker...Kast),2019,J Mol Model,10.1007/s00894-019-4033-4,,2,abstract_only,2026-10-26T11:05Z
+C12,Modeling Flexible Molecules in Solution: A pKa Case Study (Haworth Wang Coote),2017,J Phys Chem A,10.1021/acs.jpca.7b04133,,2,abstract_only,2026-10-26T11:05Z
+C13,Fast and Accurate Prediction of Tautomer Ratios in Aqueous Solution via a Siamese NN (sPhysNet-Taut),2025,J Chem Theory Comput,10.1021/acs.jctc.5c00041,,1,abstract_only,2026-10-26T11:05Z
+C14,Deep learning of tautomer stability from crystallographic proton positions (Tautomer-Predictor),2026,Chem Sci,10.1039/d6sc03714c,,1,abstract_only,2026-10-26T10:20Z
+C15,Kinase inhibitors can change protonation or tautomeric state upon binding (MCCE; Gunner/Chodera),2026,bioRxiv,10.64898/2026.07.27.741060,,1,abstract_only,2026-10-26T10:25Z
+C16,Tractable and Thermodynamically Consistent pKa Prediction via First-Dissociation Aggregation (DTi-pKa),2026,bioRxiv,10.64898/2026.09.30.755586,,1,abstract_only,2026-10-26T10:25Z
+C17,GEOM-Drugs Revisited: Toward More Chemically Accurate Benchmarks for 3D Molecule Generation (Nikitin...Isayev),2025,arXiv 2505.00169,https://arxiv.org/abs/2505.00169,,1,abstract_only,2026-10-26T11:00Z
+C18,Auto3D tautomer/protomer analysis tutorial,2025,docs,https://auto3d.readthedocs.io/en/latest/example/tautomer_protomer_analysis.html,https://github.com/isayevlab/Auto3D_pkg,1,full_text_read,2026-10-26T10:18Z
+C19,Scalable Low-Energy Molecular Conformer Generation with QM Accuracy (LoQI/ChEMBL3D),2025,ChemRxiv / NeurIPS AI4Mat WS,10.26434/chemrxiv-2025-k4h7v,https://github.com/isayevlab/LoQI,2,abstract_only,2026-10-26T10:50Z
+C20,The impact of conformer quality on learned representations of molecular conformer ensembles (Adams & Coley),2025,arXiv 2502.13220,https://arxiv.org/abs/2502.13220,,0,abstract_only,2026-10-26T10:30Z
+C21,Best Practices for Constructing Preparing and Evaluating Protein-Ligand Binding Affinity Benchmarks (Hahn et al.),2022,LiveCoMS,https://pmc.ncbi.nlm.nih.gov/articles/PMC9662604/,,1,abstract_only,2026-10-26T10:18Z

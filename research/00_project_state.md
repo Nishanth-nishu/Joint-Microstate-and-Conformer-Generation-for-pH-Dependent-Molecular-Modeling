@@ -13,6 +13,8 @@ Work dir on gnode118: /scratch/nishanth.r/jmcg (staging on /home2/nishanth.r/jmc
 | V Feature matrix | conformer methods done (05_feature_matrix_conformer_methods.csv); needs AcepKa/Uni-pKa/LoQI/RAPA columns |
 | VI Dataset audit | round 1 done (06_dataset_audit.md) |
 | VII Candidate ideas | initial set (07_candidate_ideas.md) |
-| VIII–XIV | not started |
+| VIII Novelty loop | round 1 done: I2 Reject, I4/I5 Revise → N1 (08_novelty_claims.csv) |
+| IX Minimum experiment | N1 pilot pre-registered (experiments/N1_pilot/PREREG.md); stratified set built; pilot awaiting approval to run |
+| X–XIV | not started |
 
 Tooling limitation: scholar-scout not installed on this machine; Google Scholar not searched (see CONVENTIONS.md).

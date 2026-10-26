@@ -1,0 +1,412 @@
+# LoQI: Scalable Low-Energy Molecular Conformer Generation with Quantum Mechanical Accuracy
+
+<div align="center">
+  <a href="https://scholar.google.com/citations?user=DOljaG8AAAAJ&hl=en" target="_blank">Filipp&nbsp;Nikitin<sup>1,2</sup></a> &emsp; <b>&middot;</b> &emsp;
+  <a href="#" target="_blank">Dylan&nbsp;M.&nbsp;Anstine<sup>2,3</sup></a> &emsp; <b>&middot;</b> &emsp;
+  <a href="#" target="_blank">Roman&nbsp;Zubatyuk<sup>2,5</sup></a> &emsp; <b>&middot;</b> &emsp;
+  <a href="https://scholar.google.ch/citations?user=8S0VfjoAAAAJ&hl=en" target="_blank">Saee&nbsp;Gopal&nbsp;Paliwal<sup>5</sup></a> &emsp; <b>&middot;</b> &emsp;
+  <a href="https://olexandrisayev.com/" target="_blank">Olexandr&nbsp;Isayev<sup>1,2,4*</sup></a>
+  <br>
+  <sup>1</sup>Ray and Stephanie Lane Computational Biology Department, Carnegie Mellon University, Pittsburgh, PA, USA
+  <br>
+  <sup>2</sup>Department of Chemistry, Carnegie Mellon University, Pittsburgh, PA, USA
+  <br>
+  <sup>3</sup>Department of Chemical Engineering and Materials Science, Michigan State University, East Lansing, MI, USA
+  <br>
+  <sup>4</sup>Department of Materials Science and Engineering, Carnegie Mellon University, Pittsburgh, PA, USA
+  <br>
+  <sup>5</sup>NVIDIA, Santa Clara, CA, USA
+  <br><br>
+  <a href="#" target="_blank">📄&nbsp;Paper</a> &emsp; <b>&middot;</b> &emsp;
+  <a href="#citation">📖&nbsp;Citation</a> &emsp; <b>&middot;</b> &emsp;
+  <a href="#setup">⚙️&nbsp;Setup</a> &emsp; <b>&middot;</b> &emsp;
+  <a href="https://github.com/isayevlab/LoQI" target="_blank">🔗&nbsp;GitHub</a>
+  <br><br>
+  <span><sup>*</sup>Corresponding author: olexandr@olexandrisayev.com</span>
+</div>
+
+---
+
+## Overview
+
+### LoQI v1.1.0
+
+Extended large-molecule capability, improved performance on very small
+molecules, and improved stereochemistry conditioning for lowercase r/s ring centers.
+**Non-carbon chirality control remains limited and needs further work**;
+stereo conditioning currently supports only tetrahedral centers with four explicit neighbors.
+
+Download [loqi_flow_v1.1.0.ckpt](https://drive.google.com/file/d/1UOxDPX6u0n6Ij6mvqaT6PVmEREeBjJcS/view?usp=sharing)
+to `data/loqi_flow_v1.1.0.ckpt`, or use the registered model name below for automatic download.
+The app defaults to
+**Flow Matching v1.1.0**; `scripts/sample_conformers.py` also defaults to this release.
+Legacy checkpoints remain available.
+
+```bash
+loqi sample --smiles "CCO" --model loqi_flow_v1.1.0 --output confs.sdf
+```
+
+<div align="center">
+    <img width="700" alt="Macrocycles" src="assets/macrocycles.svg"/>
+</div>
+
+### Abstract
+
+Molecular geometry is crucial for biological activity and chemical reactivity; however, computational methods for generating 3D structures are limited by the vast scale of conformational space and the complexities of stereochemistry. Here we present an approach that combines an expansive dataset of molecular conformers with generative diffusion models to address this problem. We introduce **ChEMBL3D**, which contains over 250 million molecular geometries for 1.8 million drug-like compounds, optimized using AIMNet2 neural network potentials to a near-quantum mechanical accuracy with implicit solvent effects included. This dataset captures complex organic molecules in various protonation states and stereochemical configurations. 
+
+We then developed **LoQI** (Low-energy QM Informed conformer generative model), a stereochemistry-aware diffusion model that learns molecular geometry distributions directly from this data. Through graph augmentation, LoQI accurately generates molecular structures with targeted stereochemistry, representing a significant advance in modeling capabilities over previous generative methods. The model outperforms traditional approaches, achieving up to tenfold improvement in energy accuracy and effective recovery of optimal conformations. Benchmark tests on complex systems, including macrocycles and flexible molecules, as well as validation with crystal structures, show LoQI can perform low energy conformer search efficiently.
+
+> **Note on Implementation**: LoQI is built upon the [Megalodon architecture](https://arxiv.org/pdf/2505.18392) developed, adapting it specifically for stereochemistry-aware conformer generation with the ChEMBL3D dataset.
+
+---
+
+## Key Features
+
+- **ChEMBL3D Dataset**: 250+ million AIMNet2-optimized conformers for 1.8M drug-like molecules
+- **Stereochemistry-Aware**: First all-atom diffusion model with explicit stereochemical encoding
+- **Quantum Mechanical Accuracy**: Near-DFT accuracy with implicit solvent effects
+- **Superior Performance**: Up to 10x improvement in energy accuracy over traditional methods
+- **Complex Molecule Support**: Handles macrocycles, flexible molecules, and challenging stereochemistry
+
+---
+
+## Setup
+
+### System and Hardware Requirements
+
+- OS tested by authors:
+  - Ubuntu 24.04 LTS (latest stable Ubuntu LTS at time of writing)
+- Other platforms:
+  - Expected to work: only `torch` and the pure-Python `torch_geometric` are required, no compiled
+    PyTorch Geometric extensions.
+- Tested inference hardware:
+  - GPU: NVIDIA RTX 3090 (24 GB VRAM)
+  - CPU: AMD Ryzen 9 5950X
+- Recommended GPU memory:
+  - 16-24 GB VRAM for comfortable inference/evaluation with larger molecules and higher batch sizes
+- Minimum practical GPU memory:
+  - 8 GB VRAM can run inference, but requires reduced batch sizes
+- CPU-only:
+  - Works (the package tests run on CPU, see [Tests](#tests)) but is slow for large
+    molecules or many conformers and was not systematically studied by the authors
+
+OOM mitigation for larger molecules:
+- reduce inference batch size (`--batch_size` in sampling, or `data.inference_batch_size` in config)
+- if using evaluation/optimization, also reduce optimization batch size (`evaluation.energy_metrics_args.batchsize`)
+
+### Installation
+
+LoQI requires Python 3.11+ and PyTorch 2.8+. Install from GitHub until a PyPI
+release is available:
+
+```bash
+pip install "loqi @ git+https://github.com/isayevlab/LoQI"
+```
+
+For CUDA, install the matching PyTorch build first. Compiled PyTorch Geometric
+extensions are not required for the released LoQI models.
+
+For development, clone the repository and run `pip install -e ".[dev]"`.
+Optional extras are `train` for training and preprocessing, `aimnet` for the
+AIMNet2 package, and `dev` for tests and linting.
+
+### Quick start
+
+```python
+from loqi import generate_conformers
+
+molecules = generate_conformers(["CCO", "CC(=O)Oc1ccccc1C(=O)O"], n_conformers=10, device="cpu")
+for molecule in molecules:
+    print(molecule.GetNumConformers(), molecule.GetIntProp("loqi_failed"))
+```
+
+The API returns one RDKit molecule per input SMILES, with explicit hydrogens by
+default. Non-finite samples are omitted and counted in `loqi_failed`. Invalid
+SMILES raise `ValueError`. Use `load_model()` once for repeated sampling:
+
+All molecule sizes use LoQI, including 2–4 atoms; there is no RDKit fallback.
+
+```python
+from loqi import generate_conformers, load_model
+
+model = load_model("loqi_flow", device="cuda")
+molecules = generate_conformers("c1ccncc1", 50, model=model, seed=0, batch_atoms=2000)
+```
+
+`steps` defaults to 25; keep that value for diffusion checkpoints. Flow matching
+supports other step counts. Lower `batch_atoms` to reduce memory use; it is an
+adaptive budget at a reference size of 50 atoms, with a default of 7500.
+
+```bash
+loqi download --model loqi
+loqi sample --smiles "CCO" --n-confs 10 --output confs.sdf
+loqi sample --input molecules.smi --model loqi_flow --device cuda --output confs.sdf
+```
+
+The CLI skips invalid SMILES and writes one SDF record per conformer, with
+`loqi_model` and `loqi_conformer_id` properties. Use `--steps`, `--batch-atoms`,
+or `--no-add-hs` to adjust sampling.
+
+#### Stereochemistry
+
+R/S conditioning and evaluation require four explicit bonded neighbors (including
+hydrogens); three-neighbor sulfoxide centers are excluded. For legacy carbon-only
+conditioning, use the app's `c_chirality` checkbox, CLI `--c-chirality`, or API
+`c_chirality=True`. E/Z conditioning is unchanged.
+
+App, sampling, and preprocessing share modern CIP ordering (RDKit >= 2026.03.1).
+The lowest-priority neighbor is the reference for R/S and lowercase r/s centers;
+local CW/CCW parity sets the directed triangle orientation. If CIP assignment
+exceeds RDKit limits, only unresolved centers lose tetrahedral edges, with a
+warning; molecules and E/Z edges are retained.
+
+**SDF warning:** RDKit may silently lose chirality when a 2D SDF has atom parity
+but no wedge/hash bonds. Prefer stereospecified SMILES, or verify stereo after
+loading the SDF against the original SMILES.
+
+### Checkpoints
+
+`loqi` and `loqi_flow` are downloaded from
+[KiltHub](https://doi.org/10.1184/R1/31441570), verified by SHA-256, and cached in
+`$LOQI_CACHE_DIR` or `~/.cache/loqi`. Each checkpoint is about 360 MB. To use a local
+checkpoint, call `load_model("/path/model.ckpt", config="loqi.yaml")`; both inference
+configs are included in the package.
+
+The `loqi_flow_v1.1.0` checkpoint is downloaded from
+[Google Drive](https://drive.google.com/file/d/1UOxDPX6u0n6Ij6mvqaT6PVmEREeBjJcS/view?usp=sharing)
+using the same verified cache mechanism, with `loqi_flow.yaml` as its inference config.
+The expected SHA-256 is
+`0b2acf46d71a84c963d66711ba29d04f788cfd2aa681989236f797de2eb5f9a2`.
+
+LoQI code and checkpoints use the MIT license. Bundled Megalodon code retains its
+Apache-2.0 license and third-party notices in `megalodon_licence/`.
+
+### Tests
+
+Run `pytest` for unit tests and `ruff check .` for linting. To include CPU sampling
+tests, first cache the released checkpoint with `loqi download --model loqi`, then
+run `pytest -o addopts=""`. The sampling tests check valid coordinates, seed
+reproducibility, and SDF output.
+
+### Data Setup
+
+Training and evaluation use the **ChEMBL3D** data releases below.
+
+**Release 1: Full ChEMBL3D Quantum-Accurate conformer dataset**
+- URL: https://kilthub.cmu.edu/articles/dataset/_b_ChEMBL3D_Quantum-Accurate_3D_Conformers_for_ChEMBL_at_Scale_b_/31428449
+- DOI: https://doi.org/10.1184/R1/31428449
+
+Preprocess Release 1 with
+[`data_processing/process_chembl3d.py`](data_processing/process_chembl3d.py).
+The extracted release directory must contain `zarr_database/`, `topologies/`,
+and the bundled `scripts/sgdataset.py` loader. Start with the bounded smoke test:
+
+```bash
+python data_processing/process_chembl3d.py \
+  --dataset_dir /path/to/ChEMBL3D \
+  --save_data_folder /tmp/chembl3d_smoke \
+  --test_mode
+```
+
+Then build the complete standard train/validation/test artifact set:
+
+```bash
+python data_processing/process_chembl3d.py \
+  --dataset_dir /path/to/ChEMBL3D \
+  --save_data_folder data/chembl3d_stereo
+```
+
+The processor selects the absolute-energy minimum for each `mol_id`, encodes
+the selected geometry stereochemistry, and writes the 42 standard artifacts.
+It does not create the custom CREMP, small-molecule, or rotatable-bond test
+sets included in Release 2. See the
+[detailed preprocessing guide](data_processing/README.md#chembl3d-stereo-processing)
+for options and output details.
+
+For fine-tuning on another 3D molecular set, use
+[`data_processing/process_sdf.py`](data_processing/process_sdf.py) to convert
+an SDF containing one conformer per record into the same 42 standard artifacts.
+See the
+[generic SDF preprocessing guide](data_processing/README.md#generic-3d-sdf-processing).
+
+**Release 2: Processed dataset + LoQI checkpoints (diffusion + flow matching)**
+- URL: https://kilthub.cmu.edu/articles/dataset/LoQI_Scalable_Low-Energy_Molecular_Conformer_Generation_with_Quantum_Mechanical_Accuracy/31441570
+- DOI: https://doi.org/10.1184/R1/31441570
+- Includes:
+  - `loqi.ckpt`
+  - `loqi_flow.ckpt`
+  - `chembl3d_stereo/` processed dataset
+
+For this repository, place downloaded assets with this layout:
+```text
+LoQI/
+  data/
+    loqi.ckpt
+    loqi_flow.ckpt
+    chembl3d_stereo/
+      processed/
+        ...
+```
+
+AimNet2 model path expected by configs:
+```text
+src/megalodon/metrics/aimnet2/cpcm_model/wb97m_cpcms_v2_0.jpt
+```
+
+---
+
+## Web App
+
+The repository includes a Streamlit interface for interactive conformer generation, postprocessing, and visualization.
+
+<div align="center">
+    <img width="100%" alt="LoQI App" src="assets/app.png"/>
+</div>
+
+Use the app-specific installation and usage instructions from `app/README.md` (recommended, as app dependencies are separated from core training/inference dependencies).  
+Quick start from repo root:
+
+```bash
+pip install -r app/requirements.txt
+streamlit run app/app.py
+```
+
+## Usage
+
+Install the package (`pip install -e .`) so that `loqi` and `megalodon` are importable. For
+conformer generation from Python or the `loqi` command see [Quick start](#quick-start); the scripts
+below cover training, evaluation and postprocessing.
+
+### Model Training
+
+```bash
+# LoQI conformer generation model
+python scripts/train.py --config-name=loqi outdir=./outputs train.gpus=1 data.dataset_root="./chembl3d_data"
+
+# LoQI flow-matching conformer generation model
+python scripts/train.py --config-name=loqi_flow outdir=./outputs train.gpus=1 data.dataset_root="data/chembl3d_stereo"
+
+# Customize training parameters
+python scripts/train.py --config-name=loqi \
+    outdir=./outputs \
+    train.gpus=2 \
+    train.n_epochs=800 \
+    train.seed=42 \
+    data.batch_size=150 \
+    optimizer.lr=0.0001
+```
+
+### Model Inference and Sampling
+
+#### Conformer Generation
+
+```bash
+# Generate conformers for a single molecule
+python scripts/sample_conformers.py \
+    --config scripts/conf/loqi/loqi.yaml \
+    --ckpt data/loqi.ckpt \
+    --input "c1ccccc1" \
+    --output outputs/benzene_conformers.sdf \
+    --n_confs 10 \
+    --batch_size 1
+
+# Generate conformers with evaluation (requires 3D input, e.g., SDF with low energy conformer)
+python scripts/sample_conformers.py \
+    --config scripts/conf/loqi/loqi.yaml \
+    --ckpt data/loqi.ckpt \
+    --input data/ethanot_low_energy.sdf \
+    --output outputs/ethanol_conformers.sdf \
+    --n_confs 100 \
+    --batch_size 10 \
+    --eval
+
+# Optional postprocessing: AIMNet2 optimization + iRMSD unique-set pruning
+python scripts/sample_conformers.py \
+    --config scripts/conf/loqi/loqi_flow.yaml \
+    --ckpt data/loqi_flow_v1.1.0.ckpt \
+    --input "CC(=O)Oc1ccccc1C(=O)O" \
+    --output outputs/aspirin_opt_unique.sdf \
+    --n_confs 50 \
+    --batch_size 50 \
+    --postprocess optimization+irmsd \
+    --optimization_batch_size 64 \
+    --opt_fmax 0.05 \
+    --opt_max_nstep 250 \
+    --irmsd_rthr 0.125
+```
+
+The script shares loading and sampling with the package. `--ckpt` accepts a
+registered model name or a local path; `--config` defaults to the bundled
+inference configuration. It supports SMILES and SDF input, adaptive batching,
+and optional AIMNet2 optimization and iRMSD pruning.
+
+On the tested setup (RTX 3090 + Ryzen 9 5950X), inference for a typical ChEMBL molecule takes approximately 0.1 seconds per conformer when processed within a batch. See **System and Hardware Requirements** above for VRAM guidance and OOM mitigation.
+
+Note: `--eval` needs the repository config (`--config scripts/conf/loqi/loqi.yaml`) with
+`data.dataset_root` pointing at the processed ChEMBL3D data. `--postprocess optimization` uses the
+AIMNet2 model bundled with the package (`megalodon/metrics/aimnet2/cpcm_model/wb97m_cpcms_v2_0.jpt`)
+unless the config sets `evaluation.energy_metrics_args.model_path`.
+
+Sampling steps: `--n_steps` defaults to 25. Diffusion models were trained with 25 steps and are not expected to work well for other values. Flow-matching models can be run with different step counts.
+
+#### Performance Test (Fixed Molecule Sizes)
+
+Use `scripts/performance_test.py` to:
+- sample 1000 molecules each with atom counts 10, 25, 50, and 100 from `data/chembl3d_stereo/processed/train_h.pt`
+- select molecules deterministically (first `N` per size in dataset order)
+- export per-molecule SDF inputs
+- measure per-molecule generation and optimization times
+
+```bash
+conda run -n mega env PYTHONPATH=./src TORCH_COMPILE_DISABLE=1 \
+python scripts/performance_test.py \
+  --dataset_pt data/chembl3d_stereo/processed/train_h.pt \
+  --sizes 10,25,50,100 \
+  --n_per_size 100 \
+  --outdir outputs/performance_test \
+  --config scripts/conf/loqi/loqi.yaml \
+  --ckpt data/loqi.ckpt \
+  --n_confs 100 \
+  --generation_batch_size 1
+```
+
+By default, optimization settings are taken from the selected config
+(`evaluation.energy_metrics_args.batchsize` and `evaluation.energy_metrics_args.opt_params`).
+
+Outputs:
+- `outputs/performance_test/selected_manifest.csv` (selected molecules + per-molecule SDF path)
+- `outputs/performance_test/size_<N>/mol_*.sdf` (one input SDF per selected molecule)
+- `outputs/performance_test/size_<N>_selected.sdf` (combined SDF per size)
+- `outputs/performance_test/timings_per_molecule.csv` (generation/optimization timing per molecule)
+
+#### Available Configurations
+
+**LoQI Models:**
+- `loqi.yaml` - LoQI stereochemistry-aware conformer generation model
+- `nextmol.yaml` - Alternative configuration for NextMol-style generation
+- `loqi_flow.yaml` - LoQI flow-matching conformer generation model
+
+---
+
+## Citation
+
+If you use LoQI in your research, please cite our paper:
+
+```bibtex
+@article{nikitin2025scalable,
+  title={Scalable Low-Energy Molecular Conformer Generation with Quantum Mechanical Accuracy},
+  author={Nikitin, Filipp and Anstine, Dylan M and Zubatyuk, Roman and Paliwal, Saee Gopal and Isayev, Olexandr},
+  year={2025}
+}
+```
+
+This work builds upon the Megalodon architecture. If you use the underlying architecture, please also cite:
+
+```bibtex
+@article{reidenbach2025applications,
+  title={Applications of Modular Co-Design for De Novo 3D Molecule Generation},
+  author={Reidenbach, Danny and Nikitin, Filipp and Isayev, Olexandr and Paliwal, Saee},
+  journal={arXiv preprint arXiv:2505.18392},
+  year={2025}
+}
+```
