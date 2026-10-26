@@ -46,7 +46,7 @@ Effect small: Δ_s ≈ 0.05–0.2 pKa units, likely with a CI touching 0 at pilo
 falsified or underpowered at this stage. A3D-lse/min likely no better than mean (cf. Starling vs Uni-pKa).
 
 ## Compute
-CPU only (torch 2.5.1+cpu), 16 cores, gnode118. No GPU requested.
+CPU only (torch 2.5.1+cpu), 8 cores / 32 GB (node had 2 free CPUs at submission time), gnode118. No GPU requested.
 
 ## Amendment log
 - 2026-10-26 ~10:52 UTC (before any model output): primary stratum switched v1→v2 (see Strata). Analysis default `--stratum_col stratum_v2`.
