@@ -6,3 +6,34 @@ timestamp_utc,family,query,backend,status,n_results,notes
 2026-10-26T08:21:00Z,C,conformational dependence pKa small molecule,openalex,ok,10,mostly protein pKa; off-target
 2026-10-26T08:21:00Z,C,SAMPL6 pKa challenge microscopic macroscopic,openalex,ok,10,SAMPL6 overview + measurements; SAMPL7 eval
 2026-10-26T08:21:00Z,C,(any) Google Scholar,google_scholar,not_searched_no_tool,0,Google Scholar unavailable in this session
+2026-10-26T08:25:00Z,C,QupKake micro-pKa GFN2-xTB conformer github,websearch,ok,9,PMC11325546 + github hutchisonlab/QupKake
+2026-10-26T08:25:00Z,C,https://pmc.ncbi.nlm.nih.gov/articles/PMC11325546/,webfetch,ok,1,QupKake full text first 100k chars read
+2026-10-26T08:25:00Z,C,Uni-pKa JCIM 2024 protonation ensemble Dwar-iBond microstate free energy conformers Uni-Mol,websearch,ok,9,published as JACS Au 2024 10.1021/jacsau.4c00271; AcepKa arXiv 2604.00841
+2026-10-26T08:25:00Z,C,https://github.com/dptech-corp/Uni-pKa,webfetch,ok,1,README; Apache-2.0; no conformer details
+2026-10-26T08:25:00Z,C,https://pmc.ncbi.nlm.nih.gov/articles/PMC11423309/,webfetch,ok,1,Uni-pKa JACS Au full text first 100k chars
+2026-10-26T08:25:00Z,C,https://arxiv.org/html/2604.00841v1,webfetch,ok,1,AcepKa full text
+2026-10-26T08:25:00Z,C,https://www.nature.com/articles/s42256-024-00808-8,webfetch,failed_redirect_login,0,guessed URL; not Uni-pKa; abandoned
+2026-10-26T08:25:00Z,C,https://www.researchsquare.com/article/rs-3367941/v1,webfetch,ok_title_only,0,page JS-rendered; no content
+2026-10-26T08:25:00Z,C,https://pmc.ncbi.nlm.nih.gov/articles/PMC7904668/,webfetch,ok,1,SAMPL6 pKa overview first 100k chars
+2026-10-26T08:25:00Z,C,conformational sampling pKa prediction density functional theory flexible molecules,openalex,ok,10,weak; mostly off-target
+2026-10-26T08:25:00Z,C,Epik improved ionization and tautomerization prediction machine learning,openalex,ok,5,Epik 7 not retrieved by OpenAlex title search
+2026-10-26T08:25:00Z,C,MolGpKa graph convolutional neural network pKa,openalex,ok,5,MolGpKa not directly found; Mayr 2022 transfer learning; MF-SuP-pKa
+2026-10-26T08:25:00Z,C,Dimorphite-DL protonation states,openalex,ok,3,Ropp 2019
+2026-10-26T08:25:00Z,C,MolTaut tautomer prediction aqueous,openalex,ok,5,MolTaut not found
+2026-10-26T08:25:00Z,C,Jaguar pKa conformational search accuracy,openalex,ok,8,Wagen&Wagen 2024 MLIP pKa; Kromann/Jensen PM6 2016
+2026-10-26T08:35:00Z,C,Epik 7 Johnston 2023 JCTC microscopic pKa graph convolutional neural network tautomer populations,websearch,ok,10,Epik 7 ChemRxiv + Schrodinger page: topological / agnostic to 3D
+2026-10-26T08:35:00Z,C,https://www.schrodinger.com/science-articles/schrodinger-solutions-small-molecule-protonation-state-enumeration-and-pka,webfetch,ok,1,vendor page; Epik7 agnostic to 3D; Jaguar pKa conformer search
+2026-10-26T08:35:00Z,C,Macro-pKa Schrodinger conformational search Jaguar pKa accuracy,websearch,ok,9,vendor descriptions only; no numbers
+2026-10-26T08:35:00Z,C,Jensen semiempirical pKa drug-like molecules conformer search,websearch,ok,9,Jensen 2017 JPCA; conformer effect not isolated in snippets
+2026-10-26T08:35:00Z,C,pKa shift intramolecular hydrogen bond conformer ensemble drug-like molecule magnitude,websearch,ok,9,led to Over et al 2014 J Med Chem
+2026-10-26T08:35:00Z,C,https://pmc.ncbi.nlm.nih.gov/articles/PMC3968888/,webfetch,ok,1,Over 2014 full text: ~1 pKa unit stereo-IMHB shift exp
+2026-10-26T08:35:00Z,C,pK shifts in small molecules and HIV protease electrostatics and conformation,openalex,ok,3,Gilson 1998 JACS not retrieved
+2026-10-26T08:35:00Z,C,constant pH replica exchange explicit solvent Swails Roitberg,openalex,ok,5,Swails 2014 not retrieved directly; Cruzeiro/Roitberg 2019
+2026-10-26T08:35:00Z,C,Protons OpenMM constant pH small molecule tautomers,openalex,ok,5,off-target
+2026-10-26T08:35:00Z,C,Rustenburg Chodera constant-pH protons openmm small molecule,websearch,ok,9,protons docs: ligand states from Epik + calibrated reference free energies
+2026-10-26T08:35:00Z,C,Starling macroscopic pKa Wagen,websearch,ok,9,ChemRxiv 2025 + Rowan blog
+2026-10-26T08:35:00Z,C,Wagen 2024 MLIP pKa AIMNet2 conformer search,websearch,ok,9,ChemRxiv 2024; Rowan pKa blog
+2026-10-26T08:35:00Z,C,https://rowansci.substack.com/p/starling-macroscopic-pka-logd-and,webfetch,ok,1,no conformer detail
+2026-10-26T08:35:00Z,C,https://rowansci.substack.com/p/rowan-pka-fast-and-accurate-prediction,webfetch,ok,1,824 conformers upadacitinib example
+2026-10-26T08:35:00Z,C,constant pH MD drug-like small molecule water coupled conformational sampling,websearch,ok,10,mostly protein CpHMD
+2026-10-26T08:35:00Z,C,https://www.choderalab.org/publications/tag/OpenEye+Toolkit,webfetch,ok,1,Gunner et al 2020 JCAMD citation

@@ -1,0 +1,158 @@
+timestamp_utc,run_dir,family,query,backend,status,n_results,notes
+2026-10-26T08:20:24Z,scholar_runs/family_A,family_A,(all queries),google_scholar,not_searched_no_tool,0,Google Scholar unavailable in this session
+2026-10-26T08:20:42Z,scholar_runs/family_A,family_A,joint protonation state conformer generation,openalex,ok,15,title-word search; all off-topic (proton therapy etc.); 0 relevant
+2026-10-26T08:20:42Z,scholar_runs/family_A,family_A,protonation state diffusion model molecular,openalex,ok,15,off-topic (proton transport MD); 0 relevant
+2026-10-26T08:20:42Z,scholar_runs/family_A,family_A,pH conditioned conformer generation,openalex,ok,15,off-topic; 0 relevant
+2026-10-26T08:20:42Z,scholar_runs/family_A,family_A,joint protonation state and conformer generation generative model diffusion,websearch,ok,10,"no joint method found; CORDIS project 101210115 (protein protonation + multiconformer via flow matching, proposal only)"
+2026-10-26T08:21:00Z,scholar_runs/family_A,family_A,protonation-aware molecular conformer generation machine learning,websearch,ok,9,no joint method; pKAce (2407.11103) pKa model on conformers; OrbNet Denali enumerates protonation then conformers (pipeline)
+2026-10-26T08:21:00Z,scholar_runs/family_A,family_A,tautomer and conformer joint generation deep generative model 3D,websearch,ok,10,no joint tautomer+conformer generator; Auto3D (pipeline enumeration+ANI)
+2026-10-26T08:21:00Z,scholar_runs/family_A,family_A,Uni-pKa microstate free energy protonation ensemble conformers,websearch,ok,9,"Uni-pKa (ChemRxiv), AcepKa 2604.00841 'protonation-state generation' + separate conformer engine; Starling"
+2026-10-26T08:21:00Z,scholar_runs/family_A,family_A,diffusion docking protonation state tautomer sampling ligand generative,websearch,ok,10,DiffDock/SigmaDock/DynamicBind; none mention protonation/tautomer sampling in results
+2026-10-26T08:21:19Z,scholar_runs/family_A,family_A,"""protonation"" ""conformer"" generative model pH-dependent ensemble arXiv 2025",websearch,ok,10,"no pH-conditioned generator; OMTRA 2512.05080, FlexiFlow 2511.17249, OMol25 protonation eval surfaced"
+2026-10-26T08:21:19Z,scholar_runs/family_A,family_A,microstate conformational ensemble generative model charge state small molecule,websearch,ok,10,none relevant at small-molecule level
+2026-10-26T08:21:19Z,scholar_runs/family_A,family_A,discrete continuous diffusion protonation hydrogen placement molecule structure generation,websearch,ok,10,no protonation; MUDiff/DiffMol (family D)
+2026-10-26T08:21:19Z,scholar_runs/family_A,family_A,arxiv 2604.00841 AcepKa,webfetch,ok,1,abstract page: protonation + conformer generation as separate components; 3D-aware mode applies protonation to bound poses
+2026-10-26T08:22:00Z,scholar_runs/family_A,family_A,tautomer-aware 3D molecule generation diffusion tautomer state,websearch,ok,9,"no tautomer-state 3D generator; D3MES (H placement), GCDM, MDM"
+2026-10-26T08:22:00Z,scholar_runs/family_A,family_A,protomer conformer generation neural network ionization state 3D pose,websearch,ok,10,AcepKa pipeline: enumerate microstates then conformers per state then NN score; 3D mode keeps pose
+2026-10-26T08:22:00Z,scholar_runs/family_A,family_A,co-folding ligand protonation state sampling Boltz AlphaFold3 hydrogen,websearch,ok,10,nothing on ligand protonation sampling in co-folding models
+2026-10-26T08:22:00Z,scholar_runs/family_A,family_A,generative model jointly samples protonation states and structure pH input,websearch,ok,9,none; closest conceptual analogue is protein sequence-structure co-design
+2026-10-26T08:23:57Z,scholar_runs/family_A,family_A,chemrxiv protonation state aware 3D generative ligand pH dependent conformer ensemble,websearch,ok,10,"LoQI/ChEMBL3D (conformer diffusion, data spans protonation states); AcepKa (pH input); Epik v7"
+2026-10-26T08:23:57Z,scholar_runs/family_A,family_A,constant pH machine learning generative model protonation sampling titratable,websearch,ok,10,protein CpHMD/pKa predictors only; no generative protonation sampler
+2026-10-26T08:23:57Z,scholar_runs/family_A,family_A,Uni-pKa protonation ensemble pKa prediction,openalex,ok,5,"Uni-pKa (Res Square 2023), AcepKa JCIM 2026 10.1021/acs.jcim.6c03037, Wagen pKa ML"
+2026-10-26T08:23:57Z,scholar_runs/family_A,family_A,arxiv 2604.00841 AcepKa full text,webfetch,ok,1,pH is an input; microstates rule-based SMARTS enumeration; conformers generated per microstate (sequential)
+2026-10-26T08:23:57Z,scholar_runs/family_A,family_A,LoQI ChEMBL3D stereochemistry-aware diffusion conformer,websearch,ok,9,LoQI diffusion conformer gen; ChEMBL3D data has multiple protonation states; protonation not generated
+2026-10-26T08:23:57Z,scholar_runs/family_A,family_A,pKa OR protonation conditioned generative flow matching charge state 2026,websearch,ok,9,nothing
+2026-10-26T08:23:57Z,scholar_runs/family_A,family_A,"Torsional Diffusion citing papers (90 citations, top 25)",citation_neighbours,ok,25,"no protonation/pH descendants in top-cited; JODO (TNNLS 2024), SurfDock, CDGS surfaced"
+2026-10-26T08:30:21Z,scholar_runs/family_A,family_A,tautomer generative model deep learning enumeration,openalex,ok,10,all off-topic SMILES generative design papers; 0 relevant
+2026-10-26T08:30:21Z,scholar_runs/family_A,family_A,Torsional Diffusion abstract page,webfetch,ok,1,abstract only; no detail on fixed local structure/hydrogens on the abs page
+2026-10-26T08:21Z,scholar_runs/family_B,family_B,gcorso/torsional-diffusion utils/featurization.py (raw GitHub),webfetch,ok,1,Official TD featurization read; formal charge + AddHs confirmed
+2026-10-26T08:22Z,scholar_runs/family_B,family_B,DiTMC diffusion transformer molecular conformer generation 2025 arXiv,websearch,ok,10,"-> arXiv 2506.15378, NeurIPS 2025, code ML4MolSim/dit_mc"
+2026-10-26T08:23Z,scholar_runs/family_B,family_B,EC-Conf consistency model fast molecular conformer generation,websearch,ok,10,"-> arXiv 2308.00237, J Cheminform 2024"
+2026-10-26T08:23Z,scholar_runs/family_B,family_B,SO(3)-Averaged Flow Matching molecular conformer generation arXiv,websearch,ok,9,"-> arXiv 2507.09785, ICML 2025 (NVIDIA)"
+2026-10-26T08:23Z,scholar_runs/family_B,family_B,COSMIC conformer generation model arXiv 2025,websearch,no_match,9,No COSMIC hit on general web; resolved later via OpenAlex
+2026-10-26T08:23Z,scholar_runs/family_B,family_B,MSGEN molecular conformer generation arXiv,websearch,partial,9,No arXiv listing; resolved to ICLR 2026 'Hierarchical Multi-Scale Molecular Conformer Generation'
+2026-10-26T08:25Z,scholar_runs/family_B,family_B,"""COSMIC"" molecular conformer generation diffusion Boltzmann",websearch,no_match,10,Still no hit; name collides with cosmology papers
+2026-10-26T08:25Z,scholar_runs/family_B,family_B,"""StoL"" SMILES to 3D structure generation; ""PDCG"" conformer generation",websearch,partial,10,StoL = arXiv 2511.12182; PDCG not found on web
+2026-10-26T08:25Z,scholar_runs/family_B,family_B,transferable Boltzmann generator small molecules Klein Noe,websearch,ok,10,"-> arXiv 2406.14426, NeurIPS 2024"
+2026-10-26T08:25Z,scholar_runs/family_B,family_B,conformer generation flow matching 2026 protonation state charge aware,websearch,no_match,9,"No 2025-2026 pH/protonation-conditioned conformer generator surfaced; SemlaFlow noted (formal charge as generated variable, de novo not conformer)"
+2026-10-26T08:27Z,scholar_runs/family_B,family_B,COSMIC conformer generation molecular,openalex,ok,10,"W4395663930 COSMIC: Molecular Conformation Space Modeling in Internal Coordinates with an Adversarial Framework, JCIM 2024"
+2026-10-26T08:27Z,scholar_runs/family_B,family_B,PDCG physics diffusion conformer generation,openalex,ok,3,"W7130458699 PDCG, Chemistry (MDPI) 2026, doi 10.3390/chemistry8020029"
+2026-10-26T08:27Z,scholar_runs/family_B,family_B,GeoMFormer general architecture geometric molecular representation learning,openalex,ok,5,W4400024878 arXiv 2406.16853
+2026-10-26T08:27Z,scholar_runs/family_B,family_B,Particle Guidance non-IID diverse sampling diffusion conformer generation,websearch,ok,9,"-> arXiv 2310.13102, ICLR 2024; applied on top of torsional diffusion"
+2026-10-26T08:30Z,scholar_runs/family_B,family_B,GEOM dataset paper full text (arXiv 2006.05531v4 HTML),webfetch,ok,1,De-salting / ionization-state text recovered (Methods); tautomers NOT generated
+2026-10-26T08:31Z,scholar_runs/family_B,family_B,arxiv.org/html/2506.15378v2 (DiTMC full text),webfetch,ok,1,Table A8 atom features incl. formal charge -5..5
+2026-10-26T08:31Z,scholar_runs/family_B,family_B,arxiv.org/html/2507.09785v1 (SO3-AvgFlow full text),webfetch,ok,1,"Atom feature table: formal charge, total num hydrogens"
+2026-10-26T08:34Z,scholar_runs/family_B,family_B,PattanaikL/GeoMol model/featurization.py,webfetch,ok,1,"formal charge [-1,0,1], AddHs"
+2026-10-26T08:34Z,scholar_runs/family_B,family_B,DeepGraphLearning/ConfGF dataset.py,webfetch,ok,1,atom_type = atomic number only; no formal charge
+2026-10-26T08:36Z,scholar_runs/family_B,family_B,shenoynikhil/ETFlow etflow/commons/featurization.py,webfetch,ok,1,AddHs + GetFormalCharge confirmed
+2026-10-26T08:36Z,scholar_runs/family_B,family_B,arxiv.org/html/2311.17932v2 (MCF full text),webfetch,ok,1,Table 6 node features incl. formal charge -1..+1; Laplacian eigenvector PE
+2026-10-26T08:38Z,scholar_runs/family_B,family_B,arxiv.org/html/2306.14852v1 (CoarsenConf full text),webfetch,ok,1,atomic charge among node features; Boltzmann weights only used to pick training conformers
+2026-10-26T08:38Z,scholar_runs/family_B,family_B,arxiv.org/html/2308.00237v6 (EC-Conf full text),webfetch,ok,1,Atom features not specified; ConfGF-style splits
+2026-10-26T08:38Z,scholar_runs/family_B,family_B,arxiv.org/html/2511.12182v1 (StoL full text),webfetch,ok,1,"Explicit H; fragments restricted to C,N,O,F; charge not addressed"
+2026-10-26T08:38Z,scholar_runs/family_B,family_B,mdpi.com/2624-8549/8/2/29 (PDCG full text),webfetch,blocked_403,0,MDPI returns 403 to both curl and WebFetch; metadata only
+2026-10-26T08:40Z,scholar_runs/family_B,family_B,openreview.net MSGEN pdf,webfetch,blocked_403,0,OpenReview bot check; abstract obtained from iclr.cc virtual page instead
+2026-10-26T08:40Z,scholar_runs/family_B,family_B,iclr.cc/virtual/2026/poster/10006885 (MSGEN abstract),webfetch,ok,1,Abstract + authors obtained
+2026-10-26T08:40Z,scholar_runs/family_B,family_B,arxiv.org/html/2406.16853v1 (GeoMFormer full text),webfetch,ok,1,"Representation/prediction model, not a generator"
+2026-10-26T08:40Z,scholar_runs/family_B,family_B,arxiv.org/html/2406.14426v2 (Transferable Boltzmann Generators full text),webfetch,ok,1,Dipeptides; atom-type one-hot 54 classes; no charge/protonation
+2026-10-26T08:42Z,scholar_runs/family_B,family_B,arxiv.org/html/2206.01729v2 (Torsional Diffusion full text),webfetch,ok,1,Random splits from Ganea et al.; torsional Boltzmann generator with MMFF energies
+2026-10-26T08:42Z,scholar_runs/family_B,family_B,pubs.acs.org JCIM 3c00989 (COSMIC full text),webfetch,blocked_403,0,ACS paywall/403; abstract-level only
+2026-10-26T08:43Z,scholar_runs/family_B,family_B,Uni-Mol atom features charge hydrogen ICLR 2023,websearch,partial,9,Venue/code confirmed; featurization details not resolved
+2026-10-26T08:45Z,scholar_runs/family_B,family_B,(family-level record) Google Scholar,google_scholar,not_searched_no_tool,0,scout_cli.py / Scholar not available on this Linux session; never queried
+2026-10-26T08:21:00Z,scholar_runs/family_C,C,Uni-pKa unified framework pKa prediction,openalex,ok,5,found Uni-pKa Research Square preprint W4387732971
+2026-10-26T08:21:00Z,scholar_runs/family_C,C,constant pH molecular dynamics small molecule ligand protonation,openalex,ok,10,Donnini 2011 lambda-dyn; Henderson/Shen 2018 ligand CpHMD; phbuilder 2024
+2026-10-26T08:21:00Z,scholar_runs/family_C,C,Epik 7 microscopic pKa machine learning,openalex,ok,5,Epik 7 not found by title words; found Wagen 2025 Starling-pKa
+2026-10-26T08:21:00Z,scholar_runs/family_C,C,QupKake pKa prediction semiempirical graph neural network,openalex,ok,5,QupKake JCTC 2024
+2026-10-26T08:21:00Z,scholar_runs/family_C,C,conformational dependence pKa small molecule,openalex,ok,10,mostly protein pKa; off-target
+2026-10-26T08:21:00Z,scholar_runs/family_C,C,SAMPL6 pKa challenge microscopic macroscopic,openalex,ok,10,SAMPL6 overview + measurements; SAMPL7 eval
+2026-10-26T08:21:00Z,scholar_runs/family_C,C,(any) Google Scholar,google_scholar,not_searched_no_tool,0,Google Scholar unavailable in this session
+2026-10-26T08:25:00Z,scholar_runs/family_C,C,QupKake micro-pKa GFN2-xTB conformer github,websearch,ok,9,PMC11325546 + github hutchisonlab/QupKake
+2026-10-26T08:25:00Z,scholar_runs/family_C,C,https://pmc.ncbi.nlm.nih.gov/articles/PMC11325546/,webfetch,ok,1,QupKake full text first 100k chars read
+2026-10-26T08:25:00Z,scholar_runs/family_C,C,Uni-pKa JCIM 2024 protonation ensemble Dwar-iBond microstate free energy conformers Uni-Mol,websearch,ok,9,published as JACS Au 2024 10.1021/jacsau.4c00271; AcepKa arXiv 2604.00841
+2026-10-26T08:25:00Z,scholar_runs/family_C,C,https://github.com/dptech-corp/Uni-pKa,webfetch,ok,1,README; Apache-2.0; no conformer details
+2026-10-26T08:25:00Z,scholar_runs/family_C,C,https://pmc.ncbi.nlm.nih.gov/articles/PMC11423309/,webfetch,ok,1,Uni-pKa JACS Au full text first 100k chars
+2026-10-26T08:25:00Z,scholar_runs/family_C,C,https://arxiv.org/html/2604.00841v1,webfetch,ok,1,AcepKa full text
+2026-10-26T08:25:00Z,scholar_runs/family_C,C,https://www.nature.com/articles/s42256-024-00808-8,webfetch,failed_redirect_login,0,guessed URL; not Uni-pKa; abandoned
+2026-10-26T08:25:00Z,scholar_runs/family_C,C,https://www.researchsquare.com/article/rs-3367941/v1,webfetch,ok_title_only,0,page JS-rendered; no content
+2026-10-26T08:25:00Z,scholar_runs/family_C,C,https://pmc.ncbi.nlm.nih.gov/articles/PMC7904668/,webfetch,ok,1,SAMPL6 pKa overview first 100k chars
+2026-10-26T08:25:00Z,scholar_runs/family_C,C,conformational sampling pKa prediction density functional theory flexible molecules,openalex,ok,10,weak; mostly off-target
+2026-10-26T08:25:00Z,scholar_runs/family_C,C,Epik improved ionization and tautomerization prediction machine learning,openalex,ok,5,Epik 7 not retrieved by OpenAlex title search
+2026-10-26T08:25:00Z,scholar_runs/family_C,C,MolGpKa graph convolutional neural network pKa,openalex,ok,5,MolGpKa not directly found; Mayr 2022 transfer learning; MF-SuP-pKa
+2026-10-26T08:25:00Z,scholar_runs/family_C,C,Dimorphite-DL protonation states,openalex,ok,3,Ropp 2019
+2026-10-26T08:25:00Z,scholar_runs/family_C,C,MolTaut tautomer prediction aqueous,openalex,ok,5,MolTaut not found
+2026-10-26T08:25:00Z,scholar_runs/family_C,C,Jaguar pKa conformational search accuracy,openalex,ok,8,Wagen&Wagen 2024 MLIP pKa; Kromann/Jensen PM6 2016
+2026-10-26T08:35:00Z,scholar_runs/family_C,C,Epik 7 Johnston 2023 JCTC microscopic pKa graph convolutional neural network tautomer populations,websearch,ok,10,Epik 7 ChemRxiv + Schrodinger page: topological / agnostic to 3D
+2026-10-26T08:35:00Z,scholar_runs/family_C,C,https://www.schrodinger.com/science-articles/schrodinger-solutions-small-molecule-protonation-state-enumeration-and-pka,webfetch,ok,1,vendor page; Epik7 agnostic to 3D; Jaguar pKa conformer search
+2026-10-26T08:35:00Z,scholar_runs/family_C,C,Macro-pKa Schrodinger conformational search Jaguar pKa accuracy,websearch,ok,9,vendor descriptions only; no numbers
+2026-10-26T08:35:00Z,scholar_runs/family_C,C,Jensen semiempirical pKa drug-like molecules conformer search,websearch,ok,9,Jensen 2017 JPCA; conformer effect not isolated in snippets
+2026-10-26T08:35:00Z,scholar_runs/family_C,C,pKa shift intramolecular hydrogen bond conformer ensemble drug-like molecule magnitude,websearch,ok,9,led to Over et al 2014 J Med Chem
+2026-10-26T08:35:00Z,scholar_runs/family_C,C,https://pmc.ncbi.nlm.nih.gov/articles/PMC3968888/,webfetch,ok,1,Over 2014 full text: ~1 pKa unit stereo-IMHB shift exp
+2026-10-26T08:35:00Z,scholar_runs/family_C,C,pK shifts in small molecules and HIV protease electrostatics and conformation,openalex,ok,3,Gilson 1998 JACS not retrieved
+2026-10-26T08:35:00Z,scholar_runs/family_C,C,constant pH replica exchange explicit solvent Swails Roitberg,openalex,ok,5,Swails 2014 not retrieved directly; Cruzeiro/Roitberg 2019
+2026-10-26T08:35:00Z,scholar_runs/family_C,C,Protons OpenMM constant pH small molecule tautomers,openalex,ok,5,off-target
+2026-10-26T08:35:00Z,scholar_runs/family_C,C,Rustenburg Chodera constant-pH protons openmm small molecule,websearch,ok,9,protons docs: ligand states from Epik + calibrated reference free energies
+2026-10-26T08:35:00Z,scholar_runs/family_C,C,Starling macroscopic pKa Wagen,websearch,ok,9,ChemRxiv 2025 + Rowan blog
+2026-10-26T08:35:00Z,scholar_runs/family_C,C,Wagen 2024 MLIP pKa AIMNet2 conformer search,websearch,ok,9,ChemRxiv 2024; Rowan pKa blog
+2026-10-26T08:35:00Z,scholar_runs/family_C,C,https://rowansci.substack.com/p/starling-macroscopic-pka-logd-and,webfetch,ok,1,no conformer detail
+2026-10-26T08:35:00Z,scholar_runs/family_C,C,https://rowansci.substack.com/p/rowan-pka-fast-and-accurate-prediction,webfetch,ok,1,824 conformers upadacitinib example
+2026-10-26T08:35:00Z,scholar_runs/family_C,C,constant pH MD drug-like small molecule water coupled conformational sampling,websearch,ok,10,mostly protein CpHMD
+2026-10-26T08:35:00Z,scholar_runs/family_C,C,https://www.choderalab.org/publications/tag/OpenEye+Toolkit,webfetch,ok,1,Gunner et al 2020 JCAMD citation
+2026-10-26T08:20:24Z,scholar_runs/family_D,family_D,(all queries),google_scholar,not_searched_no_tool,0,Google Scholar unavailable in this session
+2026-10-26T08:21:19Z,scholar_runs/family_D,family_D,discrete continuous diffusion protonation hydrogen placement molecule structure generation,websearch,ok,10,"MUDiff, DiffMol (cross-logged from family_A)"
+2026-10-26T08:23:57Z,scholar_runs/family_D,family_D,MiDi mixed graph 3D denoising diffusion formal charges,websearch,ok,10,"MiDi: categorical diffusion over atom types, FORMAL CHARGES, bond types + Gaussian on coords; adaptive per-component noise schedules"
+2026-10-26T08:23:57Z,scholar_runs/family_D,family_D,EQGAT-diff formal charge categorical diffusion,websearch,ok,9,"EQGAT-diff (ICLR24): categorical diffusion of atom types, charges, bonds; x0-param; continuous coords"
+2026-10-26T08:23:57Z,scholar_runs/family_D,family_D,SemlaFlow FlowMol flow matching formal charges discrete flow matching,websearch,ok,9,SemlaFlow joint over atom types/coords/bonds/FORMAL CHARGES; FlowMol3 uses CTMC discrete FM for types/charges/bonds + ODE coords
+2026-10-26T08:23:57Z,scholar_runs/family_D,family_D,Campbell 2024 discrete flow models multimodal protein co-design,websearch,ok,10,DFM via CTMC; multimodal with continuous SE(3) flow; protein sequence-structure co-design
+2026-10-26T08:23:57Z,scholar_runs/family_D,family_D,FlexiFlow decomposable flow matching flexible molecular ensemble,webfetch,ok,1,"full text: one-hot atom+charge types, Campbell DFM update at inference, coords flow matching; no pH/protonation/tautomer"
+2026-10-26T08:23:57Z,scholar_runs/family_D,family_D,Torsional Diffusion citing papers,citation_neighbours,ok,25,JODO 'Learning Joint 2D and 3D Graph Diffusion Models for Complete Molecule Generation' TNNLS 2024
+2026-10-26T08:30:21Z,scholar_runs/family_D,family_D,JODO joint 2D 3D graph diffusion complete molecule generation,websearch,ok,9,"JODO generates atom types, formal charges, bonds, coords via Diffusion Graph Transformer; graph-only mode"
+2026-10-26T08:30:21Z,scholar_runs/family_D,family_D,MolDiff atom-bond inconsistency EDM GeoLDM DiffSBDD atom type noise charge,websearch,ok,9,"MolDiff joint atom+bond diffusion, bonds noised harder; GeoLDM/DiffSBDD charge handling not found"
+2026-10-26T08:30:21Z,scholar_runs/family_D,family_D,PepFlow full-atom peptide design multimodal flow matching,websearch,ok,9,SE(3) frames + torus torsions + simplex residue types; partial sampling
+2026-10-26T08:30:21Z,scholar_runs/family_D,family_D,EDM equivariant diffusion node features atom type charge variable atom number,websearch,ok,9,EDM QM9 generates integer atomic charge as relaxed node feature; atom-count prior not confirmed
+2026-10-26T08:30:21Z,scholar_runs/family_D,family_D,Gat 2024 discrete flow matching / D3PM discrete state spaces,websearch,ok,9,DFM via CTMC (NeurIPS24); D3PM structured transition matrices incl. absorbing states
+2026-10-26T08:30:21Z,scholar_runs/family_D,family_D,ProteinGenerator sequence space diffusion ESM3 joint discrete continuous,websearch,ok,9,"PG diffuses sequence, RF2 predicts structure each step; ESM3 detail not retrieved"
+2026-10-26T08:30:21Z,scholar_runs/family_D,family_D,MiDi full text (ar5iv 2302.09048),webfetch,ok,1,per-component adaptive noise schedules; formal charges categorical; no pH/protonation/tautomer
+2026-10-26T08:30:21Z,scholar_runs/family_D,family_D,SemlaFlow full text (arxiv html 2406.07266v3),webfetch,ok,1,"shared denoiser, OT flow coords + Campbell DFM types/bonds; charges predicted but NOT in the flow"
+2026-10-26T08:21:00Z,scholar_runs/family_E,E,(any) Google Scholar,google_scholar,not_searched_no_tool,0,Google Scholar unavailable in this session
+2026-10-26T08:45:00Z,scholar_runs/family_E,E,https://github.com/learningmatter-mit/geom,webfetch,ok,1,GEOM README: no protonation info; CC0 via Dataverse
+2026-10-26T08:45:00Z,scholar_runs/family_E,E,https://pmc.ncbi.nlm.nih.gov/articles/PMC9023519/,webfetch,ok,1,GEOM Sci Data paper: QM9 SMILES as given; de-salting corrects ionization state; vacuum CREST; MoleculeNet no protonation
+2026-10-26T08:45:00Z,scholar_runs/family_E,E,Harvard Dataverse API doi:10.7910/DVN/JNGTDF,webfetch,ok,11,file list + sizes + CC0 1.0 license
+2026-10-26T08:45:00Z,scholar_runs/family_E,E,GEOM tutorial 01_loading_data.ipynb,webfetch,ok,1,per-conformer schema: totalenergy relativeenergy boltzmannweight degeneracy; per-mol charge temperature 298.15K
+2026-10-26T08:45:00Z,scholar_runs/family_E,E,OMol25 huggingface facebook/OMol25,webfetch,ok,1,CC-BY-4.0; details not on card
+2026-10-26T08:45:00Z,scholar_runs/family_E,E,OMol25 Meta 2025 charged molecules protonation states,websearch,ok,9,charge/spin varied; protonation states unconfirmed
+2026-10-26T08:45:00Z,scholar_runs/family_E,E,SPICE dataset 2.0 charged molecules protonation states,websearch,ok,9,charged species present; protonation assignment not documented
+2026-10-26T08:45:00Z,scholar_runs/family_E,E,QMugs dataset conformers license protonation,websearch,ok,9,665k mols 3 conformers
+2026-10-26T08:45:00Z,scholar_runs/family_E,E,https://pmc.ncbi.nlm.nih.gov/articles/PMC9174255/,webfetch,ok,1,QMugs: molecules NEUTRALIZED; nonzero-charge removed
+2026-10-26T08:45:00Z,scholar_runs/family_E,E,MPCONF196 benchmark conformers macrocycles peptides,websearch,ok,9,13 compounds 196 conformers CCSD(T)/CBS
+2026-10-26T08:45:00Z,scholar_runs/family_E,E,https://github.com/WahlOya/Tautobase,webfetch,ok,1,1680 tautomer pairs; DataWarrior .dwar; license not stated
+2026-10-26T08:45:00Z,scholar_runs/family_E,E,IUPAC dissociation constants digitized dataset,websearch,ok,9,IUPAC/Dissociation-Constants repo
+2026-10-26T08:45:00Z,scholar_runs/family_E,E,https://github.com/IUPAC/Dissociation-Constants,webfetch,ok,1,24211 rows 10626 molecules CC BY-NC 4.0 v2.4a
+2026-10-26T08:45:00Z,scholar_runs/family_E,E,raw iupac_high-confidence_v2_4.csv (6.9 MB sample downloaded to ext/),webfetch,ok,1,columns profiled: macroscopic pKa1/pKa2 only; T mostly 20-25C
+2026-10-26T08:45:00Z,scholar_runs/family_E,E,SAMPL6/7/8 GitHub repos (API listings + raw files),webfetch,ok,3,microstate CSVs + SAMPL8 3D microstate structures; exp macro pKa
+2026-10-26T08:45:00Z,scholar_runs/family_E,E,DataWarrior pKaInWater dataset,websearch,ok,9,~7911-7912 entries shipped with DataWarrior; provenance poorly documented
+2026-10-26T08:45:00Z,scholar_runs/family_E,E,neutron crystallography ligand protonation PDB,websearch,ok,9,~88 neutron structures quoted (undated); no systematic ligand-protonation dataset found
+2026-10-26T08:45:00Z,scholar_runs/family_E,E,LoQI ChEMBL3D 2025,websearch,ok,9,ChEMBL3D ~250M geometries 1.8M compounds multiple protonation states (other agent audits)
+2026-10-26T08:45:00Z,scholar_runs/family_E,E,OrbNet Denali dataset protonation states tautomers,websearch,ok,9,2.3M geometries ChEMBL27 incl protonation states and tautomers; figshare
+2026-10-26T08:21:32Z,scholar_runs/loqi_rapa,loqi_rapa,LoQI / RAPA / ChEMBL3D protonation,google_scholar,not_searched_no_tool,0,Google Scholar not available in this Linux session; never searched
+2026-10-26T08:21:32Z,scholar_runs/loqi_rapa,loqi_rapa,"git clone --depth 1 https://github.com/isayevlab/LoQI (HEAD 04f3caef, 2026-10-01)",webfetch,ok,1,code read locally at /home2/nishanth.r/jmcg_stage/ext/LoQI
+2026-10-26T08:24:08Z,scholar_runs/loqi_rapa,loqi_rapa,lookup 10.26434/chemrxiv-2025-k4h7v,openalex,ok,1,W4413356074; ChemRxiv 2025; cited_by 0
+2026-10-26T08:24:08Z,scholar_runs/loqi_rapa,loqi_rapa,Scalable Low-Energy Molecular Conformer Generation with Quantum Mechanical Accuracy,openalex,ok,10,preprint + KiltHub release 10.1184/r1/31441570; no journal version
+2026-10-26T08:24:08Z,scholar_runs/loqi_rapa,loqi_rapa,LoQI ChEMBL3D conformer generation Nikitin Isayev journal 2026,websearch,ok,9,ChemRxiv v1 2025-08-20; NeurIPS 2025 AI4Mat workshop listing; no journal version found
+2026-10-26T08:24:08Z,scholar_runs/loqi_rapa,loqi_rapa,chemrxiv article page 689f756ea94eede154ec6217,webfetch,ok,1,abstract only; PDF link not exposed
+2026-10-26T08:24:08Z,scholar_runs/loqi_rapa,loqi_rapa,arxiv LoQI ChEMBL3D stereochemistry-aware diffusion conformer,websearch,ok,9,no arXiv version found
+2026-10-26T08:24:08Z,scholar_runs/loqi_rapa,loqi_rapa,chemrxiv public API / chemrxiv.org/doi/pdf,webfetch,blocked,0,Cloudflare challenge / HTTP 403; not bypassed
+2026-10-26T08:24:08Z,scholar_runs/loqi_rapa,loqi_rapa,figshare API articles 31428449 (ChEMBL3D) and 31441570 (LoQI release),webfetch,ok,2,metadata + README + scripts + small npy downloaded to ext/chembl3d_meta
+2026-10-26T08:24:08Z,scholar_runs/loqi_rapa,loqi_rapa,neurips.cc/virtual/2025/129011 -> openreview Ei3eF8B8XH pdf,webfetch,blocked,0,OpenReview browser verification page; not bypassed
+2026-10-26T08:24:08Z,scholar_runs/loqi_rapa,loqi_rapa,Europe PMC DOI/title search for LoQI preprint,webfetch,ok,0,not indexed
+2026-10-26T08:24:08Z,scholar_runs/loqi_rapa,loqi_rapa,ChEMBL3D FixpKa protomer conformers AIMNet2 LoQI openreview,websearch,ok,10,nothing new
+2026-10-26T08:24:08Z,scholar_runs/loqi_rapa,loqi_rapa,ChEMBL 3D conformers Isayev AIMNet2 ChEMBL blog release protonation pH 7.4,websearch,ok,10,no pH documented for ChEMBL3D protomer step
+2026-10-26T08:25:17Z,scholar_runs/loqi_rapa,loqi_rapa,https://pmc.ncbi.nlm.nih.gov/articles/PMC12308802/,webfetch,ok,1,"RAPA full text (JCIM 2025, CC-BY)"
+2026-10-26T08:25:17Z,scholar_runs/loqi_rapa,loqi_rapa,Europe PMC fullTextXML PMC12308802,webfetch,ok,1,full text saved research/papers/rapa_europepmc.xml; PDF render returned HTML (not saved)
+2026-10-26T08:26:23Z,scholar_runs/loqi_rapa,loqi_rapa,citing works of 10.1021/acs.jcim.5c00859 (RAPA),citation_neighbours,ok,0,OpenAlex cited_by_total 0
+2026-10-26T08:26:23Z,scholar_runs/loqi_rapa,loqi_rapa,citing works of 10.26434/chemrxiv-2025-k4h7v (LoQI),citation_neighbours,ok,0,OpenAlex cited_by_total 0 (preprint; OpenAlex coverage of citing preprints may be incomplete)
+2026-10-26T08:26:23Z,scholar_runs/loqi_rapa,loqi_rapa,"\LoQI\"" conformer generation protonation state OR tautomer OR pH 2026""",websearch,ok,10,no LoQI extension toward pH/state selection; surfaced AcepKa arXiv 2604.00841
+2026-10-26T08:26:23Z,scholar_runs/loqi_rapa,loqi_rapa,"\RAPA\"" rotamer protonation assignment Kurtzman cited multiple protein configurations docking 2026""",websearch,ok,9,only RAPA itself + ChemRxiv preprint 675c85b2085116a13353ce8b; no citing extension found
+2026-10-26T08:26:23Z,scholar_runs/loqi_rapa,loqi_rapa,generative model joint protonation state and conformer pH-conditioned diffusion small molecule microstate,websearch,ok,9,no joint pH-conditioned state+conformer generator found
+2026-10-26T08:26:23Z,scholar_runs/loqi_rapa,loqi_rapa,arxiv.org/abs/2604.00841,webfetch,ok,1,AcepKa abstract: protonation ensemble + separate AceConfgen; abstract-level only
+2026-10-26T08:26:23Z,scholar_runs/loqi_rapa,loqi_rapa,pH-dependent protomer ensemble 3D conformer generation ML microstate populations generative,websearch,ok,9,AcepKa again; no joint generator
+2026-10-26T08:26:53Z,scholar_runs/loqi_rapa,loqi_rapa,OpenEye QUACPAC FixpKa pH 7.4 OESetNeutralpHModel single protonation state,websearch,ok,10,FixpKa = rule-based single most favourable state at pH 7.4
+2026-10-26T08:26:53Z,scholar_runs/loqi_rapa,loqi_rapa,docs.eyesopen.com/applications/quacpac/fixpka/fixpka_overview.html,webfetch,ok,1,quote: 'set to its most energetically favorable ionization state for pH=7.4'

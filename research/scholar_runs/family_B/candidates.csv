@@ -1,0 +1,22 @@
+id,title,year,venue,doi_or_url,code_url,relevance(0-3),fulltext_status,checked_utc
+tordiff,Torsional Diffusion for Molecular Conformer Generation,2022,NeurIPS,https://arxiv.org/abs/2206.01729,https://github.com/gcorso/torsional-diffusion,3,full_text_read,2026-10-26T08:42Z
+tordiff_bg,Torsional Boltzmann generator (Sec 3.6/4.5 of torsional diffusion),2022,NeurIPS,https://arxiv.org/abs/2206.01729,https://github.com/gcorso/torsional-diffusion,3,full_text_read,2026-10-26T08:42Z
+geodiff,GeoDiff: a Geometric Diffusion Model for Molecular Conformation Generation,2022,ICLR,https://arxiv.org/abs/2203.02923,https://github.com/MinkaiXu/GeoDiff,2,abstract_only,2026-10-26T08:35Z
+geomol,GeoMol: Torsional Geometric Generation of Molecular 3D Conformer Ensembles,2021,NeurIPS,https://arxiv.org/abs/2106.07802,https://github.com/PattanaikL/GeoMol,2,abstract_only,2026-10-26T08:34Z
+confgf,Learning Gradient Fields for Molecular Conformation Generation (ConfGF),2021,ICML,https://arxiv.org/abs/2105.03902,https://github.com/DeepGraphLearning/ConfGF,2,abstract_only,2026-10-26T08:34Z
+etflow,ET-Flow: Equivariant Flow-Matching for Molecular Conformer Generation,2024,NeurIPS,https://arxiv.org/abs/2410.22388,https://github.com/shenoynikhil/ETFlow,3,abstract_only,2026-10-26T08:36Z
+ditmc,Sampling 3D Molecular Conformers with Diffusion Transformers (DiTMC),2025,NeurIPS,https://arxiv.org/abs/2506.15378,https://github.com/ML4MolSim/dit_mc,3,full_text_read,2026-10-26T08:31Z
+so3avgflow,Efficient Molecular Conformer Generation with SO(3)-Averaged Flow Matching and Reflow,2025,ICML,https://arxiv.org/abs/2507.09785,,3,full_text_read,2026-10-26T08:31Z
+ecconf,EC-Conf: An Ultra-fast Diffusion Model for Molecular Conformation Generation with Equivariant Consistency,2024,Journal of Cheminformatics,https://doi.org/10.1186/s13321-024-00893-2,https://github.com/DeepLearningPS/EcConf,2,full_text_read,2026-10-26T08:38Z
+cosmic,COSMIC: Molecular Conformation Space Modeling in Internal Coordinates with an Adversarial Framework,2024,J. Chem. Inf. Model.,https://doi.org/10.1021/acs.jcim.3c00989,,2,not_accessible,2026-10-26T08:42Z
+geomformer,GeoMFormer: A General Architecture for Geometric Molecular Representation Learning,2024,arXiv/ICML,https://arxiv.org/abs/2406.16853,https://github.com/c-tl/GeoMFormer,1,full_text_read,2026-10-26T08:40Z
+coarsenconf,CoarsenConf: Equivariant Coarsening with Aggregated Attention for Molecular Conformer Generation,2023,arXiv,https://arxiv.org/abs/2306.14852,https://github.com/ASK-Berkeley/CoarsenConf,2,full_text_read,2026-10-26T08:38Z
+msgen,Hierarchical Multi-Scale Molecular Conformer Generation (MSGEN),2026,ICLR,https://iclr.cc/virtual/2026/poster/10006885,,2,abstract_only,2026-10-26T08:40Z
+stol,Chemistry-Enhanced Diffusion-Based Framework for Small-to-Large Molecular Conformation Generation (StoL),2025,arXiv,https://arxiv.org/abs/2511.12182,https://github.com/Yifei-Zhu/StoL,2,full_text_read,2026-10-26T08:38Z
+pdcg,PDCG: A Diffusion Model Guided by Pre-Training for Molecular Conformation Generation,2026,Chemistry (MDPI),https://doi.org/10.3390/chemistry8020029,,1,not_accessible,2026-10-26T08:38Z
+unimol,Uni-Mol: A Universal 3D Molecular Representation Learning Framework,2023,ICLR,https://openreview.net/forum?id=6K2RM6wVqKu,https://github.com/deepmodeling/Uni-Mol,2,abstract_only,2026-10-26T08:43Z
+mcf,Swallowing the Bitter Pill: Simplified Scalable Conformer Generation (Molecular Conformer Fields),2024,ICML,https://arxiv.org/abs/2311.17932,,3,full_text_read,2026-10-26T08:36Z
+partguide,Particle Guidance: non-I.I.D. Diverse Sampling with Diffusion Models,2024,ICLR,https://arxiv.org/abs/2310.13102,https://github.com/gcorso/particle-guidance,2,abstract_only,2026-10-26T08:25Z
+tbg_kn,Transferable Boltzmann Generators,2024,NeurIPS,https://arxiv.org/abs/2406.14426,https://osf.io/n8vz3/,2,full_text_read,2026-10-26T08:40Z
+geom,GEOM: Energy-annotated molecular conformations for property prediction and molecular generation,2022,Scientific Data,https://doi.org/10.1038/s41597-022-01288-4,https://github.com/learningmatter-mit/geom,3,full_text_read,2026-10-26T08:30Z
+loqi,LoQI (listed only; deep audit assigned to another agent),NA,NA,NA,NA,3,not_accessible,2026-10-26T08:45Z

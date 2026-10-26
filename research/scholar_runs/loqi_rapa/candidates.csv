@@ -1,1 +1,6 @@
 id,title,year,venue,doi_or_url,code_url,relevance(0-3),fulltext_status,checked_utc
+loqi,"Scalable Low-Energy Molecular Conformer Generation with Quantum Mechanical Accuracy",2025,ChemRxiv (also NeurIPS 2025 AI4Mat workshop),10.26434/chemrxiv-2025-k4h7v,https://github.com/isayevlab/LoQI,3,abstract_only,2026-10-26T08:26:23Z
+chembl3d,"ChEMBL3D: Quantum-Accurate 3D Conformers for ChEMBL at Scale (dataset)",2026,KiltHub,10.1184/R1/31428449,https://github.com/isayevlab/LoQI,3,full_text_read,2026-10-26T08:26:23Z
+loqi_release,"LoQI data release (checkpoints + chembl3d_stereo processed)",2026,KiltHub,10.1184/R1/31441570,https://github.com/isayevlab/LoQI,2,full_text_read,2026-10-26T08:26:23Z
+rapa,"A Self-Consistent Approach to Rotamer and Protonation State Assignments (RAPA): Moving Beyond Single Protein Configurations",2025,J. Chem. Inf. Model. 65(14):7639-7650,10.1021/acs.jcim.5c00859,https://github.com/Ventus-Therapeutics/rapa/tree/v1.0,2,full_text_read,2026-10-26T08:26:23Z
+acepka,"AcepKa: Thermodynamics-Informed pKa Prediction and Protonation-State Generation in PlayMolecule AI",2026,arXiv,https://arxiv.org/abs/2604.00841,,2,abstract_only,2026-10-26T08:26:23Z

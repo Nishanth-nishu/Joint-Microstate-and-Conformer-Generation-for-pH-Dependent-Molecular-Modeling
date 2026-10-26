@@ -1,1 +1,11 @@
 id,title,year,venue,doi_or_url,code_url,relevance(0-3),fulltext_status,checked_utc
+geom_2022,GEOM: Energy-annotated molecular conformations for property prediction and molecular generation,2022,Scientific Data,10.1038/s41597-022-01288-4,https://github.com/learningmatter-mit/geom,3,full_text_read,2026-10-26
+qmugs_2022,QMugs quantum mechanical properties of drug-like molecules,2022,Scientific Data,10.1038/s41597-022-01390-7,https://doi.org/10.3929/ethz-b-000482129,2,full_text_read,2026-10-26
+spice_2023,SPICE A Dataset of Drug-like Molecules and Peptides for Training Machine Learning Potentials,2023,Scientific Data,10.1038/s41597-022-01882-6,https://github.com/openmm/spice-dataset,2,abstract_only,2026-10-26
+omol25_2025,OMol25 Open Molecules 2025,2025,arXiv,arXiv:2505.08762,https://huggingface.co/facebook/OMol25,2,abstract_only,2026-10-26
+orbnet_denali_2021,OrbNet Denali training data (ChEMBL27 protonation states and tautomers),2021,JCP/figshare,10.6084/m9.figshare.14883867,https://figshare.com/articles/dataset/OrbNet_Denali_Training_Data/14883867,3,abstract_only,2026-10-26
+iupac_pka_v24,IUPAC Digitized pKa Dataset v2.4a,2026,Zenodo/RSC Adv,10.5281/zenodo.7236452,https://github.com/IUPAC/Dissociation-Constants,3,full_text_read,2026-10-26
+tautobase_2019,Tautobase: an open tautomer database,2019,JCIM/GitHub,10.1021/acs.jcim.9b00044,https://github.com/WahlOya/Tautobase,3,abstract_only,2026-10-26
+sampl8_pka,SAMPL8 physical properties pKa challenge data,2021,GitHub,https://github.com/samplchallenges/SAMPL8,https://github.com/samplchallenges/SAMPL8,3,full_text_read,2026-10-26
+mpconf196_2018,MPCONF196 conformational energies of peptides and macrocycles,2018,JCTC,10.1021/acs.jctc.8b00286,,1,abstract_only,2026-10-26
+chembl3d_loqi_2025,Scalable Low-Energy Molecular Conformer Generation with QM Accuracy (ChEMBL3D/LoQI),2025,ChemRxiv/NeurIPS,https://www.cambridge.org/engage/chemrxiv/article-details/689f756ea94eede154ec6217,,3,abstract_only,2026-10-26

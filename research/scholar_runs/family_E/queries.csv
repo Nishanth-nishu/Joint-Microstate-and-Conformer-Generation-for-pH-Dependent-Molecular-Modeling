@@ -1,2 +1,21 @@
 timestamp_utc,family,query,backend,status,n_results,notes
 2026-10-26T08:21:00Z,E,(any) Google Scholar,google_scholar,not_searched_no_tool,0,Google Scholar unavailable in this session
+2026-10-26T08:45:00Z,E,https://github.com/learningmatter-mit/geom,webfetch,ok,1,GEOM README: no protonation info; CC0 via Dataverse
+2026-10-26T08:45:00Z,E,https://pmc.ncbi.nlm.nih.gov/articles/PMC9023519/,webfetch,ok,1,GEOM Sci Data paper: QM9 SMILES as given; de-salting corrects ionization state; vacuum CREST; MoleculeNet no protonation
+2026-10-26T08:45:00Z,E,Harvard Dataverse API doi:10.7910/DVN/JNGTDF,webfetch,ok,11,file list + sizes + CC0 1.0 license
+2026-10-26T08:45:00Z,E,GEOM tutorial 01_loading_data.ipynb,webfetch,ok,1,per-conformer schema: totalenergy relativeenergy boltzmannweight degeneracy; per-mol charge temperature 298.15K
+2026-10-26T08:45:00Z,E,OMol25 huggingface facebook/OMol25,webfetch,ok,1,CC-BY-4.0; details not on card
+2026-10-26T08:45:00Z,E,OMol25 Meta 2025 charged molecules protonation states,websearch,ok,9,charge/spin varied; protonation states unconfirmed
+2026-10-26T08:45:00Z,E,SPICE dataset 2.0 charged molecules protonation states,websearch,ok,9,charged species present; protonation assignment not documented
+2026-10-26T08:45:00Z,E,QMugs dataset conformers license protonation,websearch,ok,9,665k mols 3 conformers
+2026-10-26T08:45:00Z,E,https://pmc.ncbi.nlm.nih.gov/articles/PMC9174255/,webfetch,ok,1,QMugs: molecules NEUTRALIZED; nonzero-charge removed
+2026-10-26T08:45:00Z,E,MPCONF196 benchmark conformers macrocycles peptides,websearch,ok,9,13 compounds 196 conformers CCSD(T)/CBS
+2026-10-26T08:45:00Z,E,https://github.com/WahlOya/Tautobase,webfetch,ok,1,1680 tautomer pairs; DataWarrior .dwar; license not stated
+2026-10-26T08:45:00Z,E,IUPAC dissociation constants digitized dataset,websearch,ok,9,IUPAC/Dissociation-Constants repo
+2026-10-26T08:45:00Z,E,https://github.com/IUPAC/Dissociation-Constants,webfetch,ok,1,24211 rows 10626 molecules CC BY-NC 4.0 v2.4a
+2026-10-26T08:45:00Z,E,raw iupac_high-confidence_v2_4.csv (6.9 MB sample downloaded to ext/),webfetch,ok,1,columns profiled: macroscopic pKa1/pKa2 only; T mostly 20-25C
+2026-10-26T08:45:00Z,E,SAMPL6/7/8 GitHub repos (API listings + raw files),webfetch,ok,3,microstate CSVs + SAMPL8 3D microstate structures; exp macro pKa
+2026-10-26T08:45:00Z,E,DataWarrior pKaInWater dataset,websearch,ok,9,~7911-7912 entries shipped with DataWarrior; provenance poorly documented
+2026-10-26T08:45:00Z,E,neutron crystallography ligand protonation PDB,websearch,ok,9,~88 neutron structures quoted (undated); no systematic ligand-protonation dataset found
+2026-10-26T08:45:00Z,E,LoQI ChEMBL3D 2025,websearch,ok,9,ChEMBL3D ~250M geometries 1.8M compounds multiple protonation states (other agent audits)
+2026-10-26T08:45:00Z,E,OrbNet Denali dataset protonation states tautomers,websearch,ok,9,2.3M geometries ChEMBL27 incl protonation states and tautomers; figshare

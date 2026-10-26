@@ -1,3 +1,17 @@
 timestamp_utc,family,query,backend,status,n_results,notes
 2026-10-26T08:20:24Z,family_D,(all queries),google_scholar,not_searched_no_tool,0,Google Scholar unavailable in this session
 2026-10-26T08:21:19Z,family_D,discrete continuous diffusion protonation hydrogen placement molecule structure generation,websearch,ok,10,"MUDiff, DiffMol (cross-logged from family_A)"
+2026-10-26T08:23:57Z,family_D,MiDi mixed graph 3D denoising diffusion formal charges,websearch,ok,10,"MiDi: categorical diffusion over atom types, FORMAL CHARGES, bond types + Gaussian on coords; adaptive per-component noise schedules"
+2026-10-26T08:23:57Z,family_D,EQGAT-diff formal charge categorical diffusion,websearch,ok,9,"EQGAT-diff (ICLR24): categorical diffusion of atom types, charges, bonds; x0-param; continuous coords"
+2026-10-26T08:23:57Z,family_D,SemlaFlow FlowMol flow matching formal charges discrete flow matching,websearch,ok,9,SemlaFlow joint over atom types/coords/bonds/FORMAL CHARGES; FlowMol3 uses CTMC discrete FM for types/charges/bonds + ODE coords
+2026-10-26T08:23:57Z,family_D,Campbell 2024 discrete flow models multimodal protein co-design,websearch,ok,10,DFM via CTMC; multimodal with continuous SE(3) flow; protein sequence-structure co-design
+2026-10-26T08:23:57Z,family_D,FlexiFlow decomposable flow matching flexible molecular ensemble,webfetch,ok,1,"full text: one-hot atom+charge types, Campbell DFM update at inference, coords flow matching; no pH/protonation/tautomer"
+2026-10-26T08:23:57Z,family_D,Torsional Diffusion citing papers,citation_neighbours,ok,25,JODO 'Learning Joint 2D and 3D Graph Diffusion Models for Complete Molecule Generation' TNNLS 2024
+2026-10-26T08:30:21Z,family_D,JODO joint 2D 3D graph diffusion complete molecule generation,websearch,ok,9,"JODO generates atom types, formal charges, bonds, coords via Diffusion Graph Transformer; graph-only mode"
+2026-10-26T08:30:21Z,family_D,MolDiff atom-bond inconsistency EDM GeoLDM DiffSBDD atom type noise charge,websearch,ok,9,"MolDiff joint atom+bond diffusion, bonds noised harder; GeoLDM/DiffSBDD charge handling not found"
+2026-10-26T08:30:21Z,family_D,PepFlow full-atom peptide design multimodal flow matching,websearch,ok,9,SE(3) frames + torus torsions + simplex residue types; partial sampling
+2026-10-26T08:30:21Z,family_D,EDM equivariant diffusion node features atom type charge variable atom number,websearch,ok,9,EDM QM9 generates integer atomic charge as relaxed node feature; atom-count prior not confirmed
+2026-10-26T08:30:21Z,family_D,Gat 2024 discrete flow matching / D3PM discrete state spaces,websearch,ok,9,DFM via CTMC (NeurIPS24); D3PM structured transition matrices incl. absorbing states
+2026-10-26T08:30:21Z,family_D,ProteinGenerator sequence space diffusion ESM3 joint discrete continuous,websearch,ok,9,"PG diffuses sequence, RF2 predicts structure each step; ESM3 detail not retrieved"
+2026-10-26T08:30:21Z,family_D,MiDi full text (ar5iv 2302.09048),webfetch,ok,1,per-component adaptive noise schedules; formal charges categorical; no pH/protonation/tautomer
+2026-10-26T08:30:21Z,family_D,SemlaFlow full text (arxiv html 2406.07266v3),webfetch,ok,1,"shared denoiser, OT flow coords + Campbell DFM types/bonds; charges predicted but NOT in the flow"

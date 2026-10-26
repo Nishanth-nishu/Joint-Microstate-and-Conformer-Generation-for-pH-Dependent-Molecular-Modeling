@@ -1,1 +1,16 @@
 id,title,year,venue,doi_or_url,code_url,relevance(0-3),fulltext_status,checked_utc
+midi,MiDi: Mixed Graph and 3D Denoising Diffusion for Molecule Generation,2023,ECML-PKDD 2023 / arXiv 2302.09048,https://arxiv.org/abs/2302.09048,https://github.com/cvignac/MiDi,3,full_text_read,2026-10-26T08:26:21Z
+jodo,Learning Joint 2D & 3D Diffusion Models for Complete Molecule Generation (JODO),2024,IEEE TNNLS,https://doi.org/10.1109/tnnls.2024.3416328,https://github.com/GRAPH-0/JODO,3,abstract_only,2026-10-26T08:26:21Z
+eqgatdiff,Navigating the Design Space of Equivariant Diffusion-Based Generative Models (EQGAT-diff),2024,ICLR 2024 / arXiv 2309.17296,https://arxiv.org/abs/2309.17296,https://github.com/tuanle618/eqgat-diff,3,abstract_only,2026-10-26T08:26:21Z
+semlaflow,SemlaFlow: Efficient 3D Molecular Generation with Latent Attention and Equivariant Flow Matching,2025,AISTATS 2025 / arXiv 2406.07266,https://arxiv.org/abs/2406.07266,https://github.com/rssrwn/semla-flow,3,full_text_read,2026-10-26T08:26:21Z
+flowmol3,FlowMol3: Flow Matching for 3D De Novo Small-Molecule Generation,2025,arXiv 2508.12629,https://arxiv.org/abs/2508.12629,https://github.com/dunni3/FlowMol,3,abstract_only,2026-10-26T08:26:21Z
+flowmol,Mixed Continuous and Categorical Flow Matching for 3D De Novo Molecule Generation (FlowMol),2024,arXiv 2404.19739,https://arxiv.org/abs/2404.19739,https://github.com/dunni3/FlowMol,2,abstract_only,2026-10-26T08:26:21Z
+multiflow,Generative Flows on Discrete State-Spaces: Multimodal Flows with Applications to Protein Co-Design (Multiflow/DFM),2024,ICML 2024 / arXiv 2402.04997,https://arxiv.org/abs/2402.04997,https://github.com/jasonkyuyim/multiflow,3,abstract_only,2026-10-26T08:26:21Z
+dfm_gat,Discrete Flow Matching,2024,NeurIPS 2024 / arXiv 2407.15595,https://arxiv.org/abs/2407.15595,,2,abstract_only,2026-10-26T08:26:21Z
+d3pm,Structured Denoising Diffusion Models in Discrete State-Spaces (D3PM),2021,NeurIPS 2021 / arXiv 2107.03006,https://arxiv.org/abs/2107.03006,,2,abstract_only,2026-10-26T08:26:21Z
+edm,Equivariant Diffusion for Molecule Generation in 3D (EDM),2022,ICML 2022 / arXiv 2203.17003,https://arxiv.org/abs/2203.17003,https://github.com/ehoogeboom/e3_diffusion_for_molecules,2,abstract_only,2026-10-26T08:26:21Z
+mudiff,MUDiff: Unified Diffusion for Complete Molecule Generation,2023,LoG 2023 / arXiv 2304.14621,https://arxiv.org/abs/2304.14621,,2,abstract_only,2026-10-26T08:26:21Z
+moldiff,MolDiff: Addressing the Atom-Bond Inconsistency Problem in 3D Molecule Diffusion Generation,2023,ICML 2023 / arXiv 2305.07508,https://arxiv.org/abs/2305.07508,https://github.com/pengxingang/MolDiff,2,abstract_only,2026-10-26T08:26:21Z
+pepflow,Full-Atom Peptide Design based on Multi-modal Flow Matching (PepFlow),2024,ICML 2024 / arXiv 2406.00735,https://arxiv.org/abs/2406.00735,,2,abstract_only,2026-10-26T08:26:21Z
+proteingenerator,Multistate and functional protein design using RoseTTAFold sequence space diffusion (ProteinGenerator),2023,bioRxiv / Nat. Biotechnol.,https://doi.org/10.1101/2023.05.08.539766,https://github.com/RosettaCommons/protein_generator,2,abstract_only,2026-10-26T08:26:21Z
+flexiflow,FlexiFlow: decomposable flow matching for generation of flexible molecular ensemble,2025,arXiv 2511.17249,https://arxiv.org/abs/2511.17249,,3,full_text_read,2026-10-26T08:26:21Z

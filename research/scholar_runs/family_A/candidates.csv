@@ -1,1 +1,11 @@
 id,title,year,venue,doi_or_url,code_url,relevance(0-3),fulltext_status,checked_utc
+acepka,AcepKa: Thermodynamics-Informed pKa Prediction and Protonation-State Generation in PlayMolecule AI,2026,J. Chem. Inf. Model. / arXiv 2604.00841,https://doi.org/10.1021/acs.jcim.6c03037,https://playmolecule.com,3,full_text_read,2026-10-26T08:26:21Z
+unipka,Uni-pKa: An Accurate and Physically Consistent pKa Prediction through Protonation Ensemble Modeling,2023,Research Square / ChemRxiv,https://doi.org/10.21203/rs.3.rs-3367941/v1,https://github.com/dptech-corp/Uni-pKa,3,abstract_only,2026-10-26T08:26:21Z
+loqi_chembl3d,Scalable Low-Energy Molecular Conformer Generation with Quantum Mechanical Accuracy (LoQI / ChEMBL3D),2025,ChemRxiv / NeurIPS 2025 workshop,https://doi.org/10.26434/chemrxiv-2025-k4h7v,https://github.com/isayevlab,2,abstract_only,2026-10-26T08:26:21Z
+pkace,PlayMolecule pKAce: Small Molecule Protonation through Equivariant Neural Networks,2024,arXiv 2407.11103,https://arxiv.org/abs/2407.11103,,2,abstract_only,2026-10-26T08:26:21Z
+epik7,Epik: pKa and Protonation State Prediction through Machine Learning,2023,ChemRxiv / JCTC,https://chemrxiv.org/engage/chemrxiv/article-details/63bd91c54fba7064d5001ee0,,2,abstract_only,2026-10-26T08:26:21Z
+omol25,"The Open Molecules 2025 (OMol25) Dataset, Evaluations, and Models",2025,arXiv 2505.08762,https://arxiv.org/abs/2505.08762,https://github.com/facebookresearch/fairchem,2,abstract_only,2026-10-26T08:26:21Z
+wagen_pka,Physics-Informed Machine Learning Enables Rapid Macroscopic pKa Prediction (Starling),2025,ChemRxiv,https://doi.org/10.26434/chemrxiv-2025-t8s9z-v2,https://github.com/rowansci,1,abstract_only,2026-10-26T08:26:21Z
+flexiflow,FlexiFlow: decomposable flow matching for generation of flexible molecular ensemble,2025,arXiv 2511.17249,https://arxiv.org/abs/2511.17249,,2,full_text_read,2026-10-26T08:26:21Z
+tordiff,Torsional Diffusion for Molecular Conformer Generation,2022,NeurIPS 2022,https://arxiv.org/abs/2206.01729,https://github.com/gcorso/torsional-diffusion,3,abstract_only,2026-10-26T08:26:21Z
+cordis_prot,EU project 101210115: flow matching for missing protonation states + multiconformer protein structures,2025,CORDIS project record (not a paper),https://cordis.europa.eu/project/id/101210115,,1,abstract_only,2026-10-26T08:26:21Z
