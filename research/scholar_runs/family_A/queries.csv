@@ -1,0 +1,14 @@
+timestamp_utc,family,query,backend,status,n_results,notes
+2026-10-26T08:20:24Z,family_A,(all queries),google_scholar,not_searched_no_tool,0,Google Scholar unavailable in this session
+2026-10-26T08:20:42Z,family_A,joint protonation state conformer generation,openalex,ok,15,title-word search; all off-topic (proton therapy etc.); 0 relevant
+2026-10-26T08:20:42Z,family_A,protonation state diffusion model molecular,openalex,ok,15,off-topic (proton transport MD); 0 relevant
+2026-10-26T08:20:42Z,family_A,pH conditioned conformer generation,openalex,ok,15,off-topic; 0 relevant
+2026-10-26T08:20:42Z,family_A,joint protonation state and conformer generation generative model diffusion,websearch,ok,10,"no joint method found; CORDIS project 101210115 (protein protonation + multiconformer via flow matching, proposal only)"
+2026-10-26T08:21:00Z,family_A,protonation-aware molecular conformer generation machine learning,websearch,ok,9,no joint method; pKAce (2407.11103) pKa model on conformers; OrbNet Denali enumerates protonation then conformers (pipeline)
+2026-10-26T08:21:00Z,family_A,tautomer and conformer joint generation deep generative model 3D,websearch,ok,10,no joint tautomer+conformer generator; Auto3D (pipeline enumeration+ANI)
+2026-10-26T08:21:00Z,family_A,Uni-pKa microstate free energy protonation ensemble conformers,websearch,ok,9,"Uni-pKa (ChemRxiv), AcepKa 2604.00841 'protonation-state generation' + separate conformer engine; Starling"
+2026-10-26T08:21:00Z,family_A,diffusion docking protonation state tautomer sampling ligand generative,websearch,ok,10,DiffDock/SigmaDock/DynamicBind; none mention protonation/tautomer sampling in results
+2026-10-26T08:21:19Z,family_A,"""protonation"" ""conformer"" generative model pH-dependent ensemble arXiv 2025",websearch,ok,10,"no pH-conditioned generator; OMTRA 2512.05080, FlexiFlow 2511.17249, OMol25 protonation eval surfaced"
+2026-10-26T08:21:19Z,family_A,microstate conformational ensemble generative model charge state small molecule,websearch,ok,10,none relevant at small-molecule level
+2026-10-26T08:21:19Z,family_A,discrete continuous diffusion protonation hydrogen placement molecule structure generation,websearch,ok,10,no protonation; MUDiff/DiffMol (family D)
+2026-10-26T08:21:19Z,family_A,arxiv 2604.00841 AcepKa,webfetch,ok,1,abstract page: protonation + conformer generation as separate components; 3D-aware mode applies protonation to bound poses

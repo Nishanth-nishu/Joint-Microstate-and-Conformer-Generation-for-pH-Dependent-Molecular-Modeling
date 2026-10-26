@@ -1,0 +1,8 @@
+timestamp_utc,family,query,backend,status,n_results,notes
+2026-10-26T08:21:00Z,C,Uni-pKa unified framework pKa prediction,openalex,ok,5,found Uni-pKa Research Square preprint W4387732971
+2026-10-26T08:21:00Z,C,constant pH molecular dynamics small molecule ligand protonation,openalex,ok,10,Donnini 2011 lambda-dyn; Henderson/Shen 2018 ligand CpHMD; phbuilder 2024
+2026-10-26T08:21:00Z,C,Epik 7 microscopic pKa machine learning,openalex,ok,5,Epik 7 not found by title words; found Wagen 2025 Starling-pKa
+2026-10-26T08:21:00Z,C,QupKake pKa prediction semiempirical graph neural network,openalex,ok,5,QupKake JCTC 2024
+2026-10-26T08:21:00Z,C,conformational dependence pKa small molecule,openalex,ok,10,mostly protein pKa; off-target
+2026-10-26T08:21:00Z,C,SAMPL6 pKa challenge microscopic macroscopic,openalex,ok,10,SAMPL6 overview + measurements; SAMPL7 eval
+2026-10-26T08:21:00Z,C,(any) Google Scholar,google_scholar,not_searched_no_tool,0,Google Scholar unavailable in this session

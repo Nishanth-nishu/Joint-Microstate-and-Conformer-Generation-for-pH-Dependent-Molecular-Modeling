@@ -1,0 +1,3 @@
+timestamp_utc,family,query,backend,status,n_results,notes
+2026-10-26T08:20:24Z,family_D,(all queries),google_scholar,not_searched_no_tool,0,Google Scholar unavailable in this session
+2026-10-26T08:21:19Z,family_D,discrete continuous diffusion protonation hydrogen placement molecule structure generation,websearch,ok,10,"MUDiff, DiffMol (cross-logged from family_A)"

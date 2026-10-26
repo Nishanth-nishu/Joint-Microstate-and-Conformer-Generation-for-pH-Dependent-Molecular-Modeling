@@ -14,3 +14,5 @@ papers/blogs/*.txt
 cluster_sync/round2/data/QM9/round2_seeds/l_error.csv
 logs/
 venv/
+research/papers/
+research/scholar_runs/*/text/
