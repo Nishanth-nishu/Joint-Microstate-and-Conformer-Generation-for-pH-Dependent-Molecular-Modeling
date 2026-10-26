@@ -50,3 +50,12 @@ CPU only (torch 2.5.1+cpu), 8 cores / 32 GB (node had 2 free CPUs at submission 
 
 ## Amendment log
 - 2026-10-26 ~10:52 UTC (before any model output): primary stratum switched v1→v2 (see Strata). Analysis default `--stratum_col stratum_v2`.
+- 2026-10-26 22:24 UTC — **Run 1 (job 41159) failed the pre-registered sanity gate** (A3D-mean MAE ≈ 6.4 vs reported
+  0.49–0.81) → no scientific conclusion drawn, per the gate. Root causes (diagnosed jobs 41187/41189/41192):
+  (a) the pKa conversion omitted Uni-pKa's target-normalisation mean 6.5049 (`unimol/tasks/unimol_pka.py:184`): mean
+  signed error was −6.47 ± 0.87; (b) unipkainfer 0.2.0's free-energy path generates conformers with
+  `EmbedMultipleConfs(randomSeed=0)`, which returns 10 identical conformers (RDKit 2024.03 and 2026.09; seeds 1/42/−1 are
+  diverse), unlike the original Uni-pKa loop `EmbedMolecule(randomSeed=seed) for seed in range(10)`; so run 1's "3D
+  ensemble" arms were a single conformer. Fixes (driver only, before run 2): add PKA_MEAN; replace the conformer function
+  with a verbatim port of the original Uni-pKa protocol. Arms, strata, endpoints and decision rules are unchanged.
+  Run 1 outputs kept in `run1_failed_sanity_gate/` and must not be interpreted.

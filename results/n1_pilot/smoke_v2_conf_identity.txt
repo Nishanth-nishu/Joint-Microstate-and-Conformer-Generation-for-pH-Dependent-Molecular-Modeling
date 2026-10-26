@@ -1,0 +1,7 @@
+microstates 33 with any 3D spread > 1e-6: 33
+3D==2D copy (all 10): 0
+CC(=O)Nc1cccc(Nc2nc(Nc3ccccc3)n3ncc(C#N)c3n2)c1 rot 5 raw coord RMS diff vs conf0: [0.    8.903 8.887 7.796 7.853 8.032 5.032 8.662 9.121] G spread 0.06913089752197088
+CC(=O)Nc1cccc(Nc2nc([N-]c3ccccc3)n3ncc(C#N)c3n2)c1 rot 5 raw coord RMS diff vs conf0: [0.    7.081 8.207 8.89  9.07  8.972 4.197 7.39  7.57 ] G spread 0.18796825408935502
+CC(=O)Nc1cccc([N-]c2nc(Nc3ccccc3)n3ncc(C#N)c3n2)c1 rot 5 raw coord RMS diff vs conf0: [0.    1.786 1.867 2.206 2.696 4.691 2.129 3.41  1.6  ] G spread 0.45557034015655495
+CC(=O)Nc1cccc2c1C(Sc1ccc(Cl)cc1)=C(C)[NH+]2CC(=O)[O-] rot 5 raw coord RMS diff vs conf0: [0.    5.665 2.789 1.828 3.798 2.869 2.481 2.923 2.501] G spread 1.3045258522033691
+CC(=O)Nc1cccc2c1c(Sc1ccc(Cl)cc1)c(C)n2CC(=O)O rot 5 raw coord RMS diff vs conf0: [0.    6.008 2.006 7.278 1.169 1.987 2.034 5.135 5.295] G spread 0.0761256217956543

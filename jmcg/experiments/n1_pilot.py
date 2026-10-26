@@ -1,6 +1,6 @@
 """N1 pilot: 2D vs 3D-conformer input / aggregation ablation of released Uni-pKa (see research/experiments/N1_pilot/PREREG.md).
 
-One forward pass per microstate (10 ETKDG+MMFF conformers + 1 2D copy, unipkainfer defaults); every arm is computed from
+One forward pass per microstate (10 ETKDG+MMFF conformers via the ORIGINAL Uni-pKa seed loop + 1 2D copy); every arm is computed from
 the per-conformer free energies, so arms differ only in which coordinates/aggregation enter the macro-pKa.
 """
 import argparse
@@ -33,6 +33,47 @@ def _capture(conformer_results, n_molecules):
 
 _orig_agg = fe._aggregate_free_energy_predictions
 fe._aggregate_free_energy_predictions = _capture
+
+# Uni-pKa trains on pKa - mean (std 1); the mol_pka task adds it back at inference (unimol/tasks/unimol_pka.py:184).
+PKA_MEAN = 6.504894871171601
+
+
+def _faithful_3d_coords(smi, conformer_count, gen_mode, num_threads=1):
+    """Uni-pKa's original conformer protocol (dptech-corp/Uni-pKa scripts/preprocess_pka.py::smi2_3Dcoords).
+
+    unipkainfer 0.2.0's free-energy path calls EmbedMultipleConfs(randomSeed=0), which returns identical conformers
+    (verified for RDKit 2024.03 and 2026.09, job 41192); the original loops EmbedMolecule over seeds 0..cnt-1.
+    """
+    from rdkit.Chem import AllChem
+    mol = Chem.AddHs(Chem.MolFromSmiles(smi))
+    coords = []
+    for seed in range(conformer_count):
+        try:
+            res = AllChem.EmbedMolecule(mol, randomSeed=seed)
+            if res == 0:
+                try:
+                    if gen_mode == 'mmff':
+                        AllChem.MMFFOptimizeMolecule(mol)
+                    xyz = mol.GetConformer().GetPositions()
+                except Exception:
+                    xyz = fe._smiles_to_2d_coords(smi)
+            else:
+                tmp = Chem.MolFromSmiles(smi)
+                AllChem.EmbedMolecule(tmp, maxAttempts=5000, randomSeed=seed)
+                tmp = Chem.AddHs(tmp, addCoords=True)
+                try:
+                    if gen_mode == 'mmff':
+                        AllChem.MMFFOptimizeMolecule(tmp)
+                    xyz = tmp.GetConformer().GetPositions()
+                except Exception:
+                    xyz = fe._smiles_to_2d_coords(smi)
+        except Exception:
+            xyz = fe._smiles_to_2d_coords(smi)
+        coords.append(np.asarray(xyz, dtype=np.float32))
+    return coords
+
+
+fe._smiles_to_3d_coords = _faithful_3d_coords
 
 
 def lse(x):
@@ -121,7 +162,7 @@ def main():
                 for fold in range(5):
                     ga = [state_energies(per_fold[fold][s], how) for s in acid]
                     gb = [state_energies(per_fold[fold][s], how) for s in base]
-                    vals.append((lse([-g for g in ga]) - lse([-g for g in gb])) / math.log(10))
+                    vals.append((lse([-g for g in ga]) - lse([-g for g in gb])) / math.log(10) + PKA_MEAN)
                 row[arm] = float(np.mean(vals))
             # per-conformer pKa spread (fold-averaged), conformer c used for every microstate
             spreads = []
@@ -130,7 +171,7 @@ def main():
                 for c in range(N3D):
                     ga = [per_fold[fold][s].sort_values('conformer_index')['conformer_free_energy'].iloc[c] for s in acid]
                     gb = [per_fold[fold][s].sort_values('conformer_index')['conformer_free_energy'].iloc[c] for s in base]
-                    pk.append((lse([-g for g in ga]) - lse([-g for g in gb])) / math.log(10))
+                    pk.append((lse([-g for g in ga]) - lse([-g for g in gb])) / math.log(10) + PKA_MEAN)
                 spreads.append(float(np.std(pk)))
             row['conf_pka_std'] = float(np.mean(spreads))
         except KeyError as e:
