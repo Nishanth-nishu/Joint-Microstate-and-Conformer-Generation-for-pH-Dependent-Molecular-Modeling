@@ -8,7 +8,10 @@ import numpy as np
 import pandas as pd
 from scipy.stats import spearmanr
 
-REPORTED_MAE = {'sampl6': 0.493, 'sampl7': 0.554, 'sampl8': (0.619, 0.631), 'novartis': 0.810}
+# Uni-pKa JACS Au 2024 Table 1 (MAE). The Conclusions sentence ("0.810, 0.493, 0.554" for Novartis/SAMPL6/SAMPL7)
+# mislabels the Novartis acid / Novartis base / Novartis total columns; Table 1 is the source of record (amendment 3).
+REPORTED_MAE = {'novartis_acid': 0.810, 'novartis_base': 0.493, 'novartis': 0.620,
+                'sampl6': 0.554, 'sampl7': 0.570, 'sampl8': (0.619, 0.631)}
 ARMS = ['A3D-mean', 'A2D', 'A3D-only-mean', 'A3D-lse', 'A3D-min', 'A3D-single']
 
 
@@ -32,6 +35,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--run', required=True)
     ap.add_argument('--stratum_col', default='stratum_v2')
+    ap.add_argument('--out_name', default='analysis.json')
     a = ap.parse_args()
     df = pd.read_csv(os.path.join(a.run, 'transitions.csv'))
     df['stratum'] = df[a.stratum_col]
@@ -50,7 +54,7 @@ def main():
     res = {'n_transitions': int(len(df)), 'n_failed': n_fail, 'microstates_with_2d_padding_fold0': pad}
     df['group'] = df['set'].str.replace('_acid', '').str.replace('_base', '')
     res['mae_by_set'] = {g: {arm: round(float(x[f'err_{arm}'].abs().mean()), 3) for arm in ARMS} | {'n': int(len(x))}
-                         for g, x in df.groupby('group')}
+                         for g, x in list(df.groupby('group')) + list(df[df.set.str.startswith('novartis_')].groupby('set'))}
     gate = {}
     for g, rep in REPORTED_MAE.items():
         if g in res['mae_by_set']:
@@ -90,7 +94,7 @@ def main():
         else:
             verdict = 'N1 FALSIFIED on this pilot (CI of delta_s or DiD includes/below 0)'
         res['prereg_verdict'] = verdict if res['sanity_gate_pass'] else 'SANITY GATE FAILED: no conclusion'
-    with open(os.path.join(a.run, 'analysis.json'), 'w') as fh:
+    with open(os.path.join(a.run, a.out_name), 'w') as fh:
         json.dump(res, fh, indent=1)
     print(json.dumps(res, indent=1), flush=True)
 

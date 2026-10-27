@@ -22,7 +22,7 @@ experimental pKa error by more than resampling noise only on conformationally se
 - A3D-lse: G = −ln( (1/10) Σ_c exp(−G_c) ) over the 10 3D conformers (Boltzmann-style, β-scaled units).
 - A3D-min: min over the 10 3D conformers.
 - A3D-single: conformer 0 only (resampling-noise reference).
-pKa per transition = (LSE_A(−G) − LSE_B(−G)) / ln 10; fold-averaged over 5 folds.
+pKa per transition = (LSE_A(−G) − LSE_B(−G)) / ln 10; fold-averaged over 5 folds.  (+ normalisation mean 6.5049, amendment 2)
 
 ## Endpoints
 - Primary: Δ_s = MAE(A2D) − MAE(A3D-only-mean) within the **sensitive** stratum; molecule-level paired bootstrap
@@ -59,3 +59,14 @@ CPU only (torch 2.5.1+cpu), 8 cores / 32 GB (node had 2 free CPUs at submission 
   ensemble" arms were a single conformer. Fixes (driver only, before run 2): add PKA_MEAN; replace the conformer function
   with a verbatim port of the original Uni-pKa protocol. Arms, strata, endpoints and decision rules are unchanged.
   Run 1 outputs kept in `run1_failed_sanity_gate/` and must not be interpreted.
+- 2026-10-27 ~00:05 UTC (05:35 IST) — **POST-HOC amendment 3 (made AFTER run 2 outputs, incl. arm results, were seen).**
+  Run 2 (job 41194) failed the gate only on "Novartis" (ours 0.654 vs reference 0.810); SAMPL6/7/8 passed. Cause: the
+  gate references were transcribed from the paper's Conclusions sentence ("MAEs of 0.810, 0.493, and 0.554" for
+  Novartis/SAMPL6/SAMPL7), which mislabels Table 1. Table 1 (PMC11423309, "Performance on External Data Sets") gives
+  MAE/RMSE pairs for Novartis acid 0.810/1.061, Novartis base 0.493/0.653, Novartis total 0.620/0.840, SAMPL6
+  0.554/0.716, SAMPL7 0.570/0.735, SAMPL8 0.631/0.878. Run 2 reproduces every column within 0.10 MAE (acid 0.818,
+  base 0.544, total 0.654, SAMPL6 0.516, SAMPL7 0.522, SAMPL8 0.638) and the RMSEs track too (acid 1.106, SAMPL8 0.885).
+  Gate references corrected to Table 1 (`n1_analyze.py::REPORTED_MAE`); tolerance, arms, endpoints and decision rules
+  unchanged. Original gate-failed output kept as `run2/analysis.json`; corrected output `run2/analysis_gate_table1.json`.
+  Risk acknowledged: the correction is post hoc; it is justified only by the paper's own table, not by our results, and
+  the primary endpoint (Δ_s, DiD) is not affected by the gate values.
