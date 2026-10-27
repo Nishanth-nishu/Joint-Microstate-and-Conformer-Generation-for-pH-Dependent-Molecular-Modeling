@@ -1,0 +1,38 @@
+[
+ {
+  "state_id": "acac_Z_enol",
+  "method": "td",
+  "conf": 3,
+  "old": {
+   "valid": false,
+   "clash": false,
+   "n_clash_pairs": 1,
+   "min_nonlocal_dist": 1.860903722534828
+  },
+  "new": {
+   "valid": true,
+   "clash": true,
+   "n_clash_pairs": 0,
+   "n_hbond_contacts": 1,
+   "clash_pairs": []
+  }
+ },
+ {
+  "state_id": "acac_Z_enol",
+  "method": "td",
+  "conf": 5,
+  "old": {
+   "valid": false,
+   "clash": false,
+   "n_clash_pairs": 1,
+   "min_nonlocal_dist": 1.8042376638368771
+  },
+  "new": {
+   "valid": true,
+   "clash": true,
+   "n_clash_pairs": 0,
+   "n_hbond_contacts": 1,
+   "clash_pairs": []
+  }
+ }
+]

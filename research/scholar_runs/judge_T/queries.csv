@@ -1,0 +1,21 @@
+timestamp_utc,family,query,backend,status,n_results,notes
+2026-10-27T10:33:00Z,judge_T,(all queries),google_scholar,not_searched_no_tool,0,no Google Scholar tool on this host
+2026-10-27T10:33:40Z,judge_T,"Zankov 2019 ""Conjugated QSPR models"" tautomeric equilibrium constants acidity pKa twin neural network",websearch,ok,10,KPFU dspace record + phys.org
+2026-10-27T10:33:50Z,judge_T,dspace.kpfu.ru/xmlui/handle/net/156038?show=full,webfetch,ok,1,PDF bitstream listed (54 KB)
+2026-10-27T10:33:55Z,judge_T,phys.org 2020-01 chemists neural networks properties,webfetch,ok,1,no micro/macro or data detail
+2026-10-27T10:34:05Z,judge_T,KPFU bitstream SCOPUS15499596-2019-SID85075149908-a1.pdf,webfetch,ok,1,abstract + 43 refs only
+2026-10-27T10:34:15Z,judge_T,10.1021/acs.jcim.9b00722 (cited_by),citation_neighbours,ok,5,none ML pKa+taut
+2026-10-27T10:34:20Z,judge_T,10.1016/j.mencom.2021.11.003,webfetch,error,0,redirect not followed
+2026-10-27T10:34:20Z,judge_T,PMC11423309 fulltext grep micro/pretrain/tautomer,webfetch,ok,1,pretrain = predicted ChEMBL pKa same LSE loss; authors' tautomer remark
+2026-10-27T10:34:40Z,judge_T,neural network microstate free energy trained jointly on pKa and tautomer ratio data Tautobase,websearch,ok,10,no joint model
+2026-10-27T10:34:40Z,judge_T,Starling Rowan pKa tautomer Tautobase benchmark microstate,websearch,ok,9,no Starling Tautobase result
+2026-10-27T10:34:40Z,judge_T,macro-pKa loss does not constrain tautomer free energies within macrostate machine learning identifiability,websearch,ok,9,not stated
+2026-10-27T10:34:55Z,judge_T,chemrxiv 68388349c1cb1ecda02ba65d (Starling),webfetch,error,0,403
+2026-10-27T10:34:55Z,judge_T,rowansci.substack.com starling-macroscopic-pka-logd-and,webfetch,ok,1,no Tautobase
+2026-10-27T10:35:05Z,judge_T,Epik 7 tautomer ratio accuracy experimental tautomer data training Johnston 2023,websearch,ok,9,abstract-level only
+2026-10-27T10:35:05Z,judge_T,AcepKa pKa tautomer microstate free energy 2026 JCIM tautomer ratios,websearch,ok,9,
+2026-10-27T10:35:05Z,judge_T,tautomer pKa multitask deep learning microstate free energies joint training 2024-2026,websearch,ok,9,none joint
+2026-10-27T10:35:20Z,judge_T,arxiv.org/html/2604.00841v1 (AcepKa),webfetch,ok,1,no tautomer training/eval
+2026-10-27T10:35:20Z,judge_T,infochim.u-strasbg.fr CS3-2026 poster (Sen & Horvath),webfetch,ok,1,planned MIL over microspecies; no tautomer-ratio loss
+2026-10-27T10:35:35Z,judge_T,Zankov conjugated twin neural network Kabachnik micro,websearch,ok,10,nothing further
+2026-10-27T10:35:35Z,judge_T,"""pKa Predicting Models Trained with a Tautomer-Compatible Graph Dataset"" Simon 2026",websearch,ok,9,metadata only

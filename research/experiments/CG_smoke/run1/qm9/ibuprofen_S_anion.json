@@ -1,0 +1,457 @@
+{
+ "state_id": "ibuprofen_S_anion",
+ "note": "flexible anion; chiral",
+ "seed": 0,
+ "n_confs_requested": 8,
+ "failures": [],
+ "state": {
+  "state_smiles_input": "CC(C)Cc1ccc(cc1)[C@H](C)C(=O)[O-]",
+  "parent_smiles": "CC(C)Cc1ccc(cc1)[C@H](C)C(=O)O",
+  "state_smiles_canonical": "CC(C)Cc1ccc([C@H](C)C(=O)[O-])cc1",
+  "skeleton_key": "CC(C)CC1CCC(C(C)C(O)O)CC1",
+  "state_class": "protonation",
+  "net_charge": -1,
+  "parent_net_charge": 0,
+  "dH_total": -1,
+  "changed_sites": [
+   {
+    "parent_idx": 14,
+    "state_idx": 14,
+    "element": "O",
+    "dH": -1,
+    "dq": -1
+   }
+  ],
+  "changed_bonds": [],
+  "heavy_map_state_to_parent": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14
+  ],
+  "n_equally_minimal_mappings": 4,
+  "n_atoms_with_H": 32,
+  "n_heavy": 15,
+  "elements": {
+   "C": 13,
+   "O": 2,
+   "H": 17
+  },
+  "charged_atoms": [
+   [
+    14,
+    "O",
+    -1
+   ]
+  ],
+  "stereo_elements": [
+   {
+    "kind": "atom",
+    "centered_on": 10,
+    "specified": true
+   }
+  ],
+  "parent_stereocentres_checked": [
+   10
+  ]
+ },
+ "checkpoint_compatibility": {
+  "hard": [],
+  "out_of_distribution": [
+   "15 heavy atoms > 9 (QM9 training size)",
+   "charged atoms: representable by the featuriser, but whether the checkpoint saw such graphs is a training-data question (inventory.json), not shown by successful inference"
+  ]
+ },
+ "category": "C",
+ "etkdg_v3": {
+  "generation": {},
+  "seconds": 0.14,
+  "n_generated": 8,
+  "validation": [
+   {
+    "finite": true,
+    "rt_atoms": true,
+    "rt_bonds": true,
+    "rt_isomeric": true,
+    "rt_smiles": "CC(C)Cc1ccc([C@H](C)C(=O)[O-])cc1",
+    "connectivity": true,
+    "max_12_dev": 0.029562935627310383,
+    "max_13_dev": 0.007723828442184111,
+    "bonds_angles": true,
+    "n_clash_pairs": 0,
+    "min_nonlocal_dist": 2.1421527855132996,
+    "clash": true,
+    "stereo_smiles_3d": "CC(C)Cc1ccc([C@H](C)C(=O)[O-])cc1",
+    "stereo": true,
+    "mmff_energy": 89.57895662307794,
+    "valid": true
+   },
+   {
+    "finite": true,
+    "rt_atoms": true,
+    "rt_bonds": true,
+    "rt_isomeric": true,
+    "rt_smiles": "CC(C)Cc1ccc([C@H](C)C(=O)[O-])cc1",
+    "connectivity": true,
+    "max_12_dev": 0.029562935627310383,
+    "max_13_dev": 0.007723828442184111,
+    "bonds_angles": true,
+    "n_clash_pairs": 0,
+    "min_nonlocal_dist": 2.1421527855132996,
+    "clash": true,
+    "stereo_smiles_3d": "CC(C)Cc1ccc([C@H](C)C(=O)[O-])cc1",
+    "stereo": true,
+    "mmff_energy": 89.57895662307794,
+    "valid": true
+   },
+   {
+    "finite": true,
+    "rt_atoms": true,
+    "rt_bonds": true,
+    "rt_isomeric": true,
+    "rt_smiles": "CC(C)Cc1ccc([C@H](C)C(=O)[O-])cc1",
+    "connectivity": true,
+    "max_12_dev": 0.029562935627310383,
+    "max_13_dev": 0.007723828442184111,
+    "bonds_angles": true,
+    "n_clash_pairs": 0,
+    "min_nonlocal_dist": 2.1421527855132996,
+    "clash": true,
+    "stereo_smiles_3d": "CC(C)Cc1ccc([C@H](C)C(=O)[O-])cc1",
+    "stereo": true,
+    "mmff_energy": 89.57895662307794,
+    "valid": true
+   },
+   {
+    "finite": true,
+    "rt_atoms": true,
+    "rt_bonds": true,
+    "rt_isomeric": true,
+    "rt_smiles": "CC(C)Cc1ccc([C@H](C)C(=O)[O-])cc1",
+    "connectivity": true,
+    "max_12_dev": 0.029562935627310383,
+    "max_13_dev": 0.007723828442184111,
+    "bonds_angles": true,
+    "n_clash_pairs": 0,
+    "min_nonlocal_dist": 2.1421527855132996,
+    "clash": true,
+    "stereo_smiles_3d": "CC(C)Cc1ccc([C@H](C)C(=O)[O-])cc1",
+    "stereo": true,
+    "mmff_energy": 89.57895662307794,
+    "valid": true
+   },
+   {
+    "finite": true,
+    "rt_atoms": true,
+    "rt_bonds": true,
+    "rt_isomeric": true,
+    "rt_smiles": "CC(C)Cc1ccc([C@H](C)C(=O)[O-])cc1",
+    "connectivity": true,
+    "max_12_dev": 0.029562935627310383,
+    "max_13_dev": 0.007723828442184111,
+    "bonds_angles": true,
+    "n_clash_pairs": 0,
+    "min_nonlocal_dist": 2.1421527855132996,
+    "clash": true,
+    "stereo_smiles_3d": "CC(C)Cc1ccc([C@H](C)C(=O)[O-])cc1",
+    "stereo": true,
+    "mmff_energy": 89.57895662307794,
+    "valid": true
+   },
+   {
+    "finite": true,
+    "rt_atoms": true,
+    "rt_bonds": true,
+    "rt_isomeric": true,
+    "rt_smiles": "CC(C)Cc1ccc([C@H](C)C(=O)[O-])cc1",
+    "connectivity": true,
+    "max_12_dev": 0.029562935627310383,
+    "max_13_dev": 0.007723828442184111,
+    "bonds_angles": true,
+    "n_clash_pairs": 0,
+    "min_nonlocal_dist": 2.1421527855132996,
+    "clash": true,
+    "stereo_smiles_3d": "CC(C)Cc1ccc([C@H](C)C(=O)[O-])cc1",
+    "stereo": true,
+    "mmff_energy": 89.57895662307794,
+    "valid": true
+   },
+   {
+    "finite": true,
+    "rt_atoms": true,
+    "rt_bonds": true,
+    "rt_isomeric": true,
+    "rt_smiles": "CC(C)Cc1ccc([C@H](C)C(=O)[O-])cc1",
+    "connectivity": true,
+    "max_12_dev": 0.029562935627310383,
+    "max_13_dev": 0.007723828442184111,
+    "bonds_angles": true,
+    "n_clash_pairs": 0,
+    "min_nonlocal_dist": 2.1421527855132996,
+    "clash": true,
+    "stereo_smiles_3d": "CC(C)Cc1ccc([C@H](C)C(=O)[O-])cc1",
+    "stereo": true,
+    "mmff_energy": 89.57895662307794,
+    "valid": true
+   },
+   {
+    "finite": true,
+    "rt_atoms": true,
+    "rt_bonds": true,
+    "rt_isomeric": true,
+    "rt_smiles": "CC(C)Cc1ccc([C@H](C)C(=O)[O-])cc1",
+    "connectivity": true,
+    "max_12_dev": 0.029562935627310383,
+    "max_13_dev": 0.007723828442184111,
+    "bonds_angles": true,
+    "n_clash_pairs": 0,
+    "min_nonlocal_dist": 2.1421527855132996,
+    "clash": true,
+    "stereo_smiles_3d": "CC(C)Cc1ccc([C@H](C)C(=O)[O-])cc1",
+    "stereo": true,
+    "mmff_energy": 89.57895662307794,
+    "valid": true
+   }
+  ],
+  "summary": {
+   "n_valid": 8,
+   "n_finite": 8,
+   "n_rt_atoms": 8,
+   "n_rt_bonds": 8,
+   "n_rt_isomeric": 8,
+   "n_connectivity": 8,
+   "n_bonds_angles": 8,
+   "n_clash": 8,
+   "n_stereo": 8,
+   "n_connectivity_unchecked": 0,
+   "mmff_median": 89.57895662307794,
+   "mmff_min": 89.57895662307794
+  },
+  "diversity": {
+   "n": 8,
+   "pairwise_rmsd_min": 0.0,
+   "pairwise_rmsd_median": 0.0,
+   "pairwise_rmsd_max": 0.0,
+   "n_clusters_0p5A": 1,
+   "n_unique_0p1A": 1
+  }
+ },
+ "td": {
+  "generation": {
+   "n_rotatable_td": 7,
+   "model_applied": true,
+   "locked_double_bonds": [],
+   "torsions_parent_keyed": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     1,
+     3
+    ],
+    [
+     3,
+     4
+    ],
+    [
+     7,
+     10
+    ],
+    [
+     10,
+     11
+    ],
+    [
+     10,
+     12
+    ]
+   ]
+  },
+  "seconds": 2.38,
+  "n_generated": 8,
+  "validation": [
+   {
+    "finite": true,
+    "rt_atoms": true,
+    "rt_bonds": true,
+    "rt_isomeric": true,
+    "rt_smiles": "CC(C)Cc1ccc([C@H](C)C(=O)[O-])cc1",
+    "connectivity": true,
+    "max_12_dev": 0.02956387001335936,
+    "max_13_dev": 0.00772302627607413,
+    "bonds_angles": true,
+    "n_clash_pairs": 0,
+    "min_nonlocal_dist": 1.8848128200357204,
+    "clash": true,
+    "stereo_smiles_3d": "CC(C)Cc1ccc([C@H](C)C(=O)[O-])cc1",
+    "stereo": true,
+    "mmff_energy": 95.55155723929848,
+    "valid": true
+   },
+   {
+    "finite": true,
+    "rt_atoms": true,
+    "rt_bonds": true,
+    "rt_isomeric": true,
+    "rt_smiles": "CC(C)Cc1ccc([C@H](C)C(=O)[O-])cc1",
+    "connectivity": true,
+    "max_12_dev": 0.02956225869425344,
+    "max_13_dev": 0.007724335635176605,
+    "bonds_angles": true,
+    "n_clash_pairs": 0,
+    "min_nonlocal_dist": 2.1566823506407924,
+    "clash": true,
+    "stereo_smiles_3d": "CC(C)Cc1ccc([C@H](C)C(=O)[O-])cc1",
+    "stereo": true,
+    "mmff_energy": 88.75747685483935,
+    "valid": true
+   },
+   {
+    "finite": true,
+    "rt_atoms": true,
+    "rt_bonds": true,
+    "rt_isomeric": true,
+    "rt_smiles": "CC(C)Cc1ccc([C@H](C)C(=O)[O-])cc1",
+    "connectivity": true,
+    "max_12_dev": 0.02956154692663282,
+    "max_13_dev": 0.00772514676732472,
+    "bonds_angles": true,
+    "n_clash_pairs": 0,
+    "min_nonlocal_dist": 1.7596173931365737,
+    "clash": true,
+    "stereo_smiles_3d": "CC(C)Cc1ccc([C@H](C)C(=O)[O-])cc1",
+    "stereo": true,
+    "mmff_energy": 102.24697561342359,
+    "valid": true
+   },
+   {
+    "finite": true,
+    "rt_atoms": true,
+    "rt_bonds": true,
+    "rt_isomeric": true,
+    "rt_smiles": "CC(C)Cc1ccc([C@H](C)C(=O)[O-])cc1",
+    "connectivity": true,
+    "max_12_dev": 0.02956204163226195,
+    "max_13_dev": 0.007725014247383477,
+    "bonds_angles": true,
+    "n_clash_pairs": 0,
+    "min_nonlocal_dist": 2.013901269663776,
+    "clash": true,
+    "stereo_smiles_3d": "CC(C)Cc1ccc([C@H](C)C(=O)[O-])cc1",
+    "stereo": true,
+    "mmff_energy": 93.14453538681649,
+    "valid": true
+   },
+   {
+    "finite": true,
+    "rt_atoms": true,
+    "rt_bonds": true,
+    "rt_isomeric": true,
+    "rt_smiles": "CC(C)Cc1ccc([C@H](C)C(=O)[O-])cc1",
+    "connectivity": true,
+    "max_12_dev": 0.029562550254921938,
+    "max_13_dev": 0.007724695337258947,
+    "bonds_angles": true,
+    "n_clash_pairs": 0,
+    "min_nonlocal_dist": 1.9120396659637207,
+    "clash": true,
+    "stereo_smiles_3d": "CC(C)Cc1ccc([C@H](C)C(=O)[O-])cc1",
+    "stereo": true,
+    "mmff_energy": 91.2034016606596,
+    "valid": true
+   },
+   {
+    "finite": true,
+    "rt_atoms": true,
+    "rt_bonds": true,
+    "rt_isomeric": true,
+    "rt_smiles": "CC(C)Cc1ccc([C@H](C)C(=O)[O-])cc1",
+    "connectivity": true,
+    "max_12_dev": 0.029562300527285146,
+    "max_13_dev": 0.007725055858435859,
+    "bonds_angles": true,
+    "n_clash_pairs": 0,
+    "min_nonlocal_dist": 1.757332769645169,
+    "clash": true,
+    "stereo_smiles_3d": "CC(C)Cc1ccc([C@H](C)C(=O)[O-])cc1",
+    "stereo": true,
+    "mmff_energy": 91.43847596783745,
+    "valid": true
+   },
+   {
+    "finite": true,
+    "rt_atoms": true,
+    "rt_bonds": true,
+    "rt_isomeric": true,
+    "rt_smiles": "CC(C)Cc1ccc([C@H](C)C(=O)[O-])cc1",
+    "connectivity": true,
+    "max_12_dev": 0.029563043001495926,
+    "max_13_dev": 0.007723714865822462,
+    "bonds_angles": true,
+    "n_clash_pairs": 0,
+    "min_nonlocal_dist": 2.12386665522858,
+    "clash": true,
+    "stereo_smiles_3d": "CC(C)Cc1ccc([C@H](C)C(=O)[O-])cc1",
+    "stereo": true,
+    "mmff_energy": 87.773220973741,
+    "valid": true
+   },
+   {
+    "finite": true,
+    "rt_atoms": true,
+    "rt_bonds": true,
+    "rt_isomeric": true,
+    "rt_smiles": "CC(C)Cc1ccc([C@H](C)C(=O)[O-])cc1",
+    "connectivity": true,
+    "max_12_dev": 0.029562638861372337,
+    "max_13_dev": 0.007724045448420203,
+    "bonds_angles": true,
+    "n_clash_pairs": 0,
+    "min_nonlocal_dist": 2.20141784984757,
+    "clash": true,
+    "stereo_smiles_3d": "CC(C)Cc1ccc([C@H](C)C(=O)[O-])cc1",
+    "stereo": true,
+    "mmff_energy": 87.73456253760148,
+    "valid": true
+   }
+  ],
+  "summary": {
+   "n_valid": 8,
+   "n_finite": 8,
+   "n_rt_atoms": 8,
+   "n_rt_bonds": 8,
+   "n_rt_isomeric": 8,
+   "n_connectivity": 8,
+   "n_bonds_angles": 8,
+   "n_clash": 8,
+   "n_stereo": 8,
+   "n_connectivity_unchecked": 0,
+   "mmff_median": 91.32093881424852,
+   "mmff_min": 87.73456253760148
+  },
+  "diversity": {
+   "n": 8,
+   "pairwise_rmsd_min": 0.20779527576452772,
+   "pairwise_rmsd_median": 0.8913927135984367,
+   "pairwise_rmsd_max": 1.1765282414268405,
+   "n_clusters_0p5A": 6,
+   "n_unique_0p1A": 8
+  }
+ }
+}

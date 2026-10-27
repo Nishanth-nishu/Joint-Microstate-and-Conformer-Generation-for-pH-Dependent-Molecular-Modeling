@@ -1,0 +1,513 @@
+{
+ "state_id": "acac_Z_enol",
+ "note": "Z-enol tautomer (stereo double bond specified)",
+ "seed": 0,
+ "n_confs_requested": 8,
+ "failures": [],
+ "state": {
+  "state_smiles_input": "C/C(O)=C/C(C)=O",
+  "parent_smiles": "CC(=O)CC(C)=O",
+  "state_smiles_canonical": "CC(=O)/C=C(/C)O",
+  "skeleton_key": "CC(O)CC(C)O",
+  "state_class": "tautomer",
+  "net_charge": 0,
+  "parent_net_charge": 0,
+  "dH_total": 0,
+  "changed_sites": [
+   {
+    "parent_idx": 2,
+    "state_idx": 2,
+    "element": "O",
+    "dH": 1,
+    "dq": 0
+   },
+   {
+    "parent_idx": 3,
+    "state_idx": 3,
+    "element": "C",
+    "dH": -1,
+    "dq": 0
+   }
+  ],
+  "changed_bonds": [
+   {
+    "parent_atoms": [
+     1,
+     2
+    ],
+    "parent": "DOUBLE",
+    "state": "SINGLE"
+   },
+   {
+    "parent_atoms": [
+     1,
+     3
+    ],
+    "parent": "SINGLE",
+    "state": "DOUBLE"
+   }
+  ],
+  "heavy_map_state_to_parent": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "n_equally_minimal_mappings": 2,
+  "n_atoms_with_H": 15,
+  "n_heavy": 7,
+  "elements": {
+   "C": 5,
+   "O": 2,
+   "H": 8
+  },
+  "charged_atoms": [],
+  "stereo_elements": [
+   {
+    "kind": "double_bond",
+    "centered_on": 2,
+    "specified": true
+   }
+  ],
+  "parent_stereocentres_checked": []
+ },
+ "checkpoint_compatibility": {
+  "hard": [],
+  "out_of_distribution": []
+ },
+ "category": "A",
+ "etkdg_v3": {
+  "generation": {},
+  "seconds": 0.01,
+  "n_generated": 8,
+  "validation": [
+   {
+    "finite": true,
+    "rt_atoms": true,
+    "rt_bonds": true,
+    "rt_isomeric": true,
+    "rt_smiles": "CC(=O)/C=C(/C)O",
+    "connectivity": true,
+    "max_12_dev": 0.013058799549176436,
+    "max_13_dev": 0.0001681243340505567,
+    "bonds_angles": true,
+    "n_hbond_contacts": 0,
+    "n_clash_pairs": 0,
+    "clash_pairs": [],
+    "min_nonlocal_dist": 2.3225835272324216,
+    "clash": true,
+    "stereo_smiles_3d": "CC(=O)/C=C(/C)O",
+    "stereo": true,
+    "mmff_energy": 29.728503546748485,
+    "valid": true
+   },
+   {
+    "finite": true,
+    "rt_atoms": true,
+    "rt_bonds": true,
+    "rt_isomeric": true,
+    "rt_smiles": "CC(=O)/C=C(/C)O",
+    "connectivity": true,
+    "max_12_dev": 0.013058799549176436,
+    "max_13_dev": 0.0001681243340505567,
+    "bonds_angles": true,
+    "n_hbond_contacts": 0,
+    "n_clash_pairs": 0,
+    "clash_pairs": [],
+    "min_nonlocal_dist": 2.3225835272324216,
+    "clash": true,
+    "stereo_smiles_3d": "CC(=O)/C=C(/C)O",
+    "stereo": true,
+    "mmff_energy": 29.728503546748485,
+    "valid": true
+   },
+   {
+    "finite": true,
+    "rt_atoms": true,
+    "rt_bonds": true,
+    "rt_isomeric": true,
+    "rt_smiles": "CC(=O)/C=C(/C)O",
+    "connectivity": true,
+    "max_12_dev": 0.013058799549176436,
+    "max_13_dev": 0.0001681243340505567,
+    "bonds_angles": true,
+    "n_hbond_contacts": 0,
+    "n_clash_pairs": 0,
+    "clash_pairs": [],
+    "min_nonlocal_dist": 2.3225835272324216,
+    "clash": true,
+    "stereo_smiles_3d": "CC(=O)/C=C(/C)O",
+    "stereo": true,
+    "mmff_energy": 29.728503546748485,
+    "valid": true
+   },
+   {
+    "finite": true,
+    "rt_atoms": true,
+    "rt_bonds": true,
+    "rt_isomeric": true,
+    "rt_smiles": "CC(=O)/C=C(/C)O",
+    "connectivity": true,
+    "max_12_dev": 0.013058799549176436,
+    "max_13_dev": 0.0001681243340505567,
+    "bonds_angles": true,
+    "n_hbond_contacts": 0,
+    "n_clash_pairs": 0,
+    "clash_pairs": [],
+    "min_nonlocal_dist": 2.3225835272324216,
+    "clash": true,
+    "stereo_smiles_3d": "CC(=O)/C=C(/C)O",
+    "stereo": true,
+    "mmff_energy": 29.728503546748485,
+    "valid": true
+   },
+   {
+    "finite": true,
+    "rt_atoms": true,
+    "rt_bonds": true,
+    "rt_isomeric": true,
+    "rt_smiles": "CC(=O)/C=C(/C)O",
+    "connectivity": true,
+    "max_12_dev": 0.013058799549176436,
+    "max_13_dev": 0.0001681243340505567,
+    "bonds_angles": true,
+    "n_hbond_contacts": 0,
+    "n_clash_pairs": 0,
+    "clash_pairs": [],
+    "min_nonlocal_dist": 2.3225835272324216,
+    "clash": true,
+    "stereo_smiles_3d": "CC(=O)/C=C(/C)O",
+    "stereo": true,
+    "mmff_energy": 29.728503546748485,
+    "valid": true
+   },
+   {
+    "finite": true,
+    "rt_atoms": true,
+    "rt_bonds": true,
+    "rt_isomeric": true,
+    "rt_smiles": "CC(=O)/C=C(/C)O",
+    "connectivity": true,
+    "max_12_dev": 0.013058799549176436,
+    "max_13_dev": 0.0001681243340505567,
+    "bonds_angles": true,
+    "n_hbond_contacts": 0,
+    "n_clash_pairs": 0,
+    "clash_pairs": [],
+    "min_nonlocal_dist": 2.3225835272324216,
+    "clash": true,
+    "stereo_smiles_3d": "CC(=O)/C=C(/C)O",
+    "stereo": true,
+    "mmff_energy": 29.728503546748485,
+    "valid": true
+   },
+   {
+    "finite": true,
+    "rt_atoms": true,
+    "rt_bonds": true,
+    "rt_isomeric": true,
+    "rt_smiles": "CC(=O)/C=C(/C)O",
+    "connectivity": true,
+    "max_12_dev": 0.013058799549176436,
+    "max_13_dev": 0.0001681243340505567,
+    "bonds_angles": true,
+    "n_hbond_contacts": 0,
+    "n_clash_pairs": 0,
+    "clash_pairs": [],
+    "min_nonlocal_dist": 2.3225835272324216,
+    "clash": true,
+    "stereo_smiles_3d": "CC(=O)/C=C(/C)O",
+    "stereo": true,
+    "mmff_energy": 29.728503546748485,
+    "valid": true
+   },
+   {
+    "finite": true,
+    "rt_atoms": true,
+    "rt_bonds": true,
+    "rt_isomeric": true,
+    "rt_smiles": "CC(=O)/C=C(/C)O",
+    "connectivity": true,
+    "max_12_dev": 0.013058799549176436,
+    "max_13_dev": 0.0001681243340505567,
+    "bonds_angles": true,
+    "n_hbond_contacts": 0,
+    "n_clash_pairs": 0,
+    "clash_pairs": [],
+    "min_nonlocal_dist": 2.3225835272324216,
+    "clash": true,
+    "stereo_smiles_3d": "CC(=O)/C=C(/C)O",
+    "stereo": true,
+    "mmff_energy": 29.728503546748485,
+    "valid": true
+   }
+  ],
+  "summary": {
+   "n_valid": 8,
+   "n_finite": 8,
+   "n_rt_atoms": 8,
+   "n_rt_bonds": 8,
+   "n_rt_isomeric": 8,
+   "n_connectivity": 8,
+   "n_bonds_angles": 8,
+   "n_clash": 8,
+   "n_stereo": 8,
+   "n_connectivity_unchecked": 0,
+   "mmff_median": 29.728503546748485,
+   "mmff_min": 29.728503546748485
+  },
+  "diversity": {
+   "n": 8,
+   "pairwise_rmsd_min": 0.0,
+   "pairwise_rmsd_median": 0.0,
+   "pairwise_rmsd_max": 0.0,
+   "n_clusters_0p5A": 1,
+   "n_unique_0p1A": 1
+  }
+ },
+ "td": {
+  "generation": {
+   "n_rotatable_td": 5,
+   "model_applied": true,
+   "locked_double_bonds": [],
+   "torsions_parent_keyed": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     1,
+     3
+    ],
+    [
+     3,
+     4
+    ],
+    [
+     4,
+     5
+    ]
+   ]
+  },
+  "seconds": 3.47,
+  "n_generated": 8,
+  "validation": [
+   {
+    "finite": true,
+    "rt_atoms": true,
+    "rt_bonds": true,
+    "rt_isomeric": false,
+    "rt_smiles": "CC(=O)/C=C(\\C)O",
+    "connectivity": true,
+    "max_12_dev": 0.013058419515121544,
+    "max_13_dev": 0.00016824023056827286,
+    "bonds_angles": true,
+    "n_hbond_contacts": 0,
+    "n_clash_pairs": 0,
+    "clash_pairs": [],
+    "min_nonlocal_dist": 1.7799452225713894,
+    "clash": true,
+    "stereo_smiles_3d": "CC(=O)/C=C(\\C)O",
+    "stereo": false,
+    "mmff_energy": 45.52792418231871,
+    "valid": false
+   },
+   {
+    "finite": true,
+    "rt_atoms": true,
+    "rt_bonds": true,
+    "rt_isomeric": true,
+    "rt_smiles": "CC(=O)/C=C(/C)O",
+    "connectivity": true,
+    "max_12_dev": 0.013058210670036097,
+    "max_13_dev": 0.00016813214139510535,
+    "bonds_angles": true,
+    "n_hbond_contacts": 0,
+    "n_clash_pairs": 0,
+    "clash_pairs": [],
+    "min_nonlocal_dist": 2.089051741029988,
+    "clash": true,
+    "stereo_smiles_3d": "CC(=O)/C=C(/C)O",
+    "stereo": true,
+    "mmff_energy": 29.762252825979658,
+    "valid": true
+   },
+   {
+    "finite": true,
+    "rt_atoms": true,
+    "rt_bonds": true,
+    "rt_isomeric": true,
+    "rt_smiles": "CC(=O)/C=C(/C)O",
+    "connectivity": true,
+    "max_12_dev": 0.013058182563175702,
+    "max_13_dev": 0.00016782167076545562,
+    "bonds_angles": true,
+    "n_hbond_contacts": 0,
+    "n_clash_pairs": 1,
+    "clash_pairs": [
+     [
+      2,
+      13,
+      "OH",
+      1.797
+     ]
+    ],
+    "min_nonlocal_dist": 1.7967692624775775,
+    "clash": false,
+    "stereo_smiles_3d": "CC(=O)/C=C(/C)O",
+    "stereo": true,
+    "mmff_energy": 34.18717730049204,
+    "valid": false
+   },
+   {
+    "finite": true,
+    "rt_atoms": true,
+    "rt_bonds": true,
+    "rt_isomeric": true,
+    "rt_smiles": "CC(=O)/C=C(/C)O",
+    "connectivity": true,
+    "max_12_dev": 0.013058127029743405,
+    "max_13_dev": 0.0001683806961554346,
+    "bonds_angles": true,
+    "n_hbond_contacts": 0,
+    "n_clash_pairs": 2,
+    "clash_pairs": [
+     [
+      5,
+      10,
+      "CH",
+      2.003
+     ],
+     [
+      10,
+      13,
+      "HH",
+      1.282
+     ]
+    ],
+    "min_nonlocal_dist": 1.2823587957746791,
+    "clash": false,
+    "stereo_smiles_3d": "CC(=O)/C=C(/C)O",
+    "stereo": true,
+    "mmff_energy": 53.85497538872622,
+    "valid": false
+   },
+   {
+    "finite": true,
+    "rt_atoms": true,
+    "rt_bonds": true,
+    "rt_isomeric": true,
+    "rt_smiles": "CC(=O)/C=C(/C)O",
+    "connectivity": true,
+    "max_12_dev": 0.013058094403056275,
+    "max_13_dev": 0.00016779822990553583,
+    "bonds_angles": true,
+    "n_hbond_contacts": 0,
+    "n_clash_pairs": 0,
+    "clash_pairs": [],
+    "min_nonlocal_dist": 2.243137033266822,
+    "clash": true,
+    "stereo_smiles_3d": "CC(=O)/C=C(/C)O",
+    "stereo": true,
+    "mmff_energy": 32.920142724652436,
+    "valid": true
+   },
+   {
+    "finite": true,
+    "rt_atoms": true,
+    "rt_bonds": true,
+    "rt_isomeric": true,
+    "rt_smiles": "CC(=O)/C=C(/C)O",
+    "connectivity": true,
+    "max_12_dev": 0.01305847133647986,
+    "max_13_dev": 0.00016825611291126918,
+    "bonds_angles": true,
+    "n_hbond_contacts": 0,
+    "n_clash_pairs": 0,
+    "clash_pairs": [],
+    "min_nonlocal_dist": 2.261131646199741,
+    "clash": true,
+    "stereo_smiles_3d": "CC(=O)/C=C(/C)O",
+    "stereo": true,
+    "mmff_energy": 31.56686332969511,
+    "valid": true
+   },
+   {
+    "finite": true,
+    "rt_atoms": true,
+    "rt_bonds": true,
+    "rt_isomeric": true,
+    "rt_smiles": "CC(=O)/C=C(/C)O",
+    "connectivity": true,
+    "max_12_dev": 0.013058266925302098,
+    "max_13_dev": 0.0001684089775944031,
+    "bonds_angles": true,
+    "n_hbond_contacts": 0,
+    "n_clash_pairs": 0,
+    "clash_pairs": [],
+    "min_nonlocal_dist": 2.183890484480223,
+    "clash": true,
+    "stereo_smiles_3d": "CC(=O)/C=C(/C)O",
+    "stereo": true,
+    "mmff_energy": 25.592419926727167,
+    "valid": true
+   },
+   {
+    "finite": true,
+    "rt_atoms": true,
+    "rt_bonds": true,
+    "rt_isomeric": true,
+    "rt_smiles": "CC(=O)/C=C(/C)O",
+    "connectivity": true,
+    "max_12_dev": 0.013058005187708499,
+    "max_13_dev": 0.00016820287783003707,
+    "bonds_angles": true,
+    "n_hbond_contacts": 0,
+    "n_clash_pairs": 1,
+    "clash_pairs": [
+     [
+      10,
+      13,
+      "HH",
+      1.165
+     ]
+    ],
+    "min_nonlocal_dist": 1.1651759656269003,
+    "clash": false,
+    "stereo_smiles_3d": "CC(=O)/C=C(/C)O",
+    "stereo": true,
+    "mmff_energy": 71.27086961992326,
+    "valid": false
+   }
+  ],
+  "summary": {
+   "n_valid": 4,
+   "n_finite": 8,
+   "n_rt_atoms": 8,
+   "n_rt_bonds": 8,
+   "n_rt_isomeric": 7,
+   "n_connectivity": 8,
+   "n_bonds_angles": 8,
+   "n_clash": 5,
+   "n_stereo": 7,
+   "n_connectivity_unchecked": 0,
+   "mmff_median": 33.55366001257224,
+   "mmff_min": 25.592419926727167
+  },
+  "diversity": {
+   "n": 8,
+   "pairwise_rmsd_min": 0.045747320684727796,
+   "pairwise_rmsd_median": 0.6666701294545605,
+   "pairwise_rmsd_max": 1.2472007765762132,
+   "n_clusters_0p5A": 3,
+   "n_unique_0p1A": 7
+  }
+ }
+}

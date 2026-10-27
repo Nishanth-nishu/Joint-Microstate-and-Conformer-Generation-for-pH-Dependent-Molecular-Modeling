@@ -54,3 +54,27 @@ Evidence pointers: `scholar_runs/<family>/summary.md`, `paper_notes/*.md`, `04_l
 2. I4 (benchmark) — likely publishable regardless of method outcome; packages negative results honestly.
 3. I1 (full joint generator) — retained only as Candidate C if I5 finds geometry→state signal.
 4. I3 — high overlap with LoQI; keep as a sub-experiment.
+
+## Round 2 — tautomer populations (2026-10-27, after N1 was falsified; literature: scholar_runs/F_tautomer)
+
+### T1 — Within-macrostate identifiability diagnosis of pKa-trained microstate models
+- Hypothesis: a macro-pKa loss pKa = (LSE_A(−G) − LSE_B(−G))/ln10 gives microstate i a gradient ∂pKa/∂G_i ∝ p_i, its
+  population inside its macrostate; minor tautomers get ~no signal, so tautomer ΔG between same-charge microstates is
+  (near-)unidentified by macro-pKa data. Predicts Uni-pKa's poor Tautobase log K (reported MAE 3.435).
+- Test (no training): zero-shot Uni-pKa log K on Tautobase measured pairs; error vs how lopsided the pair is; sign accuracy.
+- Closest: Gunner 2020 / SAMPL6 overview (chemistry statement: macro-pKa does not reveal tautomer ΔG). Not found: the ML
+  loss-gradient version, or an analysis of Uni-pKa's tautomer failure.
+- Reject: Uni-pKa zero-shot log K already good on measured pairs (MAE < 1.0), i.e. the reported failure is a protocol artefact.
+
+### T2 — Joint macro-pKa + tautomer-ratio fitting of one microstate free-energy function (head-only)
+- Hypothesis: adding a small experimental tautomer-ratio term to the same G(s) (Uni-pKa head, frozen backbone) fixes
+  out-of-sample tautomer ratios without degrading macro-pKa — because the two data types constrain orthogonal directions
+  of G (across vs within macrostates).
+- Closest: Zankov 2019 (conjugated QSPR / twin NN, log K_T = ΔpKa, fragment descriptors, mixed solvents — abstract only);
+  sPhysNet-Taut 2025 (tautomer-only Siamese 3D NN, Tautobase fine-tune). Difference: one per-microstate G with LSE macro
+  loss over enumerated microstate sets; pKa non-inferiority measured; directly repairs a released SOTA pKa model.
+- Reject: joint head no better on held-out tautomer pairs than pKa-only refit, or pKa degrades beyond 0.05 MAE.
+
+### T3 — pKa-derived ("E") Tautobase labels as cycle-consistent weak supervision
+- Tautobase has 166 numeric aqueous 'E' entries (several "based on pKa values in aqueous soln."). Use as extra training
+  pairs in T2; evaluate only on measured pairs. Secondary arm only; leakage risk with Dwar-iBonD pKa.

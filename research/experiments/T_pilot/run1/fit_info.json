@@ -1,0 +1,20 @@
+{
+ "hp": {
+  "lr": 0.0001,
+  "epochs": 20,
+  "pka_batch": 64,
+  "taut_batch": 16,
+  "lam": 1.0,
+  "seeds": [
+   0,
+   1,
+   2
+  ],
+  "cv_folds": 5
+ },
+ "dwar_transitions": 8232,
+ "dwar_missing": 0,
+ "tautobase_measured": 221,
+ "tautobase_E": 166,
+ "tautobase_missing": 0
+}

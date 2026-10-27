@@ -1,0 +1,42 @@
+{
+ "started": "2026-10-27 21:18:24 UTC / 2026-10-28 02:48:24 IST",
+ "args": {
+  "model_dir": "/scratch/nishanth.r/tordiff/workdir/pretrained/qm9_1order",
+  "ckpt": "best_model.pt",
+  "out": "/scratch/nishanth.r/jmcg/results/cond_gen/smoke2/qm9",
+  "state": null,
+  "parent": null,
+  "id": "state0",
+  "states_csv": "jmcg/condgen/smoke_states.csv",
+  "n_confs": 8,
+  "seed": 0,
+  "steps": 20,
+  "stereo_policy": "require",
+  "lock_arm": true
+ },
+ "host": "gnode118",
+ "python": "3.9.23",
+ "rdkit": "2022.09.5",
+ "torch": "1.13.1+cu117",
+ "generator": {
+  "backend": "torsional_diffusion",
+  "td_repo": "/scratch/nishanth.r/tordiff/torsional-diffusion",
+  "checkpoint": "/scratch/nishanth.r/tordiff/workdir/pretrained/qm9_1order/best_model.pt",
+  "checkpoint_sha256": "4199663e4d408760fd7b8f851d814fd8d97f3c17932efff58f04c9ea75130158",
+  "dataset": "qm9",
+  "in_node_features": 44,
+  "atom_types": [
+   "H",
+   "C",
+   "N",
+   "O",
+   "F"
+  ],
+  "sigma_min": 0.031400000000000004,
+  "sigma_max": 3.14,
+  "inference_steps": 20,
+  "sde": "reverse SDE (TD default, ode=False)",
+  "device": "cpu"
+ },
+ "finished": "2026-10-27 21:18:46 UTC / 2026-10-28 02:48:46 IST"
+}

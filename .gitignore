@@ -16,3 +16,7 @@ logs/
 venv/
 research/papers/
 research/scholar_runs/*/text/
+
+# large numeric caches (regenerable; >100 MB GitHub limit)
+*.npz
+*.npy

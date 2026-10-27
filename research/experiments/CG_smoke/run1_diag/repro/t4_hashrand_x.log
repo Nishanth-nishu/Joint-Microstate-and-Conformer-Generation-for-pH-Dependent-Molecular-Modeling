@@ -1,0 +1,47 @@
+/scratch/nishanth.r/tordiff/venv/lib/python3.9/site-packages/torch/jit/_check.py:181: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn("The TorchScript type system doesn't support "
+{
+ "started": "2026-10-27 21:14:34 UTC / 2026-10-28 02:44:34 IST",
+ "args": {
+  "model_dir": "/scratch/nishanth.r/tordiff/workdir/pretrained/qm9_1order",
+  "ckpt": "best_model.pt",
+  "out": "/scratch/nishanth.r/jmcg/results/cond_gen/smoke1_diag/repro/t4_hashrand_x",
+  "state": null,
+  "parent": null,
+  "id": "state0",
+  "states_csv": "/scratch/nishanth.r/jmcg/results/cond_gen/smoke1/repro_states.csv",
+  "n_confs": 8,
+  "seed": 0,
+  "steps": 20,
+  "stereo_policy": "require",
+  "lock_arm": false
+ },
+ "host": "gnode118",
+ "python": "3.9.23",
+ "rdkit": "2022.09.5",
+ "torch": "1.13.1+cu117",
+ "generator": {
+  "backend": "torsional_diffusion",
+  "td_repo": "/scratch/nishanth.r/tordiff/torsional-diffusion",
+  "checkpoint": "/scratch/nishanth.r/tordiff/workdir/pretrained/qm9_1order/best_model.pt",
+  "checkpoint_sha256": "4199663e4d408760fd7b8f851d814fd8d97f3c17932efff58f04c9ea75130158",
+  "dataset": "qm9",
+  "in_node_features": 44,
+  "atom_types": [
+   "H",
+   "C",
+   "N",
+   "O",
+   "F"
+  ],
+  "sigma_min": 0.031400000000000004,
+  "sigma_max": 3.14,
+  "inference_steps": 20,
+  "sde": "reverse SDE (TD default, ode=False)",
+  "device": "cpu"
+ }
+}
+glycine_zwitterion       tautomer_zwitterionic etkdg_v3: valid 8/8 clusters 1 td: valid 8/8 clusters 1
+acac_Z_enol              tautomer             etkdg_v3: valid 8/8 clusters 1 td: valid 4/8 clusters 3
+histamine_dication       protonation          etkdg_v3: valid 8/8 clusters 1 td: valid 8/8 clusters 3
+done 2026-10-27 21:14:39 UTC / 2026-10-28 02:44:39 IST

@@ -1,6 +1,6 @@
 # Project state
 
-Updated 2026-10-27 00:10 UTC (05:40 IST). Repo: Nishanth-nishu/Joint-Microstate-and-Conformer-Generation-for-pH-Dependent-Molecular-Modeling.
+Updated 2026-10-27 10:55 UTC (16:25 IST). Repo: Nishanth-nishu/Joint-Microstate-and-Conformer-Generation-for-pH-Dependent-Molecular-Modeling.
 Work dir on gnode118: /scratch/nishanth.r/jmcg (staging on /home2/nishanth.r/jmcg_stage, rsynced into scratch by jobs).
 
 | Phase | Status |
@@ -15,6 +15,8 @@ Work dir on gnode118: /scratch/nishanth.r/jmcg (staging on /home2/nishanth.r/jmc
 | VII Candidate ideas | initial set (07_candidate_ideas.md) |
 | VIII Novelty loop | round 1 done: I2 Reject, I4/I5 Revise → N1 (08_novelty_claims.csv) |
 | IX Minimum experiment | N1 pilot done: **N1 falsified** (run2/RESULTS.md). Released Uni-pKa is conformer-invariant; sanity gate passes vs Table 1 (post-hoc reference fix, amendment 3) |
-| X–XIV | not started — direction pending: (a) write up the negative/invariance result (outcome B), (b) pivot to tautomer populations (Uni-pKa Tautobase log K MAE 3.4), (c) test geometry with a physics-based ΔG source instead of Uni-pKa |
+| VIII-b Novelty loop round 2 (tautomers) | done: F_tautomer search + judge → T1 B (diagnostic), T2 B (joint vs tautomer-only) |
+| IX-b Tautomer pilot | pre-registered (experiments/T_pilot/PREREG.md); code ready; awaiting user approval to run (CPU, ~7 h) |
+| X–XIV | not started |
 
 Tooling limitation: scholar-scout not installed on this machine; Google Scholar not searched (see CONVENTIONS.md).

@@ -1,0 +1,261 @@
+{
+ "stage0_zero_shot_5fold": {
+  "C": {
+   "n": 135,
+   "mae": 3.185,
+   "rmse": 3.752,
+   "mean_signed": -2.326,
+   "sign_acc_|logK|>=1": 0.226,
+   "n_|logK|>=1": 106,
+   "mae_2D": 3.154,
+   "mae_by_both_in_dwar": {
+    "0": [
+     135,
+     3.185
+    ]
+   },
+   "mae_predict_zero": 3.005,
+   "slope_pred_on_meas": [
+    0.10382914122591556,
+    0.06094927859318132,
+    0.15781744186308455
+   ]
+  },
+  "E": {
+   "n": 166,
+   "mae": 3.211,
+   "rmse": 4.138,
+   "mean_signed": -0.572,
+   "sign_acc_|logK|>=1": 0.465,
+   "n_|logK|>=1": 144,
+   "mae_2D": 3.206,
+   "mae_by_both_in_dwar": {
+    "0": [
+     166,
+     3.211
+    ]
+   },
+   "mae_predict_zero": 3.237,
+   "slope_pred_on_meas": [
+    0.04960755306655038,
+    0.017538143606185486,
+    0.08154951632868314
+   ]
+  },
+  "M": {
+   "n": 221,
+   "mae": 3.213,
+   "rmse": 3.995,
+   "mean_signed": 1.388,
+   "sign_acc_|logK|>=1": 0.679,
+   "n_|logK|>=1": 187,
+   "mae_2D": 3.254,
+   "mae_by_both_in_dwar": {
+    "0": [
+     209,
+     3.163
+    ],
+    "1": [
+     12,
+     4.073
+    ]
+   },
+   "mae_predict_zero": 3.529,
+   "slope_pred_on_meas": [
+    0.09675625606396189,
+    0.0750339324148568,
+    0.11827230759445378
+   ]
+  }
+ },
+ "n_measured_pairs": 221,
+ "n_groups": 138,
+ "taut_oof_mae": {
+  "R0": 3.241,
+  "R-pKa": 3.252,
+  "R-joint": 1.912,
+  "R-joint+E": 1.78,
+  "R-taut": 1.905
+ },
+ "taut_oof_mae_per_seed": {
+  "R0": [
+   3.241,
+   3.241,
+   3.241
+  ],
+  "R-pKa": [
+   3.253,
+   3.251,
+   3.253
+  ],
+  "R-joint": [
+   1.916,
+   1.914,
+   1.915
+  ],
+  "R-joint+E": [
+   1.78,
+   1.775,
+   1.789
+  ],
+  "R-taut": [
+   1.909,
+   1.908,
+   1.903
+  ]
+ },
+ "taut_oof_mae_by_stratum": {
+  "control": {
+   "R0": 4.585,
+   "R-pKa": 4.612,
+   "R-joint": 2.642,
+   "R-joint+E": 2.448,
+   "R-taut": 2.423,
+   "n": 53
+  },
+  "other": {
+   "R0": 2.937,
+   "R-pKa": 2.951,
+   "R-joint": 1.694,
+   "R-joint+E": 1.531,
+   "R-taut": 1.748,
+   "n": 115
+  },
+  "sensitive": {
+   "R0": 2.557,
+   "R-pKa": 2.546,
+   "R-joint": 1.658,
+   "R-joint+E": 1.653,
+   "R-taut": 1.727,
+   "n": 53
+  }
+ },
+ "taut_oof_slope": {
+  "R0": [
+   0.09625934624434675,
+   0.0682739916211354,
+   0.12217392305852191
+  ],
+  "R-pKa": [
+   0.09125504069684293,
+   0.06521234345019787,
+   0.1156928597375009
+  ],
+  "R-joint": [
+   0.5121750125678382,
+   0.4259574473685924,
+   0.5995330725348312
+  ],
+  "R-joint+E": [
+   0.5710621116821183,
+   0.47851708395240633,
+   0.6606628535523084
+  ],
+  "R-taut": [
+   0.6280845367309831,
+   0.5143182367342345,
+   0.7328066255344058
+  ]
+ },
+ "taut_oof_mae_predict_zero": 3.529,
+ "delta_taut_tautonly_minus_joint": [
+  -0.007271095657655082,
+  -0.11804012827544613,
+  0.11165202483065868
+ ],
+ "delta_taut_pKa_minus_joint": [
+  1.3399110277995978,
+  1.0620571832234105,
+  1.6096796075737194
+ ],
+ "delta_taut_R0_minus_joint": [
+  1.3287900117231213,
+  1.0573125388525886,
+  1.5950644397842575
+ ],
+ "delta_taut_joint_minus_jointE": [
+  0.13212307297468723,
+  0.03815059768335662,
+  0.2248561869575971
+ ],
+ "ext_pka_mae": {
+  "R0": {
+   "novartis": 0.669,
+   "sampl6": 0.534,
+   "sampl7": 0.603,
+   "sampl8": 0.638,
+   "all": 0.651
+  },
+  "R-pKa": {
+   "novartis": 0.656,
+   "sampl6": 0.531,
+   "sampl7": 0.653,
+   "sampl8": 0.617,
+   "all": 0.642
+  },
+  "R-joint": {
+   "novartis": 0.858,
+   "sampl6": 1.055,
+   "sampl7": 0.802,
+   "sampl8": 0.761,
+   "all": 0.865
+  },
+  "R-joint+E": {
+   "novartis": 0.901,
+   "sampl6": 1.184,
+   "sampl7": 0.877,
+   "sampl8": 0.789,
+   "all": 0.917
+  },
+  "R-taut": {
+   "novartis": 2.181,
+   "sampl6": 2.446,
+   "sampl7": 2.978,
+   "sampl8": 2.866,
+   "all": 2.297
+  }
+ },
+ "ext_pka_joint_minus_pKa": [
+  0.2229069380529141,
+  0.16408730485800943,
+  0.28194244044382916
+ ],
+ "sanity_gate": {
+  "novartis_acid": {
+   "ours_fold0": 0.827,
+   "reported": 0.81,
+   "pass": true
+  },
+  "novartis_base": {
+   "ours_fold0": 0.564,
+   "reported": 0.493,
+   "pass": true
+  },
+  "novartis": {
+   "ours_fold0": 0.669,
+   "reported": 0.62,
+   "pass": true
+  },
+  "sampl6": {
+   "ours_fold0": 0.534,
+   "reported": 0.554,
+   "pass": true
+  },
+  "sampl7": {
+   "ours_fold0": 0.603,
+   "reported": 0.57,
+   "pass": true
+  },
+  "sampl8": {
+   "ours_fold0": 0.638,
+   "reported": [
+    0.619,
+    0.631
+   ],
+   "pass": true
+  }
+ },
+ "sanity_gate_pass": true,
+ "prereg_verdict": "T2 FALSIFIED: delta(taut-only - joint) CI includes/below 0; macro-pKa non-inferiority fails (upper CI > 0.05); joint OOF MAE > 1.0 log K",
+ "T1_verdict": "SUPPORTS T1 (compression)"
+}

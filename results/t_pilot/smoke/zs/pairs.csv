@@ -1,0 +1,6 @@
+close_site_pair,heavy_atoms,imhb6_7_flexible_v2,imhb_flexible,imhb_rigid,in_unipka_finetune,label_kind,log_k,logk_A2D,logk_A3D-mean,logk_A3D-only-mean,n_acid_sites,n_base_sites,n_rot,n_sites,reference,row_nr,salt_bridge_flexible_v2,scaffold,site_pair_flexible_v2,smiles_t1,smiles_t2,solvent,split,stratum,stratum_v2,temperature,zwitterion_capable
+0,6,0,0,0,0,M,7.94,0.44315286735070314,0.6560556077266936,0.6773458817642924,0,0,0,1,17,30,0,C1=CCCC1,0,OC1=CCCC1,O=C1CCCC1,Water,train,control,control,,0
+0,7,0,0,0,0,M,6.39,0.2098837624931892,0.5578810904719158,0.5926808232697881,0,0,0,1,17,31,0,C1=CCCCC1,0,OC1=CCCCC1,O=C1CCCCC1,Water,train,control,control,,0
+0,8,0,0,0,0,M,8.0,-0.08389687892385247,0.35207519445777324,0.39567240179593566,0,0,0,1,17,32,0,C1=CCCCCC1,0,OC1=CCCCCC1,O=C1CCCCCC1,Water,val,control,control,,0
+0,9,1,1,0,1,M,1.45,-0.5880869543699869,-0.6022706991166156,-0.6036890735912783,0,0,1,1,17,35,0,C1=CCCC1,0,CC(=O)C1=C(O)CCC1,CC(=O)C1CCCC1=O,Water,train,sensitive,sensitive,,0
+0,10,1,1,0,1,M,0.49,-0.7135354926333297,-0.4410133873623705,-0.41376117683527447,0,0,1,1,17,36,0,C1=CCCCC1,0,CC(=O)C1=C(O)CCCC1,CC(=O)C1CCCCC1=O,Water,train,sensitive,sensitive,,0

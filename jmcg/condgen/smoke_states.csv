@@ -1,0 +1,27 @@
+# Smoke test 1 (2026-10-27): 10 parents, neutral/ionised/tautomeric states, + 2 negative controls. Elements H,C,N,O
+# (the QM9 checkpoint vocabulary is H,C,N,O,F) except the deliberate S control.
+id,parent_smiles,state_smiles,note
+propylamine_neutral,CCCN,CCCN,neutral amine
+propylamine_cation,CCCN,CCC[NH3+],ionised (+1)
+glycine_neutral,NCC(=O)O,NCC(=O)O,neutral
+glycine_zwitterion,NCC(=O)O,[NH3+]CC(=O)[O-],zwitterion (aqueous dominant)
+gaba_neutral,NCCCC(=O)O,NCCCC(=O)O,flexible neutral
+gaba_zwitterion,NCCCC(=O)O,[NH3+]CCCC(=O)[O-],flexible zwitterion
+hydroxypyridine,Oc1ccccn1,Oc1ccccn1,tautomer A (lactim)
+pyridone,Oc1ccccn1,O=c1cccc[nH]1,tautomer B (lactam); C-O torsion disappears
+acac_diketo,CC(=O)CC(C)=O,CC(=O)CC(C)=O,keto tautomer
+acac_Z_enol,CC(=O)CC(C)=O,C/C(O)=C/C(C)=O,Z-enol tautomer (stereo double bond specified)
+histamine_Ntau,NCCc1c[nH]cn1,NCCc1c[nH]cn1,neutral N-tau-H tautomer
+histamine_Npi,NCCc1c[nH]cn1,NCCc1cnc[nH]1,neutral N-pi-H tautomer
+histamine_cation,NCCc1c[nH]cn1,[NH3+]CCc1c[nH]cn1,monocation (amine)
+histamine_dication,NCCc1c[nH]cn1,[NH3+]CCc1c[nH]c[nH+]1,dication
+ibuprofen_S_neutral,CC(C)Cc1ccc(cc1)[C@H](C)C(=O)O,CC(C)Cc1ccc(cc1)[C@H](C)C(=O)O,flexible; 15 heavy atoms (QM9 size OOD); chiral
+ibuprofen_S_anion,CC(C)Cc1ccc(cc1)[C@H](C)C(=O)O,CC(C)Cc1ccc(cc1)[C@H](C)C(=O)[O-],flexible anion; chiral
+pyridine,c1ccncc1,c1ccncc1,rigid (0 torsions)
+pyridinium,c1ccncc1,c1cc[nH+]cc1,rigid cation (0 torsions)
+phenol,Oc1ccccc1,Oc1ccccc1,1 torsion
+phenolate,Oc1ccccc1,[O-]c1ccccc1,anion; torsion disappears
+acetamidine,CC(=N)N,CC(=N)N,neutral; C=N-H E/Z not expressible in heavy-atom SMILES (not validated)
+acetamidinium,CC(=N)N,CC(N)=[NH2+],cation
+NEG_cysteine_S,N[C@@H](CS)C(=O)O,[NH3+][C@@H](CS)C(=O)[O-],negative control: S not in QM9 vocabulary
+NEG_wrong_skeleton,CCO,CCN,negative control: not a protomer/tautomer of parent

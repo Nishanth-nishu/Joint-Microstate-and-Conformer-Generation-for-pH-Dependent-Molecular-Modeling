@@ -203,7 +203,12 @@ def build_iupac(path, sampl_keys):
     return rows, keep
 
 
-def build_tautobase(path):
+MEASURED = ('', 'meas', 'measured', 'm')
+
+
+def build_tautobase(path, kinds=None):
+    """kinds=None keeps measured entries only (frozen sensitive_set_v2 behaviour); otherwise a tuple of lower-cased
+    Meas/Calc/Est tags to keep (e.g. MEASURED + ('e', 'c')), and each row records its tag as label_kind."""
     keep = Counter()
     rows = []
     with open(path, encoding='utf-8', errors='replace', newline='') as fh:
@@ -212,7 +217,8 @@ def build_tautobase(path):
             solv = (r.get('State/Solvent') or '').strip().lower()
             if not any(w in solv for w in ('water', 'aqueous', 'h2o')):
                 keep['drop_not_aqueous'] += 1; continue
-            if (r.get('Meas/Calc/Est') or '').strip().lower() not in ('', 'meas', 'measured', 'm'):
+            kind = (r.get('Meas/Calc/Est') or '').strip().lower()
+            if kind not in (kinds or MEASURED):
                 keep['drop_not_measured'] += 1; continue
             try:
                 logk = float(r['log K'])
@@ -239,6 +245,8 @@ def build_tautobase(path):
                          'solvent': r.get('State/Solvent'), 'temperature': r.get('Temperature'),
                          'reference': r.get('Reference'), 'heavy_atoms': m1.GetNumHeavyAtoms(),
                          'scaffold': scaf, 'split': split, **f})
+            if kinds:
+                rows[-1]['label_kind'] = 'M' if kind in MEASURED else kind.upper()
             keep['rows_kept'] += 1
     return rows, keep
 

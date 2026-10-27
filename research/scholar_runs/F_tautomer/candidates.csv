@@ -1,0 +1,18 @@
+id,title,year,venue,doi_or_url,code_url,relevance(0-3),fulltext_status,checked_utc
+zankov2019,Conjugated QSPR Models: Simultaneous Prediction of Tautomeric Equilibrium Constants and Acidity of Molecules,2019,J Chem Inf Model 59:4569,https://doi.org/10.1021/acs.jcim.9b00722,none found,3,abstract_only,2026-10-27T10:25:20Z
+gunner2020,Standard state free energies not pKas are ideal for describing small molecule protonation and tautomeric states,2020,JCAMD 34:561,https://doi.org/10.1007/s10822-020-00280-7,,3,full_text_read,2026-10-27T10:22:40Z
+isik2021_sampl6,Overview of the SAMPL6 pKa challenge,2021,JCAMD,https://doi.org/10.1007/s10822-020-00362-6,https://github.com/samplchallenges/SAMPL6,2,full_text_read,2026-10-27T10:22:40Z
+gimadiev2018,Assessment of tautomer distribution using the condensed reaction graph approach,2018,JCAMD 32:401,https://doi.org/10.1007/s10822-018-0101-6,,2,abstract_only,2026-10-27T10:27:00Z
+glavatskikh2018,Visualization and Analysis of Complex Reaction Data: Tautomeric Equilibria,2018,Mol Inform,https://doi.org/10.1002/minf.201800056,,1,abstract_only,2026-10-27T10:22:00Z
+watson2019,Generation of Tautomers Using Micro-pKa's,2019,J Chem Inf Model,https://doi.org/10.1021/acs.jcim.8b00955,,2,not_accessible,2026-10-27T10:24:40Z
+pan2026_csd,Deep learning of tautomer stability from crystallographic proton positions,2026,Chem Sci,https://doi.org/10.1039/d6sc03714c,https://github.com/xiaolinpan/Tautomer-Predictor,2,full_text_read,2026-10-27T10:26:20Z
+sphysnet_taut,Fast and Accurate Prediction of Tautomer Ratios in Aqueous Solution via a Siamese Neural Network,2025,JCTC,https://doi.org/10.1021/acs.jctc.5c00041,https://github.com/xiaolinpan/sPhysNet-Taut,3,full_text_read,2026-10-27T10:22:00Z
+acepka,AcepKa,2026,JCIM,https://doi.org/10.1021/acs.jcim.6c03037,https://open.playmolecule.org,1,full_text_read,2026-10-27T10:21:40Z
+dti_pka,Tractable and Thermodynamically Consistent pKa Prediction via First-Dissociation Aggregation,2026,bioRxiv,https://doi.org/10.64898/2026.09.30.755586,,1,abstract_only,2026-10-27T10:24:00Z
+g_pka2026,pKa Predicting Models Trained with a Tautomer-Compatible Graph Dataset with QM Features,2026,JCIM 66:6895,https://doi.org/10.1021/acs.jcim.6c00255,stated public,2,abstract_only,2026-10-27T10:25:20Z
+epik7,Epik: pKa and Protonation State Prediction through Machine Learning,2023,JCTC 19:2380,https://doi.org/10.1021/acs.jctc.3c00044,commercial,1,abstract_only,2026-10-27T10:25:40Z
+tauthor2009,Tautomer Enumeration and Stability Prediction for Virtual Screening on Large Chemical Databases,2009,JCIM,https://doi.org/10.1021/ci800340j,commercial,1,abstract_only,2026-10-27T10:24:40Z
+dhaked2020,Tautomer Database: A Comprehensive Resource for Tautomerism Analyses,2020,JCIM,https://doi.org/10.1021/acs.jcim.9b01156,https://cactus.nci.nih.gov,2,not_accessible,2026-10-27T10:26:00Z
+infante2026,Unifying pKa and Protonation Prediction with Sequence-Based Deep Learning,2026,JCIM,https://doi.org/10.1021/acs.jcim.6c00556,https://doi.org/10.5281/zenodo.20089806,1,not_accessible,2026-10-27T10:23:40Z
+ranepura2026,Kinase Inhibitors can Change Protonation or Tautomeric State upon Binding,2026,JCIM,https://doi.org/10.1021/acs.jcim.6c02792,,1,not_accessible,2026-10-27T10:20:40Z
+lim2026,Understanding the role of aromaticity in tautomeric equilibria,2026,ChemRxiv,https://doi.org/10.26434/chemrxiv.15010863/v1,,1,not_accessible,2026-10-27T10:27:20Z

@@ -16,6 +16,8 @@ echo "=== STAGE 1: sync staging -> scratch"
 rsync -a --exclude '*.pdf' --exclude 'papers/*.txt' $STAGE/research/ $P/research/
 [[ -d $STAGE/jmcg ]] && rsync -a $STAGE/jmcg/ $P/jmcg/
 [[ -d $STAGE/slurm_jmcg ]] && rsync -a $STAGE/slurm_jmcg/ $P/slurm_jmcg/
+cp $STAGE/README.md $P/README.md
+[[ -d $STAGE/data_manifests ]] && rsync -a $STAGE/data_manifests/ $P/data_manifests/
 cp $STAGE/*.sbatch $P/slurm_jmcg/ 2>/dev/null || { mkdir -p $P/slurm_jmcg && cp $STAGE/*.sbatch $P/slurm_jmcg/; }
 mkdir -p $P/logs && cp $STAGE/logs/*.log $P/logs/ 2>/dev/null || true
 echo "=== STAGE 2: commit + push"
@@ -24,5 +26,6 @@ grep -qx 'research/papers/' .gitignore || printf 'research/papers/\nresearch/sch
 git add -A
 git diff --cached --quiet && echo "nothing to commit" || git commit -q -m "${MSG:-research update}"
 git log --format='%h %an %s' -3
+git ls-files README.md research/figures data_manifests | head -20
 git push origin main 2>&1 | tail -2
 echo "end $(date -u '+%F %T UTC') / $(TZ=Asia/Kolkata date '+%F %T IST')"

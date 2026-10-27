@@ -1,0 +1,67 @@
+timestamp_utc,family,query,backend,status,n_results,notes
+2026-10-27T10:20:00Z,F_tautomer,(all queries),google_scholar,not_searched_no_tool,0,no Google Scholar tool on this host
+2026-10-27T10:20:20Z,F_tautomer,10.1039/D1SC01185E (cited_by),citation_neighbours,ok,25,48 citing total; MolTaut; Vazquez-Salazar 2021; Zeng/York 2023
+2026-10-27T10:20:20Z,F_tautomer,10.1021/acs.jctc.5c00041 (cited_by),citation_neighbours,ok,9,found Pan 2026 Chem Sci (CSD tautomers); Infante 2026 JCIM
+2026-10-27T10:20:20Z,F_tautomer,10.1021/jacsau.4c00271 (cited_by),citation_neighbours,ok,25,38 total; TripKa; Zheng/Leito/Green zwitterion; Starling; no tautomer-ratio follow-up seen
+2026-10-27T10:20:40Z,F_tautomer,tautomer pKa multi-task neural network,openalex,ok,15,no joint pKa+tautomer model
+2026-10-27T10:20:40Z,F_tautomer,tautomer ratio prediction machine learning,openalex,ok,20,only Wieder 2021 relevant
+2026-10-27T10:20:40Z,F_tautomer,microstate free energy tautomer equilibrium constant,openalex,ok,15,Gunner 2026 kinase; Zheng/Green datasets
+2026-10-27T10:20:40Z,F_tautomer,microscopic pKa macroscopic pKa tautomer prediction,openalex,ok,20,Gunner 2020 JCAMD; SAMPL6 overview
+2026-10-27T10:21:00Z,F_tautomer,tautomerization free energy aqueous solution deep learning,openalex,ok,15,Infante 2026
+2026-10-27T10:21:00Z,F_tautomer,Epik 7 protonation tautomer prediction,openalex,ok,10,nothing new
+2026-10-27T10:21:00Z,F_tautomer,tautomer equilibrium constants experimental dataset,openalex,ok,15,Champion/Riniker 2024 multistate
+2026-10-27T10:21:00Z,F_tautomer,microconstants dataset microscopic acid dissociation constants,openalex,ok,7,Fraczkiewicz 2024
+2026-10-27T10:21:20Z,F_tautomer,machine learning jointly trained pKa and tautomer ratio thermodynamic cycle consistent microstate free energy,websearch,ok,9,Starling/Uni-pKa only
+2026-10-27T10:21:20Z,F_tautomer,Epik 7 tautomer training data Tautobase benchmark Johnston 2023,websearch,ok,9,no Epik7 tautomer training info
+2026-10-27T10:21:20Z,F_tautomer,"""tautomer"" ""Uni-pKa"" fine-tune tautomer ratios Tautobase",websearch,ok,9,no Uni-pKa tautomer fine-tune found
+2026-10-27T10:21:20Z,F_tautomer,"""Deep learning of tautomer stability from crystallographic proton positions""",websearch,ok,9,press coverage
+2026-10-27T10:21:40Z,F_tautomer,arxiv.org/html/2604.00841v1,webfetch,ok,1,AcepKa; pKa-only training; no tautomer data
+2026-10-27T10:21:40Z,F_tautomer,macroscopic pKa does not determine microscopic pKa tautomer ratio underdetermined microconstants,websearch,ok,9,SAMPL6; Gunner 2020
+2026-10-27T10:21:40Z,F_tautomer,tautomer constant from microscopic pKa difference K_T=10^(pKa1-pKa2) prediction machine learning,websearch,ok,9,Glavatskikh SVM/GTM logKT
+2026-10-27T10:21:40Z,F_tautomer,MolGpKa tautomer microstate graph neural network tautomer equilibrium,websearch,ok,10,nothing on tautomer equilibria
+2026-10-27T10:22:00Z,F_tautomer,pubs.rsc.org d5cp00165j (euroSAMPL S+pKa),webfetch,error,0,403
+2026-10-27T10:22:00Z,F_tautomer,Glavatskikh tautomeric equilibrium constants QSPR SVM GTM 695 reactions,websearch,ok,9,Kazan/Strasbourg logKT models
+2026-10-27T10:22:00Z,F_tautomer,PMC11948319 (sPhysNet-Taut),webfetch,ok,1,full text; baselines; no pKa data
+2026-10-27T10:22:20Z,F_tautomer,"""Bridging Machine Learning and Thermodynamics for Accurate pKa Prediction"" PMC tautomer",websearch,ok,10,no PMC copy found by agent (PMC11423309 exists - read 2026-10-27 00:00 UTC by orchestrator)
+2026-10-27T10:22:20Z,F_tautomer,"""Standard state free energies, not pKas..."" PMC",websearch,ok,10,PMC7556740
+2026-10-27T10:22:40Z,F_tautomer,PMC7556740 (Gunner 2020),webfetch,ok,1,full text; Q2 quotes
+2026-10-27T10:22:40Z,F_tautomer,PMC7904668 (SAMPL6 overview),webfetch,ok,1,first 100k chars read; Q2 quotes
+2026-10-27T10:23:00Z,F_tautomer,pubs.acs.org/doi/10.1021/jacsau.4c00271,webfetch,error,0,403
+2026-10-27T10:23:00Z,F_tautomer,"Uni-pKa Tautobase ""3.435"" OR ""log K""",websearch,ok,9,could not confirm
+2026-10-27T10:23:20Z,F_tautomer,chemrxiv Starling 68388349c1cb1ecda02ba65d,webfetch,error,0,403
+2026-10-27T10:23:20Z,F_tautomer,github.com/dptech-corp/Uni-pKa,webfetch,ok,1,README: no tautomer data; Apache-2.0
+2026-10-27T10:23:40Z,F_tautomer,Unifying pKa and Protonation Prediction with Sequence-Based Deep Learning,openalex,ok,3,Infante 2026; not read
+2026-10-27T10:23:40Z,F_tautomer,"""Unifying pKa and Protonation Prediction..."" tautomer",websearch,empty,0,no relevant hits
+2026-10-27T10:23:40Z,F_tautomer,dominant tautomer prediction aqueous graph neural network,openalex,ok,15,found DTi-pKa 2026 bioRxiv
+2026-10-27T10:23:40Z,F_tautomer,Tautobase tautomer benchmark,openalex,ok,13,Lim/Czodrowski 2026
+2026-10-27T10:24:00Z,F_tautomer,"""Tractable and Thermodynamically Consistent pKa Prediction via First-Dissociation Aggregation""",websearch,empty,0,title not indexed
+2026-10-27T10:24:00Z,F_tautomer,biorxiv 10.64898/2026.09.30.755586,webfetch,ok,1,abstract page; no identifiability or tautomer discussion
+2026-10-27T10:24:20Z,F_tautomer,Generation of Tautomers Using Micro-pKa's,openalex,ok,5,Watson/Yu/Bochevarov 2019
+2026-10-27T10:24:20Z,F_tautomer,arXiv identifiability microstate free energies macroscopic pKa loss tautomer neural network,websearch,ok,9,nothing explicit
+2026-10-27T10:24:20Z,F_tautomer,Rowan Starling pKa tautomer microstate free energy tautomer ratio evaluation,websearch,ok,9,no Starling tautomer-ratio evaluation
+2026-10-27T10:24:20Z,F_tautomer,Fraczkiewicz S+pKa tautomer ratio microconstants tautomeric constant,websearch,ok,9,TauThor mention
+2026-10-27T10:24:40Z,F_tautomer,acs.figshare Generation_of_Tautomers_Using_Micro_pKas,webfetch,error,0,403
+2026-10-27T10:24:40Z,F_tautomer,Tautomer enumeration and stability prediction for virtual screening on large chemical databases,openalex,ok,5,Milletti 2009 TauThor
+2026-10-27T10:25:00Z,F_tautomer,Generation of Tautomers Using Micro-pKa's[Title],pubmed,empty,0,
+2026-10-27T10:25:00Z,F_tautomer,Uni-pKa OR Bridging ML Thermodynamics pKa,pubmed,ok,2,AcepKa JCIM 2026
+2026-10-27T10:25:00Z,F_tautomer,tautomer ratio prediction machine learning aqueous,pubmed,ok,2,
+2026-10-27T10:25:20Z,F_tautomer,tautomer pKa neural network,pubmed,ok,2,KEY: Zankov 2019 conjugated logKT+pKa; G-pKa 2026
+2026-10-27T10:25:20Z,F_tautomer,10.1021/acs.jcim.9b00722 (refs+cited_by),citation_neighbours,ok,30,5 citing; no tautomer follow-up
+2026-10-27T10:25:20Z,F_tautomer,10.1007/s10822-020-00280-7 (cited_by),citation_neighbours,ok,25,Epik7; AcepKa; Gunner 2026
+2026-10-27T10:25:40Z,F_tautomer,"""Epik: pKa and Protonation State Prediction through Machine Learning"" tautomer penalties training microstate",websearch,ok,9,
+2026-10-27T10:25:40Z,F_tautomer,schrodinger.com science-article protonation states,webfetch,ok,1,two routes for tautomer free energy
+2026-10-27T10:25:40Z,F_tautomer,Epik pKa protonation Johnston,pubmed,ok,1,Epik7 abstract
+2026-10-27T10:26:00Z,F_tautomer,Tautomer Database: A Comprehensive Resource for Tautomerism Analyses,openalex,ok,5,Dhaked 2020
+2026-10-27T10:26:00Z,F_tautomer,"""Digitized dataset of aqueous dissociation constants"" Zheng Green",websearch,ok,9,IUPAC dataset
+2026-10-27T10:26:00Z,F_tautomer,github.com/IUPAC/Dissociation-Constants,webfetch,ok,1,24211 rows; CC BY-NC 4.0
+2026-10-27T10:26:00Z,F_tautomer,github.com/WahlOya/Tautobase,webfetch,ok,1,1680 pairs; license not stated on page
+2026-10-27T10:26:20Z,F_tautomer,PMC13598646 (Pan 2026 Chem Sci),webfetch,ok,1,full text; no Uni-pKa; no pKa data
+2026-10-27T10:26:20Z,F_tautomer,pKaHub tautomer,websearch,empty,0,pKaHub not found
+2026-10-27T10:26:20Z,F_tautomer,arxiv NN microstate free energies trained on pKa and tautomer constants jointly,websearch,ok,10,nothing new
+2026-10-27T10:26:40Z,F_tautomer,conjugated models tautomeric constant acidity twin neural network,openalex,ok,2,Zankov only
+2026-10-27T10:26:40Z,F_tautomer,tautomeric equilibrium constant prediction condensed graph of reaction,openalex,ok,10,Gimadiev 2015
+2026-10-27T10:26:40Z,F_tautomer,Zankov conjugated QSPR pdf,websearch,ok,10,kpfu repo; phys.org
+2026-10-27T10:27:00Z,F_tautomer,phys.org 2020-01 chemists neural networks,webfetch,ok,1,Kabachnik equation
+2026-10-27T10:27:00Z,F_tautomer,Gimadiev 2018 tautomer distribution CGR dataset,websearch,ok,9,785 transformations
+2026-10-27T10:27:00Z,F_tautomer,tautomer free energy NN potential implicit solvent benchmark 2024,openalex,ok,15,nothing relevant
+2026-10-27T10:27:20Z,F_tautomer,researchsquare rs-3367941 (Uni-pKa preprint),webfetch,error,0,no body text

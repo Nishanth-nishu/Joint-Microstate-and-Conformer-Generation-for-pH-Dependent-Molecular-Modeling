@@ -1,0 +1,56 @@
+[
+ {
+  "state_id": "gaba_neutral",
+  "method": "td",
+  "conf": 1,
+  "old": {
+   "valid": false,
+   "clash": false,
+   "n_clash_pairs": 1,
+   "min_nonlocal_dist": 1.8570827849380147
+  },
+  "new": {
+   "valid": true,
+   "clash": true,
+   "n_clash_pairs": 0,
+   "n_hbond_contacts": 1,
+   "clash_pairs": []
+  }
+ },
+ {
+  "state_id": "acac_Z_enol",
+  "method": "td_lockdb",
+  "conf": 2,
+  "old": {
+   "valid": false,
+   "clash": false,
+   "n_clash_pairs": 1,
+   "min_nonlocal_dist": 1.8968115889753072
+  },
+  "new": {
+   "valid": true,
+   "clash": true,
+   "n_clash_pairs": 0,
+   "n_hbond_contacts": 1,
+   "clash_pairs": []
+  }
+ },
+ {
+  "state_id": "acac_Z_enol",
+  "method": "td_lockdb",
+  "conf": 5,
+  "old": {
+   "valid": false,
+   "clash": false,
+   "n_clash_pairs": 1,
+   "min_nonlocal_dist": 1.8999043678158594
+  },
+  "new": {
+   "valid": true,
+   "clash": true,
+   "n_clash_pairs": 0,
+   "n_hbond_contacts": 1,
+   "clash_pairs": []
+  }
+ }
+]
