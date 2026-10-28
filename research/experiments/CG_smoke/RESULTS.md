@@ -166,8 +166,9 @@ kcal/mol for the histamine dication. They are not used for any conclusion.
      was a polar-H···O contact.
    - **Fix:** a polar H···N/O pair is now flagged only below 1.5 Å. Such contacts are counted (`n_hbond_contacts`),
      and the clashing pairs are now listed per conformer. New test added.
-3. **Ambiguous checkpoint selection.** The run picked `qm9_1order`, not `qm9_default`. This is not fixed yet. The
-   next run should pin the checkpoint by path.
+3. **Ambiguous checkpoint selection.** The run picked `qm9_1order`, not `qm9_default`. **Fixed in smoke 3**
+   (`slurm_jmcg/cg_smoke3.sbatch`): the checkpoint is pinned by path and the job stops if its SHA-256 does not start
+   with 6a9a6ee9b0e51bda. See section 8.
 4. **Cross-process TD drift.** Measured above and not fixed. The rule from now on: reproducibility claims are
    "same verdicts and clusters, coordinates within 0.11 Å", not bit-identical.
 5. **Fixed in the earlier code audit** (before any output; listed in `10_decision_log.md`):
@@ -222,3 +223,52 @@ This checks that state handling, the seeding fix and the E/Z lock do not degrade
 in minutes. Nothing about charged states can be claimed until this passes. Separately, and without training, a
 read-only count of charged environments in GEOM-DRUGS would show whether a B-category model can be trained from
 existing data.
+
+**Status:** done. The wrapper-fidelity check passed (FAITHFUL; `../CG_fidelity/RESULTS.md`).
+
+## 8. Smoke 3: `qm9_default` pinned (job 45117, 2026-10-28 15:56–15:59 UTC / 21:26–21:29 IST)
+
+Identical to smoke 2 except for the checkpoint: `pretrained/qm9_default/best_model.pt`, SHA-256 6a9a6ee9b0e51bda…,
+pinned by path and checked by hash. Same 24 states, seed 0, 8 conformers, same code. Outputs: `run3/`.
+
+- **Tests:** test_states 20/20, test_backend 10/10.
+- **Valid/generated, by category (smoke 2 → smoke 3):**
+
+| category | ETKDG | TD | TD + E/Z lock |
+|---|---|---|---|
+| A (12 neutral in-distribution states) | 96/96 → 96/96 | 94/96 → 94/96 | 7/8 → 7/8 |
+| B (8 charged states) | 64/64 → 64/64 | 63/64 → 63/64 | – |
+| C (2 ibuprofen states, OOD size) | 16/16 → 16/16 | 14/16 → 16/16 | – |
+| D (2 controls) | cysteine ETKDG 8/8, TD hard-rejected (S); wrong skeleton rejected: unchanged | | |
+
+- **The four smoke-3 failures:**
+
+| state (category) | method | conf | reason |
+|---|---|---|---|
+| acac_Z_enol (A) | td | 0 | Z→E flip of the enol C=C **and** O···H 1.78 Å (O to a non-polar H, so not H-bond exempt) |
+| acac_Z_enol (A) | td | 4 | Z→E flip only (clash-free, bonds and angles OK) |
+| acac_Z_enol (A) | td_lockdb | 2 | O···H 1.77 Å (methyl H to the carbonyl O; limit 1.90 Å); E/Z kept |
+| histamine_dication (B) | td | 5 | H···H 1.35 Å (limit 1.44 Å) |
+
+  - Every bond, angle, connectivity, SDF and stereocentre check passed for every conformer.
+  - The acac Z-enol flips again on the same seed embedding (conformer 0), as it did with `qm9_1order`. The E/Z
+    problem is not checkpoint-specific. The lock arm removes the flips but not the methyl orientation clash.
+- **Per-state changes vs smoke 2 (TD only; ETKDG is bit-identical because its code and seeds are unchanged):**
+  - gaba_zwitterion 7/8 → 8/8.
+  - ibuprofen_S_neutral 6/8 → 8/8.
+  - histamine_dication 8/8 → 7/8.
+  - With 8 conformers per state these are single-conformer changes, not evidence that either checkpoint is better.
+- **Clusters (TD vs ETKDG, 12 states with more than one cluster in either):** TD more in 6, the same in 3, fewer in 3.
+  Smoke 2 was 9 more / 4 same / 1 fewer over 14 states. Descriptive only, at n = 8.
+- **Reproducibility (seed 0, two processes):**
+  - ETKDG is bit-identical.
+  - TD max |dx|: glycine zwitterion 7e-4 Å, histamine dication 6.8e-2 Å, **acac Z-enol 0.49 Å** (smoke 2: at most
+    1.1e-2 Å).
+  - Verdicts were identical across the two processes, with the same failing conformers and the same valid counts.
+  - The 0.11 Å rule in item 4 of section 4 is therefore **broken** for this checkpoint. Small floating-point
+    differences between processes are amplified by the SDE; the root cause is still unverified. Reproducibility claims
+    must be stated as "same verdicts", not as a coordinate tolerance, until the drift is explained.
+
+**Interpretation is unchanged** (sections 5–6). The TD run on A states is now on the checkpoint that passed the
+fidelity check, so it can be cited as a sanity check. B and C remain uninterpretable. Smoke 1 and 2 TD outputs
+(`qm9_1order`) are superseded by smoke 3.

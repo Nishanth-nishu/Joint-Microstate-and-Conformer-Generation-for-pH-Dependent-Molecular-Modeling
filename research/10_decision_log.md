@@ -43,3 +43,8 @@
 - Job 44897 (10:41–11:00 UTC / 16:11–16:30 IST): TD generate_confs.py vs our TDGenerator on 50 GEOM-QM9 test molecules, qm9_default pinned (sha256 6a9a6ee9…), seeds 0/1, scored with TD evaluate_confs.py.
 - Pre-registered rule (jmcg/condgen/fidelity.py) passed: W0−R0 ΔMAT-R −0.010 Å, W1−R1 −0.002 Å vs noise R1−R0 +0.011 Å (tolerance 0.031 Å); ΔCOV-R@0.5 +2.7 / +1.2 pp (tolerance 8.2 pp). Same 4 failures in all arms (3 cage embeddings, 1 corrupted 2-fragment entry).
 - Decision: wrapper accepted as faithful for neutral QM9 inputs. Smoke 1/2 TD outputs used qm9_1order and should be re-run with qm9_default before citation. Report: research/experiments/CG_fidelity/RESULTS.md.
+
+## 2026-10-28 — CG smoke 3 (qm9_default pinned)
+- Job 45117 (15:56–15:59 UTC / 21:26–21:29 IST). Checkpoint pinned by path and hash. Tests 20/20 + 10/10.
+- TD valid: A 94/96, B 63/64, C 16/16, lock 7/8; ETKDG 184/184 (bit-identical to smoke 2). acac Z-enol still flips E/Z under TD (2 of 8), so this is not checkpoint-specific.
+- Cross-process TD drift reached 0.49 Å (acac) with identical verdicts, so the 0.11 Å tolerance rule is withdrawn; reproducibility is claimed only as identical verdicts. Smoke 1/2 TD outputs superseded.
