@@ -1,0 +1,29 @@
+[
+ {
+  "smiles": "C[C@@]12C[C@@H](NC=O)[C@@H]1C2",
+  "corrected_smiles": "C[C@@]12C[C@@H](NC=O)[C@@H]1C2",
+  "n_requested": 4,
+  "build_state": "accepted",
+  "n_generated": 4,
+  "n_rotatable_td": 3,
+  "seconds": 9.36
+ },
+ {
+  "smiles": "C[C@]12C[C@@]1(C=O)OC=N2",
+  "corrected_smiles": "C[C@]12C[C@@]1(C=O)OC=N2",
+  "n_requested": 4,
+  "build_state": "accepted",
+  "n_generated": 4,
+  "n_rotatable_td": 2,
+  "seconds": 0.75
+ },
+ {
+  "smiles": "O=CN[C@@H]1C=CC[C@@H]1O",
+  "corrected_smiles": "O=CN[C@@H]1C=CC[C@@H]1O",
+  "n_requested": 16,
+  "build_state": "accepted",
+  "n_generated": 16,
+  "n_rotatable_td": 3,
+  "seconds": 2.83
+ }
+]

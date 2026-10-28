@@ -1,0 +1,107 @@
+/scratch/nishanth.r/tordiff/venv/lib/python3.9/site-packages/torch/jit/_check.py:181: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn("The TorchScript type system doesn't support "
+Inference schedule: sigma_max=3.14 sigma_min=0.031400000000000004 steps=20 ode=False likelihood=None
+C#CC(=O)CCCCC
+0 rotable_bonds=7 n_confs=116 C#CC(=O)CCCCC
+C#CC(=O)OCCCC
+1 rotable_bonds=7 n_confs=64 C#CC(=O)OCCCC
+C#CC1(C#C)CN[CH][N]1
+2 rotable_bonds=4 n_confs=2 C#C[C@]1(C#C)CNC=N1
+C#CCC(C)(C)CCC
+3 rotable_bonds=8 n_confs=50 C#CCC(C)(C)CCC
+C#CCC[C@](C)(O)CC
+4 rotable_bonds=8 n_confs=208 C#CCC[C@](C)(O)CC
+C#CC[C@@](C)(N)C(=O)O
+5 rotable_bonds=7 n_confs=24 C#CC[C@@](C)(N)C(=O)O
+C#CC[C@]1(CO)CCO1
+6 rotable_bonds=5 n_confs=50 C#CC[C@]1(CO)CCO1
+C#C[C@@H]1CC(=O)O[C@@H]1C
+7 rotable_bonds=3 n_confs=4 C#C[C@@H]1CC(=O)O[C@@H]1C
+C#C[C@]1(CCC)C[C@H]1C
+8 rotable_bonds=6 n_confs=14 C#C[C@]1(CCC)C[C@H]1C
+C#C[C@]12C[C@@H](C)C[C@H]1C2
+9 rotable_bonds=3 n_confs=4 C#C[C@]12C[C@@H](C)C[C@H]1C2
+C#Cc1ncc(N)n1C
+10 rotable_bonds=4 n_confs=2 C#Cc1ncc(N)n1C
+C1OC[C@H]2[C@H]3C[N][C]1N32
+0 != 2
+Failed to embed C1OC[C@H]2[C@H]3CN=C1N32
+CC(C)CN(C)C(N)=O
+12 rotable_bonds=7 n_confs=16 CC(C)CN(C)C(N)=O
+CC(C)O[C@@H](C)[C@@H](C)O
+13 rotable_bonds=8 n_confs=156 CC(C)O[C@@H](C)[C@@H](C)O
+CCC[C@H]1C[C@H](C#N)C1
+14 rotable_bonds=4 n_confs=14 CCC[C@H]1C[C@H](C#N)C1
+CCNC1(C(=O)O)CC1
+15 rotable_bonds=5 n_confs=48 CCNC1(C(=O)O)CC1
+CC[C@@H](O)[C@@]1(C=O)CN1
+16 rotable_bonds=5 n_confs=76 CC[C@@H](O)[C@@]1(C=O)CN1
+CC[C@@H]1[C@@H]2[C@H](C)C=C[C@@H]21
+17 rotable_bonds=3 n_confs=6 CC[C@@H]1[C@@H]2[C@H](C)C=C[C@@H]21
+CN[C@H]1C=NNC([NH])=C1
+18 rotable_bonds=3 n_confs=6 [H]/N=c1/cc(NC)cn[nH]1
+COC=NC(C)(C)C
+19 rotable_bonds=7 n_confs=8 COC=NC(C)(C)C
+CO[C@H](C#CC#N)C=O
+20 rotable_bonds=6 n_confs=12 CO[C@H](C#CC#N)C=O
+C[C@@H]1[C@H](CO)[C@]2(C)C[C@H]12
+21 rotable_bonds=4 n_confs=18 C[C@@H]1[C@H](CO)[C@]2(C)C[C@H]12
+C[C@@](O)(C#N)C1(O)CC1
+22 rotable_bonds=5 n_confs=46 C[C@@](O)(C#N)C1(O)CC1
+C[C@@](O)(C=O)C1CCC1
+23 rotable_bonds=4 n_confs=44 C[C@@](O)(C=O)C1CCC1
+C[C@H](C=O)CN1CC1
+24 rotable_bonds=4 n_confs=74 C[C@H](C=O)CN1CC1
+C[C@H]1C=CCC(=O)C1=O
+25 rotable_bonds=1 n_confs=4 C[C@H]1C=CCC(=O)C1=O
+C[C@H]1CCCCC1=O
+26 rotable_bonds=1 n_confs=16 C[C@H]1CCCCC1=O
+C[C@H]1CN1CC(N)=O
+27 rotable_bonds=4 n_confs=8 C[C@H]1CN1CC(N)=O
+C[C@H]1CN1[C@@H]1[C@H](O)[C@@H]1O
+28 rotable_bonds=4 n_confs=4 C[C@H]1CN1[C@@H]1[C@H](O)[C@@H]1O
+C[C@H]1OCCOC1(C)C
+29 rotable_bonds=3 n_confs=14 C[C@H]1OCCOC1(C)C
+C[C@H]1[C@@H](O)[C@]1(C)C#N
+30 rotable_bonds=4 n_confs=6 C[C@H]1[C@@H](O)[C@]1(C)C#N
+C[C@H]1[C@@H]2[C@H]3C[C@](C)(C3)[C@H]12
+0 != 2
+Failed to embed C[C@H]1[C@@H]2[C@H]3C[C@](C)(C3)[C@H]12
+C[C@H]1[C@H]2C[C@@H]1[C@H](C=O)C2
+32 rotable_bonds=2 n_confs=6 C[C@H]1[C@H]2C[C@@H]1[C@H](C=O)C2
+C[C@]12C=CC[C@H](C1)C2=O
+33 rotable_bonds=1 n_confs=2 C[C@]12C=CC[C@H](C1)C2=O
+C[C@]12C[C@](CCO)(C1)C2
+0 != 14
+Failed to embed C[C@]12C[C@](CCO)(C1)C2
+C[C@]12[C@H](O)[C@@H]3O[C@H]1[C@@]32C
+35 rotable_bonds=3 n_confs=2 C[C@]12[C@H](O)[C@@H]3O[C@H]1[C@@]32C
+Cc1ccc(CO)cn1
+36 rotable_bonds=3 n_confs=12 Cc1ccc(CO)cn1
+N#CCO[C@@H]1C[C@@H]1O
+37 rotable_bonds=4 n_confs=36 N#CCO[C@@H]1C[C@@H]1O
+N#C[C@@H]1CC[C@@]12C[C@@H]2O
+38 rotable_bonds=2 n_confs=4 N#C[C@@H]1CC[C@@]12C[C@@H]2O
+N#N.[NH]C1=N[CH]OC1=O
+Failed to get seed N#N.[NH]C1=N[CH]OC1=O
+Nc1nn[nH]c1C=O
+40 rotable_bonds=2 n_confs=4 Nc1nn[nH]c1C=O
+O=C1CCNC(=O)[C@H]1O
+41 rotable_bonds=1 n_confs=14 O=C1CCNC(=O)[C@H]1O
+O=C1C[C@@H]2C[C@@H]2C1=NO
+42 rotable_bonds=2 n_confs=4 O=C1C[C@@H]2C[C@@H]2C1=NO
+O=C1[C@H]2C[C@H]3O[C@@H]1C[C@@H]23
+43 rotable_bonds=0 n_confs=2 O=C1[C@H]2C[C@H]3O[C@@H]1C[C@@H]23
+O=CC1(C2CC2)CCC1
+44 rotable_bonds=2 n_confs=12 O=CC1(C2CC2)CCC1
+O=CNc1c[nH]c(O)c1
+45 rotable_bonds=3 n_confs=8 O=CNc1c[nH]c(O)c1
+O=C[C@H]1[C@@H]2C[C@H](O)[C@H]1O2
+46 rotable_bonds=2 n_confs=14 O=C[C@H]1[C@@H]2C[C@H](O)[C@H]1O2
+OC[C@@]12CCOC[C@@H]1C2
+47 rotable_bonds=2 n_confs=54 OC[C@@]12CCOC[C@@H]1C2
+O[C@H]1C=C[C@H]2CCO[C@@H]12
+48 rotable_bonds=1 n_confs=4 O[C@H]1C=C[C@H]2CCO[C@@H]12
+c1noc([C@H]2CCO2)n1
+49 rotable_bonds=1 n_confs=4 c1noc([C@H]2CCO2)n1
+Generated conformers for 46 molecules

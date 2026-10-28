@@ -1,0 +1,10 @@
+/scratch/nishanth.r/tordiff/venv/lib/python3.9/site-packages/torch/jit/_check.py:181: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn("The TorchScript type system doesn't support "
+Inference schedule: sigma_max=3.14 sigma_min=0.031400000000000004 steps=20 ode=False likelihood=None
+C[C@@]12C[C@@H](NC=O)[C@@H]1C2
+0 rotable_bonds=3 n_confs=4 C[C@@]12C[C@@H](NC=O)[C@@H]1C2
+C[C@]12C[C@@]1(C=O)OC=N2
+1 rotable_bonds=2 n_confs=4 C[C@]12C[C@@]1(C=O)OC=N2
+O=CN[C@@H]1C=CC[C@@H]1O
+2 rotable_bonds=3 n_confs=16 O=CN[C@@H]1C=CC[C@@H]1O
+Generated conformers for 3 molecules

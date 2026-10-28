@@ -38,3 +38,8 @@
   - QM9 train charge inventory: 111/106,041 charged, all nitro, 0 net-charged → B states are representable but not in distribution.
   - The run used `pretrained/qm9_1order`, not `qm9_default`; the checkpoint must be pinned by path.
   - Joint architecture not started. Proposed next step: a wrapper-fidelity check against TD's generate_confs.py on about 50 GEOM-QM9 test molecules.
+
+## 2026-10-28 — CG wrapper-fidelity check: FAITHFUL
+- Job 44897 (10:41–11:00 UTC / 16:11–16:30 IST): TD generate_confs.py vs our TDGenerator on 50 GEOM-QM9 test molecules, qm9_default pinned (sha256 6a9a6ee9…), seeds 0/1, scored with TD evaluate_confs.py.
+- Pre-registered rule (jmcg/condgen/fidelity.py) passed: W0−R0 ΔMAT-R −0.010 Å, W1−R1 −0.002 Å vs noise R1−R0 +0.011 Å (tolerance 0.031 Å); ΔCOV-R@0.5 +2.7 / +1.2 pp (tolerance 8.2 pp). Same 4 failures in all arms (3 cage embeddings, 1 corrupted 2-fragment entry).
+- Decision: wrapper accepted as faithful for neutral QM9 inputs. Smoke 1/2 TD outputs used qm9_1order and should be re-run with qm9_default before citation. Report: research/experiments/CG_fidelity/RESULTS.md.

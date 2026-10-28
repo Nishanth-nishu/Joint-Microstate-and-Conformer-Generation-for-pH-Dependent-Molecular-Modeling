@@ -1,0 +1,116 @@
+0it [00:00, ?it/s]50it [00:00, 1531.77it/s]
+model failure C1OC[C@H]2[C@H]3CN=C1N32
+model failure C[C@H]1[C@@H]2[C@H]3C[C@](C)(C3)[C@H]12
+model failure C[C@]12C[C@](CCO)(C1)C2
+model failure N#N.[NH]C1=N[CH]OC1=O
+  0%|          | 0/648 [00:00<?, ?it/s] 11%|█         | 69/648 [00:00<00:00, 684.50it/s] 21%|██▏       | 138/648 [00:00<00:00, 645.52it/s] 33%|███▎      | 212/648 [00:00<00:00, 670.08it/s] 47%|████▋     | 304/648 [00:00<00:00, 761.48it/s] 60%|██████    | 390/648 [00:00<00:00, 794.59it/s] 73%|███████▎  | 470/648 [00:00<00:00, 790.20it/s] 85%|████████▍ | 550/648 [00:00<00:00, 783.47it/s] 98%|█████████▊| 632/648 [00:00<00:00, 788.69it/s]100%|██████████| 648/648 [00:00<00:00, 757.89it/s]
+threshold 0.0
+Recall Coverage: Mean = 0.00, Median = 0.00
+Recall AMR: Mean = 0.2033, Median = 0.1403
+Precision Coverage: Mean = 0.00, Median = 0.00
+Precision AMR: Mean = 0.2379, Median = 0.1912
+threshold 0.125
+Recall Coverage: Mean = 50.54, Median = 50.00
+Recall AMR: Mean = 0.2033, Median = 0.1403
+Precision Coverage: Mean = 41.10, Median = 35.81
+Precision AMR: Mean = 0.2379, Median = 0.1912
+threshold 0.25
+Recall Coverage: Mean = 72.64, Median = 89.18
+Recall AMR: Mean = 0.2033, Median = 0.1403
+Precision Coverage: Mean = 64.40, Median = 75.00
+Precision AMR: Mean = 0.2379, Median = 0.1912
+threshold 0.375
+Recall Coverage: Mean = 76.74, Median = 96.28
+Recall AMR: Mean = 0.2033, Median = 0.1403
+Precision Coverage: Mean = 74.32, Median = 92.26
+Precision AMR: Mean = 0.2379, Median = 0.1912
+threshold 0.5
+Recall Coverage: Mean = 81.81, Median = 100.00
+Recall AMR: Mean = 0.2033, Median = 0.1403
+Precision Coverage: Mean = 79.88, Median = 100.00
+Precision AMR: Mean = 0.2379, Median = 0.1912
+threshold 0.625
+Recall Coverage: Mean = 85.85, Median = 100.00
+Recall AMR: Mean = 0.2033, Median = 0.1403
+Precision Coverage: Mean = 86.20, Median = 100.00
+Precision AMR: Mean = 0.2379, Median = 0.1912
+threshold 0.75
+Recall Coverage: Mean = 87.50, Median = 100.00
+Recall AMR: Mean = 0.2033, Median = 0.1403
+Precision Coverage: Mean = 87.24, Median = 100.00
+Precision AMR: Mean = 0.2379, Median = 0.1912
+threshold 0.875
+Recall Coverage: Mean = 89.00, Median = 100.00
+Recall AMR: Mean = 0.2033, Median = 0.1403
+Precision Coverage: Mean = 88.55, Median = 100.00
+Precision AMR: Mean = 0.2379, Median = 0.1912
+threshold 1.0
+Recall Coverage: Mean = 91.00, Median = 100.00
+Recall AMR: Mean = 0.2033, Median = 0.1403
+Precision Coverage: Mean = 89.75, Median = 100.00
+Precision AMR: Mean = 0.2379, Median = 0.1912
+threshold 1.125
+Recall Coverage: Mean = 92.00, Median = 100.00
+Recall AMR: Mean = 0.2033, Median = 0.1403
+Precision Coverage: Mean = 91.75, Median = 100.00
+Precision AMR: Mean = 0.2379, Median = 0.1912
+threshold 1.25
+Recall Coverage: Mean = 92.00, Median = 100.00
+Recall AMR: Mean = 0.2033, Median = 0.1403
+Precision Coverage: Mean = 92.00, Median = 100.00
+Precision AMR: Mean = 0.2379, Median = 0.1912
+threshold 1.375
+Recall Coverage: Mean = 92.00, Median = 100.00
+Recall AMR: Mean = 0.2033, Median = 0.1403
+Precision Coverage: Mean = 92.00, Median = 100.00
+Precision AMR: Mean = 0.2379, Median = 0.1912
+threshold 1.5
+Recall Coverage: Mean = 92.00, Median = 100.00
+Recall AMR: Mean = 0.2033, Median = 0.1403
+Precision Coverage: Mean = 92.00, Median = 100.00
+Precision AMR: Mean = 0.2379, Median = 0.1912
+threshold 1.625
+Recall Coverage: Mean = 92.00, Median = 100.00
+Recall AMR: Mean = 0.2033, Median = 0.1403
+Precision Coverage: Mean = 92.00, Median = 100.00
+Precision AMR: Mean = 0.2379, Median = 0.1912
+threshold 1.75
+Recall Coverage: Mean = 92.00, Median = 100.00
+Recall AMR: Mean = 0.2033, Median = 0.1403
+Precision Coverage: Mean = 92.00, Median = 100.00
+Precision AMR: Mean = 0.2379, Median = 0.1912
+threshold 1.875
+Recall Coverage: Mean = 92.00, Median = 100.00
+Recall AMR: Mean = 0.2033, Median = 0.1403
+Precision Coverage: Mean = 92.00, Median = 100.00
+Precision AMR: Mean = 0.2379, Median = 0.1912
+threshold 2.0
+Recall Coverage: Mean = 92.00, Median = 100.00
+Recall AMR: Mean = 0.2033, Median = 0.1403
+Precision Coverage: Mean = 92.00, Median = 100.00
+Precision AMR: Mean = 0.2379, Median = 0.1912
+threshold 2.125
+Recall Coverage: Mean = 92.00, Median = 100.00
+Recall AMR: Mean = 0.2033, Median = 0.1403
+Precision Coverage: Mean = 92.00, Median = 100.00
+Precision AMR: Mean = 0.2379, Median = 0.1912
+threshold 2.25
+Recall Coverage: Mean = 92.00, Median = 100.00
+Recall AMR: Mean = 0.2033, Median = 0.1403
+Precision Coverage: Mean = 92.00, Median = 100.00
+Precision AMR: Mean = 0.2379, Median = 0.1912
+threshold 2.375
+Recall Coverage: Mean = 92.00, Median = 100.00
+Recall AMR: Mean = 0.2033, Median = 0.1403
+Precision Coverage: Mean = 92.00, Median = 100.00
+Precision AMR: Mean = 0.2379, Median = 0.1912
+46 conformer sets compared 4 model failures 0 additional failures
+SUMMARY threshold=0.5000 COV-R_mean=81.8138 COV-R_median=100.0000 MAT-R_mean=0.2033 MAT-R_median=0.1403 COV-P_mean=79.8829 COV-P_median=100.0000 MAT-P_mean=0.2379 MAT-P_median=0.1912 n_evaluated=46 n_model_failures=4 n_additional_failures=0
+SWEEP thr=0.050 COV-R_mean=3.28 COV-R_median=0.00 COV-P_mean=1.51 COV-P_median=0.00
+SWEEP thr=0.100 COV-R_mean=38.29 COV-R_median=32.58 COV-P_mean=29.43 COV-P_median=16.89
+SWEEP thr=0.250 COV-R_mean=72.64 COV-R_median=89.18 COV-P_mean=64.40 COV-P_median=75.00
+SWEEP thr=0.500 COV-R_mean=81.81 COV-R_median=100.00 COV-P_mean=79.88 COV-P_median=100.00
+SWEEP thr=0.750 COV-R_mean=87.50 COV-R_median=100.00 COV-P_mean=87.24 COV-P_median=100.00
+SWEEP thr=1.000 COV-R_mean=91.00 COV-R_median=100.00 COV-P_mean=89.75 COV-P_median=100.00
+SWEEP thr=1.250 COV-R_mean=92.00 COV-R_median=100.00 COV-P_mean=92.00 COV-P_median=100.00
+Saved per-molecule results to /scratch/nishanth.r/jmcg/results/cond_gen/fidelity_n50/R1.eval.pkl
