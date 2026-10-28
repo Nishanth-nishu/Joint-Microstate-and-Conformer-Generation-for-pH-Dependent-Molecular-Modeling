@@ -27,10 +27,26 @@ TD_REPO = os.environ.get('TD_REPO', '/scratch/nishanth.r/tordiff/torsional-diffu
 if TD_REPO not in sys.path:
     sys.path.insert(0, TD_REPO)
 
+# TD's diffusion/torus.py builds its score-norm table at import by Monte Carlo with the global, unseeded numpy RNG, so
+# each process gets a slightly different table (relative differences ~1e-5) that scales every model output; the SDE
+# amplified this to 0.03-1.7 A between processes for the same seed (drift diagnosis 2026-10-28). Importing TD under a
+# fixed numpy seed makes the table identical in every process; the caller's numpy RNG state is restored afterwards.
+TORUS_IMPORT_SEED = 20221024
+if 'diffusion.torus' in sys.modules:
+    raise ImportError('diffusion.torus was imported before jmcg.condgen.td_backend: its score-norm table is unseeded')
+_np_state = np.random.get_state()
+np.random.seed(TORUS_IMPORT_SEED)
 from utils.featurization import featurize_mol, qm9_types, drugs_types  # noqa: E402  (TD, read-only)
 from utils.torsion import get_transformation_mask  # noqa: E402
 from utils.utils import get_model  # noqa: E402
 from diffusion import sampling as td_sampling  # noqa: E402
+from diffusion import torus as td_torus  # noqa: E402
+np.random.set_state(_np_state)
+
+
+def torus_table_sha():
+    """Hash of TD's score-norm table actually in use (recorded in run metadata)."""
+    return hashlib.sha256(np.ascontiguousarray(td_torus.score_norm_).tobytes()).hexdigest()[:16]
 
 TYPES = {'qm9': qm9_types, 'drugs': drugs_types}
 CHARGE_BUCKETS = (-1, 0, 1)  # TD featurize_mol: one-hot over these + "other"
@@ -65,7 +81,8 @@ class TDGenerator:
                     checkpoint_sha256=self.ckpt_sha256, dataset=self.dataset,
                     in_node_features=self.args.in_node_features, atom_types=sorted(self.types, key=self.types.get),
                     sigma_min=float(self.args.sigma_min), sigma_max=float(self.args.sigma_max),
-                    inference_steps=self.steps, sde='reverse SDE (TD default, ode=False)', device=self.device)
+                    inference_steps=self.steps, sde='reverse SDE (TD default, ode=False)', device=self.device,
+                    torus_import_seed=TORUS_IMPORT_SEED, torus_score_norm_sha256=torus_table_sha())
 
     def compatibility(self, mol):
         """Precise reasons this checkpoint cannot represent the state graph (hard), plus out-of-distribution notes."""

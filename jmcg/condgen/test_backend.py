@@ -4,6 +4,8 @@ Run: python -m jmcg.condgen.test_backend --model_dir <TD qm9 model dir> --states
 """
 import argparse
 import os
+import subprocess
+import sys
 import tempfile
 
 import numpy as np
@@ -86,6 +88,22 @@ def main():
         assert same < 1e-4 and diff > 1e-2, (same, diff)
         return f'seed 0 twice: max |dx| = {same:.1e} A; seed 0 vs 1: {diff:.2f} A'
     check('TD generation reproducible for a fixed seed (same process), differs across seeds', repro)
+
+    def repro_cross_process():
+        # TD's torus score-norm table is built by unseeded Monte Carlo at import; td_backend seeds that import.
+        # Without it the same seed drifted by up to 1.7 A between processes (drift diagnosis 2026-10-28).
+        code = ('import sys, hashlib, numpy as np; from jmcg.condgen import states as st; '
+                'from jmcg.condgen.td_backend import TDGenerator; g = TDGenerator(sys.argv[1]); '
+                "m, _ = st.build_state('C/C(O)=C/C(C)=O'); A, _ = g.generate(m, 4, 0); "
+                'print(np.array([x.GetConformer().GetPositions() for x in A]).tobytes().hex())')
+        here = np.array(xyz(gen.generate(st.build_state('C/C(O)=C/C(C)=O')[0], 4, 0)[0]))
+        outs = [subprocess.run([sys.executable, '-c', code, a.model_dir], capture_output=True, text=True, check=True)
+                .stdout.strip().splitlines()[-1] for _ in range(2)]
+        other = [np.frombuffer(bytes.fromhex(o), dtype=here.dtype).reshape(here.shape) for o in outs]
+        d = max(float(np.abs(here - x).max()) for x in other)
+        assert d == 0.0, d
+        return f'acac Z-enol, seed 0, this process vs 2 fresh processes: max |dx| = {d:.1e} A (bit-identical)'
+    check('TD generation bit-identical across processes for a fixed seed', repro_cross_process)
 
     def distinct_seeds():
         m = built['ibuprofen_S_neutral'][0]

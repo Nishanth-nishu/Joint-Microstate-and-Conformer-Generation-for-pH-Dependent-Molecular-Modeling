@@ -15,5 +15,5 @@ rsync -a /home2/nishanth.r/jmcg_stage/jmcg/condgen/ $P/jmcg/condgen/
 source $TD/venv/bin/activate; cd $P
 export PYTHONPATH=$P TD_REPO=$TD/torsional-diffusion OMP_NUM_THREADS=4 CUDA_VISIBLE_DEVICES=""
 python -m jmcg.condgen.test_states 2>/dev/null | tail -1
-python -m jmcg.condgen.test_backend --model_dir $TD/workdir/pretrained/qm9_1order --states_csv jmcg/condgen/smoke_states.csv 2>&1 | grep -E '^(PASS|FAIL|test_backend)'
+python -m jmcg.condgen.test_backend --model_dir $TD/workdir/pretrained/qm9_default --states_csv jmcg/condgen/smoke_states.csv 2>&1 | grep -E '^(PASS|FAIL|test_backend)'
 echo "end $(date -u '+%F %T UTC') / $(TZ=Asia/Kolkata date '+%F %T IST')"

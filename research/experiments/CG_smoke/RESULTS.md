@@ -169,7 +169,9 @@ kcal/mol for the histamine dication. They are not used for any conclusion.
 3. **Ambiguous checkpoint selection.** The run picked `qm9_1order`, not `qm9_default`. **Fixed in smoke 3**
    (`slurm_jmcg/cg_smoke3.sbatch`): the checkpoint is pinned by path and the job stops if its SHA-256 does not start
    with 6a9a6ee9b0e51bda. See section 8.
-4. **Cross-process TD drift.** Measured above and not fixed. The rule from now on: reproducibility claims are
+4. **Cross-process TD drift.** **Root cause found and fixed 2026-10-28 (section 9):** TD's `diffusion/torus.py`
+   builds its score-norm table with unseeded numpy at import. The text below is the original, pre-fix entry:
+   measured above and not fixed. The rule from now on: reproducibility claims are
    "same verdicts and clusters, coordinates within 0.11 Å", not bit-identical.
 5. **Fixed in the earlier code audit** (before any output; listed in `10_decision_log.md`):
    - silent stereoisomer choice
@@ -272,3 +274,52 @@ pinned by path and checked by hash. Same 24 states, seed 0, 8 conformers, same c
 **Interpretation is unchanged** (sections 5–6). The TD run on A states is now on the checkpoint that passed the
 fidelity check, so it can be cited as a sanity check. B and C remain uninterpretable. Smoke 1 and 2 TD outputs
 (`qm9_1order`) are superseded by smoke 3.
+
+## 9. Cross-process drift: root cause and fix (jobs 45212, 45218, 45220, 45222; 2026-10-28 16:12–16:25 UTC / 21:42–21:55 IST)
+
+**Symptom.** Same state, same seed, two separate processes. TD coordinates differed by up to 1.1e-2 Å in smoke 2 and
+0.49 Å in smoke 3 (acac Z-enol). Within one process they were always bit-identical.
+
+**Localisation** (`jmcg/condgen/drift_trace.py`: the generation is recorded stage by stage, two processes are compared):
+- Bit-identical across processes:
+  - the ETKDG seed geometries;
+  - the positions after `perturb_seeds`;
+  - the numpy, torch and python RNG states before every model call;
+  - the model input of call 0.
+- The first difference appears in the output of model call 0: about 3e-5 in `edge_pred`.
+- The SDE amplifies it at every step. In the default run the per-call output differences went
+  3e-5 → 1e-3 → 2e-1 → 6e1, and the final coordinates differed by 0.03–1.74 Å, depending on the run.
+- None of these removed it: 1 thread, `MKL_CBWR=COMPATIBLE`, both together, `ATEN_CPU_CAPABILITY=default`,
+  `PYTHONHASHSEED=0`, or turning address-space randomisation off (`setarch -R`).
+- Forward hooks on all 54 Python submodules showed identical inputs and outputs, up to and including `final_linear`.
+- So the difference enters after the network: `edge_pred * sqrt(torus.score_norm(edge_sigma))`.
+
+**Root cause.**
+- At import, TD's `diffusion/torus.py` computes the table `score_norm_` by Monte Carlo sampling with the global numpy
+  RNG, before anything seeds it.
+- Two fresh imports gave different tables: sha256 c511fd4e… vs 6885b58f….
+- The cached `.p.npy` and `.score.npy` tables, which `torus.py` writes to the current directory (the 200 MB files found
+  in the repo root earlier), were identical.
+- Every model output is multiplied by a slightly different normaliser in each process.
+- This also affects TD's own `generate_confs.py`. The R0/R1 noise in the fidelity check includes it, so that verdict
+  stands.
+
+**Fix** (`td_backend.py`):
+- TD is imported under a fixed numpy seed (`TORUS_IMPORT_SEED = 20221024`), and the caller's RNG state is restored
+  afterwards.
+- The module raises an error if `diffusion.torus` was already imported unseeded.
+- The table's hash is recorded in the generator metadata (`torus_score_norm_sha256`).
+
+**Verified** (job 45220):
+- Seeded imports give the same table in two processes (8cf17268…).
+- acac Z-enol, seed 0: bit-identical (max |dx| = 0) across two processes, between 4 threads and 1 thread, and
+  between two calls within one process.
+- New regression test, "bit-identical across processes": test_backend now passes 11/11 on `qm9_default` (job 45222).
+  test_states passes 20/20.
+
+**Consequences.**
+- From now on the reproducibility claim is **bit-identical for a fixed seed**, across processes and thread counts on
+  this node. The 0.11 Å tolerance and "same verdicts only" wording is retired.
+- Smoke 1–3 TD outputs were made with an unseeded table each run. They remain valid samples, but cannot be regenerated
+  bit-for-bit. A rerun with the same seed now gives different (fixed) coordinates.
+- Identical results across hardware or library versions have not been tested.

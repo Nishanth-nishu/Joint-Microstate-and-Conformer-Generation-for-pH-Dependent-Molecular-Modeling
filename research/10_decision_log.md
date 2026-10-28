@@ -48,3 +48,8 @@
 - Job 45117 (15:56–15:59 UTC / 21:26–21:29 IST). Checkpoint pinned by path and hash. Tests 20/20 + 10/10.
 - TD valid: A 94/96, B 63/64, C 16/16, lock 7/8; ETKDG 184/184 (bit-identical to smoke 2). acac Z-enol still flips E/Z under TD (2 of 8), so this is not checkpoint-specific.
 - Cross-process TD drift reached 0.49 Å (acac) with identical verdicts, so the 0.11 Å tolerance rule is withdrawn; reproducibility is claimed only as identical verdicts. Smoke 1/2 TD outputs superseded.
+
+## 2026-10-28 — Cross-process TD drift: root cause fixed
+- Cause: TD diffusion/torus.py computes score_norm_ by unseeded numpy Monte Carlo at import, so each process scales model outputs by a slightly different table (relative ~1e-5); the SDE amplifies it to 0.03–1.7 Å. Not threads, MKL, ATen ISA, hash seed or ASLR (all tested). Located by a stage-by-stage trace (jmcg/condgen/drift_trace.py) and per-module hooks.
+- Fix: td_backend imports TD under np.random.seed(20221024), restores the caller's RNG, refuses a prior unseeded torus import, and records the table hash. Verified bit-identical across processes and thread counts; new regression test (test_backend 11/11, job 45222).
+- Reproducibility claims are now "bit-identical for a fixed seed on this node". TD's own generate_confs.py has the same issue (does not change the fidelity verdict). Details: CG_smoke/RESULTS.md section 9.
