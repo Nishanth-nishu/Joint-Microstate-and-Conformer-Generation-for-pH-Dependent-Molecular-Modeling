@@ -1,0 +1,279 @@
+{
+ "state_id": "NEG_cysteine_S",
+ "note": "negative control: S not in QM9 vocabulary",
+ "seed": 0,
+ "n_confs_requested": 8,
+ "failures": [
+  {
+   "stage": "checkpoint",
+   "method": "td",
+   "reason": "atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']"
+  }
+ ],
+ "state": {
+  "state_smiles_input": "[NH3+][C@@H](CS)C(=O)[O-]",
+  "parent_smiles": "N[C@@H](CS)C(=O)O",
+  "state_smiles_canonical": "[NH3+][C@@H](CS)C(=O)[O-]",
+  "skeleton_key": "NC(CS)C(O)O",
+  "state_class": "tautomer_zwitterionic",
+  "net_charge": 0,
+  "parent_net_charge": 0,
+  "dH_total": 0,
+  "changed_sites": [
+   {
+    "parent_idx": 0,
+    "state_idx": 0,
+    "element": "N",
+    "dH": 1,
+    "dq": 1
+   },
+   {
+    "parent_idx": 6,
+    "state_idx": 6,
+    "element": "O",
+    "dH": -1,
+    "dq": -1
+   }
+  ],
+  "changed_bonds": [],
+  "heavy_map_state_to_parent": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "n_equally_minimal_mappings": 1,
+  "n_atoms_with_H": 14,
+  "n_heavy": 7,
+  "elements": {
+   "N": 1,
+   "C": 3,
+   "S": 1,
+   "O": 2,
+   "H": 7
+  },
+  "charged_atoms": [
+   [
+    0,
+    "N",
+    1
+   ],
+   [
+    6,
+    "O",
+    -1
+   ]
+  ],
+  "stereo_elements": [
+   {
+    "kind": "atom",
+    "centered_on": 1,
+    "specified": true
+   }
+  ],
+  "parent_stereocentres_checked": [
+   1
+  ]
+ },
+ "checkpoint_compatibility": {
+  "hard": [
+   "atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']"
+  ],
+  "out_of_distribution": [
+   "charged atoms: representable by the featuriser, but whether the checkpoint saw such graphs is a training-data question (inventory.json), not shown by successful inference"
+  ]
+ },
+ "category": "D",
+ "etkdg_v3": {
+  "generation": {},
+  "seconds": 0.02,
+  "n_generated": 8,
+  "validation": [
+   {
+    "finite": true,
+    "rt_atoms": true,
+    "rt_bonds": true,
+    "rt_isomeric": true,
+    "rt_smiles": "[NH3+][C@@H](CS)C(=O)[O-]",
+    "connectivity": true,
+    "max_12_dev": 0.008716526609207742,
+    "max_13_dev": 9.770935288688776e-05,
+    "bonds_angles": true,
+    "n_hbond_contacts": 0,
+    "n_clash_pairs": 0,
+    "clash_pairs": [],
+    "min_nonlocal_dist": 2.52186998862135,
+    "clash": true,
+    "stereo_smiles_3d": "[NH3+][C@@H](CS)C(=O)[O-]",
+    "stereo": true,
+    "mmff_energy": 42.311775477110594,
+    "valid": true
+   },
+   {
+    "finite": true,
+    "rt_atoms": true,
+    "rt_bonds": true,
+    "rt_isomeric": true,
+    "rt_smiles": "[NH3+][C@@H](CS)C(=O)[O-]",
+    "connectivity": true,
+    "max_12_dev": 0.00895891362199297,
+    "max_13_dev": 1.685710059584622e-05,
+    "bonds_angles": true,
+    "n_hbond_contacts": 0,
+    "n_clash_pairs": 0,
+    "clash_pairs": [],
+    "min_nonlocal_dist": 2.4230263073238127,
+    "clash": true,
+    "stereo_smiles_3d": "[NH3+][C@@H](CS)C(=O)[O-]",
+    "stereo": true,
+    "mmff_energy": 31.646615509086647,
+    "valid": true
+   },
+   {
+    "finite": true,
+    "rt_atoms": true,
+    "rt_bonds": true,
+    "rt_isomeric": true,
+    "rt_smiles": "[NH3+][C@@H](CS)C(=O)[O-]",
+    "connectivity": true,
+    "max_12_dev": 0.007857232761154798,
+    "max_13_dev": 9.865272191511565e-05,
+    "bonds_angles": true,
+    "n_hbond_contacts": 0,
+    "n_clash_pairs": 0,
+    "clash_pairs": [],
+    "min_nonlocal_dist": 2.2904468438172274,
+    "clash": true,
+    "stereo_smiles_3d": "[NH3+][C@@H](CS)C(=O)[O-]",
+    "stereo": true,
+    "mmff_energy": 47.021687969664214,
+    "valid": true
+   },
+   {
+    "finite": true,
+    "rt_atoms": true,
+    "rt_bonds": true,
+    "rt_isomeric": true,
+    "rt_smiles": "[NH3+][C@@H](CS)C(=O)[O-]",
+    "connectivity": true,
+    "max_12_dev": 0.012725895246718189,
+    "max_13_dev": 0.000748840116118199,
+    "bonds_angles": true,
+    "n_hbond_contacts": 0,
+    "n_clash_pairs": 0,
+    "clash_pairs": [],
+    "min_nonlocal_dist": 2.402999966656768,
+    "clash": true,
+    "stereo_smiles_3d": "[NH3+][C@@H](CS)C(=O)[O-]",
+    "stereo": true,
+    "mmff_energy": 25.776626654882673,
+    "valid": true
+   },
+   {
+    "finite": true,
+    "rt_atoms": true,
+    "rt_bonds": true,
+    "rt_isomeric": true,
+    "rt_smiles": "[NH3+][C@@H](CS)C(=O)[O-]",
+    "connectivity": true,
+    "max_12_dev": 0.008645047927370308,
+    "max_13_dev": 0.00010149313950247318,
+    "bonds_angles": true,
+    "n_hbond_contacts": 0,
+    "n_clash_pairs": 0,
+    "clash_pairs": [],
+    "min_nonlocal_dist": 2.5505597661303003,
+    "clash": true,
+    "stereo_smiles_3d": "[NH3+][C@@H](CS)C(=O)[O-]",
+    "stereo": true,
+    "mmff_energy": 27.392419057472825,
+    "valid": true
+   },
+   {
+    "finite": true,
+    "rt_atoms": true,
+    "rt_bonds": true,
+    "rt_isomeric": true,
+    "rt_smiles": "[NH3+][C@@H](CS)C(=O)[O-]",
+    "connectivity": true,
+    "max_12_dev": 0.004142473494188836,
+    "max_13_dev": -0.0010620408952690674,
+    "bonds_angles": true,
+    "n_hbond_contacts": 0,
+    "n_clash_pairs": 0,
+    "clash_pairs": [],
+    "min_nonlocal_dist": 2.040590826641467,
+    "clash": true,
+    "stereo_smiles_3d": "[NH3+][C@@H](CS)C(=O)[O-]",
+    "stereo": true,
+    "mmff_energy": 28.347799357187313,
+    "valid": true
+   },
+   {
+    "finite": true,
+    "rt_atoms": true,
+    "rt_bonds": true,
+    "rt_isomeric": true,
+    "rt_smiles": "[NH3+][C@@H](CS)C(=O)[O-]",
+    "connectivity": true,
+    "max_12_dev": 0.009352627211899334,
+    "max_13_dev": 0.0002325348393092952,
+    "bonds_angles": true,
+    "n_hbond_contacts": 0,
+    "n_clash_pairs": 0,
+    "clash_pairs": [],
+    "min_nonlocal_dist": 2.1007226061965647,
+    "clash": true,
+    "stereo_smiles_3d": "[NH3+][C@@H](CS)C(=O)[O-]",
+    "stereo": true,
+    "mmff_energy": 43.17663481255796,
+    "valid": true
+   },
+   {
+    "finite": true,
+    "rt_atoms": true,
+    "rt_bonds": true,
+    "rt_isomeric": true,
+    "rt_smiles": "[NH3+][C@@H](CS)C(=O)[O-]",
+    "connectivity": true,
+    "max_12_dev": 0.009737231743871977,
+    "max_13_dev": 5.542131787761306e-05,
+    "bonds_angles": true,
+    "n_hbond_contacts": 0,
+    "n_clash_pairs": 0,
+    "clash_pairs": [],
+    "min_nonlocal_dist": 2.120353996963215,
+    "clash": true,
+    "stereo_smiles_3d": "[NH3+][C@@H](CS)C(=O)[O-]",
+    "stereo": true,
+    "mmff_energy": 44.89151949206335,
+    "valid": true
+   }
+  ],
+  "summary": {
+   "n_valid": 8,
+   "n_finite": 8,
+   "n_rt_atoms": 8,
+   "n_rt_bonds": 8,
+   "n_rt_isomeric": 8,
+   "n_connectivity": 8,
+   "n_bonds_angles": 8,
+   "n_clash": 8,
+   "n_stereo": 8,
+   "n_connectivity_unchecked": 0,
+   "mmff_median": 36.97919549309862,
+   "mmff_min": 25.776626654882673
+  },
+  "diversity": {
+   "n": 8,
+   "pairwise_rmsd_min": 0.04810072785025159,
+   "pairwise_rmsd_median": 0.7819239583345614,
+   "pairwise_rmsd_max": 1.092965732053266,
+   "n_clusters_0p5A": 6,
+   "n_unique_0p1A": 6
+  }
+ }
+}

@@ -1,0 +1,4 @@
+id,parent_smiles,state_smiles,note
+glycine_zwitterion,NCC(=O)O,[NH3+]CC(=O)[O-],zwitterion (aqueous dominant)
+acac_Z_enol,CC(=O)CC(C)=O,C/C(O)=C/C(C)=O,Z-enol tautomer (stereo double bond specified)
+histamine_dication,NCCc1c[nH]cn1,[NH3+]CCc1c[nH]c[nH+]1,dication

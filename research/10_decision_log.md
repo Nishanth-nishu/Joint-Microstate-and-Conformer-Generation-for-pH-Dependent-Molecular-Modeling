@@ -53,3 +53,9 @@
 - Cause: TD diffusion/torus.py computes score_norm_ by unseeded numpy Monte Carlo at import, so each process scales model outputs by a slightly different table (relative ~1e-5); the SDE amplifies it to 0.03–1.7 Å. Not threads, MKL, ATen ISA, hash seed or ASLR (all tested). Located by a stage-by-stage trace (jmcg/condgen/drift_trace.py) and per-module hooks.
 - Fix: td_backend imports TD under np.random.seed(20221024), restores the caller's RNG, refuses a prior unseeded torus import, and records the table hash. Verified bit-identical across processes and thread counts; new regression test (test_backend 11/11, job 45222).
 - Reproducibility claims are now "bit-identical for a fixed seed on this node". TD's own generate_confs.py has the same issue (does not change the fidelity verdict). Details: CG_smoke/RESULTS.md section 9.
+
+## 2026-10-28 — CG smoke 4 (fixed implementation, df5210a): passed
+- Job 45272 (16:55–17:00 UTC / 22:25–22:30 IST). Provenance verified: HEAD df5210a clean, qm9_default sha 6a9a6ee9…, torus table 8cf17268cc0b0dee in both processes, inputs sha db070079….
+- All 24 inputs accounted for. Valid/generated: ETKDGv3 A 96/96, B 64/64, C 16/16, D (cysteine) 8/8; TD A 94/96, B 63/64, C 16/16, lock 7/8; wrong-skeleton control rejected; cysteine TD hard-incompatible (S).
+- Whole run bit-identical in a second process (46 SDFs, max |dx| 0); SDF re-read changed 0 verdicts.
+- Decision: the smoke pipeline is validated. No quality claim, TD vs ETKDG. Open: E/Z lock is opt-in (proposed default for stereo-specified double bonds); DRUGS checkpoint absent. Details: CG_smoke/RESULTS.md section 10.

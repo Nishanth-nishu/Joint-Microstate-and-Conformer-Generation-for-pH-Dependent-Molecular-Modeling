@@ -323,3 +323,96 @@ fidelity check, so it can be cited as a sanity check. B and C remain uninterpret
 - Smoke 1–3 TD outputs were made with an unseeded table each run. They remain valid samples, but cannot be regenerated
   bit-for-bit. A rerun with the same seed now gives different (fixed) coordinates.
 - Identical results across hardware or library versions have not been tested.
+
+## 10. Smoke 4: full smoke test on the fixed implementation (job 45272, 2026-10-28 16:55–17:00 UTC / 22:25–22:30 IST)
+
+The exact commands are in `run4/COMMANDS.md`. Outputs: `run4/` (also in `/scratch/nishanth.r/jmcg/results/cond_gen/smoke4`).
+
+**Provenance (verified in the job log):**
+- Code is at jmcg HEAD df5210a, with no tracked uncommitted changes. `td_backend`, `run`, `validate` and `states` are
+  byte-identical between staging and scratch.
+- Checkpoint: `pretrained/qm9_default/best_model.pt`, sha256 6a9a6ee9…25ee74f, pinned and checked.
+- TD torus import seed 20221024. The score-norm table hash is 8cf17268cc0b0dee, the same in both generation processes.
+- Inputs: `smoke_states.csv`, sha256 db070079…, 24 rows. Seed 0, 8 conformers, 20 steps.
+- TD repo HEAD dd354f5a.
+
+**Stages, all with exit 0:**
+- test_states: 20/20.
+- test_backend: 11/11.
+- Generation: all 24 inputs processed.
+- Second full generation process.
+- SDF re-read validation.
+- Repro and seed runs.
+
+**Every input and its outcome. None was dropped; all 24 rows have a `<id>.json`:**
+- 22 states were accepted and generated with ETKDGv3 and TD. acac_Z_enol also ran the E/Z-lock arm.
+- NEG_cysteine_S (D): the state was accepted and ETKDGv3 generated 8/8. TD is hard-incompatible: S is not in the qm9
+  vocabulary (H, C, N, O, F). This is the intended negative control.
+- NEG_wrong_skeleton (D): rejected at the state stage ("heavy-atom skeleton differs"). This is the intended negative
+  control.
+
+**Valid/generated, by category.** "Valid" means passing all of these checks:
+- finite coordinates;
+- SDF round trip of atoms, bonds and isomeric SMILES;
+- connectivity re-perceived from 3D;
+- bond and angle deviation;
+- clash screen;
+- stereo vs the requested state (charges and H counts are part of the round-trip identity).
+
+| category | states | ETKDGv3 | TD | TD + E/Z lock | TD failures by check |
+|---|---|---|---|---|---|
+| A, neutral in-distribution | 12 | 96/96 | 94/96 | 7/8 (1 state) | stereo 2 (E/Z flip; also fails isomeric round trip), clash 1 |
+| B, charged, inside vocabulary and size | 8 | 64/64 | 63/64 | – | clash 1 |
+| C, 15 heavy atoms (QM9 ≤ 9) | 2 | 16/16 | 16/16 | – | – |
+| D, controls | 2 | cysteine 8/8; wrong skeleton rejected | no TD (hard incompatibility) | – | – |
+
+**The four invalid TD conformers:**
+
+| state (cat.) | method | conf | failed checks | detail |
+|---|---|---|---|---|
+| acac_Z_enol (A) | td | 0 | stereo, rt_isomeric, clash | Z→E flip; O···H 1.776 Å to a non-polar H |
+| acac_Z_enol (A) | td | 4 | stereo, rt_isomeric | Z→E flip only |
+| acac_Z_enol (A) | td_lockdb | 2 | clash | methyl H to carbonyl O, 1.774 Å (limit 1.90 Å); E/Z kept |
+| histamine_dication (B) | td | 5 | clash | H···H 1.345 Å (limit 1.44 Å) |
+
+- Every conformer passed: finite coordinates, atom and bond round trip, formal charges and H counts, connectivity,
+  and bond lengths and angles.
+- No ETKDGv3 conformer failed any check.
+- The same four conformers failed in smoke 3, with contact distances within 0.002 Å. Fixing the torus table changed
+  coordinates only slightly for this input set.
+
+**Reproducibility:**
+- Whole run repeated in a second process: 46 SDF files, max |dx| = 0.0 Å.
+- rep_a vs rep_b (three states): 0.0 Å for both ETKDG and TD.
+- Seed 0 vs seed 1 differ by 3.1–7.8 Å.
+- Re-reading every written SDF and validating again changed 0 of 46 (state, method) verdicts.
+- The claim: **bit-identical for a fixed seed on gnode118**.
+
+**ETKDGv3 baseline (fair by construction):**
+- Same 22 supported states, same Mol objects, same per-conformer RDKit seeds as TD's starting geometries, and the same
+  validation code.
+- ETKDGv3 has no force-field refinement, and neither does TD.
+- On the states where TD runs, valid conformers are ETKDGv3 176/176 and TD 173/176 (+ lock arm 7/8).
+- Distinct conformer groups at 0.5 Å, TD vs ETKDG, over the 12 states with more than one group in either:
+  - A: TD more 2, same 3, fewer 1;
+  - B: more 3, fewer 1;
+  - C: more 1, same 1.
+- CPU time for 8 conformers per state: ETKDGv3 0.7 s total; TD 40.8 s (includes model warm-up on the first state).
+- **No claim** of better or worse conformers either way. There is no reference ensemble for these states, n = 8, and
+  for B and C the TD model is extrapolating.
+
+**Conclusions supported by this evidence:**
+1. The fixed pipeline runs end to end and records every input's outcome. It is bit-reproducible on this node.
+2. State identity (charge, H, bond orders, stereo) survives generation and SDF writing for every conformer from both
+   methods.
+3. TD's only stereo failure is the known E/Z flip of the acac enol double bond (2 of 8). The lock arm removes it. The
+   remaining TD failures are single close contacts.
+4. Nothing here measures conformer quality. Interpretability limits are unchanged from section 5: A is a sanity check;
+   B and C are out of distribution.
+
+**Unresolved:**
+- E/Z flips when the lock is off. The lock is opt-in; the smallest justified fix is to enable it by default for states
+  with a specified stereo double bond. Not done here because that changes defaults.
+- One methyl-orientation clash under the lock.
+- One H···H contact in histamine dication.
+- No GEOM-DRUGS checkpoint, so C and D cannot be tested on an in-distribution model.
