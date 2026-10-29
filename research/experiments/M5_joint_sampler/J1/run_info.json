@@ -1,0 +1,39 @@
+{
+ "arm": "J1",
+ "coefficients": {
+  "dGU": 4.2259685566436636,
+  "dphi1": 1.3319108863214977,
+  "dphi2": 0.6595375143048751,
+  "dphi3": 27.84977043759285
+ },
+ "ph": 7.4,
+ "seed": 0,
+ "fallback_levels_theta0": {
+  "glycine|charge -1": {
+   "level_mass": 0.0037268570578929123,
+   "n_states": 1,
+   "n_without_phi": 1
+  },
+  "glycine|charge 0": {
+   "level_mass": 0.9962650269688942,
+   "n_states": 2,
+   "n_without_phi": 1
+  },
+  "ibuprofen|charge -1": {
+   "level_mass": 0.998660135400079,
+   "n_states": 1,
+   "n_without_phi": 1
+  },
+  "ibuprofen|charge 0": {
+   "level_mass": 0.0013398645999210138,
+   "n_states": 1,
+   "n_without_phi": 1
+  },
+  "phenol|charge -1": {
+   "level_mass": 0.0025414156881137908,
+   "n_states": 1,
+   "n_without_phi": 1
+  }
+ },
+ "n_pairs_without_conformer": 40
+}

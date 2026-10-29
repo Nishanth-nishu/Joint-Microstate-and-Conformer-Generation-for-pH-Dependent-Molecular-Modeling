@@ -1,0 +1,476 @@
+{
+ "n_seeds": 845,
+ "n_enumerated_states": 9945,
+ "n_enumeration_failures": 2,
+ "enumerator": {
+  "enumerator": "/scratch/nishanth.r/jmcg/ext/unipka_orig/enumerator/main.py",
+  "enumerator_sha256": "6734b12b89fa02bd62785be767f728b429aa16eb94feba14b0b0fd53cfcb4067",
+  "template": "/scratch/nishanth.r/jmcg/ext/unipka_orig/enumerator/simple_smarts_pattern.tsv",
+  "template_sha256": "6b4828e5065a5c5de179351639187daf47e3e8a32d8b1358fa73d30c2702566f"
+ },
+ "PKA_MEAN": 6.504894871171601,
+ "external_oracle": {
+  "n": 356,
+  "n_groups": 270,
+  "MAE": 0.6333743536360703,
+  "MAE_ci95": [
+   0.5627250547085849,
+   0.7097096337961318
+  ],
+  "RMSE": 0.872661961291828,
+  "RMSE_ci95": [
+   0.776802618466221,
+   0.9726417812434385
+  ],
+  "mean_signed": 0.035968699049210864,
+  "slope_pred_on_target": 0.8773475682650744
+ },
+ "external_enumerated": {
+  "simple_smarts_pattern.tsv": {
+   "n_failed": 75,
+   "failures": [
+    {
+     "source_record": "sampl6:2",
+     "enum_failure": "levels present [0, 1, 2], need 0,-1"
+    },
+    {
+     "source_record": "sampl6:4",
+     "enum_failure": "levels present [1, 2], need 1,0"
+    },
+    {
+     "source_record": "sampl6:6",
+     "enum_failure": "levels present [0, 1, 2], need 0,-1"
+    },
+    {
+     "source_record": "sampl6:10",
+     "enum_failure": "levels present [0, 1], need 0,-1"
+    },
+    {
+     "source_record": "sampl6:19",
+     "enum_failure": "levels present [0, 1], need 0,-1"
+    },
+    {
+     "source_record": "sampl6:21",
+     "enum_failure": "levels present [1, 2], need 1,0"
+    },
+    {
+     "source_record": "sampl6:23",
+     "enum_failure": "levels present [-1, 0, 1, 2], need -1,-2"
+    },
+    {
+     "source_record": "sampl6:24",
+     "enum_failure": "levels present [0, 1], need 0,-1"
+    },
+    {
+     "source_record": "sampl6:25",
+     "enum_failure": "levels present [0], need 0,-1"
+    },
+    {
+     "source_record": "sampl8:4",
+     "enum_failure": "levels present [0, 1, 2], need 0,-1"
+    },
+    {
+     "source_record": "sampl8:10",
+     "enum_failure": "levels present [1, 2], need 1,0"
+    },
+    {
+     "source_record": "sampl8:14",
+     "enum_failure": "levels present [1, 2], need 1,0"
+    },
+    {
+     "source_record": "sampl8:15",
+     "enum_failure": "levels present [1, 2], need 1,0"
+    },
+    {
+     "source_record": "novartis_acid:0",
+     "enum_failure": "levels present [0, 1, 2], need 0,-1"
+    },
+    {
+     "source_record": "novartis_acid:14",
+     "enum_failure": "levels present [0], need 0,-1"
+    },
+    {
+     "source_record": "novartis_acid:19",
+     "enum_failure": "levels present [0, 1], need 0,-1"
+    },
+    {
+     "source_record": "novartis_acid:22",
+     "enum_failure": "levels present [0], need 0,-1"
+    },
+    {
+     "source_record": "novartis_acid:34",
+     "enum_failure": "levels present [0, 1, 2], need 0,-1"
+    },
+    {
+     "source_record": "novartis_acid:53",
+     "enum_failure": "levels present [0], need 0,-1"
+    },
+    {
+     "source_record": "novartis_acid:54",
+     "enum_failure": "levels present [0, 1, 2], need 0,-1"
+    },
+    {
+     "source_record": "novartis_acid:66",
+     "enum_failure": "levels present [0, 1], need 0,-1"
+    },
+    {
+     "source_record": "novartis_acid:67",
+     "enum_failure": "levels present [0, 1], need 0,-1"
+    },
+    {
+     "source_record": "novartis_acid:68",
+     "enum_failure": "levels present [0, 1, 2], need 0,-1"
+    },
+    {
+     "source_record": "novartis_acid:71",
+     "enum_failure": "levels present [0, 1], need 0,-1"
+    },
+    {
+     "source_record": "novartis_acid:72",
+     "enum_failure": "levels present [0], need 0,-1"
+    },
+    {
+     "source_record": "novartis_acid:80",
+     "enum_failure": "levels present [0, 1], need 0,-1"
+    },
+    {
+     "source_record": "novartis_acid:81",
+     "enum_failure": "levels present [0, 1, 2], need 0,-1"
+    },
+    {
+     "source_record": "novartis_acid:82",
+     "enum_failure": "levels present [0, 1, 2], need 0,-1"
+    },
+    {
+     "source_record": "novartis_acid:95",
+     "enum_failure": "levels present [0], need 0,-1"
+    },
+    {
+     "source_record": "novartis_acid:96",
+     "enum_failure": "levels present [0], need 0,-1"
+    },
+    {
+     "source_record": "novartis_acid:101",
+     "enum_failure": "levels present [0, 1], need 0,-1"
+    },
+    {
+     "source_record": "novartis_base:1",
+     "enum_failure": "levels present [1, 2], need 1,0"
+    },
+    {
+     "source_record": "novartis_base:3",
+     "enum_failure": "levels present [1, 2], need 1,0"
+    },
+    {
+     "source_record": "novartis_base:4",
+     "enum_failure": "levels present [1, 2], need 1,0"
+    },
+    {
+     "source_record": "novartis_base:11",
+     "enum_failure": "levels present [1, 2], need 1,0"
+    },
+    {
+     "source_record": "novartis_base:12",
+     "enum_failure": "levels present [1, 2], need 1,0"
+    },
+    {
+     "source_record": "novartis_base:13",
+     "enum_failure": "levels present [1, 2], need 1,0"
+    },
+    {
+     "source_record": "novartis_base:15",
+     "enum_failure": "levels present [1, 2], need 1,0"
+    },
+    {
+     "source_record": "novartis_base:21",
+     "enum_failure": "levels present [1, 2], need 1,0"
+    },
+    {
+     "source_record": "novartis_base:23",
+     "enum_failure": "levels present [1, 2], need 1,0"
+    },
+    {
+     "source_record": "novartis_base:27",
+     "enum_failure": "levels present [1, 2], need 1,0"
+    },
+    {
+     "source_record": "novartis_base:28",
+     "enum_failure": "levels present [1, 2], need 1,0"
+    },
+    {
+     "source_record": "novartis_base:30",
+     "enum_failure": "levels present [1, 2], need 1,0"
+    },
+    {
+     "source_record": "novartis_base:44",
+     "enum_failure": "levels present [1, 2], need 1,0"
+    },
+    {
+     "source_record": "novartis_base:48",
+     "enum_failure": "levels present [1, 2], need 1,0"
+    },
+    {
+     "source_record": "novartis_base:56",
+     "enum_failure": "levels present [1, 2], need 1,0"
+    },
+    {
+     "source_record": "novartis_base:75",
+     "enum_failure": "levels present [1, 2], need 1,0"
+    },
+    {
+     "source_record": "novartis_base:77",
+     "enum_failure": "levels present [1, 2], need 1,0"
+    },
+    {
+     "source_record": "novartis_base:79",
+     "enum_failure": "levels present [1, 2], need 1,0"
+    },
+    {
+     "source_record": "novartis_base:80",
+     "enum_failure": "levels present [1, 2], need 1,0"
+    }
+   ],
+   "on_successes": {
+    "n": 281,
+    "n_groups": 218,
+    "MAE": 0.6502291050543882,
+    "MAE_ci95": [
+     0.5668368701079419,
+     0.7412086866888721
+    ],
+    "RMSE": 0.9023515328100697,
+    "RMSE_ci95": [
+     0.7878309952481616,
+     1.0154630728040916
+    ],
+    "mean_signed": 0.012041859829724832,
+    "slope_pred_on_target": 0.8611087591164657
+   },
+   "oracle_on_same_successes": {
+    "n": 281,
+    "n_groups": 218,
+    "MAE": 0.6420675852851698,
+    "MAE_ci95": [
+     0.5578095319889937,
+     0.7325329856333664
+    ],
+    "RMSE": 0.8966084663799004,
+    "RMSE_ci95": [
+     0.7804884855899856,
+     1.0106983335572532
+    ],
+    "mean_signed": -0.0003761144120535496,
+    "slope_pred_on_target": 0.8576718613448998
+   },
+   "mean_recall_acid": 0.8767751228605322,
+   "mean_recall_base": 0.9007710557532621,
+   "full_recall_both": 139
+  },
+  "smarts_pattern.tsv": {
+   "n_failed": 0,
+   "failures": [],
+   "on_successes": {
+    "n": 356,
+    "n_groups": 270,
+    "MAE": 0.6330862160381067,
+    "MAE_ci95": [
+     0.5624849625077184,
+     0.7096123462251437
+    ],
+    "RMSE": 0.8726202337974437,
+    "RMSE_ci95": [
+     0.776689916750862,
+     0.9726337571677036
+    ],
+    "mean_signed": 0.03567952032423187,
+    "slope_pred_on_target": 0.8774421562162067
+   },
+   "oracle_on_same_successes": {
+    "n": 356,
+    "n_groups": 270,
+    "MAE": 0.6333743536360703,
+    "MAE_ci95": [
+     0.5627250547085849,
+     0.7097096337961318
+    ],
+    "RMSE": 0.872661961291828,
+    "RMSE_ci95": [
+     0.776802618466221,
+     0.9726417812434385
+    ],
+    "mean_signed": 0.035968699049210864,
+    "slope_pred_on_target": 0.8773475682650744
+   },
+   "mean_recall_acid": 0.9875468164794006,
+   "mean_recall_base": 1.0,
+   "full_recall_both": 345
+  }
+ },
+ "external_by_source": {
+  "unipka:novartis_acid": {
+   "n": 112,
+   "n_groups": 92,
+   "MAE": 0.8184930824805475,
+   "MAE_ci95": [
+    0.6583821468584071,
+    0.9816679370006344
+   ],
+   "RMSE": 1.1056620162248818,
+   "RMSE_ci95": [
+    0.9030765084855717,
+    1.2902822282782682
+   ],
+   "mean_signed": 0.16656571245183677,
+   "slope_pred_on_target": 0.7898236588234452
+  },
+  "unipka:novartis_base": {
+   "n": 168,
+   "n_groups": 138,
+   "MAE": 0.5441825283545269,
+   "MAE_ci95": [
+    0.4650907374932,
+    0.6314836588947631
+   ],
+   "RMSE": 0.7244807824901252,
+   "RMSE_ci95": [
+    0.6180396916967853,
+    0.8290506136766145
+   ],
+   "mean_signed": 0.013431252694940872,
+   "slope_pred_on_target": 0.8631487109195765
+  },
+  "unipka:sampl6": {
+   "n": 31,
+   "n_groups": 18,
+   "MAE": 0.5159409378445269,
+   "MAE_ci95": [
+    0.34472269646043524,
+    0.6939523257994937
+   ],
+   "RMSE": 0.7614311354705594,
+   "RMSE_ci95": [
+    0.513458584085647,
+    0.9794332238057484
+   ],
+   "mean_signed": 0.1157145306555268,
+   "slope_pred_on_target": 0.9846382937202903
+  },
+  "unipka:sampl7": {
+   "n": 20,
+   "n_groups": 14,
+   "MAE": 0.5224762061653561,
+   "MAE_ci95": [
+    0.36410985699344545,
+    0.6981891935995888
+   ],
+   "RMSE": 0.649682415005828,
+   "RMSE_ci95": [
+    0.4600140914846516,
+    0.8252553007885753
+   ],
+   "mean_signed": -0.3464881132737725,
+   "slope_pred_on_target": 0.9463589115944181
+  },
+  "unipka:sampl8": {
+   "n": 25,
+   "n_groups": 17,
+   "MAE": 0.6377474678628702,
+   "MAE_ci95": [
+    0.3677032436550739,
+    0.8892645824595509
+   ],
+   "RMSE": 0.8853412739022642,
+   "RMSE_ci95": [
+    0.524480616041316,
+    1.1609241838152002
+   ],
+   "mean_signed": -0.19057366282730398,
+   "slope_pred_on_target": 1.17869376702955
+  }
+ },
+ "tautomer_oracle": {
+  "calculated": {
+   "n": 135,
+   "n_groups": 49,
+   "MAE": 3.1850676263031668,
+   "MAE_ci95": [
+    2.460684511674267,
+    3.8771040503108427
+   ],
+   "RMSE": 3.7521872944737806,
+   "RMSE_ci95": [
+    3.1476907125197084,
+    4.405976315805988
+   ],
+   "mean_signed": -2.3261138885581323,
+   "slope_pred_on_target": 0.10382914076719109
+  },
+  "estimated": {
+   "n": 166,
+   "n_groups": 91,
+   "MAE": 3.2107314088522103,
+   "MAE_ci95": [
+    2.8137798798577354,
+    3.6868154181875736
+   ],
+   "RMSE": 4.137544270092338,
+   "RMSE_ci95": [
+    3.463024473706314,
+    4.94168436923005
+   ],
+   "mean_signed": -0.5724104204070294,
+   "slope_pred_on_target": 0.04960755282255841
+  },
+  "measured": {
+   "n": 221,
+   "n_groups": 132,
+   "MAE": 3.2128404668137778,
+   "MAE_ci95": [
+    2.805672495242566,
+    3.6222273747426637
+   ],
+   "RMSE": 3.9947892539050773,
+   "RMSE_ci95": [
+    3.5293703940613756,
+    4.430319062890878
+   ],
+   "mean_signed": 1.3880842656481815,
+   "slope_pred_on_target": 0.09675625702632852
+  }
+ },
+ "tautomer_predict_zero_MAE": {
+  "calculated": 3.0051111111111117,
+  "estimated": 3.2372891566265065,
+  "measured": 3.529049773755656
+ },
+ "tautomer_enumerator_recall": {
+  "calculated|simple_smarts_pattern.tsv": {
+   "t1_in_own_ensemble": "135/135",
+   "t2_in_ensemble_of_t1": "0/135"
+  },
+  "calculated|smarts_pattern.tsv": {
+   "t1_in_own_ensemble": "135/135",
+   "t2_in_ensemble_of_t1": "0/135"
+  },
+  "estimated|simple_smarts_pattern.tsv": {
+   "t1_in_own_ensemble": "165/166",
+   "t2_in_ensemble_of_t1": "0/166"
+  },
+  "estimated|smarts_pattern.tsv": {
+   "t1_in_own_ensemble": "165/166",
+   "t2_in_ensemble_of_t1": "0/166"
+  },
+  "measured|simple_smarts_pattern.tsv": {
+   "t1_in_own_ensemble": "221/221",
+   "t2_in_ensemble_of_t1": "0/221"
+  },
+  "measured|smarts_pattern.tsv": {
+   "t1_in_own_ensemble": "221/221",
+   "t2_in_ensemble_of_t1": "0/221"
+  }
+ },
+ "reproduction_vs_N1": {
+  "n_matched": 356,
+  "max_abs_diff": 4.338177761009193
+ }
+}

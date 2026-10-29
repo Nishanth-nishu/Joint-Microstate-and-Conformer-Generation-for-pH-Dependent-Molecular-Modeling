@@ -1,0 +1,11 @@
+obs_id,source,source_record,split_group,target,oracle,n_acid,n_base,template,enumerated,recall_acid,recall_base,n_ens_acid_level,n_ens_base_level,ensemble_size,enum_failure
+O006395,unipka:sampl6,sampl6:0,O=C1NCCCc2c1oc1ccccc21,9.53,9.579349640128118,1,2,simple_smarts_pattern.tsv,9.667394195693875,1.0,0.5,1.0,1.0,2.0,
+O006395,unipka:sampl6,sampl6:0,O=C1NCCCc2c1oc1ccccc21,9.53,9.579349640128118,1,2,smarts_pattern.tsv,9.579349640128118,1.0,1.0,1.0,2.0,5.0,
+O006396,unipka:sampl6,sampl6:1,c1ccc(Nc2ncnc3ccccc23)cc1,5.03,4.661169521487581,3,1,simple_smarts_pattern.tsv,4.661169521487581,1.0,1.0,3.0,1.0,7.0,
+O006396,unipka:sampl6,sampl6:1,c1ccc(Nc2ncnc3ccccc23)cc1,5.03,4.661169521487581,3,1,smarts_pattern.tsv,4.661169521487581,1.0,1.0,3.0,1.0,8.0,
+O006397,unipka:sampl6,sampl6:2,O=C(Nc1nnc(Cc2ccccc2)s1)c1cccs1,7.02,7.161836825230179,1,2,simple_smarts_pattern.tsv,,,,,,,"levels present [0, 1, 2], need 0,-1"
+O006397,unipka:sampl6,sampl6:2,O=C(Nc1nnc(Cc2ccccc2)s1)c1cccs1,7.02,7.161836825230179,1,2,smarts_pattern.tsv,7.161836825230179,1.0,1.0,1.0,2.0,10.0,
+O006398,unipka:sampl6,sampl6:3,c1ccc(CNc2ncnc3ccccc23)cc1,6.02,5.891262242994538,3,1,simple_smarts_pattern.tsv,5.891262242994538,1.0,1.0,3.0,1.0,7.0,
+O006398,unipka:sampl6,sampl6:3,c1ccc(CNc2ncnc3ccccc23)cc1,6.02,5.891262242994538,3,1,smarts_pattern.tsv,5.891262242994538,1.0,1.0,3.0,1.0,8.0,
+O006399,unipka:sampl6,sampl6:4,O=C(Nc1ccccc1N1CCCCC1)c1ccco1,4.59,4.205479806798757,2,1,simple_smarts_pattern.tsv,,,,,,,"levels present [1, 2], need 1,0"
+O006399,unipka:sampl6,sampl6:4,O=C(Nc1ccccc1N1CCCCC1)c1ccco1,4.59,4.205479806798757,2,1,smarts_pattern.tsv,4.205479806798757,1.0,1.0,2.0,1.0,5.0,

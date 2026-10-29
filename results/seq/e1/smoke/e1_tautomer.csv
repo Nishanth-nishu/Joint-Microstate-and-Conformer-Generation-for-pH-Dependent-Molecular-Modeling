@@ -1,0 +1,6 @@
+obs_id,label_status,split,split_group,target,oracle,oracle_sd_folds,t1_in_ensemble|simple_smarts_pattern.tsv,t2_in_ensemble|simple_smarts_pattern.tsv,t1_in_ensemble|smarts_pattern.tsv,t2_in_ensemble|smarts_pattern.tsv
+O014980,measured,train,O=C1CCCC1,7.94,0.6560556077266936,0.38980892072492784,True,False,True,False
+O014981,measured,train,O=C1CCCCC1,6.39,0.5578810904719158,0.4452432951651045,True,False,True,False
+O014982,measured,train,O=C1CCCCCC1,8.0,0.35207522457962737,0.360279252393253,True,False,True,False
+O014983,measured,train,O=C1CCCC1,1.45,-0.6022706991166156,0.24979027244511917,True,False,True,False
+O014984,measured,train,O=C1CCCCC1,0.49,-0.4410133873623705,0.141313106242319,True,False,True,False

@@ -1,0 +1,45 @@
+{
+ "started": "2026-10-28 17:11:31 UTC / 2026-10-28 22:41:31 IST",
+ "args": {
+  "model_dir": "/scratch/nishanth.r/tordiff/workdir/pretrained/qm9_default",
+  "ckpt": "best_model.pt",
+  "out": "/scratch/nishanth.r/jmcg/results/cond_gen/smoke5/qm9",
+  "state": null,
+  "parent": null,
+  "id": "state0",
+  "states_csv": "jmcg/condgen/smoke_states.csv",
+  "n_confs": 8,
+  "seed": 0,
+  "steps": 20,
+  "stereo_policy": "require",
+  "ez_policy": "lock",
+  "free_arm": true
+ },
+ "host": "gnode118",
+ "python": "3.9.23",
+ "rdkit": "2022.09.5",
+ "torch": "1.13.1+cu117",
+ "generator": {
+  "backend": "torsional_diffusion",
+  "td_repo": "/scratch/nishanth.r/tordiff/torsional-diffusion",
+  "checkpoint": "/scratch/nishanth.r/tordiff/workdir/pretrained/qm9_default/best_model.pt",
+  "checkpoint_sha256": "6a9a6ee9b0e51bdaa15f1661d2d41a4809507b2e1f31f9f74f9cd38fa25ee74f",
+  "dataset": "qm9",
+  "in_node_features": 44,
+  "atom_types": [
+   "H",
+   "C",
+   "N",
+   "O",
+   "F"
+  ],
+  "sigma_min": 0.031400000000000004,
+  "sigma_max": 3.14,
+  "inference_steps": 20,
+  "sde": "reverse SDE (TD default, ode=False)",
+  "device": "cpu",
+  "torus_import_seed": 20221024,
+  "torus_score_norm_sha256": "8cf17268cc0b0dee"
+ },
+ "finished": "2026-10-28 17:12:15 UTC / 2026-10-28 22:42:15 IST"
+}

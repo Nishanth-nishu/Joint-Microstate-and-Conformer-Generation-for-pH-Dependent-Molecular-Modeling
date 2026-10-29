@@ -1,0 +1,17 @@
+/scratch/nishanth.r/jmcg/jmcg/joint/sample.py:113: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  print(pd.DataFrame(rows).groupby('parent').apply(lambda d: d.sort_values('p_joint', ascending=False).head(3)
+                                           smiles  charge   p_joint
+parent                                                             
+acac        0                       CC(=O)CC(C)=O       0  1.000000
+glycine     3                    [NH3+]CC(=O)[O-]       0  0.996248
+            1                         NCC(=O)[O-]      -1  0.003727
+            2                            NCC(=O)O       0  0.000017
+histamine   7                  [NH3+]CCc1c[nH]cn1       1  0.783335
+            9              [NH3+]CCc1c[nH]c[nH+]1       2  0.109840
+            8                   NCCc1c[nH]c[nH+]1       1  0.104360
+ibuprofen   10  CC(C)Cc1ccc([C@H](C)C(=O)[O-])cc1      -1  0.998660
+            11     CC(C)Cc1ccc([C@H](C)C(=O)O)cc1       0  0.001340
+phenol      13                          Oc1ccccc1       0  0.997459
+            12                       [O-]c1ccccc1      -1  0.002541
+propylamine 15                          CCC[NH3+]       1  0.999587
+            14                               CCCN       0  0.000413

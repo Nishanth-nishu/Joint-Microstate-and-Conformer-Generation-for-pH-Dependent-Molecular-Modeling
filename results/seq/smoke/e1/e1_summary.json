@@ -1,0 +1,129 @@
+{
+ "n_seeds": 18,
+ "n_enumerated_states": 58,
+ "n_enumeration_failures": 0,
+ "enumerator": {
+  "enumerator": "/scratch/nishanth.r/jmcg/ext/unipka_orig/enumerator/main.py",
+  "enumerator_sha256": "6734b12b89fa02bd62785be767f728b429aa16eb94feba14b0b0fd53cfcb4067",
+  "template": "/scratch/nishanth.r/jmcg/ext/unipka_orig/enumerator/simple_smarts_pattern.tsv",
+  "template_sha256": "6b4828e5065a5c5de179351639187daf47e3e8a32d8b1358fa73d30c2702566f"
+ },
+ "PKA_MEAN": 6.504894871171601,
+ "external_oracle": {
+  "n": 10,
+  "n_groups": 7,
+  "MAE": 0.265633987616432,
+  "MAE_ci95": [
+   0.10580091793687166,
+   0.41258429937734725
+  ],
+  "RMSE": 0.33510029329174595,
+  "RMSE_ci95": [
+   0.15045691657338434,
+   0.45847823692357803
+  ],
+  "mean_signed": -0.009037883365925214,
+  "slope_pred_on_target": 1.071727374366198
+ },
+ "external_enumerated": {
+  "n_failed": 3,
+  "failures": [
+   {
+    "source_record": "sampl6:2",
+    "enum_failure": "levels present [0, 1, 2], need 0,-1"
+   },
+   {
+    "source_record": "sampl6:4",
+    "enum_failure": "levels present [1, 2], need 1,0"
+   },
+   {
+    "source_record": "sampl6:6",
+    "enum_failure": "levels present [0, 1, 2], need 0,-1"
+   }
+  ],
+  "on_successes": {
+   "n": 7,
+   "n_groups": 5,
+   "MAE": 0.21804407221231248,
+   "MAE_ci95": [
+    0.08376087208537163,
+    0.3523272723392533
+   ],
+   "RMSE": 0.2654259873087779,
+   "RMSE_ci95": [
+    0.09436665153575961,
+    0.3633136999283231
+   ],
+   "mean_signed": -0.06447272419909174,
+   "slope_pred_on_target": 0.9934739578048198
+  },
+  "oracle_on_same_successes": {
+   "n": 7,
+   "n_groups": 5,
+   "MAE": 0.205520471721482,
+   "MAE_ci95": [
+    0.06467134468823825,
+    0.3428540799129983
+   ],
+   "RMSE": 0.26104138161819024,
+   "RMSE_ci95": [
+    0.07165554642159809,
+    0.3605892793380481
+   ],
+   "mean_signed": -0.07700500305295892,
+   "slope_pred_on_target": 0.9794926708967653
+  },
+  "mean_recall_acid": 0.9523809523809523,
+  "mean_recall_base": 0.880952380952381,
+  "full_recall_both": 4
+ },
+ "external_by_source": {
+  "unipka:sampl6": {
+   "n": 10,
+   "n_groups": 7,
+   "MAE": 0.265633987616432,
+   "MAE_ci95": [
+    0.10580091793687166,
+    0.41258429937734725
+   ],
+   "RMSE": 0.33510029329174595,
+   "RMSE_ci95": [
+    0.15045691657338434,
+    0.45847823692357803
+   ],
+   "mean_signed": -0.009037883365925214,
+   "slope_pred_on_target": 1.071727374366198
+  }
+ },
+ "tautomer_oracle": {
+  "measured": {
+   "n": 10,
+   "n_groups": 6,
+   "MAE": 4.4250254092113765,
+   "MAE_ci95": [
+    3.1813517581684545,
+    6.8337274571906175
+   ],
+   "RMSE": 5.250036062770378,
+   "RMSE_ci95": [
+    4.195107415682765,
+    6.858064911883957
+   ],
+   "mean_signed": -0.48475765125275905,
+   "slope_pred_on_target": 0.09128315088795204
+  }
+ },
+ "tautomer_predict_zero_MAE": {
+  "measured": 4.714
+ },
+ "tautomer_enumerator_recall": {
+  "measured": {
+   "t1_in_own_ensemble": "10/10",
+   "t2_in_ensemble_of_t1": "0/10"
+  }
+ },
+ "reproduction_vs_N1": {
+  "n_matched": 10,
+  "max_abs_diff": 4.440892098500626e-16
+ }
+}

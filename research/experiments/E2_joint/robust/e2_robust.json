@@ -1,0 +1,83 @@
+{
+ "R1_canonical_split": {
+  "n_train": 130,
+  "n_test": 19,
+  "n_test_groups": 15,
+  "MAE": {
+   "S0": 4.352048705535038,
+   "S1": 3.4281130935780824,
+   "J1": 2.678458569362541,
+   "C1": 3.137968442190709,
+   "S1+phi3": 2.872677050733738,
+   "S1+psi3": 3.184127132881819
+  },
+  "delta_S": {
+   "mean": 0.7496545242155414,
+   "ci95": [
+    0.33026402850065495,
+    1.3111691069916365
+   ]
+  },
+  "delta_C": {
+   "mean": 0.45950987282816785,
+   "ci95": [
+    0.1535610816421332,
+    0.7933492389983505
+   ]
+  }
+ },
+ "R2_fold_seeds_1_20": {
+  "n_seeds": 20,
+  "dS_mean_range": [
+   0.2793545728028936,
+   0.45085004721505584
+  ],
+  "dC_mean_range": [
+   0.18927432476529243,
+   0.39338840900528843
+  ],
+  "n_supported": 14,
+  "n_dC_lo_positive": 15,
+  "n_dS_lo_positive": 19
+ },
+ "R3_phi3_vs_psi3_seed0": {
+  "MAE": {
+   "S1+phi3": 2.268361583646123,
+   "S1+psi3": 2.4259063972482453
+  },
+  "psi3_minus_phi3": {
+   "mean": 0.15754481360212186,
+   "ci95": [
+    -0.024507581806543374,
+    0.39057644826599797
+   ]
+  }
+ },
+ "R4_eligibility": {
+  "n_all": 221,
+  "n_eligible": 150,
+  "S0_MAE_all": 3.2128404668137773,
+  "S0_MAE_eligible": 3.4171370000663166,
+  "S0_MAE_ineligible": 2.781228072618272,
+  "S1_MAE_all": 2.747438525752603,
+  "S1_MAE_eligible": 2.6739092602636676,
+  "S1_MAE_ineligible": 2.9027820443912016,
+  "predict_zero_MAE_eligible": 3.7537999999999996,
+  "predict_zero_MAE_ineligible": 3.0542253521126765,
+  "ineligible_reasons": {
+   "bonds_angles": 40,
+   "rt_isomeric,stereo": 10,
+   "bonds_angles; C=C(O)c1ccc([N+](=O)[O-])cc1: invalid after MM": 1,
+   "bonds_angles; C/C=[N+](/[O-])O: invalid after MMFF: bonds_an": 1,
+   "bonds_angles; CC/C=[N+](/[O-])O: invalid after MMFF: bonds_a": 1,
+   "bonds_angles; CCC/C=[N+](/[O-])O: invalid after MMFF: bonds_": 1,
+   "bonds_angles; CC(C)/C=[N+](/[O-])O: invalid after MMFF: bond": 1,
+   "bonds_angles; [O-]/[N+](O)=C/Cc1ccccc1: invalid after MMFF: ": 1
+  }
+ },
+ "R5_phi1": {
+  "note": "phi1 = -ln N_eff with N_eff over all valid minimised conformers, duplicates not merged: a rigid state with 30 identical minima gets N_eff = 30 (phi1 = -3.40), the most \"entropic\" value",
+  "n_states_phi1_at_minus_ln_nvalid": 128,
+  "n_states_with_phi": 314
+ }
+}

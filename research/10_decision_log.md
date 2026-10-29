@@ -63,3 +63,31 @@
 ## 2026-10-28 — E/Z lock made the run default (committed 2026-10-29)
 - run.py --ez_policy lock (default): td locks only double bonds whose E/Z the input SMILES specifies; enumeration-assigned and unspecified bonds stay free; --ez_policy free is the ablation opt-out; per-state reason in <id>.json ez_lock. Backend default unchanged (fidelity check still applies).
 - Smoke 5 (job 45286): tests 20/20 + 15/15 (4 new lock regressions); 46/46 outputs bit-identical to smoke 4 with arms mapped (td = old td_lockdb). TD A 95/96, B 63/64, C 16/16. The lock preserves stereo only; 2 clash failures remain (acac 1.774 Å, histamine dication 1.345 Å).
+
+## 2026-10-28 — M2–M5: canonical data, sequential baseline, E1/E6, E2 joint prototype
+- **M2 canonical_v1 (job 45295):**
+  - 15,502 observations, 29,280 states, 11,355 parents; 3 records dropped, with reasons.
+  - Leakage L1/L1b/L2 = 0. 18 val and 18 test near-duplicates are flagged, not removed.
+- **M3/M4 E1 (jobs 45306, 45308):**
+  - External macro-pKa MAE 0.633 [0.56, 0.71] on oracle states; the full template matches it with 0 failures; the
+    simple template fails 75/356.
+  - N1 reproduced 356/356 (max |Δ| 1e-9) once a duplicate idx in N1's file was keyed around.
+  - Tautomers: zero-shot measured MAE 3.21, slope 0.10. The enumerator never proposes the partner tautomer (0/221).
+  - Conformers on neutral GEOM-QM9: TD beats ETKDGv3, COV-R@0.5 +6.4 pp, MAT-R −0.06 Å.
+- **E2/E3 (job 45572):**
+  - Pre-registered verdict SUPPORTED: Δ_S 0.39 [0.14, 0.64], Δ_C 0.23 [0.025, 0.49], on 150/221 eligible measured
+    pairs.
+  - The gain is carried entirely by φ3 (Boltzmann-weighted polar SASA); φ1 and φ2 contribute nothing.
+  - Post hoc (job 45574): Δ_C lower bound > 0 in only 15/20 alternative fold seeds; φ3 vs 2D TPSA head to head CI
+    includes 0; canonical test split (n = 19) agrees in direction.
+  - Decision: report "a 3D polar-exposure term helps calibrate Uni-pKa tautomer scores", not "conformer coupling
+    helps". φ1 is defective (no conformer de-duplication) and must be fixed before any entropy claim.
+- **Bugs fixed before the fit:**
+  - MMFF typing rewrote aromatic bond types in place, so features v1 were invalid (PREREG amendment 2).
+  - Conformer-comparison NaN.
+  - N1 join key.
+- **M5 sampler (job 45584):** runs end to end; at θ = 0 it equals softmax(fold-mean G_U) to 1e-16.
+  - Masking unscorable states gave neutral glycine 100% at pH 7.4; replaced by a flagged θ = 0 level fallback.
+  - Open blocker: the validator rejects MMFF minima of zwitterions and carboxylates/phenolates, so the coupled model
+    cannot score the dominant physiological states. A design decision for the user.
+- **E4 not run:** no pH-resolved data.

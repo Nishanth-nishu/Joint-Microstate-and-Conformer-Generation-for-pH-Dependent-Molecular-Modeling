@@ -1,0 +1,11 @@
+obs_id,source,source_record,split_group,target,oracle,n_acid,n_base,enumerated,recall_acid,recall_base,n_ens_acid_level,n_ens_base_level,ensemble_size,enum_failure
+O006395,unipka:sampl6,sampl6:0,O=C1NCCCc2c1oc1ccccc21,9.53,9.579349640128118,1,2,9.667394195693875,1.0,0.5,1.0,1.0,2.0,
+O006396,unipka:sampl6,sampl6:1,c1ccc(Nc2ncnc3ccccc23)cc1,5.03,4.661169521487581,3,1,4.661169521487581,1.0,1.0,3.0,1.0,7.0,
+O006397,unipka:sampl6,sampl6:2,O=C(Nc1nnc(Cc2ccccc2)s1)c1cccs1,7.02,7.161836825230179,1,2,,,,,,,"levels present [0, 1, 2], need 0,-1"
+O006398,unipka:sampl6,sampl6:3,c1ccc(CNc2ncnc3ccccc23)cc1,6.02,5.891262242994538,3,1,5.891262242994538,1.0,1.0,3.0,1.0,7.0,
+O006399,unipka:sampl6,sampl6:4,O=C(Nc1ccccc1N1CCCCC1)c1ccco1,4.59,4.205479806798757,2,1,,,,,,,"levels present [1, 2], need 1,0"
+O006400,unipka:sampl6,sampl6:5,O=C(Nc1cccc2cccnc12)c1cccnc1,3.03,3.4304545002117117,3,1,3.4301055223523966,0.6666666666666666,1.0,2.0,1.0,4.0,
+O006401,unipka:sampl6,sampl6:6,O=C(Nc1cccc2cccnc12)c1cccnc1,11.74,12.431339555682523,1,1,,,,,,,"levels present [0, 1, 2], need 0,-1"
+O006402,unipka:sampl6,sampl6:7,c1ccc(CNc2ncnc3ccccc23)cc1,6.08,6.049073887433671,3,1,6.049073887433671,1.0,1.0,3.0,1.0,7.0,
+O006403,unipka:sampl6,sampl6:8,O=c1cc(-c2ccccc2)c2ccccc2[nH]1,4.22,4.155167540849299,1,3,4.155197915119928,1.0,0.6666666666666666,1.0,2.0,4.0,
+O006404,unipka:sampl6,sampl6:9,c1ccc(Nc2ncnc3ccccc23)cc1,5.37,4.974487645524367,3,1,4.974487645524367,1.0,1.0,3.0,1.0,7.0,

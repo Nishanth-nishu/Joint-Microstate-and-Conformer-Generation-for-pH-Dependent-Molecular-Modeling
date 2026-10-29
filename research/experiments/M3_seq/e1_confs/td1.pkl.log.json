@@ -1,0 +1,1787 @@
+[
+ {
+  "smiles": "C#CC(=O)CCCCC",
+  "corrected_smiles": "C#CC(=O)CCCCC",
+  "n_requested": 116,
+  "build_state": "accepted",
+  "n_generated": 116,
+  "n_rotatable_td": 7,
+  "seconds": 31.33
+ },
+ {
+  "smiles": "C#CC(=O)C[C@]1(C)CN1",
+  "corrected_smiles": "C#CC(=O)C[C@]1(C)CN1",
+  "n_requested": 24,
+  "build_state": "accepted",
+  "n_generated": 24,
+  "n_rotatable_td": 5,
+  "seconds": 3.88
+ },
+ {
+  "smiles": "C#CC(C)(C)OCC#N",
+  "corrected_smiles": "C#CC(C)(C)OCC#N",
+  "n_requested": 16,
+  "build_state": "accepted",
+  "n_generated": 16,
+  "n_rotatable_td": 7,
+  "seconds": 2.7
+ },
+ {
+  "smiles": "C#CC1=C[C@@H](C)NC1=O",
+  "corrected_smiles": "C#CC1=C[C@@H](C)NC1=O",
+  "n_requested": 2,
+  "build_state": "accepted",
+  "n_generated": 2,
+  "n_rotatable_td": 3,
+  "seconds": 0.49
+ },
+ {
+  "smiles": "C#CC1=C[C@H](O)C[C@@H]1C",
+  "corrected_smiles": "C#CC1=C[C@H](O)C[C@@H]1C",
+  "n_requested": 14,
+  "build_state": "accepted",
+  "n_generated": 14,
+  "n_rotatable_td": 4,
+  "seconds": 2.52
+ },
+ {
+  "smiles": "C#CCC(C)(C)CCC",
+  "corrected_smiles": "C#CCC(C)(C)CCC",
+  "n_requested": 50,
+  "build_state": "accepted",
+  "n_generated": 50,
+  "n_rotatable_td": 8,
+  "seconds": 13.89
+ },
+ {
+  "smiles": "C#CCC[C@@H](C=O)CC",
+  "corrected_smiles": "C#CCC[C@@H](C=O)CC",
+  "n_requested": 170,
+  "build_state": "accepted",
+  "n_generated": 170,
+  "n_rotatable_td": 7,
+  "seconds": 34.94
+ },
+ {
+  "smiles": "C#CCOC(C#C)=NC",
+  "corrected_smiles": "C#CCOC(C#C)=NC",
+  "n_requested": 10,
+  "build_state": "rejected: unassigned stereo elements [{'kind': 'double_bond', 'centered_on': 6, 'specified': False}]: specify them, or expand the state with expand_stereo (policy \"enumerate\") so each stereoisomer is its own explicit state",
+  "n_generated": 10,
+  "n_rotatable_td": 8,
+  "seconds": 1.38
+ },
+ {
+  "smiles": "C#CC[C@@H]1COC1=NC",
+  "corrected_smiles": "C#CC[C@@H]1COC1=NC",
+  "n_requested": 6,
+  "build_state": "rejected: unassigned stereo elements [{'kind': 'double_bond', 'centered_on': 6, 'specified': False}]: specify them, or expand the state with expand_stereo (policy \"enumerate\") so each stereoisomer is its own explicit state",
+  "n_generated": 6,
+  "n_rotatable_td": 5,
+  "seconds": 1.12
+ },
+ {
+  "smiles": "C#C[C@@H](C#CC#N)C=O",
+  "corrected_smiles": "C#C[C@@H](C#CC#N)C=O",
+  "n_requested": 6,
+  "build_state": "accepted",
+  "n_generated": 6,
+  "n_rotatable_td": 6,
+  "seconds": 0.69
+ },
+ {
+  "smiles": "C#C[C@@H]1C[C@]12C[C@H](C)C2",
+  "corrected_smiles": "C#C[C@@H]1C[C@]12C[C@H](C)C2",
+  "n_requested": 2,
+  "build_state": "accepted",
+  "n_generated": 2,
+  "n_rotatable_td": 3,
+  "seconds": 0.65
+ },
+ {
+  "smiles": "C#C[C@@H]1NC[C@@]1(C)C#N",
+  "corrected_smiles": "C#C[C@@H]1NC[C@@]1(C)C#N",
+  "n_requested": 4,
+  "build_state": "accepted",
+  "n_generated": 4,
+  "n_rotatable_td": 4,
+  "seconds": 0.8
+ },
+ {
+  "smiles": "C#C[C@@H]1[C@@H]2C[C@H]1O2",
+  "corrected_smiles": "C#C[C@@H]1[C@@H]2C[C@H]1O2",
+  "n_requested": 2,
+  "build_state": "accepted",
+  "n_generated": 2,
+  "n_rotatable_td": 2,
+  "seconds": 0.43
+ },
+ {
+  "smiles": "C#C[C@@]1(C)[C@H]2C[C@]1(C)C2",
+  "corrected_smiles": "C#C[C@@]1(C)[C@H]2C[C@]1(C)C2",
+  "n_requested": 4,
+  "build_state": "accepted",
+  "error": "RuntimeError: ETKDG seed embedding failed",
+  "seconds": 1.13
+ },
+ {
+  "smiles": "C#C[C@H](C=O)CCC",
+  "corrected_smiles": "C#C[C@H](C=O)CCC",
+  "n_requested": 52,
+  "build_state": "accepted",
+  "n_generated": 52,
+  "n_rotatable_td": 6,
+  "seconds": 8.15
+ },
+ {
+  "smiles": "C#C[C@H]1C(=O)[C@@H]2C[C@H]1O2",
+  "corrected_smiles": "C#C[C@H]1C(=O)[C@@H]2C[C@H]1O2",
+  "n_requested": 2,
+  "build_state": "accepted",
+  "n_generated": 2,
+  "n_rotatable_td": 2,
+  "seconds": 0.48
+ },
+ {
+  "smiles": "C#C[C@H]1[C@@H](C)C[C@H]2CN21",
+  "corrected_smiles": "C#C[C@H]1[C@@H](C)C[C@H]2CN21",
+  "n_requested": 4,
+  "build_state": "rejected: unassigned stereo elements [{'kind': 'atom', 'centered_on': 8, 'specified': False}]: specify them, or expand the state with expand_stereo (policy \"enumerate\") so each stereoisomer is its own explicit state",
+  "n_generated": 4,
+  "n_rotatable_td": 3,
+  "seconds": 1.02
+ },
+ {
+  "smiles": "C#C[C@]1(C)[C@@H](O)[C@H]2CN21",
+  "corrected_smiles": "C#C[C@]1(C)[C@@H](O)[C@H]2CN21",
+  "n_requested": 6,
+  "build_state": "rejected: unassigned stereo elements [{'kind': 'atom', 'centered_on': 8, 'specified': False}]: specify them, or expand the state with expand_stereo (policy \"enumerate\") so each stereoisomer is its own explicit state",
+  "error": "RuntimeError: ETKDG seed embedding failed",
+  "seconds": 1.63
+ },
+ {
+  "smiles": "C#C[C@]1(O)C=C[C@H]2N[C@H]21",
+  "corrected_smiles": "C#C[C@]1(O)C=C[C@H]2N[C@H]21",
+  "n_requested": 2,
+  "build_state": "accepted",
+  "n_generated": 2,
+  "n_rotatable_td": 3,
+  "seconds": 0.51
+ },
+ {
+  "smiles": "C#C[C@]1(O)[C@@H](N)[C@H]1C#N",
+  "corrected_smiles": "C#C[C@]1(O)[C@@H](N)[C@H]1C#N",
+  "n_requested": 8,
+  "build_state": "accepted",
+  "n_generated": 8,
+  "n_rotatable_td": 5,
+  "seconds": 1.14
+ },
+ {
+  "smiles": "C#C[C@]12C[C@]3(CO3)[C@H]1N2",
+  "corrected_smiles": "C#C[C@]12C[C@]3(CO3)[C@H]1N2",
+  "n_requested": 2,
+  "build_state": "accepted",
+  "n_generated": 2,
+  "n_rotatable_td": 2,
+  "seconds": 0.53
+ },
+ {
+  "smiles": "C#Cc1cc(CO)c[nH]1",
+  "corrected_smiles": "C#Cc1cc(CO)c[nH]1",
+  "n_requested": 12,
+  "build_state": "accepted",
+  "n_generated": 12,
+  "n_rotatable_td": 4,
+  "seconds": 1.66
+ },
+ {
+  "smiles": "C1=C[C@H]2[C@H]3C[C@@H]1[C@@H]1[C@H]3N21",
+  "corrected_smiles": "C1=C[C@H]2[C@H]3C[C@@H]1[C@@H]1[C@H]3N21",
+  "n_requested": 2,
+  "build_state": "rejected: unassigned stereo elements [{'kind': 'atom', 'centered_on': 8, 'specified': False}]: specify them, or expand the state with expand_stereo (policy \"enumerate\") so each stereoisomer is its own explicit state",
+  "n_generated": 2,
+  "n_rotatable_td": 0,
+  "seconds": 0.01
+ },
+ {
+  "smiles": "C1=NCCO[C@@H]2C[C@@H]2O1",
+  "corrected_smiles": "C1=NCCO[C@@H]2C[C@@H]2O1",
+  "n_requested": 2,
+  "build_state": "rejected: unassigned stereo elements [{'kind': 'double_bond', 'centered_on': 0, 'specified': False}]: specify them, or expand the state with expand_stereo (policy \"enumerate\") so each stereoisomer is its own explicit state",
+  "n_generated": 2,
+  "n_rotatable_td": 0,
+  "seconds": 0.01
+ },
+ {
+  "smiles": "C1C[C@@H]2[C@H]3C[C@H](C3)[C@H]12",
+  "corrected_smiles": "C1C[C@@H]2[C@H]3C[C@H](C3)[C@H]12",
+  "n_requested": 2,
+  "build_state": "accepted",
+  "n_generated": 2,
+  "n_rotatable_td": 0,
+  "seconds": 0.02
+ },
+ {
+  "smiles": "C1C[C@H]2[C@H]3C[N][C](O1)N23",
+  "corrected_smiles": "C1C[C@H]2[C@H]3CN=C(O1)N23",
+  "n_requested": 2,
+  "build_state": "rejected: unassigned stereo elements [{'kind': 'atom', 'centered_on': 8, 'specified': False}]: specify them, or expand the state with expand_stereo (policy \"enumerate\") so each stereoisomer is its own explicit state",
+  "error": "RuntimeError: ETKDG seed embedding failed",
+  "seconds": 0.4
+ },
+ {
+  "smiles": "C1C[C@H]2[C@H]3[C@@H]4O[C@H]3[C@]24C1",
+  "corrected_smiles": "C1C[C@H]2[C@H]3[C@@H]4O[C@H]3[C@]24C1",
+  "n_requested": 2,
+  "build_state": "accepted",
+  "n_generated": 2,
+  "n_rotatable_td": 0,
+  "seconds": 0.02
+ },
+ {
+  "smiles": "C1[C@H]2C[C@]34CC[C@]3(C4)[C@@H]12",
+  "corrected_smiles": "C1[C@H]2C[C@]34CC[C@]3(C4)[C@@H]12",
+  "n_requested": 2,
+  "build_state": "accepted",
+  "error": "RuntimeError: ETKDG seed embedding failed",
+  "seconds": 0.53
+ },
+ {
+  "smiles": "CC#C[C@H]1CO1",
+  "corrected_smiles": "CC#C[C@H]1CO1",
+  "n_requested": 2,
+  "build_state": "accepted",
+  "n_generated": 2,
+  "n_rotatable_td": 3,
+  "seconds": 0.37
+ },
+ {
+  "smiles": "CC#Cc1[nH]cnc1N",
+  "corrected_smiles": "CC#Cc1[nH]cnc1N",
+  "n_requested": 2,
+  "build_state": "accepted",
+  "n_generated": 2,
+  "n_rotatable_td": 4,
+  "seconds": 0.46
+ },
+ {
+  "smiles": "CC(=O)C(=O)C1CC1",
+  "corrected_smiles": "CC(=O)C(=O)C1CC1",
+  "n_requested": 4,
+  "build_state": "accepted",
+  "n_generated": 4,
+  "n_rotatable_td": 3,
+  "seconds": 0.69
+ },
+ {
+  "smiles": "CC(=O)C(=O)C[C@@H](C)O",
+  "corrected_smiles": "CC(=O)C(=O)C[C@@H](C)O",
+  "n_requested": 92,
+  "build_state": "accepted",
+  "n_generated": 92,
+  "n_rotatable_td": 6,
+  "seconds": 14.64
+ },
+ {
+  "smiles": "CC(C)c1nc[nH]n1",
+  "corrected_smiles": "CC(C)c1nc[nH]n1",
+  "n_requested": 4,
+  "build_state": "accepted",
+  "n_generated": 4,
+  "n_rotatable_td": 3,
+  "seconds": 0.74
+ },
+ {
+  "smiles": "CC1(C)CN1[C@H]1C[C@H]1O",
+  "corrected_smiles": "CC1(C)CN1[C@H]1C[C@H]1O",
+  "n_requested": 10,
+  "build_state": "rejected: unassigned stereo elements [{'kind': 'atom', 'centered_on': 4, 'specified': False}]: specify them, or expand the state with expand_stereo (policy \"enumerate\") so each stereoisomer is its own explicit state",
+  "n_generated": 10,
+  "n_rotatable_td": 4,
+  "seconds": 2.48
+ },
+ {
+  "smiles": "CC1(C)CO[C@]1(C)CO",
+  "corrected_smiles": "CC1(C)CO[C@]1(C)CO",
+  "n_requested": 14,
+  "build_state": "accepted",
+  "n_generated": 14,
+  "n_rotatable_td": 5,
+  "seconds": 3.81
+ },
+ {
+  "smiles": "CC1(C)N2C[C@H]2C12CC2",
+  "corrected_smiles": "CC1(C)N2C[C@H]2C12CC2",
+  "n_requested": 2,
+  "build_state": "rejected: unassigned stereo elements [{'kind': 'atom', 'centered_on': 3, 'specified': False}]: specify them, or expand the state with expand_stereo (policy \"enumerate\") so each stereoisomer is its own explicit state",
+  "n_generated": 2,
+  "n_rotatable_td": 2,
+  "seconds": 1.51
+ },
+ {
+  "smiles": "CC1=C([NH])C=NN[C@H]1N",
+  "corrected_smiles": "[H]/N=c1\\cn[nH]c(N)c1C",
+  "n_requested": 2,
+  "build_state": "accepted",
+  "n_generated": 2,
+  "n_rotatable_td": 3,
+  "seconds": 0.53
+ },
+ {
+  "smiles": "CC1=CC[C@@](C)(CO)C1",
+  "corrected_smiles": "CC1=CC[C@@](C)(CO)C1",
+  "n_requested": 38,
+  "build_state": "accepted",
+  "n_generated": 38,
+  "n_rotatable_td": 4,
+  "seconds": 8.84
+ },
+ {
+  "smiles": "CC1=C[C@H]2C[C@H]2C1=O",
+  "corrected_smiles": "CC1=C[C@H]2C[C@H]2C1=O",
+  "n_requested": 2,
+  "build_state": "accepted",
+  "n_generated": 2,
+  "n_rotatable_td": 1,
+  "seconds": 0.49
+ },
+ {
+  "smiles": "CC1=C[C@H]2N[C@@]2(C)C1=O",
+  "corrected_smiles": "CC1=C[C@H]2N[C@@]2(C)C1=O",
+  "n_requested": 4,
+  "build_state": "accepted",
+  "n_generated": 4,
+  "n_rotatable_td": 2,
+  "seconds": 0.8
+ },
+ {
+  "smiles": "CC1=NC[C@@]2(O)C[C@H]2O1",
+  "corrected_smiles": "CC1=NC[C@@]2(O)C[C@H]2O1",
+  "n_requested": 6,
+  "build_state": "accepted",
+  "n_generated": 6,
+  "n_rotatable_td": 2,
+  "seconds": 1.0
+ },
+ {
+  "smiles": "CC1=N[C@@]2(CO1)C[C@@H]2C",
+  "corrected_smiles": "CC1=N[C@@]2(CO1)C[C@@H]2C",
+  "n_requested": 4,
+  "build_state": "accepted",
+  "n_generated": 4,
+  "n_rotatable_td": 2,
+  "seconds": 0.85
+ },
+ {
+  "smiles": "CCC#CC(C)C",
+  "corrected_smiles": "CCC#CC(C)C",
+  "n_requested": 18,
+  "build_state": "accepted",
+  "n_generated": 18,
+  "n_rotatable_td": 6,
+  "seconds": 2.77
+ },
+ {
+  "smiles": "CCC(C)(C)OC(C)=O",
+  "corrected_smiles": "CCC(C)(C)OC(C)=O",
+  "n_requested": 12,
+  "build_state": "accepted",
+  "n_generated": 12,
+  "n_rotatable_td": 7,
+  "seconds": 3.12
+ },
+ {
+  "smiles": "CCCC[C@H](C#N)NC",
+  "corrected_smiles": "CCCC[C@H](C#N)NC",
+  "n_requested": 318,
+  "build_state": "accepted",
+  "n_generated": 318,
+  "n_rotatable_td": 7,
+  "seconds": 71.56
+ },
+ {
+  "smiles": "CCC[C@@H](C)C(C)=NO",
+  "corrected_smiles": "CCC[C@@H](C)C(C)=NO",
+  "n_requested": 118,
+  "build_state": "rejected: unassigned stereo elements [{'kind': 'double_bond', 'centered_on': 6, 'specified': False}]: specify them, or expand the state with expand_stereo (policy \"enumerate\") so each stereoisomer is its own explicit state",
+  "n_generated": 118,
+  "n_rotatable_td": 8,
+  "seconds": 27.61
+ },
+ {
+  "smiles": "CCNc1c[nH]cn1",
+  "corrected_smiles": "CCNc1c[nH]cn1",
+  "n_requested": 12,
+  "build_state": "accepted",
+  "n_generated": 12,
+  "n_rotatable_td": 3,
+  "seconds": 1.52
+ },
+ {
+  "smiles": "CCOC(=O)[C@@H](N)C#N",
+  "corrected_smiles": "CCOC(=O)[C@@H](N)C#N",
+  "n_requested": 50,
+  "build_state": "accepted",
+  "n_generated": 50,
+  "n_rotatable_td": 6,
+  "seconds": 5.32
+ },
+ {
+  "smiles": "CCOC[C@H]1C[C@H]1C#N",
+  "corrected_smiles": "CCOC[C@H]1C[C@H]1C#N",
+  "n_requested": 68,
+  "build_state": "accepted",
+  "n_generated": 68,
+  "n_rotatable_td": 5,
+  "seconds": 9.68
+ },
+ {
+  "smiles": "CCOc1n[nH]c(=O)[nH]1",
+  "corrected_smiles": "CCOc1n[nH]c(=O)[nH]1",
+  "n_requested": 10,
+  "build_state": "accepted",
+  "n_generated": 10,
+  "n_rotatable_td": 3,
+  "seconds": 1.22
+ },
+ {
+  "smiles": "CC[C@@H](C#N)C(C)(C)O",
+  "corrected_smiles": "CC[C@@H](C#N)C(C)(C)O",
+  "n_requested": 78,
+  "build_state": "accepted",
+  "n_generated": 78,
+  "n_rotatable_td": 7,
+  "seconds": 15.25
+ },
+ {
+  "smiles": "CC[C@@H](O)[C@@H](O)[C@H]1CN1",
+  "corrected_smiles": "CC[C@@H](O)[C@@H](O)[C@H]1CN1",
+  "n_requested": 280,
+  "build_state": "accepted",
+  "n_generated": 280,
+  "n_rotatable_td": 6,
+  "seconds": 59.44
+ },
+ {
+  "smiles": "CC[C@@]1(C#N)CN1",
+  "corrected_smiles": "CC[C@@]1(C#N)CN1",
+  "n_requested": 6,
+  "build_state": "accepted",
+  "n_generated": 6,
+  "n_rotatable_td": 3,
+  "seconds": 0.91
+ },
+ {
+  "smiles": "CC[C@@]1(CCOC)CO1",
+  "corrected_smiles": "CC[C@@]1(CCOC)CO1",
+  "n_requested": 258,
+  "build_state": "accepted",
+  "n_generated": 258,
+  "n_rotatable_td": 6,
+  "seconds": 56.72
+ },
+ {
+  "smiles": "CC[C@H](C#N)CCCO",
+  "corrected_smiles": "CC[C@H](C#N)CCCO",
+  "n_requested": 452,
+  "build_state": "accepted",
+  "n_generated": 452,
+  "n_rotatable_td": 7,
+  "seconds": 96.1
+ },
+ {
+  "smiles": "CC[C@H]1OC=NC[C@H]1O",
+  "corrected_smiles": "CC[C@H]1OC=NC[C@H]1O",
+  "n_requested": 48,
+  "build_state": "accepted",
+  "n_generated": 48,
+  "n_rotatable_td": 3,
+  "seconds": 8.26
+ },
+ {
+  "smiles": "CC[C@H]1O[C@@H](C)C1=O",
+  "corrected_smiles": "CC[C@H]1O[C@@H](C)C1=O",
+  "n_requested": 6,
+  "build_state": "accepted",
+  "n_generated": 6,
+  "n_rotatable_td": 3,
+  "seconds": 1.06
+ },
+ {
+  "smiles": "CCc1cnc(=O)oc1",
+  "corrected_smiles": "CCc1cnc(=O)oc1",
+  "n_requested": 6,
+  "build_state": "accepted",
+  "n_generated": 6,
+  "n_rotatable_td": 2,
+  "seconds": 0.88
+ },
+ {
+  "smiles": "CCc1nccn1C",
+  "corrected_smiles": "CCc1nccn1C",
+  "n_requested": 8,
+  "build_state": "accepted",
+  "n_generated": 8,
+  "n_rotatable_td": 3,
+  "seconds": 1.28
+ },
+ {
+  "smiles": "CCn1cc(O)cn1",
+  "corrected_smiles": "CCn1cc(O)cn1",
+  "n_requested": 4,
+  "build_state": "accepted",
+  "n_generated": 4,
+  "n_rotatable_td": 3,
+  "seconds": 0.68
+ },
+ {
+  "smiles": "CN(C)C1(C=O)CC1",
+  "corrected_smiles": "CN(C)C1(C=O)CC1",
+  "n_requested": 12,
+  "build_state": "accepted",
+  "n_generated": 12,
+  "n_rotatable_td": 4,
+  "seconds": 1.99
+ },
+ {
+  "smiles": "CN1C=CCC(=O)[C]1[NH]",
+  "corrected_smiles": "[H]/N=C1\\C(=O)CC=CN1C",
+  "n_requested": 2,
+  "build_state": "accepted",
+  "n_generated": 2,
+  "n_rotatable_td": 2,
+  "seconds": 0.52
+ },
+ {
+  "smiles": "CN1CC[N][C]1[C@H]1CO1",
+  "corrected_smiles": "CN1CCN=C1[C@H]1CO1",
+  "n_requested": 8,
+  "build_state": "accepted",
+  "n_generated": 8,
+  "n_rotatable_td": 2,
+  "seconds": 1.36
+ },
+ {
+  "smiles": "CN1C[C@@]12C[C@H]1N[C@]12C",
+  "corrected_smiles": "CN1C[C@@]12C[C@H]1N[C@]12C",
+  "n_requested": 4,
+  "build_state": "rejected: unassigned stereo elements [{'kind': 'atom', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy \"enumerate\") so each stereoisomer is its own explicit state",
+  "n_generated": 4,
+  "n_rotatable_td": 2,
+  "seconds": 0.99
+ },
+ {
+  "smiles": "CN1N=C(N)N=C[C@H]1[NH]",
+  "corrected_smiles": "[H]/N=c1\\cnc(N)nn1C",
+  "n_requested": 2,
+  "build_state": "accepted",
+  "n_generated": 2,
+  "n_rotatable_td": 3,
+  "seconds": 0.49
+ },
+ {
+  "smiles": "CN1[C]([NH])[C@H]2C[C@H]2C1=O",
+  "corrected_smiles": "[H]/N=C1/[C@H]2C[C@H]2C(=O)N1C",
+  "n_requested": 4,
+  "build_state": "accepted",
+  "n_generated": 4,
+  "n_rotatable_td": 2,
+  "seconds": 0.77
+ },
+ {
+  "smiles": "CN=C1OC[C@H]2O[C@@]12C",
+  "corrected_smiles": "CN=C1OC[C@H]2O[C@@]12C",
+  "n_requested": 2,
+  "build_state": "rejected: unassigned stereo elements [{'kind': 'double_bond', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy \"enumerate\") so each stereoisomer is its own explicit state",
+  "n_generated": 2,
+  "n_rotatable_td": 3,
+  "seconds": 0.56
+ },
+ {
+  "smiles": "CN=COCC1CCC1",
+  "corrected_smiles": "CN=COCC1CCC1",
+  "n_requested": 48,
+  "build_state": "rejected: unassigned stereo elements [{'kind': 'double_bond', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy \"enumerate\") so each stereoisomer is its own explicit state",
+  "n_generated": 48,
+  "n_rotatable_td": 5,
+  "seconds": 8.69
+ },
+ {
+  "smiles": "CN[C@@]12C[C@]1(O)CC2=O",
+  "corrected_smiles": "CN[C@@]12C[C@]1(O)CC2=O",
+  "n_requested": 32,
+  "build_state": "accepted",
+  "n_generated": 32,
+  "n_rotatable_td": 3,
+  "seconds": 4.27
+ },
+ {
+  "smiles": "CNc1ccc(=O)[nH]n1",
+  "corrected_smiles": "CNc1ccc(=O)[nH]n1",
+  "n_requested": 8,
+  "build_state": "accepted",
+  "n_generated": 8,
+  "n_rotatable_td": 2,
+  "seconds": 1.04
+ },
+ {
+  "smiles": "COC(=O)C(=O)CC=O",
+  "corrected_smiles": "COC(=O)C(=O)CC=O",
+  "n_requested": 34,
+  "build_state": "accepted",
+  "n_generated": 34,
+  "n_rotatable_td": 5,
+  "seconds": 3.08
+ },
+ {
+  "smiles": "COC(=O)CCO",
+  "corrected_smiles": "COC(=O)CCO",
+  "n_requested": 66,
+  "build_state": "accepted",
+  "n_generated": 66,
+  "n_rotatable_td": 5,
+  "seconds": 6.19
+ },
+ {
+  "smiles": "COC[C@@H](C)C(=O)C=O",
+  "corrected_smiles": "COC[C@@H](C)C(=O)C=O",
+  "n_requested": 88,
+  "build_state": "accepted",
+  "n_generated": 88,
+  "n_rotatable_td": 6,
+  "seconds": 14.19
+ },
+ {
+  "smiles": "COC[C@@H](C)C(N)=O",
+  "corrected_smiles": "COC[C@@H](C)C(N)=O",
+  "n_requested": 54,
+  "build_state": "accepted",
+  "n_generated": 54,
+  "n_rotatable_td": 6,
+  "seconds": 8.53
+ },
+ {
+  "smiles": "COC[C@@H](OC)[C@@H](C)O",
+  "corrected_smiles": "COC[C@@H](OC)[C@@H](C)O",
+  "n_requested": 212,
+  "build_state": "accepted",
+  "n_generated": 212,
+  "n_rotatable_td": 8,
+  "seconds": 48.3
+ },
+ {
+  "smiles": "COC[C@@]1(C)CN=CO1",
+  "corrected_smiles": "COC[C@@]1(C)CN=CO1",
+  "n_requested": 30,
+  "build_state": "accepted",
+  "n_generated": 30,
+  "n_rotatable_td": 4,
+  "seconds": 4.86
+ },
+ {
+  "smiles": "COC[C@H]1C[C@H]1COC",
+  "corrected_smiles": "COC[C@H]1C[C@H]1COC",
+  "n_requested": 190,
+  "build_state": "accepted",
+  "n_generated": 190,
+  "n_rotatable_td": 6,
+  "seconds": 40.56
+ },
+ {
+  "smiles": "COC[C@H]1N2CC1(O)C2",
+  "corrected_smiles": "COC[C@H]1N2CC1(O)C2",
+  "n_requested": 34,
+  "build_state": "rejected: unassigned stereo elements [{'kind': 'atom', 'centered_on': 4, 'specified': False}, {'kind': 'atom', 'centered_on': 6, 'specified': False}]: specify them, or expand the state with expand_stereo (policy \"enumerate\") so each stereoisomer is its own explicit state",
+  "error": "RuntimeError: ETKDG seed embedding failed",
+  "seconds": 0.38
+ },
+ {
+  "smiles": "COC[C@H]1OC[C@H]1C#N",
+  "corrected_smiles": "COC[C@H]1OC[C@H]1C#N",
+  "n_requested": 18,
+  "build_state": "accepted",
+  "n_generated": 18,
+  "n_rotatable_td": 4,
+  "seconds": 2.57
+ },
+ {
+  "smiles": "CO[C@@]1(C)COC(=O)C1",
+  "corrected_smiles": "CO[C@@]1(C)COC(=O)C1",
+  "n_requested": 12,
+  "build_state": "accepted",
+  "n_generated": 12,
+  "n_rotatable_td": 3,
+  "seconds": 1.99
+ },
+ {
+  "smiles": "CO[C@H]1COC12CCC2",
+  "corrected_smiles": "CO[C@H]1COC12CCC2",
+  "n_requested": 6,
+  "build_state": "accepted",
+  "n_generated": 6,
+  "n_rotatable_td": 2,
+  "seconds": 1.32
+ },
+ {
+  "smiles": "C[C@@H](C#N)c1cnco1",
+  "corrected_smiles": "C[C@@H](C#N)c1cnco1",
+  "n_requested": 4,
+  "build_state": "accepted",
+  "n_generated": 4,
+  "n_rotatable_td": 3,
+  "seconds": 0.67
+ },
+ {
+  "smiles": "C[C@@H](CO)NC(=N)C=O",
+  "corrected_smiles": "[H]/N=C(\\C=O)N[C@@H](C)CO",
+  "n_requested": 66,
+  "build_state": "accepted",
+  "n_generated": 66,
+  "n_rotatable_td": 7,
+  "seconds": 10.25
+ },
+ {
+  "smiles": "C[C@@H](COC=O)[C@H]1CO1",
+  "corrected_smiles": "C[C@@H](COC=O)[C@H]1CO1",
+  "n_requested": 36,
+  "build_state": "accepted",
+  "n_generated": 36,
+  "n_rotatable_td": 5,
+  "seconds": 5.48
+ },
+ {
+  "smiles": "C[C@@H](O)C1=N[C@H]2C[C@H]2N1",
+  "corrected_smiles": "C[C@@H](O)C1=N[C@H]2C[C@H]2N1",
+  "n_requested": 12,
+  "build_state": "accepted",
+  "n_generated": 12,
+  "n_rotatable_td": 3,
+  "seconds": 1.8
+ },
+ {
+  "smiles": "C[C@@H](O)CCO[CH][NH]",
+  "corrected_smiles": "[H]/N=C/OCC[C@@H](C)O",
+  "n_requested": 202,
+  "build_state": "accepted",
+  "n_generated": 202,
+  "n_rotatable_td": 7,
+  "seconds": 31.8
+ },
+ {
+  "smiles": "C[C@@H](O)[C@@]1(C)CO1",
+  "corrected_smiles": "C[C@@H](O)[C@@]1(C)CO1",
+  "n_requested": 20,
+  "build_state": "accepted",
+  "n_generated": 20,
+  "n_rotatable_td": 4,
+  "seconds": 2.67
+ },
+ {
+  "smiles": "C[C@@H]1C(=O)C2(C)CN1C2",
+  "corrected_smiles": "C[C@@H]1C(=O)C2(C)CN1C2",
+  "n_requested": 2,
+  "build_state": "rejected: unassigned stereo elements [{'kind': 'atom', 'centered_on': 4, 'specified': False}, {'kind': 'atom', 'centered_on': 7, 'specified': False}]: specify them, or expand the state with expand_stereo (policy \"enumerate\") so each stereoisomer is its own explicit state",
+  "n_generated": 2,
+  "n_rotatable_td": 2,
+  "seconds": 0.63
+ },
+ {
+  "smiles": "C[C@@H]1C(=O)CN1C",
+  "corrected_smiles": "C[C@@H]1C(=O)CN1C",
+  "n_requested": 4,
+  "build_state": "accepted",
+  "n_generated": 4,
+  "n_rotatable_td": 2,
+  "seconds": 0.73
+ },
+ {
+  "smiles": "C[C@@H]1O[C@@H]2[C@@H]3[C@H]1[C@H]2[C@@H]3C",
+  "corrected_smiles": "C[C@@H]1O[C@@H]2[C@@H]3[C@H]1[C@H]2[C@@H]3C",
+  "n_requested": 4,
+  "build_state": "accepted",
+  "error": "RuntimeError: ETKDG seed embedding failed",
+  "seconds": 0.72
+ },
+ {
+  "smiles": "C[C@@H]1[C@H](CO)[C@@H]2[C@H]1N2C",
+  "corrected_smiles": "C[C@@H]1[C@H](CO)[C@@H]2[C@H]1N2C",
+  "n_requested": 24,
+  "build_state": "rejected: unassigned stereo elements [{'kind': 'atom', 'centered_on': 7, 'specified': False}]: specify them, or expand the state with expand_stereo (policy \"enumerate\") so each stereoisomer is its own explicit state",
+  "n_generated": 24,
+  "n_rotatable_td": 4,
+  "seconds": 4.64
+ },
+ {
+  "smiles": "C[C@@H]1[C@H]([C@@H](O)C#N)[C@@H]1C",
+  "corrected_smiles": "C[C@@H]1[C@H]([C@@H](O)C#N)[C@@H]1C",
+  "n_requested": 20,
+  "build_state": "accepted",
+  "n_generated": 20,
+  "n_rotatable_td": 5,
+  "seconds": 3.48
+ },
+ {
+  "smiles": "C[C@@]1(C(N)=O)CNC1=O",
+  "corrected_smiles": "C[C@@]1(C(N)=O)CNC1=O",
+  "n_requested": 2,
+  "build_state": "accepted",
+  "n_generated": 2,
+  "n_rotatable_td": 3,
+  "seconds": 0.56
+ },
+ {
+  "smiles": "C[C@@]1(N2CC2)CC[C@H]1O",
+  "corrected_smiles": "C[C@@]1(N2CC2)CC[C@H]1O",
+  "n_requested": 26,
+  "build_state": "accepted",
+  "n_generated": 26,
+  "n_rotatable_td": 3,
+  "seconds": 5.29
+ },
+ {
+  "smiles": "C[C@@]1([C@H]2O[C@H]3C[C@H]32)CO1",
+  "corrected_smiles": "C[C@@]1([C@H]2O[C@H]3C[C@H]32)CO1",
+  "n_requested": 4,
+  "build_state": "accepted",
+  "error": "RuntimeError: ETKDG seed embedding failed",
+  "seconds": 0.49
+ },
+ {
+  "smiles": "C[C@@]12C[C@@H](CNC1=O)O2",
+  "corrected_smiles": "C[C@@]12C[C@@H](CNC1=O)O2",
+  "n_requested": 2,
+  "build_state": "accepted",
+  "n_generated": 2,
+  "n_rotatable_td": 1,
+  "seconds": 0.59
+ },
+ {
+  "smiles": "C[C@@]12C[C@@H](NC=O)[C@@H]1C2",
+  "corrected_smiles": "C[C@@]12C[C@@H](NC=O)[C@@H]1C2",
+  "n_requested": 4,
+  "build_state": "accepted",
+  "n_generated": 4,
+  "n_rotatable_td": 3,
+  "seconds": 0.93
+ },
+ {
+  "smiles": "C[C@@]12C[C@H]3O[C]([NH])N1[C@H]32",
+  "corrected_smiles": "[H]/N=C1\\O[C@@H]2C[C@@]3(C)[C@@H]2N13",
+  "n_requested": 2,
+  "build_state": "rejected: unassigned stereo elements [{'kind': 'atom', 'centered_on': 9, 'specified': False}]: specify them, or expand the state with expand_stereo (policy \"enumerate\") so each stereoisomer is its own explicit state",
+  "error": "RuntimeError: ETKDG seed embedding failed",
+  "seconds": 0.37
+ },
+ {
+  "smiles": "C[C@@]12C[C@]1(O)[C@@H](O)C2=O",
+  "corrected_smiles": "C[C@@]12C[C@]1(O)[C@@H](O)C2=O",
+  "n_requested": 6,
+  "build_state": "accepted",
+  "n_generated": 6,
+  "n_rotatable_td": 3,
+  "seconds": 1.02
+ },
+ {
+  "smiles": "C[C@@]12[C@H]3[C@H]4O[C@@H]1C[C@@H]2[C@H]43",
+  "corrected_smiles": "C[C@@]12[C@H]3[C@H]4O[C@@H]1C[C@@H]2[C@H]43",
+  "n_requested": 2,
+  "build_state": "accepted",
+  "n_generated": 2,
+  "n_rotatable_td": 1,
+  "seconds": 0.61
+ },
+ {
+  "smiles": "C[C@@]12[C]3[CH]CN4[C@@H]3[C@@H]1[C@H]42",
+  "corrected_smiles": "C[C@]12C3=CCN4[C@H]1[C@H]2[C@H]34",
+  "n_requested": 2,
+  "build_state": "accepted",
+  "error": "RuntimeError: ETKDG seed embedding failed",
+  "seconds": 0.49
+ },
+ {
+  "smiles": "C[C@H](CC=O)CNC=O",
+  "corrected_smiles": "C[C@H](CC=O)CNC=O",
+  "n_requested": 116,
+  "build_state": "accepted",
+  "n_generated": 116,
+  "n_rotatable_td": 6,
+  "seconds": 20.76
+ },
+ {
+  "smiles": "C[C@H]1C=CCC(=O)C1=O",
+  "corrected_smiles": "C[C@H]1C=CCC(=O)C1=O",
+  "n_requested": 4,
+  "build_state": "accepted",
+  "n_generated": 4,
+  "n_rotatable_td": 1,
+  "seconds": 0.77
+ },
+ {
+  "smiles": "C[C@H]1CC[C@@H](CCO)O1",
+  "corrected_smiles": "C[C@H]1CC[C@@H](CCO)O1",
+  "n_requested": 152,
+  "build_state": "accepted",
+  "n_generated": 152,
+  "n_rotatable_td": 4,
+  "seconds": 32.58
+ },
+ {
+  "smiles": "C[C@H]1CO[C@@H]2C[C@H]1[C@H]2O",
+  "corrected_smiles": "C[C@H]1CO[C@@H]2C[C@H]1[C@H]2O",
+  "n_requested": 12,
+  "build_state": "accepted",
+  "n_generated": 12,
+  "n_rotatable_td": 2,
+  "seconds": 2.26
+ },
+ {
+  "smiles": "C[C@H]1C[C@@H](CCO)CO1",
+  "corrected_smiles": "C[C@H]1C[C@@H](CCO)CO1",
+  "n_requested": 218,
+  "build_state": "accepted",
+  "n_generated": 218,
+  "n_rotatable_td": 4,
+  "seconds": 47.07
+ },
+ {
+  "smiles": "C[C@H]1C[C@H]1C(=O)N1CC1",
+  "corrected_smiles": "C[C@H]1C[C@H]1C(=O)N1CC1",
+  "n_requested": 10,
+  "build_state": "accepted",
+  "n_generated": 10,
+  "n_rotatable_td": 3,
+  "seconds": 1.75
+ },
+ {
+  "smiles": "C[C@H]1C[C@H]1C1=CCOC1",
+  "corrected_smiles": "C[C@H]1C[C@H]1C1=CCOC1",
+  "n_requested": 4,
+  "build_state": "accepted",
+  "n_generated": 4,
+  "n_rotatable_td": 2,
+  "seconds": 0.93
+ },
+ {
+  "smiles": "C[C@H]1C[C@](C#N)(C=O)O1",
+  "corrected_smiles": "C[C@H]1C[C@](C#N)(C=O)O1",
+  "n_requested": 4,
+  "build_state": "accepted",
+  "n_generated": 4,
+  "n_rotatable_td": 3,
+  "seconds": 0.72
+ },
+ {
+  "smiles": "C[C@H]1N2[C@@H]3[C@@H]4[C@H]2[C@@]1(C)[C@H]34",
+  "corrected_smiles": "C[C@H]1N2[C@@H]3[C@@H]4[C@H]2[C@@]1(C)[C@H]34",
+  "n_requested": 2,
+  "build_state": "accepted",
+  "n_generated": 2,
+  "n_rotatable_td": 2,
+  "seconds": 0.62
+ },
+ {
+  "smiles": "C[C@H]1OC[C@@H](C#N)[C@H]1C",
+  "corrected_smiles": "C[C@H]1OC[C@@H](C#N)[C@H]1C",
+  "n_requested": 4,
+  "build_state": "accepted",
+  "n_generated": 4,
+  "n_rotatable_td": 3,
+  "seconds": 0.94
+ },
+ {
+  "smiles": "C[C@H]1OC[C@H]2CO[C@]21C",
+  "corrected_smiles": "C[C@H]1OC[C@H]2CO[C@]21C",
+  "n_requested": 4,
+  "build_state": "accepted",
+  "n_generated": 4,
+  "n_rotatable_td": 2,
+  "seconds": 0.97
+ },
+ {
+  "smiles": "C[C@H]1O[C@@H](CO)[C@H]1O",
+  "corrected_smiles": "C[C@H]1O[C@@H](CO)[C@H]1O",
+  "n_requested": 32,
+  "build_state": "accepted",
+  "n_generated": 32,
+  "n_rotatable_td": 4,
+  "seconds": 4.15
+ },
+ {
+  "smiles": "C[C@H]1O[C@@]2(C)C[C@@]2(C)O1",
+  "corrected_smiles": "C[C@H]1O[C@@]2(C)C[C@@]2(C)O1",
+  "n_requested": 2,
+  "build_state": "accepted",
+  "n_generated": 2,
+  "n_rotatable_td": 3,
+  "seconds": 0.66
+ },
+ {
+  "smiles": "C[C@H]1O[C@H]2C(=O)CN[C@@H]12",
+  "corrected_smiles": "C[C@H]1O[C@H]2C(=O)CN[C@@H]12",
+  "n_requested": 4,
+  "build_state": "accepted",
+  "n_generated": 4,
+  "n_rotatable_td": 1,
+  "seconds": 0.82
+ },
+ {
+  "smiles": "C[C@H]1O[C@]1(C)C#CC=O",
+  "corrected_smiles": "C[C@H]1O[C@]1(C)C#CC=O",
+  "n_requested": 4,
+  "build_state": "accepted",
+  "n_generated": 4,
+  "n_rotatable_td": 5,
+  "seconds": 0.73
+ },
+ {
+  "smiles": "C[C@H]1[C@@H](O)[C@H]1[C@@H](N)C#N",
+  "corrected_smiles": "C[C@H]1[C@@H](O)[C@H]1[C@@H](N)C#N",
+  "n_requested": 34,
+  "build_state": "accepted",
+  "n_generated": 34,
+  "n_rotatable_td": 5,
+  "seconds": 5.42
+ },
+ {
+  "smiles": "C[C@H]1[C@@H](O)c2ncnn21",
+  "corrected_smiles": "C[C@H]1[C@@H](O)c2ncnn21",
+  "n_requested": 8,
+  "build_state": "accepted",
+  "n_generated": 8,
+  "n_rotatable_td": 2,
+  "seconds": 1.08
+ },
+ {
+  "smiles": "C[C@H]1[C@@H]2[C@@H]3[C@H](O)[C@]3(C)[C@H]12",
+  "corrected_smiles": "C[C@H]1[C@@H]2[C@@H]3[C@H](O)[C@]3(C)[C@H]12",
+  "n_requested": 4,
+  "build_state": "accepted",
+  "error": "RuntimeError: ETKDG seed embedding failed",
+  "seconds": 0.57
+ },
+ {
+  "smiles": "C[C@]12C=C[C@H](O1)[C@H]2CO",
+  "corrected_smiles": "C[C@]12C=C[C@H](O1)[C@H]2CO",
+  "n_requested": 20,
+  "build_state": "accepted",
+  "n_generated": 20,
+  "n_rotatable_td": 3,
+  "seconds": 3.11
+ },
+ {
+  "smiles": "C[C@]12CCCN1CC2=O",
+  "corrected_smiles": "C[C@]12CCCN1CC2=O",
+  "n_requested": 4,
+  "build_state": "accepted",
+  "n_generated": 4,
+  "n_rotatable_td": 1,
+  "seconds": 0.96
+ },
+ {
+  "smiles": "C[C@]12CO[C]1[N][C@H]1C[C@H]12",
+  "corrected_smiles": "C[C@]12COC1=N[C@H]1C[C@H]12",
+  "n_requested": 2,
+  "build_state": "accepted",
+  "n_generated": 2,
+  "n_rotatable_td": 1,
+  "seconds": 0.64
+ },
+ {
+  "smiles": "C[C@]12C[C@@]1(C=O)OC=N2",
+  "corrected_smiles": "C[C@]12C[C@@]1(C=O)OC=N2",
+  "n_requested": 4,
+  "build_state": "accepted",
+  "n_generated": 4,
+  "n_rotatable_td": 2,
+  "seconds": 0.81
+ },
+ {
+  "smiles": "C[C@]12C[C@H]1O[C@H]1C[C@@H]2C1",
+  "corrected_smiles": "C[C@]12C[C@H]1O[C@H]1C[C@@H]2C1",
+  "n_requested": 2,
+  "build_state": "accepted",
+  "n_generated": 2,
+  "n_rotatable_td": 1,
+  "seconds": 0.73
+ },
+ {
+  "smiles": "C[C@]12N=CO[C@H]1[C@H]2CO",
+  "corrected_smiles": "C[C@]12N=CO[C@H]1[C@H]2CO",
+  "n_requested": 14,
+  "build_state": "accepted",
+  "n_generated": 14,
+  "n_rotatable_td": 3,
+  "seconds": 2.28
+ },
+ {
+  "smiles": "C[C@]12N[C@H]1[C@H]1C[C@]12C=O",
+  "corrected_smiles": "C[C@]12N[C@H]1[C@H]1C[C@]12C=O",
+  "n_requested": 4,
+  "build_state": "accepted",
+  "n_generated": 4,
+  "n_rotatable_td": 2,
+  "seconds": 1.15
+ },
+ {
+  "smiles": "C[C]1C[C@@]2(O)[C@H]3[C]1C[C@H]32",
+  "corrected_smiles": "CC1=C2C[C@@H]3[C@H]2[C@]3(O)C1",
+  "n_requested": 4,
+  "build_state": "accepted",
+  "error": "RuntimeError: ETKDG seed embedding failed",
+  "seconds": 0.69
+ },
+ {
+  "smiles": "C[N]C1=C[CH]C(=O)N1",
+  "corrected_smiles": "C/N=C1/C=CC(=O)N1",
+  "n_requested": 2,
+  "build_state": "accepted",
+  "n_generated": 2,
+  "n_rotatable_td": 2,
+  "seconds": 0.5
+ },
+ {
+  "smiles": "Cc1ccn(CCO)n1",
+  "corrected_smiles": "Cc1ccn(CCO)n1",
+  "n_requested": 30,
+  "build_state": "accepted",
+  "n_generated": 30,
+  "n_rotatable_td": 4,
+  "seconds": 4.19
+ },
+ {
+  "smiles": "Cc1nc(O)n(C)n1",
+  "corrected_smiles": "Cc1nc(O)n(C)n1",
+  "n_requested": 6,
+  "build_state": "accepted",
+  "n_generated": 6,
+  "n_rotatable_td": 3,
+  "seconds": 0.91
+ },
+ {
+  "smiles": "Cc1nn2ccnc2o1",
+  "corrected_smiles": "Cc1nn2ccnc2o1",
+  "n_requested": 4,
+  "build_state": "accepted",
+  "n_generated": 4,
+  "n_rotatable_td": 1,
+  "seconds": 0.67
+ },
+ {
+  "smiles": "Cn1cc(N=CN)nn1",
+  "corrected_smiles": "Cn1cc(N=CN)nn1",
+  "n_requested": 4,
+  "build_state": "rejected: unassigned stereo elements [{'kind': 'double_bond', 'centered_on': 4, 'specified': False}]: specify them, or expand the state with expand_stereo (policy \"enumerate\") so each stereoisomer is its own explicit state",
+  "n_generated": 4,
+  "n_rotatable_td": 4,
+  "seconds": 0.74
+ },
+ {
+  "smiles": "Cn1ncc(OC=O)n1",
+  "corrected_smiles": "Cn1ncc(OC=O)n1",
+  "n_requested": 14,
+  "build_state": "accepted",
+  "n_generated": 14,
+  "n_rotatable_td": 3,
+  "seconds": 1.46
+ },
+ {
+  "smiles": "N#CCNc1cocn1",
+  "corrected_smiles": "N#CCNc1cocn1",
+  "n_requested": 12,
+  "build_state": "accepted",
+  "n_generated": 12,
+  "n_rotatable_td": 3,
+  "seconds": 1.37
+ },
+ {
+  "smiles": "N#CCO[C@@H]1C[C@@H]1O",
+  "corrected_smiles": "N#CCO[C@@H]1C[C@@H]1O",
+  "n_requested": 36,
+  "build_state": "accepted",
+  "n_generated": 36,
+  "n_rotatable_td": 4,
+  "seconds": 3.94
+ },
+ {
+  "smiles": "N#CC[C@@]12O[C@@H]1C[C@@H]2O",
+  "corrected_smiles": "N#CC[C@@]12O[C@@H]1C[C@@H]2O",
+  "n_requested": 12,
+  "build_state": "accepted",
+  "n_generated": 12,
+  "n_rotatable_td": 3,
+  "seconds": 1.8
+ },
+ {
+  "smiles": "N#CC[C@H]1[C@@H]2CCN1C2",
+  "corrected_smiles": "N#CC[C@H]1[C@@H]2CCN1C2",
+  "n_requested": 6,
+  "build_state": "rejected: unassigned stereo elements [{'kind': 'atom', 'centered_on': 7, 'specified': False}]: specify them, or expand the state with expand_stereo (policy \"enumerate\") so each stereoisomer is its own explicit state",
+  "n_generated": 6,
+  "n_rotatable_td": 2,
+  "seconds": 1.3
+ },
+ {
+  "smiles": "N#C[C@@H]1CC=CC1=NO",
+  "corrected_smiles": "N#C[C@@H]1CC=CC1=NO",
+  "n_requested": 2,
+  "build_state": "rejected: unassigned stereo elements [{'kind': 'double_bond', 'centered_on': 6, 'specified': False}]: specify them, or expand the state with expand_stereo (policy \"enumerate\") so each stereoisomer is its own explicit state",
+  "n_generated": 2,
+  "n_rotatable_td": 3,
+  "seconds": 0.55
+ },
+ {
+  "smiles": "N#C[C@@H]1CC[C@@H]1O[CH][NH]",
+  "corrected_smiles": "[H]/N=C/O[C@H]1CC[C@H]1C#N",
+  "n_requested": 6,
+  "build_state": "accepted",
+  "n_generated": 6,
+  "n_rotatable_td": 4,
+  "seconds": 1.11
+ },
+ {
+  "smiles": "N#C[C@@H]1N2[C@@H]3C[C@@]1(O)[C@@H]32",
+  "corrected_smiles": "N#C[C@@H]1N2[C@@H]3C[C@@]1(O)[C@@H]32",
+  "n_requested": 6,
+  "build_state": "rejected: unassigned stereo elements [{'kind': 'atom', 'centered_on': 3, 'specified': False}]: specify them, or expand the state with expand_stereo (policy \"enumerate\") so each stereoisomer is its own explicit state",
+  "n_generated": 6,
+  "n_rotatable_td": 2,
+  "seconds": 0.99
+ },
+ {
+  "smiles": "N#C[C@@H]1OC[C@@]1(O)C#N",
+  "corrected_smiles": "N#C[C@@H]1OC[C@@]1(O)C#N",
+  "n_requested": 6,
+  "build_state": "accepted",
+  "n_generated": 6,
+  "n_rotatable_td": 3,
+  "seconds": 0.85
+ },
+ {
+  "smiles": "N#C[C@@H]1[C@@H]2OCC[C@@]21N",
+  "corrected_smiles": "N#C[C@@H]1[C@@H]2OCC[C@@]21N",
+  "n_requested": 6,
+  "build_state": "accepted",
+  "n_generated": 6,
+  "n_rotatable_td": 2,
+  "seconds": 1.12
+ },
+ {
+  "smiles": "N#C[C@@]1(O)COC[C@@H]1O",
+  "corrected_smiles": "N#C[C@@]1(O)COC[C@@H]1O",
+  "n_requested": 18,
+  "build_state": "accepted",
+  "n_generated": 18,
+  "n_rotatable_td": 3,
+  "seconds": 2.43
+ },
+ {
+  "smiles": "N#C[C@@]12CN1C[C@@H]2C=O",
+  "corrected_smiles": "N#C[C@@]12CN1C[C@@H]2C=O",
+  "n_requested": 4,
+  "build_state": "rejected: unassigned stereo elements [{'kind': 'atom', 'centered_on': 4, 'specified': False}]: specify them, or expand the state with expand_stereo (policy \"enumerate\") so each stereoisomer is its own explicit state",
+  "n_generated": 4,
+  "n_rotatable_td": 2,
+  "seconds": 1.2
+ },
+ {
+  "smiles": "N#C[C@@]12C[CH][C]3CN1[C@H]32",
+  "corrected_smiles": "N#C[C@@]12[C@H]3[C@H]4CN1[C@@H]2[C@H]43",
+  "n_requested": 2,
+  "build_state": "rejected: unassigned stereo elements [{'kind': 'atom', 'centered_on': 6, 'specified': False}]: specify them, or expand the state with expand_stereo (policy \"enumerate\") so each stereoisomer is its own explicit state",
+  "n_generated": 2,
+  "n_rotatable_td": 1,
+  "seconds": 0.54
+ },
+ {
+  "smiles": "N#C[C@H]1Cc2ncnn21",
+  "corrected_smiles": "N#C[C@H]1Cc2ncnn21",
+  "n_requested": 2,
+  "build_state": "accepted",
+  "n_generated": 2,
+  "n_rotatable_td": 1,
+  "seconds": 0.47
+ },
+ {
+  "smiles": "N#C[C@]12CN3[C@H]1C=C[C@@H]32",
+  "corrected_smiles": "N#C[C@]12CN3[C@H]1C=C[C@@H]32",
+  "n_requested": 2,
+  "build_state": "rejected: unassigned stereo elements [{'kind': 'atom', 'centered_on': 4, 'specified': False}]: specify them, or expand the state with expand_stereo (policy \"enumerate\") so each stereoisomer is its own explicit state",
+  "n_generated": 2,
+  "n_rotatable_td": 1,
+  "seconds": 0.55
+ },
+ {
+  "smiles": "N=C(CC1CC1)NC=O",
+  "corrected_smiles": "[H]/N=C(/CC1CC1)NC=O",
+  "n_requested": 22,
+  "build_state": "accepted",
+  "error": "RuntimeError: ETKDG seed embedding failed",
+  "seconds": 1.63
+ },
+ {
+  "smiles": "NC(=O)[C@@H](O)CC=O",
+  "corrected_smiles": "NC(=O)[C@@H](O)CC=O",
+  "n_requested": 48,
+  "build_state": "accepted",
+  "n_generated": 48,
+  "n_rotatable_td": 5,
+  "seconds": 5.1
+ },
+ {
+  "smiles": "NC(=O)[C@H]1CN1",
+  "corrected_smiles": "NC(=O)[C@H]1CN1",
+  "n_requested": 4,
+  "build_state": "accepted",
+  "n_generated": 4,
+  "n_rotatable_td": 2,
+  "seconds": 0.62
+ },
+ {
+  "smiles": "N[C@H]1CCN(C=O)C1=O",
+  "corrected_smiles": "N[C@H]1CCN(C=O)C1=O",
+  "n_requested": 14,
+  "build_state": "accepted",
+  "n_generated": 14,
+  "n_rotatable_td": 2,
+  "seconds": 2.04
+ },
+ {
+  "smiles": "Nc1n[nH]cc1CC=O",
+  "corrected_smiles": "Nc1n[nH]cc1CC=O",
+  "n_requested": 12,
+  "build_state": "accepted",
+  "n_generated": 12,
+  "n_rotatable_td": 3,
+  "seconds": 1.64
+ },
+ {
+  "smiles": "O=C(CO)[C@H]1CO1",
+  "corrected_smiles": "O=C(CO)[C@H]1CO1",
+  "n_requested": 18,
+  "build_state": "accepted",
+  "n_generated": 18,
+  "n_rotatable_td": 3,
+  "seconds": 1.75
+ },
+ {
+  "smiles": "O=C1C=C[C@@]2(O)C[C@H]2C1",
+  "corrected_smiles": "O=C1C=C[C@@]2(O)C[C@H]2C1",
+  "n_requested": 4,
+  "build_state": "accepted",
+  "n_generated": 4,
+  "n_rotatable_td": 1,
+  "seconds": 0.87
+ },
+ {
+  "smiles": "O=C1CCOC(=O)CC1",
+  "corrected_smiles": "O=C1CCOC(=O)CC1",
+  "n_requested": 10,
+  "build_state": "accepted",
+  "n_generated": 10,
+  "n_rotatable_td": 0,
+  "seconds": 0.04
+ },
+ {
+  "smiles": "O=C1CNC[C@]2(CO2)C1",
+  "corrected_smiles": "O=C1CNC[C@]2(CO2)C1",
+  "n_requested": 16,
+  "build_state": "accepted",
+  "n_generated": 16,
+  "n_rotatable_td": 0,
+  "seconds": 0.06
+ },
+ {
+  "smiles": "O=C1C[C]2[CH]CC[C@H]2O1",
+  "corrected_smiles": "O=C1CC2=CCC[C@H]2O1",
+  "n_requested": 2,
+  "build_state": "accepted",
+  "n_generated": 2,
+  "n_rotatable_td": 0,
+  "seconds": 0.01
+ },
+ {
+  "smiles": "O=C1Cn2cncc2O1",
+  "corrected_smiles": "O=C1Cn2cncc2O1",
+  "n_requested": 2,
+  "build_state": "accepted",
+  "n_generated": 2,
+  "n_rotatable_td": 0,
+  "seconds": 0.01
+ },
+ {
+  "smiles": "O=C1NC=N[C@H]2C[C@H]2N1",
+  "corrected_smiles": "O=C1NC=N[C@H]2C[C@H]2N1",
+  "n_requested": 2,
+  "build_state": "accepted",
+  "n_generated": 2,
+  "n_rotatable_td": 0,
+  "seconds": 0.01
+ },
+ {
+  "smiles": "O=C1NC[C@@]23CC[C@@]12O3",
+  "corrected_smiles": "O=C1NC[C@@]23CC[C@@]12O3",
+  "n_requested": 2,
+  "build_state": "accepted",
+  "error": "RuntimeError: ETKDG seed embedding failed",
+  "seconds": 0.26
+ },
+ {
+  "smiles": "O=C1N[C@H]2C[C@H]2O1",
+  "corrected_smiles": "O=C1N[C@H]2C[C@H]2O1",
+  "n_requested": 2,
+  "build_state": "accepted",
+  "n_generated": 2,
+  "n_rotatable_td": 0,
+  "seconds": 0.01
+ },
+ {
+  "smiles": "O=C1O[C@H]2[C@@H]3O[C@H]2[C@]13O",
+  "corrected_smiles": "O=C1O[C@H]2[C@@H]3O[C@H]2[C@]13O",
+  "n_requested": 4,
+  "build_state": "accepted",
+  "n_generated": 4,
+  "n_rotatable_td": 1,
+  "seconds": 0.67
+ },
+ {
+  "smiles": "O=C1[C@H]2C[C@H]3O[C@@H]1C[C@@H]23",
+  "corrected_smiles": "O=C1[C@H]2C[C@H]3O[C@@H]1C[C@@H]23",
+  "n_requested": 2,
+  "build_state": "accepted",
+  "n_generated": 2,
+  "n_rotatable_td": 0,
+  "seconds": 0.01
+ },
+ {
+  "smiles": "O=CC(=O)[C@@H]1C=CCO1",
+  "corrected_smiles": "O=CC(=O)[C@@H]1C=CCO1",
+  "n_requested": 6,
+  "build_state": "accepted",
+  "n_generated": 6,
+  "n_rotatable_td": 2,
+  "seconds": 0.98
+ },
+ {
+  "smiles": "O=CC[C@@]12CC=C[C@@H]1C2",
+  "corrected_smiles": "O=CC[C@@]12CC=C[C@@H]1C2",
+  "n_requested": 20,
+  "build_state": "accepted",
+  "n_generated": 20,
+  "n_rotatable_td": 2,
+  "seconds": 3.4
+ },
+ {
+  "smiles": "O=COc1cnnnn1",
+  "corrected_smiles": "O=COc1cnnnn1",
+  "n_requested": 8,
+  "build_state": "accepted",
+  "n_generated": 8,
+  "n_rotatable_td": 2,
+  "seconds": 0.81
+ },
+ {
+  "smiles": "O=C[C@@H]1CN[C@@H]1C(=O)O",
+  "corrected_smiles": "O=C[C@@H]1CN[C@@H]1C(=O)O",
+  "n_requested": 20,
+  "build_state": "accepted",
+  "n_generated": 20,
+  "n_rotatable_td": 3,
+  "seconds": 2.69
+ },
+ {
+  "smiles": "O=C[C@@H]1OC[C@H](O)[C@@H]1O",
+  "corrected_smiles": "O=C[C@@H]1OC[C@H](O)[C@@H]1O",
+  "n_requested": 28,
+  "build_state": "accepted",
+  "n_generated": 28,
+  "n_rotatable_td": 3,
+  "seconds": 3.89
+ },
+ {
+  "smiles": "O=C[C@@]1(O)[C@@H]2[C@@H]3N[C@@H]3[C@@H]21",
+  "corrected_smiles": "O=C[C@@]1(O)[C@@H]2[C@@H]3N[C@@H]3[C@@H]21",
+  "n_requested": 4,
+  "build_state": "accepted",
+  "n_generated": 4,
+  "n_rotatable_td": 2,
+  "seconds": 1.08
+ },
+ {
+  "smiles": "O=C[C@H]1CCOCCO1",
+  "corrected_smiles": "O=C[C@H]1CCOCCO1",
+  "n_requested": 62,
+  "build_state": "accepted",
+  "n_generated": 62,
+  "n_rotatable_td": 1,
+  "seconds": 10.93
+ },
+ {
+  "smiles": "O=C[C@H]1N=CO[C@H]2C[C@@H]12",
+  "corrected_smiles": "O=C[C@H]1N=CO[C@H]2C[C@@H]12",
+  "n_requested": 6,
+  "build_state": "accepted",
+  "n_generated": 6,
+  "n_rotatable_td": 1,
+  "seconds": 1.03
+ },
+ {
+  "smiles": "O=C[C@]1(O)C[C@H]2C[C@H]21",
+  "corrected_smiles": "O=C[C@]1(O)C[C@H]2C[C@H]21",
+  "n_requested": 12,
+  "build_state": "accepted",
+  "n_generated": 12,
+  "n_rotatable_td": 2,
+  "seconds": 1.88
+ },
+ {
+  "smiles": "O=C[C@]12O[C@H]1[C@H]1C[C@H]12",
+  "corrected_smiles": "O=C[C@]12O[C@H]1[C@H]1C[C@H]12",
+  "n_requested": 4,
+  "build_state": "accepted",
+  "error": "RuntimeError: ETKDG seed embedding failed",
+  "seconds": 0.19
+ },
+ {
+  "smiles": "O=Cc1ccc(=O)[nH]c1",
+  "corrected_smiles": "O=Cc1ccc(=O)[nH]c1",
+  "n_requested": 4,
+  "build_state": "accepted",
+  "n_generated": 4,
+  "n_rotatable_td": 1,
+  "seconds": 0.71
+ },
+ {
+  "smiles": "OC1CC2(CCCC2)C1",
+  "corrected_smiles": "OC1CC2(CCCC2)C1",
+  "n_requested": 10,
+  "build_state": "accepted",
+  "n_generated": 10,
+  "n_rotatable_td": 1,
+  "seconds": 2.43
+ },
+ {
+  "smiles": "OCCCc1ccno1",
+  "corrected_smiles": "OCCCc1ccno1",
+  "n_requested": 70,
+  "build_state": "accepted",
+  "n_generated": 70,
+  "n_rotatable_td": 4,
+  "seconds": 10.45
+ },
+ {
+  "smiles": "OCC[C@@]12[C@H]3[C@H]4[C@@H]1N4[C@H]32",
+  "corrected_smiles": "OCC[C@@]12[C@H]3[C@H]4[C@@H]1N4[C@H]32",
+  "n_requested": 52,
+  "build_state": "rejected: unassigned stereo elements [{'kind': 'atom', 'centered_on': 7, 'specified': False}]: specify them, or expand the state with expand_stereo (policy \"enumerate\") so each stereoisomer is its own explicit state",
+  "n_generated": 52,
+  "n_rotatable_td": 3,
+  "seconds": 9.04
+ },
+ {
+  "smiles": "OCCc1cc(O)c[nH]1",
+  "corrected_smiles": "OCCc1cc(O)c[nH]1",
+  "n_requested": 48,
+  "build_state": "accepted",
+  "n_generated": 48,
+  "n_rotatable_td": 4,
+  "seconds": 6.82
+ },
+ {
+  "smiles": "OC[C@@H]1C=CCCOC1",
+  "corrected_smiles": "OC[C@@H]1C=CCCOC1",
+  "n_requested": 110,
+  "build_state": "accepted",
+  "n_generated": 110,
+  "n_rotatable_td": 2,
+  "seconds": 23.17
+ },
+ {
+  "smiles": "OC[C@@H]1[C@@H]2C=CCO[C@@H]21",
+  "corrected_smiles": "OC[C@@H]1[C@@H]2C=CCO[C@@H]21",
+  "n_requested": 28,
+  "build_state": "accepted",
+  "n_generated": 28,
+  "n_rotatable_td": 2,
+  "seconds": 4.45
+ },
+ {
+  "smiles": "OC[C@@]12C[C@H]3O[C@@H]1[C@]32O",
+  "corrected_smiles": "OC[C@@]12C[C@H]3O[C@@H]1[C@]32O",
+  "n_requested": 34,
+  "build_state": "accepted",
+  "n_generated": 34,
+  "n_rotatable_td": 3,
+  "seconds": 4.63
+ },
+ {
+  "smiles": "OC[C@@]12OC[C@H]3C[C@@H]1[C@H]32",
+  "corrected_smiles": "OC[C@@]12OC[C@H]3C[C@@H]1[C@H]32",
+  "n_requested": 18,
+  "build_state": "accepted",
+  "n_generated": 18,
+  "n_rotatable_td": 2,
+  "seconds": 3.25
+ },
+ {
+  "smiles": "OC[C@H]1[C@H]2C=C[C@@H]3[C@H]2N31",
+  "corrected_smiles": "OC[C@H]1[C@H]2C=C[C@@H]3[C@H]2N31",
+  "n_requested": 18,
+  "build_state": "rejected: unassigned stereo elements [{'kind': 'atom', 'centered_on': 8, 'specified': False}]: specify them, or expand the state with expand_stereo (policy \"enumerate\") so each stereoisomer is its own explicit state",
+  "n_generated": 18,
+  "n_rotatable_td": 2,
+  "seconds": 3.19
+ },
+ {
+  "smiles": "O[C@@]1([C@H]2CO2)[C@H]2CC[C@H]21",
+  "corrected_smiles": "O[C@@]1([C@H]2CO2)[C@H]2CC[C@H]21",
+  "n_requested": 14,
+  "build_state": "accepted",
+  "n_generated": 14,
+  "n_rotatable_td": 2,
+  "seconds": 2.94
+ },
+ {
+  "smiles": "O[C@@]12CN3[C@H]4[C@@H]1N[C@@H]2[C@H]43",
+  "corrected_smiles": "O[C@@]12CN3[C@H]4[C@@H]1N[C@@H]2[C@H]43",
+  "n_requested": 4,
+  "build_state": "rejected: unassigned stereo elements [{'kind': 'atom', 'centered_on': 3, 'specified': False}]: specify them, or expand the state with expand_stereo (policy \"enumerate\") so each stereoisomer is its own explicit state",
+  "n_generated": 4,
+  "n_rotatable_td": 1,
+  "seconds": 0.9
+ },
+ {
+  "smiles": "O[C@@]12[C@H]3C[C@H]3[C@H]3[C@@H]1O[C@H]32",
+  "corrected_smiles": "O[C@@]12[C@H]3C[C@H]3[C@H]3[C@@H]1O[C@H]32",
+  "n_requested": 6,
+  "build_state": "accepted",
+  "n_generated": 6,
+  "n_rotatable_td": 1,
+  "seconds": 1.14
+ },
+ {
+  "smiles": "O[C@H]1C[C@@H]2[C]1[CH][C@@H]1O[C@@H]12",
+  "corrected_smiles": "O[C@H]1C[C@@H]2C1=C[C@@H]1O[C@@H]12",
+  "n_requested": 2,
+  "build_state": "accepted",
+  "n_generated": 2,
+  "n_rotatable_td": 1,
+  "seconds": 0.62
+ },
+ {
+  "smiles": "O[C@H]1C[C@]2(CO2)[C@H]2C[C@@H]12",
+  "corrected_smiles": "O[C@H]1C[C@]2(CO2)[C@H]2C[C@@H]12",
+  "n_requested": 6,
+  "build_state": "accepted",
+  "n_generated": 6,
+  "n_rotatable_td": 1,
+  "seconds": 1.29
+ },
+ {
+  "smiles": "O[C@H]1[C@H]2CN2C12COC2",
+  "corrected_smiles": "O[C@H]1[C@H]2CN2C12COC2",
+  "n_requested": 6,
+  "build_state": "rejected: unassigned stereo elements [{'kind': 'atom', 'centered_on': 4, 'specified': False}]: specify them, or expand the state with expand_stereo (policy \"enumerate\") so each stereoisomer is its own explicit state",
+  "error": "RuntimeError: ETKDG seed embedding failed",
+  "seconds": 0.45
+ },
+ {
+  "smiles": "O[C@H]1[C@H]2C[C@@H]3C[C@H]2[C@]13O",
+  "corrected_smiles": "O[C@H]1[C@H]2C[C@@H]3C[C@H]2[C@]13O",
+  "n_requested": 10,
+  "build_state": "accepted",
+  "n_generated": 10,
+  "n_rotatable_td": 2,
+  "seconds": 1.96
+ },
+ {
+  "smiles": "O[C@H]1[C@H]2C[C@H]3CO[C@@H]1[C@@H]23",
+  "corrected_smiles": "O[C@H]1[C@H]2C[C@H]3CO[C@@H]1[C@@H]23",
+  "n_requested": 4,
+  "build_state": "accepted",
+  "n_generated": 4,
+  "n_rotatable_td": 1,
+  "seconds": 0.98
+ },
+ {
+  "smiles": "O[C@H]1[C@H]2C[C@]1(O)C[C@H]2O",
+  "corrected_smiles": "O[C@H]1[C@H]2C[C@]1(O)C[C@H]2O",
+  "n_requested": 34,
+  "build_state": "accepted",
+  "n_generated": 34,
+  "n_rotatable_td": 3,
+  "seconds": 6.18
+ },
+ {
+  "smiles": "O[C@]12CN3[C@H]1[C@H]2C31CC1",
+  "corrected_smiles": "O[C@]12CN3[C@H]1[C@H]2C31CC1",
+  "n_requested": 6,
+  "build_state": "accepted",
+  "n_generated": 6,
+  "n_rotatable_td": 1,
+  "seconds": 1.21
+ },
+ {
+  "smiles": "[NH]C1=C(N)[CH]C=NO1",
+  "corrected_smiles": "[H]/N=c1\\onccc1N",
+  "n_requested": 2,
+  "build_state": "accepted",
+  "n_generated": 2,
+  "n_rotatable_td": 2,
+  "seconds": 0.48
+ },
+ {
+  "smiles": "[NH]C1=NCNC=N1",
+  "corrected_smiles": "[H]N=c1nc[nH]cn1",
+  "n_requested": 2,
+  "build_state": "accepted",
+  "n_generated": 2,
+  "n_rotatable_td": 1,
+  "seconds": 0.42
+ },
+ {
+  "smiles": "[NH][CH]O[C@@]12CCO[C@@H]1C2",
+  "corrected_smiles": "[H]/N=C/O[C@@]12CCO[C@@H]1C2",
+  "n_requested": 12,
+  "build_state": "accepted",
+  "n_generated": 12,
+  "n_rotatable_td": 3,
+  "seconds": 2.01
+ },
+ {
+  "smiles": "[NH][CH]O[C@@]12C[C@H]3O[C@@H]1[C@H]32",
+  "corrected_smiles": "[H]/N=C/O[C@@]12C[C@H]3O[C@@H]1[C@H]32",
+  "n_requested": 10,
+  "build_state": "accepted",
+  "n_generated": 10,
+  "n_rotatable_td": 3,
+  "seconds": 1.5
+ },
+ {
+  "smiles": "[NH][C]1CC[C]([NH])OCO1",
+  "corrected_smiles": "[H]/N=C1/CC/C(=N/[H])OCO1",
+  "n_requested": 4,
+  "build_state": "accepted",
+  "n_generated": 4,
+  "n_rotatable_td": 2,
+  "seconds": 0.88
+ },
+ {
+  "smiles": "[NH][C]1NC[C@H](O)CC1=O",
+  "corrected_smiles": "[H]/N=C1/NC[C@H](O)CC1=O",
+  "n_requested": 12,
+  "build_state": "accepted",
+  "n_generated": 12,
+  "n_rotatable_td": 2,
+  "seconds": 1.84
+ },
+ {
+  "smiles": "c1nc2c(o1)OCO2",
+  "corrected_smiles": "c1nc2c(o1)OCO2",
+  "n_requested": 2,
+  "build_state": "accepted",
+  "n_generated": 2,
+  "n_rotatable_td": 0,
+  "seconds": 0.01
+ }
+]

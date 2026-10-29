@@ -1,0 +1,31 @@
+{
+ "started": "2026-10-28 17:34:28 UTC / 2026-10-28 23:04:28 IST",
+ "args": {
+  "parents": "/scratch/nishanth.r/jmcg/results/seq/smoke/parents.csv",
+  "ph": 7.4,
+  "ph_grid": "2,4,10,12",
+  "model_dir": "/scratch/nishanth.r/jmcg/models/unipka",
+  "out": "/scratch/nishanth.r/jmcg/results/seq/smoke/states",
+  "p_min": 0.05,
+  "top_k": 3,
+  "threads": 8,
+  "lower": -2,
+  "upper": 2
+ },
+ "host": "gnode118",
+ "python": "3.10.12",
+ "rdkit": "2026.09.1",
+ "enumerator": {
+  "enumerator": "/scratch/nishanth.r/jmcg/ext/unipka_orig/enumerator/main.py",
+  "enumerator_sha256": "6734b12b89fa02bd62785be767f728b429aa16eb94feba14b0b0fd53cfcb4067",
+  "template": "/scratch/nishanth.r/jmcg/ext/unipka_orig/enumerator/simple_smarts_pattern.tsv",
+  "template_sha256": "6b4828e5065a5c5de179351639187daf47e3e8a32d8b1358fa73d30c2702566f"
+ },
+ "PKA_MEAN": 6.504894871171601,
+ "population_convention": "p(z|G,pH) = softmax_z(-G_z - q_z ln10 (pH - PKA_MEAN)) over the enumerated ensemble; per fold, then averaged",
+ "finished": "2026-10-28 17:34:47 UTC / 2026-10-28 23:04:47 IST",
+ "n_parents": 6,
+ "n_states": 16,
+ "n_enumeration_failures": 0,
+ "n_selected": 8
+}

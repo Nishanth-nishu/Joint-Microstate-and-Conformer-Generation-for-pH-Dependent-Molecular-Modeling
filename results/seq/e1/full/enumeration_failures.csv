@@ -1,0 +1,3 @@
+template,seed,smiles,level,reason
+simple_smarts_pattern.tsv,N=C(N)O,N=C(N)O,0,input state not in its own ensemble (filtered by Uni-pKa)
+smarts_pattern.tsv,N=C(N)O,N=C(N)O,0,input state not in its own ensemble (filtered by Uni-pKa)

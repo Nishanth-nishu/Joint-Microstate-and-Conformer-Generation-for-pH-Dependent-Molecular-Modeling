@@ -1,0 +1,14 @@
+{
+ "state_id": "NEG_wrong_skeleton",
+ "note": "negative control: not a protomer/tautomer of parent",
+ "seed": 0,
+ "n_confs_requested": 8,
+ "ez_policy": "lock",
+ "failures": [
+  {
+   "stage": "state",
+   "reason": "not a protomer/tautomer of the parent: heavy-atom skeleton differs"
+  }
+ ],
+ "category": "D"
+}

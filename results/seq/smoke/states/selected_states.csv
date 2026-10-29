@@ -1,0 +1,9 @@
+id,parent_smiles,state_smiles,note
+acac__S916758ff3b403044,CC(=O)CC(C)=O,CC(=O)CC(C)=O,pH 7.4: p=1.000 (covered 1.000)
+glycine__Seaa746402de4afbc,NCC(=O)O,[NH3+]CC(=O)[O-],pH 7.4: p=0.996 (covered 0.996)
+histamine__S7d5b6b6e49d67689,NCCc1c[nH]cn1,[NH3+]CCc1c[nH]cn1,pH 7.4: p=0.770 (covered 0.997)
+histamine__S106b0245399500d1,NCCc1c[nH]cn1,[NH3+]CCc1c[nH]c[nH+]1,pH 7.4: p=0.123 (covered 0.997)
+histamine__S5de1513f255a5077,NCCc1c[nH]cn1,NCCc1c[nH]c[nH+]1,pH 7.4: p=0.105 (covered 0.997)
+ibuprofen__Seb0d6ecc06bf9c3b,CC(C)Cc1ccc(cc1)[C@H](C)C(=O)O,CC(C)Cc1ccc([C@H](C)C(=O)[O-])cc1,pH 7.4: p=0.999 (covered 0.999)
+phenol__S3db4fe68296a6b09,Oc1ccccc1,Oc1ccccc1,pH 7.4: p=0.997 (covered 0.997)
+propylamine__S900df5f7d2b415b8,CCCN,CCC[NH3+],pH 7.4: p=1.000 (covered 1.000)

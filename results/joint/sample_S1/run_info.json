@@ -1,0 +1,10 @@
+{
+ "arm": "S1",
+ "coefficients": {
+  "dGU": 4.831513993337638
+ },
+ "ph": 7.4,
+ "seed": 0,
+ "fallback_levels_theta0": {},
+ "n_pairs_without_conformer": 40
+}

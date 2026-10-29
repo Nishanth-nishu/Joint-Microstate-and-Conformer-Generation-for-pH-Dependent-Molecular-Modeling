@@ -1,0 +1,170 @@
+10 enumeration seeds, 84 enumerated states, 46 states to score
+fold 0: 46 states in 15s
+fold 1: 46 states in 15s
+fold 2: 46 states in 15s
+fold 3: 46 states in 15s
+fold 4: 46 states in 15s
+{
+ "n_seeds": 10,
+ "n_enumerated_states": 84,
+ "n_enumeration_failures": 0,
+ "PKA_MEAN": 6.504894871171601,
+ "external_oracle": {
+  "n": 5,
+  "n_groups": 5,
+  "MAE": 0.21465497881548448,
+  "MAE_ci95": [
+   0.09960232389946828,
+   0.33022576302432183
+  ],
+  "RMSE": 0.2541724544124205,
+  "RMSE_ci95": [
+   0.10782882648950695,
+   0.3453046970132496
+  ],
+  "mean_signed": -0.13818039267216503,
+  "slope_pred_on_target": 1.098171418168771
+ },
+ "external_enumerated": {
+  "simple_smarts_pattern.tsv": {
+   "n_failed": 2,
+   "failures": [
+    {
+     "source_record": "sampl6:2",
+     "enum_failure": "levels present [0, 1, 2], need 0,-1"
+    },
+    {
+     "source_record": "sampl6:4",
+     "enum_failure": "levels present [1, 2], need 1,0"
+    }
+   ],
+   "on_successes": {
+    "n": 3,
+    "n_groups": 3,
+    "MAE": 0.21165414373725225,
+    "MAE_ci95": [
+     0.12873775700546197,
+     0.368830478512419
+    ],
+    "RMSE": 0.23908610510920147,
+    "RMSE_ci95": [
+     0.12873775700546197,
+     0.368830478512419
+    ],
+    "mean_signed": -0.1200580132746684,
+    "slope_pred_on_target": 1.1028257948445876
+   },
+   "oracle_on_same_successes": {
+    "n": 3,
+    "n_groups": 3,
+    "MAE": 0.1823059585486666,
+    "MAE_ci95": [
+     0.04934964012811882,
+     0.368830478512419
+    ],
+    "RMSE": 0.22733581543557407,
+    "RMSE_ci95": [
+     0.04934964012811882,
+     0.368830478512419
+    ],
+    "mean_signed": -0.14940619846325406,
+    "slope_pred_on_target": 1.081805446528282
+   },
+   "mean_recall_acid": 1.0,
+   "mean_recall_base": 0.8333333333333334,
+   "full_recall_both": 2
+  },
+  "smarts_pattern.tsv": {
+   "n_failed": 0,
+   "failures": [],
+   "on_successes": {
+    "n": 5,
+    "n_groups": 5,
+    "MAE": 0.21465497881548448,
+    "MAE_ci95": [
+     0.09960232389946828,
+     0.33022576302432183
+    ],
+    "RMSE": 0.2541724544124205,
+    "RMSE_ci95": [
+     0.10782882648950695,
+     0.3453046970132496
+    ],
+    "mean_signed": -0.13818039267216503,
+    "slope_pred_on_target": 1.098171418168771
+   },
+   "oracle_on_same_successes": {
+    "n": 5,
+    "n_groups": 5,
+    "MAE": 0.21465497881548448,
+    "MAE_ci95": [
+     0.09960232389946828,
+     0.33022576302432183
+    ],
+    "RMSE": 0.2541724544124205,
+    "RMSE_ci95": [
+     0.10782882648950695,
+     0.3453046970132496
+    ],
+    "mean_signed": -0.13818039267216503,
+    "slope_pred_on_target": 1.098171418168771
+   },
+   "mean_recall_acid": 1.0,
+   "mean_recall_base": 1.0,
+   "full_recall_both": 5
+  }
+ },
+ "external_by_source": {
+  "unipka:sampl6": {
+   "n": 5,
+   "n_groups": 5,
+   "MAE": 0.21465497881548448,
+   "MAE_ci95": [
+    0.09960232389946828,
+    0.33022576302432183
+   ],
+   "RMSE": 0.2541724544124205,
+   "RMSE_ci95": [
+    0.10782882648950695,
+    0.3453046970132496
+   ],
+   "mean_signed": -0.13818039267216503,
+   "slope_pred_on_target": 1.098171418168771
+  }
+ },
+ "tautomer_oracle": {
+  "measured": {
+   "n": 5,
+   "n_groups": 3,
+   "MAE": 4.74945443274015,
+   "MAE_ci95": [
+    3.381566148445227,
+    7.647924775420374
+   ],
+   "RMSE": 5.488876227516779,
+   "RMSE_ci95": [
+    4.17614636371398,
+    7.647924775420373
+   ],
+   "mean_signed": -4.74945443274015,
+   "slope_pred_on_target": 0.15194757010796978
+  }
+ },
+ "tautomer_predict_zero_MAE": {
+  "measured": 4.853999999999999
+ },
+ "tautomer_enumerator_recall": {
+  "measured|simple_smarts_pattern.tsv": {
+   "t1_in_own_ensemble": "5/5",
+   "t2_in_ensemble_of_t1": "0/5"
+  },
+  "measured|smarts_pattern.tsv": {
+   "t1_in_own_ensemble": "5/5",
+   "t2_in_ensemble_of_t1": "0/5"
+  }
+ },
+ "reproduction_vs_N1": {
+  "n_matched": 5,
+  "max_abs_diff": 0.0
+ }
+}

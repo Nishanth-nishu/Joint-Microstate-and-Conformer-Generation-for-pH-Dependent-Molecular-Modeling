@@ -1,0 +1,282 @@
+{
+ "counts": {
+  "parents": 11355,
+  "states": 29280,
+  "observations": 15502,
+  "dropped_records": 3,
+  "dropped_by_source_reason": {
+   "dwar-iBond: acid/base sets not one proton apart in charge": 3
+  },
+  "obs_by_task_role_label": {
+   "macro_pka|curated_eval|measured": 6395,
+   "macro_pka|external_test|measured": 356,
+   "macro_pka|unipka_train|measured": 8229,
+   "tautomer_logk|curated_eval|calculated": 135,
+   "tautomer_logk|curated_eval|estimated": 166,
+   "tautomer_logk|curated_eval|measured": 221
+  },
+  "parents_by_task": {
+   "macro_pka": 10529,
+   "tautomer_logk": 451
+  },
+  "tautomer_pairs": 522,
+  "tautomer_pairs_measured": 221,
+  "states_by_origin": {
+   "dwar-iBond": 23542,
+   "iupac_v2_4": 5094,
+   "tautobase": 947,
+   "novartis_base": 696,
+   "sampl6": 100,
+   "sampl8": 111,
+   "novartis_acid": 372,
+   "sampl7": 43
+  },
+  "conformer_references": "none in this layer: no dataset here provides 3D reference ensembles for these states (GEOM-QM9 test set is neutral-only and lives in the TD workdir)"
+ },
+ "chemistry": {
+  "state_formal_charge": {
+   "1": 8482,
+   "0": 13233,
+   "-1": 5317,
+   "-2": 641,
+   "-3": 102,
+   "2": 1392,
+   "4": 19,
+   "3": 66,
+   "-4": 27,
+   "-5": 1
+  },
+  "state_elements": {
+   "C": 29277,
+   "H": 29252,
+   "N": 25743,
+   "O": 21878,
+   "Cl": 1726,
+   "Br": 646,
+   "S": 4518,
+   "F": 815,
+   "P": 586,
+   "Se": 114,
+   "Si": 98,
+   "I": 162,
+   "As": 11
+  },
+  "state_n_heavy_quantiles": {
+   "0": 2.0,
+   "0.25": 10.0,
+   "0.5": 13.0,
+   "0.75": 18.0,
+   "0.95": 26.0,
+   "1": 59.0
+  },
+  "states_with_unspecified_stereo": 5597,
+  "td_qm9_vocabulary_states": 21904,
+  "td_qm9_vocabulary_and_size_le9_states": 4070,
+  "parents_by_method": {
+   "canonical_tautomer": 11315,
+   "microstate_as_is": 40
+  }
+ },
+ "missingness": {
+  "value": {
+   "macro_pka": "0/14980",
+   "tautomer_logk": "0/522"
+  },
+  "temperature": {
+   "macro_pka": "8585/14980",
+   "tautomer_logk": "516/522"
+  },
+  "solvent": {
+   "macro_pka": "0/14980",
+   "tautomer_logk": "0/522"
+  },
+  "states_A": {
+   "macro_pka": "6395/14980",
+   "tautomer_logk": "0/522"
+  },
+  "states_B": {
+   "macro_pka": "6395/14980",
+   "tautomer_logk": "0/522"
+  },
+  "reported_state": {
+   "macro_pka": "8585/14980",
+   "tautomer_logk": "522/522"
+  },
+  "scaffold": {
+   "macro_pka": "2572/14980",
+   "tautomer_logk": "29/522"
+  }
+ },
+ "duplicates_conflicts": {
+  "iupac_same_family_same_index": 85,
+  "iupac_same_family_same_index_spread_gt1": 6,
+  "iupac_records_with_internal_spread_gt1": 24,
+  "tautomer_pair_records_duplicated": 4,
+  "tautomer_pairs_conflicting_gt1": 0,
+  "tautomer_pairs_sign_conflict": 0
+ },
+ "splits": {
+  "obs_by_task_split": {
+   "macro_pka|excluded_external_overlap": 3,
+   "macro_pka|test": 968,
+   "macro_pka|train": 4758,
+   "macro_pka|val": 666,
+   "tautomer_logk|excluded_external_overlap": 1,
+   "tautomer_logk|test": 111,
+   "tautomer_logk|train": 331,
+   "tautomer_logk|val": 79
+  },
+  "parents_by_split": {
+   "excluded_external_overlap": 3,
+   "test": 857,
+   "train": 4070,
+   "val": 529
+  },
+  "split_groups_by_split": {
+   "excluded_external_overlap": 3,
+   "test": 238,
+   "train": 1122,
+   "val": 272
+  },
+  "measured_taut_by_split": {
+   "excluded_external_overlap": 1,
+   "test": 28,
+   "train": 171,
+   "val": 21
+  }
+ },
+ "leakage": {
+  "L1_families_in_several_splits": 0,
+  "L2_split_groups_in_several_splits": 0,
+  "L3_near_duplicates_vs_train": {
+   "val": {
+    "n_parents": 18,
+    "of": 529,
+    "examples": [
+     {
+      "parent": "C1=NNC2(C1)CCC2",
+      "nearest_train": "C1=NNC2(C1)CCCC2",
+      "tanimoto": 0.9
+     },
+     {
+      "parent": "O=C(O)CN(CC(=O)O)CP(=O)(O)O",
+      "nearest_train": "O=C(O)CN(CP(=O)(O)O)CP(=O)(O)O",
+      "tanimoto": 0.9
+     },
+     {
+      "parent": "O=C(O)CCCCCCCC(=O)O",
+      "nearest_train": "O=C(O)CCCCCCC(=O)O",
+      "tanimoto": 1.0
+     },
+     {
+      "parent": "O=C(O)CN(CCCCCCCCCCCCN(CC(=O)O)CC(=O)O)CC(=O)O",
+      "nearest_train": "O=C(O)CN(CCCCCCCCN(CC(=O)O)CC(=O)O)CC(=O)O",
+      "tanimoto": 1.0
+     },
+     {
+      "parent": "CCNCCNCC",
+      "nearest_train": "CCNCCNCCNCC",
+      "tanimoto": 0.909
+     },
+     {
+      "parent": "O=C(O)CCCCCCCCC(=O)O",
+      "nearest_train": "O=C(O)CCCCCCC(=O)O",
+      "tanimoto": 1.0
+     },
+     {
+      "parent": "NCCNCCNCCNCCN",
+      "nearest_train": "NCCNCCN",
+      "tanimoto": 0.909
+     },
+     {
+      "parent": "O=C(O)C1(O)CCCC1",
+      "nearest_train": "O=C(O)C1(O)CCCCCC1",
+      "tanimoto": 0.938
+     },
+     {
+      "parent": "NCCCCC(=O)O",
+      "nearest_train": "NCCCCCC(=O)O",
+      "tanimoto": 0.941
+     },
+     {
+      "parent": "CCCCNCCCC",
+      "nearest_train": "CCCCNCCNCCCC",
+      "tanimoto": 0.923
+     }
+    ]
+   },
+   "test": {
+    "n_parents": 18,
+    "of": 857,
+    "examples": [
+     {
+      "parent": "O=C(O)C1(O)CCCCC1",
+      "nearest_train": "O=C(O)C1(O)CCCCCC1",
+      "tanimoto": 1.0
+     },
+     {
+      "parent": "CCCCCCSCC(=O)O",
+      "nearest_train": "CCCCCSCC(=O)O",
+      "tanimoto": 0.955
+     },
+     {
+      "parent": "NCCOCCN",
+      "nearest_train": "NCCOCCOCCN",
+      "tanimoto": 0.909
+     },
+     {
+      "parent": "c1[nH]nc2c1CCCCC2",
+      "nearest_train": "c1[nH]nc2c1CCCC2",
+      "tanimoto": 0.952
+     },
+     {
+      "parent": "N[C@@H]1CCCC[C@H]1O",
+      "nearest_train": "NC1CCCCCC1O",
+      "tanimoto": 0.938
+     },
+     {
+      "parent": "N[C@@H]1CCCC[C@@H]1O",
+      "nearest_train": "NC1CCCCCC1O",
+      "tanimoto": 0.938
+     },
+     {
+      "parent": "NC1CCCCC1O",
+      "nearest_train": "NC1CCCCCC1O",
+      "tanimoto": 0.938
+     },
+     {
+      "parent": "O=c1c(O)c(O)c1=O",
+      "nearest_train": "O=c1c(O)c(O)c(=O)c1=O",
+      "tanimoto": 0.9
+     },
+     {
+      "parent": "CCCCCCCCCCCN",
+      "nearest_train": "CCCCCCCCCCCCCN",
+      "tanimoto": 1.0
+     },
+     {
+      "parent": "O=C(O)[C@H]1CCCC[C@H]1C(=O)O",
+      "nearest_train": "O=C(O)[C@H]1CCCCC[C@H]1C(=O)O",
+      "tanimoto": 0.933
+     }
+    ]
+   }
+  },
+  "L4_eval_families_in_unipka_train": {
+   "test": "267/857",
+   "train": "1291/4070",
+   "val": "145/529"
+  },
+  "L5_legacy_v2_families_in_several_legacy_splits": 26,
+  "L5_legacy_vs_new_split_agreement": "3077/6916",
+  "L6_tautomer_pairs_two_families": 16,
+  "L1b_linked_families_in_several_splits": 0,
+  "excluded_external_overlap_obs": 4
+ },
+ "inputs_manifest": {
+  "observations.csv": "ee2379572d4d22f3efd860cbcdd912900ec136e522c0c4f80daf77ebfe4dc721",
+  "states.csv": "4149d969d0329b9e41922df56c8a68bcce3d8554b0406d534ce098e70b531138",
+  "parents.csv": "c5c8f36739c84458eedee6f51f4e25f26ab9a54295bf19db8f99d0d84f0feb24",
+  "dropped.csv": "d25a48dd3a3f66507cfbdebeccce33d45a05ed227abb563a38702d22a74b8843"
+ }
+}

@@ -1,0 +1,17 @@
+parent,parent_smiles,smiles,state_id,charge,level,is_input
+glycine,NCC(=O)O,NCC(=O)[O-],S7247d0d7f3fa2478,-1,-1,False
+glycine,NCC(=O)O,NCC(=O)O,S93fd644bd2fdb4ba,0,0,True
+glycine,NCC(=O)O,[NH3+]CC(=O)[O-],Seaa746402de4afbc,0,0,False
+glycine,NCC(=O)O,[NH3+]CC(=O)O,Sd423f5e029afa9bc,1,1,False
+histamine,NCCc1c[nH]cn1,NCCc1c[n-]cn1,S528c2803e5278055,-1,-1,False
+histamine,NCCc1c[nH]cn1,NCCc1c[nH]cn1,Sff6ed328eb02f8be,0,0,True
+histamine,NCCc1c[nH]cn1,[NH3+]CCc1c[nH]cn1,S7d5b6b6e49d67689,1,1,False
+histamine,NCCc1c[nH]cn1,NCCc1c[nH]c[nH+]1,S5de1513f255a5077,1,1,False
+histamine,NCCc1c[nH]cn1,[NH3+]CCc1c[nH]c[nH+]1,S106b0245399500d1,2,2,False
+acac,CC(=O)CC(C)=O,CC(=O)CC(C)=O,S916758ff3b403044,0,0,True
+phenol,Oc1ccccc1,[O-]c1ccccc1,S06f6225055287ac6,-1,-1,False
+phenol,Oc1ccccc1,Oc1ccccc1,S3db4fe68296a6b09,0,0,True
+ibuprofen,CC(C)Cc1ccc(cc1)[C@H](C)C(=O)O,CC(C)Cc1ccc([C@H](C)C(=O)[O-])cc1,Seb0d6ecc06bf9c3b,-1,-1,False
+ibuprofen,CC(C)Cc1ccc(cc1)[C@H](C)C(=O)O,CC(C)Cc1ccc([C@H](C)C(=O)O)cc1,S1da2b7e7d4df02bd,0,0,True
+propylamine,CCCN,CCCN,Saa6cba0c9303ff1a,0,0,True
+propylamine,CCCN,CCC[NH3+],S900df5f7d2b415b8,1,1,False

@@ -1,0 +1,23 @@
+NEG_cysteine_S         effective=False locked=[] reason: no stereogenic double bond in the state: nothing to lock
+acac_Z_enol            effective=True  locked=[[1, 3]] reason: input specifies E/Z of 1 double bond(s): locked
+acac_diketo            effective=False locked=[] reason: no stereogenic double bond in the state: nothing to lock
+acetamidine            effective=False locked=[] reason: no stereogenic double bond in the state: nothing to lock
+acetamidinium          effective=False locked=[] reason: no stereogenic double bond in the state: nothing to lock
+gaba_neutral           effective=False locked=[] reason: no stereogenic double bond in the state: nothing to lock
+gaba_zwitterion        effective=False locked=[] reason: no stereogenic double bond in the state: nothing to lock
+glycine_neutral        effective=False locked=[] reason: no stereogenic double bond in the state: nothing to lock
+glycine_zwitterion     effective=False locked=[] reason: no stereogenic double bond in the state: nothing to lock
+histamine_Npi          effective=False locked=[] reason: no stereogenic double bond in the state: nothing to lock
+histamine_Ntau         effective=False locked=[] reason: no stereogenic double bond in the state: nothing to lock
+histamine_cation       effective=False locked=[] reason: no stereogenic double bond in the state: nothing to lock
+histamine_dication     effective=False locked=[] reason: no stereogenic double bond in the state: nothing to lock
+hydroxypyridine        effective=False locked=[] reason: no stereogenic double bond in the state: nothing to lock
+ibuprofen_S_anion      effective=False locked=[] reason: no stereogenic double bond in the state: nothing to lock
+ibuprofen_S_neutral    effective=False locked=[] reason: no stereogenic double bond in the state: nothing to lock
+phenol                 effective=False locked=[] reason: no stereogenic double bond in the state: nothing to lock
+phenolate              effective=False locked=[] reason: no stereogenic double bond in the state: nothing to lock
+propylamine_cation     effective=False locked=[] reason: no stereogenic double bond in the state: nothing to lock
+propylamine_neutral    effective=False locked=[] reason: no stereogenic double bond in the state: nothing to lock
+pyridine               effective=False locked=[] reason: no stereogenic double bond in the state: nothing to lock
+pyridinium             effective=False locked=[] reason: no stereogenic double bond in the state: nothing to lock
+pyridone               effective=False locked=[] reason: no stereogenic double bond in the state: nothing to lock
