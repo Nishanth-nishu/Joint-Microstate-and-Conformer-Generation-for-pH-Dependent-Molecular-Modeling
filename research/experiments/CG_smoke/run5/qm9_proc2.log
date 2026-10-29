@@ -1,0 +1,71 @@
+/scratch/nishanth.r/tordiff/venv/lib/python3.9/site-packages/torch/jit/_check.py:181: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  warnings.warn("The TorchScript type system doesn't support "
+{
+ "started": "2026-10-28 17:12:24 UTC / 2026-10-28 22:42:24 IST",
+ "args": {
+  "model_dir": "/scratch/nishanth.r/tordiff/workdir/pretrained/qm9_default",
+  "ckpt": "best_model.pt",
+  "out": "/scratch/nishanth.r/jmcg/results/cond_gen/smoke5/qm9_proc2",
+  "state": null,
+  "parent": null,
+  "id": "state0",
+  "states_csv": "jmcg/condgen/smoke_states.csv",
+  "n_confs": 8,
+  "seed": 0,
+  "steps": 20,
+  "stereo_policy": "require",
+  "ez_policy": "lock",
+  "free_arm": true
+ },
+ "host": "gnode118",
+ "python": "3.9.23",
+ "rdkit": "2022.09.5",
+ "torch": "1.13.1+cu117",
+ "generator": {
+  "backend": "torsional_diffusion",
+  "td_repo": "/scratch/nishanth.r/tordiff/torsional-diffusion",
+  "checkpoint": "/scratch/nishanth.r/tordiff/workdir/pretrained/qm9_default/best_model.pt",
+  "checkpoint_sha256": "6a9a6ee9b0e51bdaa15f1661d2d41a4809507b2e1f31f9f74f9cd38fa25ee74f",
+  "dataset": "qm9",
+  "in_node_features": 44,
+  "atom_types": [
+   "H",
+   "C",
+   "N",
+   "O",
+   "F"
+  ],
+  "sigma_min": 0.031400000000000004,
+  "sigma_max": 3.14,
+  "inference_steps": 20,
+  "sde": "reverse SDE (TD default, ode=False)",
+  "device": "cpu",
+  "torus_import_seed": 20221024,
+  "torus_score_norm_sha256": "8cf17268cc0b0dee"
+ }
+}
+propylamine_neutral      parent               etkdg_v3: valid 8/8 clusters 1 td: valid 8/8 clusters 2
+propylamine_cation       protonation          etkdg_v3: valid 8/8 clusters 2 td: valid 8/8 clusters 3
+glycine_neutral          parent               etkdg_v3: valid 8/8 clusters 1 td: valid 8/8 clusters 1
+glycine_zwitterion       tautomer_zwitterionic etkdg_v3: valid 8/8 clusters 1 td: valid 8/8 clusters 1
+gaba_neutral             parent               etkdg_v3: valid 8/8 clusters 6 td: valid 8/8 clusters 6
+gaba_zwitterion          tautomer_zwitterionic etkdg_v3: valid 8/8 clusters 7 td: valid 8/8 clusters 4
+hydroxypyridine          parent               etkdg_v3: valid 8/8 clusters 1 td: valid 8/8 clusters 1
+pyridone                 tautomer             etkdg_v3: valid 8/8 clusters 1 td: valid 8/8 clusters 1
+acac_diketo              parent               etkdg_v3: valid 8/8 clusters 4 td: valid 8/8 clusters 4
+acac_Z_enol              tautomer             etkdg_v3: valid 8/8 clusters 2 td: valid 7/8 clusters 2 td_free: valid 6/8 clusters 4
+histamine_Ntau           parent               etkdg_v3: valid 8/8 clusters 6 td: valid 8/8 clusters 5
+histamine_Npi            tautomer             etkdg_v3: valid 8/8 clusters 4 td: valid 8/8 clusters 4
+histamine_cation         protonation          etkdg_v3: valid 8/8 clusters 3 td: valid 8/8 clusters 5
+histamine_dication       protonation          etkdg_v3: valid 8/8 clusters 2 td: valid 7/8 clusters 4
+ibuprofen_S_neutral      parent               etkdg_v3: valid 8/8 clusters 3 td: valid 8/8 clusters 7
+ibuprofen_S_anion        protonation          etkdg_v3: valid 8/8 clusters 5 td: valid 8/8 clusters 5
+pyridine                 parent               etkdg_v3: valid 8/8 clusters 1 td: valid 8/8 clusters 1
+pyridinium               protonation          etkdg_v3: valid 8/8 clusters 1 td: valid 8/8 clusters 1
+phenol                   parent               etkdg_v3: valid 8/8 clusters 1 td: valid 8/8 clusters 1
+phenolate                protonation          etkdg_v3: valid 8/8 clusters 1 td: valid 8/8 clusters 1
+acetamidine              parent               etkdg_v3: valid 8/8 clusters 1 td: valid 8/8 clusters 1
+acetamidinium            protonation          etkdg_v3: valid 8/8 clusters 1 td: valid 8/8 clusters 1
+NEG_cysteine_S           tautomer_zwitterionic etkdg_v3: valid 8/8 clusters 6  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+NEG_wrong_skeleton       -                      FAIL[state: not a protomer/tautomer of the parent: heavy-atom skeleton differs]
+done 2026-10-28 17:13:08 UTC / 2026-10-28 22:43:08 IST

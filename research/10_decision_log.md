@@ -59,3 +59,7 @@
 - All 24 inputs accounted for. Valid/generated: ETKDGv3 A 96/96, B 64/64, C 16/16, D (cysteine) 8/8; TD A 94/96, B 63/64, C 16/16, lock 7/8; wrong-skeleton control rejected; cysteine TD hard-incompatible (S).
 - Whole run bit-identical in a second process (46 SDFs, max |dx| 0); SDF re-read changed 0 verdicts.
 - Decision: the smoke pipeline is validated. No quality claim, TD vs ETKDG. Open: E/Z lock is opt-in (proposed default for stereo-specified double bonds); DRUGS checkpoint absent. Details: CG_smoke/RESULTS.md section 10.
+
+## 2026-10-28 — E/Z lock made the run default (committed 2026-10-29)
+- run.py --ez_policy lock (default): td locks only double bonds whose E/Z the input SMILES specifies; enumeration-assigned and unspecified bonds stay free; --ez_policy free is the ablation opt-out; per-state reason in <id>.json ez_lock. Backend default unchanged (fidelity check still applies).
+- Smoke 5 (job 45286): tests 20/20 + 15/15 (4 new lock regressions); 46/46 outputs bit-identical to smoke 4 with arms mapped (td = old td_lockdb). TD A 95/96, B 63/64, C 16/16. The lock preserves stereo only; 2 clash failures remain (acac 1.774 Å, histamine dication 1.345 Å).

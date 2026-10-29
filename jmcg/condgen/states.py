@@ -209,6 +209,27 @@ def build_state(state_smiles, parent_smiles=None):
     return molH, info
 
 
+EZ_SPECIFIED = (Chem.BondStereo.STEREOE, Chem.BondStereo.STEREOZ, Chem.BondStereo.STEREOCIS,
+                Chem.BondStereo.STEREOTRANS)
+
+
+def input_specified_double_bonds(state_mol, input_smiles):
+    """Double bonds of state_mol whose E/Z was specified in input_smiles (the SMILES the user gave, before any stereo
+    enumeration). Returns (sorted list of state atom-index pairs, ambiguous). The input and state graphs are the same
+    up to the stereo added by enumeration; atoms are mapped by substructure match. ambiguous=True if graph symmetry maps
+    the specified bonds onto different bond sets (then the caller must not guess)."""
+    inp = _parse(input_smiles, 'input')
+    spec = [(b.GetBeginAtomIdx(), b.GetEndAtomIdx()) for b in inp.GetBonds()
+            if b.GetBondType() == Chem.BondType.DOUBLE and b.GetStereo() in EZ_SPECIFIED]
+    if not spec:
+        return [], False
+    sets = {frozenset(tuple(sorted((m[i], m[j]))) for i, j in spec)
+            for m in state_mol.GetSubstructMatches(inp, uniquify=False, maxMatches=1000)}
+    if len(sets) != 1:
+        return [], True
+    return sorted(next(iter(sets))), False
+
+
 def torsions_parent_keyed(edge_index, edge_mask, heavy_map):
     """TD rotatable bonds as parent heavy-atom index pairs (TD bonds to H are never rotatable: 1-atom fragment)."""
     out = []

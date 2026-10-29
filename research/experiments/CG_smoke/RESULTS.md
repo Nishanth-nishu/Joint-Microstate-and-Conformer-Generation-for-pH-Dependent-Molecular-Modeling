@@ -416,3 +416,60 @@ The exact commands are in `run4/COMMANDS.md`. Outputs: `run4/` (also in `/scratc
 - One methyl-orientation clash under the lock.
 - One H···H contact in histamine dication.
 - No GEOM-DRUGS checkpoint, so C and D cannot be tested on an in-distribution model.
+
+## 11. E/Z lock as run default (smoke 5, job 45286, 2026-10-28 17:09–17:14 UTC / 22:39–22:44 IST). Uncommitted, pending review
+
+**Behaviour change** (`run.py`, `states.py`, `td_backend.py`; the diff against HEAD 619a181 is
+`run5/diff_vs_HEAD.patch`):
+- Method `td` now locks, by default, exactly the double bonds whose E/Z the **input** state SMILES specifies.
+- Not locked:
+  - double bonds whose stereo was assigned by `--stereo_policy enumerate`;
+  - double bonds without specified stereo (STEREONONE/STEREOANY are never locked; the old code also locked
+    STEREOANY);
+  - every single bond.
+- `--ez_policy free` is the opt-out for ablations. `--free_arm` adds the unlocked run as `td_free`, only when the lock
+  is in effect.
+- Each `<id>.json` records `ez_lock`: policy, effective, requested/locked bonds, the reason, and the count of
+  enumeration-assigned bonds.
+- The backend default (`TDGenerator.generate`) is unchanged, i.e. TD behaviour. The wrapper-fidelity result therefore
+  still applies.
+- The lock addresses stereochemical preservation only. **It does not fix geometry failures:** the locked acac Z-enol
+  still has 1 clash in 8 (O···H 1.774 Å).
+
+**Tests (confirmed).** test_states 20/20; test_backend 15/15, including four new regression tests:
+1. **acac Z-enol, seed 0.**
+   - Unlocked TD flips conformers [0, 4], exactly the smoke-4 failures.
+   - Default `td` keeps E/Z in 8/8, with 7/8 valid.
+   - Only the C=C leaves the torsion set (5 → 4). The C–O and C–C torsions stay free.
+2. **Explicit E and Z inputs** (acac E-enol, (Z)- and (E)-pent-2-ene).
+   - Each has exactly 1 bond locked and E/Z kept 8/8.
+   - Exactly one torsion is removed.
+3. **Unspecified C=C** (pent-2-ene).
+   - Under `require` it is rejected, as before.
+   - Under `enumerate` it gives 2 isomers, neither locked (reason recorded).
+   - Unlocked TD then kept the enumerated E/Z in only 6/8 and 4/8. These are reported as stereo failures against the
+     enumerated isomer, not hidden.
+4. **No stereogenic double bond** (gaba, acac diketo C=O, pyridine ring, ibuprofen).
+   - Nothing is locked.
+   - TD output is bit-identical under `lock` and `free`.
+
+**Fixed-seed comparison with smoke 4 (619a181 outputs, read-only).**
+- 46/46 (state, method) outputs are bit-identical with identical verdicts (`run5/compare_vs_smoke4.txt`).
+- New `td` for acac_Z_enol = smoke-4 `td_lockdb`; new `td_free` = smoke-4 `td`.
+- All other states are unchanged; only acac_Z_enol has an effective lock (`run5/ez_lock_per_state.txt`).
+- Cross-process: 46 SDFs, max |dx| 0. SDF re-read: 0 verdict changes.
+
+**Valid/generated, smoke 5 default arm.**
+
+| category | ETKDGv3 | TD | TD unlocked (`td_free`) |
+|---|---|---|---|
+| A | 96/96 | 95/96 | 6/8 (acac Z-enol only) |
+| B | 64/64 | 63/64 | – |
+| C | 16/16 | 16/16 | – |
+| D | cysteine 8/8; wrong-skeleton control rejected | cysteine hard-incompatible (S) | – |
+
+**Unresolved geometry failures (confirmed, unchanged):**
+- acac Z-enol default `td` conf 2: methyl H to carbonyl O, 1.774 Å.
+- histamine dication `td` conf 5: H···H 1.345 Å.
+
+Thresholds are unchanged.

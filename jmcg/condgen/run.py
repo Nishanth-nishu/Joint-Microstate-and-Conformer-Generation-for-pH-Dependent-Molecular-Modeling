@@ -12,6 +12,14 @@ Outputs in --out:
                          per-conformer validation, diversity, failures
   summary.csv            one row per (state, method)
   run_info.json          checkpoint (path + SHA-256), TD repo, versions, settings, UTC/IST timestamps
+E/Z policy (--ez_policy, default "lock"): method `td` removes from TD's torsion set exactly the double bonds whose E/Z
+the INPUT state SMILES specifies, so that configuration cannot flip (TD's own behaviour flipped the acac Z-enol in 2/8
+conformers, smokes 1-4). Not locked: double bonds whose stereo was assigned by --stereo_policy enumerate (not by the
+input), double bonds without stereo, and all single bonds (neighbouring torsions stay free). The lock preserves the
+specified stereochemistry only; it does not address clashes. `--ez_policy free` is the opt-out (TD behaviour, for
+ablations); `--free_arm` additionally runs unlocked TD as method `td_free` whenever the lock is in effect. The
+effective setting and its reason are recorded per state in <id>.json under "ez_lock". The backend default
+(TDGenerator.generate) stays TD's behaviour, as used by the wrapper-fidelity check.
 A state that cannot be represented (parse error, not a protomer/tautomer of the parent, atom type outside the
 checkpoint vocabulary, embedding failure) is recorded as a failure with its reason; nothing is silently substituted.
 """
@@ -51,9 +59,33 @@ def write_sdf(path, mols, props):
     w.close()
 
 
+def ez_lock_plan(mol, info, row, policy):
+    """Which double bonds method `td` locks, and why. Only bonds whose E/Z the input state SMILES specifies."""
+    n_db = sum(x['kind'] == 'double_bond' for x in info['stereo_elements'])
+    inp = row.get('input_state_smiles') or row['state_smiles']
+    req, ambiguous = st.input_specified_double_bonds(mol, inp)
+    enumerated = n_db - len(req) if row.get('stereo_enumerated') and not ambiguous else 0
+    plan = dict(policy=policy, effective=False, requested_bonds=[list(p) for p in req], locked_bonds=[],
+                n_stereo_double_bonds=n_db, n_assigned_by_enumeration=enumerated, input_state_smiles=inp)
+    if policy == 'free':
+        plan['reason'] = 'opt-out (--ez_policy free): TD behaviour, specified E/Z may rotate'
+    elif n_db == 0:
+        plan['reason'] = 'no stereogenic double bond in the state: nothing to lock'
+    elif ambiguous:
+        plan['reason'] = 'input-specified E/Z bonds map ambiguously onto the state (symmetry): not locked'
+    elif not req:
+        plan['reason'] = 'double-bond stereo assigned by stereo enumeration, not by the input: not constrained'
+    else:
+        plan['effective'] = True
+        plan['reason'] = f'input specifies E/Z of {len(req)} double bond(s): locked' + (
+            f'; {enumerated} enumeration-assigned double bond(s) left free' if enumerated else '')
+    return plan
+
+
 def run_state(gen, row, a):
     sid = row['id']
-    rec = dict(state_id=sid, note=row.get('note', ''), seed=a.seed, n_confs_requested=a.n_confs, failures=[])
+    rec = dict(state_id=sid, note=row.get('note', ''), seed=a.seed, n_confs_requested=a.n_confs, ez_policy=a.ez_policy,
+               failures=[])
     try:
         mol, info = st.build_state(row['state_smiles'], row.get('parent_smiles') or None)
     except st.StateError as e:
@@ -65,8 +97,8 @@ def run_state(gen, row, a):
     hard, ood = gen.compatibility(mol) if gen else (['no TD checkpoint loaded'], [])
     rec['checkpoint_compatibility'] = dict(hard=hard, out_of_distribution=ood)
     rows = []
-    has_ez = any(x['kind'] == 'double_bond' for x in info['stereo_elements'])
-    methods = ['etkdg_v3'] + ([] if hard else ['td'] + (['td_lockdb'] if a.lock_arm and has_ez else []))
+    ez = rec['ez_lock'] = ez_lock_plan(mol, info, row, a.ez_policy)
+    methods = ['etkdg_v3'] + ([] if hard else ['td'] + (['td_free'] if a.free_arm and ez['effective'] else []))
     # A in-distribution neutral | B charged, inside vocabulary and size | C outside training size/charge buckets |
     # D unsupported atom types (TD) - D states still get the ETKDG baseline
     rec['category'] = 'D' if hard else 'C' if gen.size_or_bucket_ood(mol) else 'B' if info['charged_atoms'] else 'A'
@@ -79,7 +111,12 @@ def run_state(gen, row, a):
                 from jmcg.condgen.td_backend import etkdg_baseline
                 mols, ginfo = etkdg_baseline(mol, a.n_confs, a.seed), {}
             else:
-                mols, ginfo = gen.generate(mol, a.n_confs, a.seed, lock_stereo_double_bonds=method == 'td_lockdb')
+                lock = ez['requested_bonds'] if method == 'td' and ez['effective'] else False
+                mols, ginfo = gen.generate(mol, a.n_confs, a.seed, lock_stereo_double_bonds=lock)
+                if lock:
+                    got = {tuple(sorted(p)) for p in ginfo['locked_double_bonds']}
+                    ez['locked_bonds'] = sorted(got)
+                    ez['requested_not_td_torsion'] = [p for p in ez['requested_bonds'] if tuple(p) not in got]
                 ginfo['torsions_parent_keyed'] = st.torsions_parent_keyed(
                     ginfo.pop('edge_index'), ginfo.pop('edge_mask'), info['heavy_map_state_to_parent'])
         except Exception as e:  # noqa: BLE001 - record and continue with the next method/state
@@ -96,6 +133,8 @@ def run_state(gen, row, a):
                       'Torsional Diffusion (frozen checkpoint)', state_smiles=target, state_class=info['state_class'],
                       net_charge=info['net_charge'], seed=a.seed, conf_index=k,
                       checkpoint_sha256='' if method == 'etkdg_v3' else gen.ckpt_sha256,
+                      ez_lock_effective=bool(method == 'td' and ez['effective']),
+                      ez_locked_bonds=len(ginfo.get('locked_double_bonds', [])),
                       valid=c['valid'], stereo_ok=c.get('stereo'), clash_free=c.get('clash'),
                       mmff94s_energy=c.get('mmff_energy')) for k, c in enumerate(checks)]
         write_sdf(os.path.join(a.out, f'{sid}__{method}.sdf'), mols, props)
@@ -124,7 +163,10 @@ def main():
     ap.add_argument('--stereo_policy', choices=['require', 'enumerate'], default='require',
                     help='require: reject states with unassigned stereo; enumerate: expand them into one explicit '
                          'state per stereoisomer (ids <id>__st<k>). No stereoisomer is ever picked silently.')
-    ap.add_argument('--lock_arm', action='store_true', help='also run TD with stereo double bonds removed from torsions')
+    ap.add_argument('--ez_policy', choices=['lock', 'free'], default='lock',
+                    help='lock (default): TD never rotates a double bond whose E/Z the input specifies; free: TD behaviour')
+    ap.add_argument('--free_arm', action='store_true',
+                    help='for states with a stereo double bond, also run unlocked TD as method td_free')
     a = ap.parse_args()
     os.makedirs(a.out, exist_ok=True)
     torch.set_num_threads(int(os.environ.get('OMP_NUM_THREADS', '4')))
@@ -142,6 +184,7 @@ def main():
                 isomers = [row['state_smiles']]  # build_state reports the parse error
             for k, smi in enumerate(isomers):
                 expanded.append(dict(row, id=row['id'] if len(isomers) == 1 else f"{row['id']}__st{k}", state_smiles=smi,
+                                     input_state_smiles=row['state_smiles'], stereo_enumerated=len(isomers) > 1,
                                      note=f"{row.get('note', '')} [stereo-enumerated {k + 1}/{len(isomers)}]"
                                      if len(isomers) > 1 else row.get('note', '')))
         table = expanded

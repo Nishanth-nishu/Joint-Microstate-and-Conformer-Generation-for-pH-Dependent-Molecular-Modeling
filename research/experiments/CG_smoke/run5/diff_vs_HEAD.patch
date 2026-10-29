@@ -1,0 +1,431 @@
+diff --git a/jmcg/condgen/run.py b/jmcg/condgen/run.py
+index cb322b1..494fde8 100644
+--- a/jmcg/condgen/run.py
++++ b/jmcg/condgen/run.py
+@@ -12,6 +12,14 @@ Outputs in --out:
+                          per-conformer validation, diversity, failures
+   summary.csv            one row per (state, method)
+   run_info.json          checkpoint (path + SHA-256), TD repo, versions, settings, UTC/IST timestamps
++E/Z policy (--ez_policy, default "lock"): method `td` removes from TD's torsion set exactly the double bonds whose E/Z
++the INPUT state SMILES specifies, so that configuration cannot flip (TD's own behaviour flipped the acac Z-enol in 2/8
++conformers, smokes 1-4). Not locked: double bonds whose stereo was assigned by --stereo_policy enumerate (not by the
++input), double bonds without stereo, and all single bonds (neighbouring torsions stay free). The lock preserves the
++specified stereochemistry only; it does not address clashes. `--ez_policy free` is the opt-out (TD behaviour, for
++ablations); `--free_arm` additionally runs unlocked TD as method `td_free` whenever the lock is in effect. The
++effective setting and its reason are recorded per state in <id>.json under "ez_lock". The backend default
++(TDGenerator.generate) stays TD's behaviour, as used by the wrapper-fidelity check.
+ A state that cannot be represented (parse error, not a protomer/tautomer of the parent, atom type outside the
+ checkpoint vocabulary, embedding failure) is recorded as a failure with its reason; nothing is silently substituted.
+ """
+@@ -51,9 +59,33 @@ def write_sdf(path, mols, props):
+     w.close()
+ 
+ 
++def ez_lock_plan(mol, info, row, policy):
++    """Which double bonds method `td` locks, and why. Only bonds whose E/Z the input state SMILES specifies."""
++    n_db = sum(x['kind'] == 'double_bond' for x in info['stereo_elements'])
++    inp = row.get('input_state_smiles') or row['state_smiles']
++    req, ambiguous = st.input_specified_double_bonds(mol, inp)
++    enumerated = n_db - len(req) if row.get('stereo_enumerated') and not ambiguous else 0
++    plan = dict(policy=policy, effective=False, requested_bonds=[list(p) for p in req], locked_bonds=[],
++                n_stereo_double_bonds=n_db, n_assigned_by_enumeration=enumerated, input_state_smiles=inp)
++    if policy == 'free':
++        plan['reason'] = 'opt-out (--ez_policy free): TD behaviour, specified E/Z may rotate'
++    elif n_db == 0:
++        plan['reason'] = 'no stereogenic double bond in the state: nothing to lock'
++    elif ambiguous:
++        plan['reason'] = 'input-specified E/Z bonds map ambiguously onto the state (symmetry): not locked'
++    elif not req:
++        plan['reason'] = 'double-bond stereo assigned by stereo enumeration, not by the input: not constrained'
++    else:
++        plan['effective'] = True
++        plan['reason'] = f'input specifies E/Z of {len(req)} double bond(s): locked' + (
++            f'; {enumerated} enumeration-assigned double bond(s) left free' if enumerated else '')
++    return plan
++
++
+ def run_state(gen, row, a):
+     sid = row['id']
+-    rec = dict(state_id=sid, note=row.get('note', ''), seed=a.seed, n_confs_requested=a.n_confs, failures=[])
++    rec = dict(state_id=sid, note=row.get('note', ''), seed=a.seed, n_confs_requested=a.n_confs, ez_policy=a.ez_policy,
++               failures=[])
+     try:
+         mol, info = st.build_state(row['state_smiles'], row.get('parent_smiles') or None)
+     except st.StateError as e:
+@@ -65,8 +97,8 @@ def run_state(gen, row, a):
+     hard, ood = gen.compatibility(mol) if gen else (['no TD checkpoint loaded'], [])
+     rec['checkpoint_compatibility'] = dict(hard=hard, out_of_distribution=ood)
+     rows = []
+-    has_ez = any(x['kind'] == 'double_bond' for x in info['stereo_elements'])
+-    methods = ['etkdg_v3'] + ([] if hard else ['td'] + (['td_lockdb'] if a.lock_arm and has_ez else []))
++    ez = rec['ez_lock'] = ez_lock_plan(mol, info, row, a.ez_policy)
++    methods = ['etkdg_v3'] + ([] if hard else ['td'] + (['td_free'] if a.free_arm and ez['effective'] else []))
+     # A in-distribution neutral | B charged, inside vocabulary and size | C outside training size/charge buckets |
+     # D unsupported atom types (TD) - D states still get the ETKDG baseline
+     rec['category'] = 'D' if hard else 'C' if gen.size_or_bucket_ood(mol) else 'B' if info['charged_atoms'] else 'A'
+@@ -79,7 +111,12 @@ def run_state(gen, row, a):
+                 from jmcg.condgen.td_backend import etkdg_baseline
+                 mols, ginfo = etkdg_baseline(mol, a.n_confs, a.seed), {}
+             else:
+-                mols, ginfo = gen.generate(mol, a.n_confs, a.seed, lock_stereo_double_bonds=method == 'td_lockdb')
++                lock = ez['requested_bonds'] if method == 'td' and ez['effective'] else False
++                mols, ginfo = gen.generate(mol, a.n_confs, a.seed, lock_stereo_double_bonds=lock)
++                if lock:
++                    got = {tuple(sorted(p)) for p in ginfo['locked_double_bonds']}
++                    ez['locked_bonds'] = sorted(got)
++                    ez['requested_not_td_torsion'] = [p for p in ez['requested_bonds'] if tuple(p) not in got]
+                 ginfo['torsions_parent_keyed'] = st.torsions_parent_keyed(
+                     ginfo.pop('edge_index'), ginfo.pop('edge_mask'), info['heavy_map_state_to_parent'])
+         except Exception as e:  # noqa: BLE001 - record and continue with the next method/state
+@@ -96,6 +133,8 @@ def run_state(gen, row, a):
+                       'Torsional Diffusion (frozen checkpoint)', state_smiles=target, state_class=info['state_class'],
+                       net_charge=info['net_charge'], seed=a.seed, conf_index=k,
+                       checkpoint_sha256='' if method == 'etkdg_v3' else gen.ckpt_sha256,
++                      ez_lock_effective=bool(method == 'td' and ez['effective']),
++                      ez_locked_bonds=len(ginfo.get('locked_double_bonds', [])),
+                       valid=c['valid'], stereo_ok=c.get('stereo'), clash_free=c.get('clash'),
+                       mmff94s_energy=c.get('mmff_energy')) for k, c in enumerate(checks)]
+         write_sdf(os.path.join(a.out, f'{sid}__{method}.sdf'), mols, props)
+@@ -124,7 +163,10 @@ def main():
+     ap.add_argument('--stereo_policy', choices=['require', 'enumerate'], default='require',
+                     help='require: reject states with unassigned stereo; enumerate: expand them into one explicit '
+                          'state per stereoisomer (ids <id>__st<k>). No stereoisomer is ever picked silently.')
+-    ap.add_argument('--lock_arm', action='store_true', help='also run TD with stereo double bonds removed from torsions')
++    ap.add_argument('--ez_policy', choices=['lock', 'free'], default='lock',
++                    help='lock (default): TD never rotates a specified non-ring stereo double bond; free: TD behaviour')
++    ap.add_argument('--free_arm', action='store_true',
++                    help='for states with a stereo double bond, also run unlocked TD as method td_free')
+     a = ap.parse_args()
+     os.makedirs(a.out, exist_ok=True)
+     torch.set_num_threads(int(os.environ.get('OMP_NUM_THREADS', '4')))
+@@ -142,6 +184,7 @@ def main():
+                 isomers = [row['state_smiles']]  # build_state reports the parse error
+             for k, smi in enumerate(isomers):
+                 expanded.append(dict(row, id=row['id'] if len(isomers) == 1 else f"{row['id']}__st{k}", state_smiles=smi,
++                                     input_state_smiles=row['state_smiles'], stereo_enumerated=len(isomers) > 1,
+                                      note=f"{row.get('note', '')} [stereo-enumerated {k + 1}/{len(isomers)}]"
+                                      if len(isomers) > 1 else row.get('note', '')))
+         table = expanded
+diff --git a/jmcg/condgen/states.py b/jmcg/condgen/states.py
+index 234382c..fe487f3 100644
+--- a/jmcg/condgen/states.py
++++ b/jmcg/condgen/states.py
+@@ -209,6 +209,27 @@ def build_state(state_smiles, parent_smiles=None):
+     return molH, info
+ 
+ 
++EZ_SPECIFIED = (Chem.BondStereo.STEREOE, Chem.BondStereo.STEREOZ, Chem.BondStereo.STEREOCIS,
++                Chem.BondStereo.STEREOTRANS)
++
++
++def input_specified_double_bonds(state_mol, input_smiles):
++    """Double bonds of state_mol whose E/Z was specified in input_smiles (the SMILES the user gave, before any stereo
++    enumeration). Returns (sorted list of state atom-index pairs, ambiguous). The input and state graphs are the same
++    up to the stereo added by enumeration; atoms are mapped by substructure match. ambiguous=True if graph symmetry maps
++    the specified bonds onto different bond sets (then the caller must not guess)."""
++    inp = _parse(input_smiles, 'input')
++    spec = [(b.GetBeginAtomIdx(), b.GetEndAtomIdx()) for b in inp.GetBonds()
++            if b.GetBondType() == Chem.BondType.DOUBLE and b.GetStereo() in EZ_SPECIFIED]
++    if not spec:
++        return [], False
++    sets = {frozenset(tuple(sorted((m[i], m[j]))) for i, j in spec)
++            for m in state_mol.GetSubstructMatches(inp, uniquify=False, maxMatches=1000)}
++    if len(sets) != 1:
++        return [], True
++    return sorted(next(iter(sets))), False
++
++
+ def torsions_parent_keyed(edge_index, edge_mask, heavy_map):
+     """TD rotatable bonds as parent heavy-atom index pairs (TD bonds to H are never rotatable: 1-atom fragment)."""
+     out = []
+diff --git a/jmcg/condgen/td_backend.py b/jmcg/condgen/td_backend.py
+index 52933d1..7f15c18 100644
+--- a/jmcg/condgen/td_backend.py
++++ b/jmcg/condgen/td_backend.py
+@@ -8,8 +8,11 @@ differences from TD's generate_confs.py are:
+     embedded on its own with RDKit randomSeed = conformer_seeds(seed, n)[k], drawn from numpy's generator. Passing
+     randomSeed=seed to EmbedMultipleConfs is NOT used: with seed 0 RDKit returned n identical conformers (smoke 1,
+     2026-10-28). Same default embedding parameters as TD otherwise;
+-  - optional `lock_stereo_double_bonds`: drop non-ring stereo double bonds from the torsion set, so E/Z cannot flip.
+-    Off by default (TD behaviour); the model's per-bond readout for the remaining bonds is unchanged.
++  - optional `lock_stereo_double_bonds`: drop double bonds with a specified E/Z (STEREOE/Z/CIS/TRANS; never
++    STEREONONE or STEREOANY) from the torsion set, so their E/Z cannot flip. True = every such bond; a collection of
++    atom-index pairs = only those bonds. Only the locked bonds leave the torsion set: neighbouring single bonds stay
++    rotatable and the model's per-bond readout for the remaining bonds is unchanged. Off by default here (TD
++    behaviour, used by the wrapper-fidelity check); the run-level default is set in run.py (--ez_policy).
+ """
+ import hashlib
+ import os
+@@ -49,6 +52,8 @@ def torus_table_sha():
+     return hashlib.sha256(np.ascontiguousarray(td_torus.score_norm_).tobytes()).hexdigest()[:16]
+ 
+ TYPES = {'qm9': qm9_types, 'drugs': drugs_types}
++EZ_SPECIFIED = (Chem.BondStereo.STEREOE, Chem.BondStereo.STEREOZ, Chem.BondStereo.STEREOCIS,
++                Chem.BondStereo.STEREOTRANS)
+ CHARGE_BUCKETS = (-1, 0, 1)  # TD featurize_mol: one-hot over these + "other"
+ 
+ 
+@@ -113,14 +118,17 @@ class TDGenerator:
+         edge_mask, mask_rotate = get_transformation_mask(data)
+         locked = []
+         if lock_stereo_double_bonds:
++            want = None if lock_stereo_double_bonds is True else {frozenset(map(int, p)) for p in lock_stereo_double_bonds}
+             ei = data.edge_index.T.numpy()
+             rows = np.flatnonzero(edge_mask)
+             keep = np.ones(len(rows), dtype=bool)
+             for k, e in enumerate(rows):
+-                b = mol.GetBondBetweenAtoms(int(ei[e, 0]), int(ei[e, 1]))
+-                if b.GetBondType() == Chem.BondType.DOUBLE and b.GetStereo() != Chem.BondStereo.STEREONONE:
++                i, j = int(ei[e, 0]), int(ei[e, 1])
++                b = mol.GetBondBetweenAtoms(i, j)
++                if (b.GetBondType() == Chem.BondType.DOUBLE and b.GetStereo() in EZ_SPECIFIED
++                        and (want is None or frozenset((i, j)) in want)):
+                     keep[k] = False
+-                    locked.append((int(ei[e, 0]), int(ei[e, 1])))
++                    locked.append((i, j))
+             edge_mask = edge_mask.copy()
+             edge_mask[rows[~keep]] = False
+             mask_rotate = mask_rotate[keep]
+diff --git a/jmcg/condgen/test_backend.py b/jmcg/condgen/test_backend.py
+index 01d8d31..c148c4f 100644
+--- a/jmcg/condgen/test_backend.py
++++ b/jmcg/condgen/test_backend.py
+@@ -15,7 +15,7 @@ from rdkit.Chem import rdMolTransforms
+ 
+ from jmcg.condgen import states as st
+ from jmcg.condgen import validate as va
+-from jmcg.condgen.run import write_sdf
++from jmcg.condgen.run import run_state, write_sdf
+ from jmcg.condgen.td_backend import TDGenerator, embed_n, etkdg_baseline, featurize_mol
+ 
+ RESULTS = []
+@@ -128,6 +128,89 @@ def main():
+         return f'locked: {sum(ok_l)}/8 correct E/Z; unlocked TD: {sum(ok_u)}/8 correct E/Z'
+     check('E/Z lock keeps the specified double-bond configuration', lock)
+ 
++    def run_methods(sid=None, row=None, **kw):
++        ns = argparse.Namespace(seed=0, n_confs=8, ez_policy='lock', free_arm=False, out=tempfile.mkdtemp())
++        vars(ns).update(kw)
++        row = row or table[table.id == sid].iloc[0].to_dict()
++        rec, rows = run_state(gen, row, ns)
++        return rec, {r['method']: r for r in rows}, ns.out
++
++    def torsion_pairs(m, lock):
++        data, _ = gen.torsion_data(m, lock)
++        ei = data.edge_index.T.numpy()
++        return {tuple(sorted(map(int, ei[e]))) for e in np.flatnonzero(data.edge_mask.numpy())}
++
++    def ez_ok(out, sid, method):
++        return [m.GetProp('stereo_ok') for m in Chem.SDMolSupplier(f'{out}/{sid}__{method}.sdf', removeHs=False)]
++
++    def lock_acac_regression():
++        # smoke 4 (seed 0): unlocked TD flipped conformers 0 and 4 of the acac Z-enol to E; run default must not.
++        rec, rows, out = run_methods('acac_Z_enol', free_arm=True)
++        ez = rec['ez_lock']
++        assert ez['effective'] and len(ez['locked_bonds']) == 1 and not ez['requested_not_td_torsion'], ez
++        assert set(rows) == {'etkdg_v3', 'td', 'td_free'}, set(rows)
++        assert rows['td']['n_stereo'] == 8, rows['td']
++        flips = [k for k, v in enumerate(ez_ok(out, 'acac_Z_enol', 'td_free')) if v != 'True']
++        assert flips == [0, 4], flips  # the documented smoke-4 failures reproduce without the lock
++        m = built['acac_Z_enol'][0]
++        free, locked = torsion_pairs(m, False), torsion_pairs(m, ez['requested_bonds'])
++        assert free - locked == {tuple(ez['locked_bonds'][0])} and locked < free, (free, locked)
++        return (f"default td: E/Z {rows['td']['n_stereo']}/8 kept (valid {rows['td']['n_valid']}/8); td_free flips "
++                f"confs {flips}; torsions {len(free)} -> {len(locked)} (only the C=C removed, C-O/C-C stay free)")
++    check('E/Z lock regression: acac Z-enol seed 0 flips (confs 0, 4) only without the default lock', lock_acac_regression)
++
++    def lock_explicit_e_z():
++        out = []
++        for sid, smi, parent in [('acac_E_enol', r'C/C(O)=C\C(C)=O', 'CC(=O)CC(C)=O'),
++                                 ('pent2ene_Z', r'C/C=C\CC', None), ('pent2ene_E', 'C/C=C/CC', None)]:
++            rec, rows, _ = run_methods(row=dict(id=sid, parent_smiles=parent or '', state_smiles=smi))
++            ez = rec['ez_lock']
++            assert ez['effective'] and len(ez['locked_bonds']) == 1, (sid, ez)
++            assert rows['td']['n_stereo'] == 8 and rows['etkdg_v3']['n_stereo'] == 8, (sid, rows['td'])
++            m, _ = st.build_state(smi, parent)
++            free, locked = torsion_pairs(m, False), torsion_pairs(m, ez['requested_bonds'])
++            assert free - locked == {tuple(ez['locked_bonds'][0])}, (sid, free, locked)
++            out.append(f"{sid}: locked {ez['locked_bonds']}, E/Z kept {rows['td']['n_stereo']}/8, "
++                       f"torsions {len(free)}->{len(locked)}")
++        return '; '.join(out)
++    check('E/Z lock applies to explicit E and Z input states and removes only the specified C=C torsion', lock_explicit_e_z)
++
++    def lock_unspecified():
++        try:
++            st.build_state('CC=CCC')
++            raise AssertionError('unspecified C=C accepted under policy require')
++        except st.StateError:
++            pass
++        isomers = st.expand_stereo('CC=CCC')
++        assert len(isomers) == 2, isomers
++        res = []
++        for k, smi in enumerate(isomers):
++            rec, rows, _ = run_methods(row=dict(id=f'pent2ene__st{k}', parent_smiles='', state_smiles=smi,
++                                                input_state_smiles='CC=CCC', stereo_enumerated=True), free_arm=True)
++            ez = rec['ez_lock']
++            assert not ez['effective'] and 'enumeration' in ez['reason'] and rows['td']['locked'] == 0, ez
++            assert set(rows) == {'etkdg_v3', 'td'}, set(rows)  # no td_free arm when nothing is locked
++            m, _ = st.build_state(smi)
++            assert torsion_pairs(m, ez['requested_bonds'] or False) == torsion_pairs(m, False)
++            res.append(f"{smi}: not locked ({ez['reason']}), E/Z kept {rows['td']['n_stereo']}/8")
++        return 'require: rejected; enumerate: 2 isomers, ' + '; '.join(res)
++    check('unspecified double-bond stereo: rejected (require) or enumerated but never locked (enumerate)', lock_unspecified)
++
++    def lock_irrelevant():
++        res = []
++        for sid in ['gaba_neutral', 'acac_diketo', 'pyridine', 'ibuprofen_S_neutral']:
++            rec, rows, out_l = run_methods(sid)
++            _, _, out_f = run_methods(sid, ez_policy='free')
++            ez = rec['ez_lock']
++            assert not ez['effective'] and ez['n_stereo_double_bonds'] == 0 and 'no stereogenic' in ez['reason'], ez
++            A = xyz(list(Chem.SDMolSupplier(f'{out_l}/{sid}__td.sdf', removeHs=False)))
++            B = xyz(list(Chem.SDMolSupplier(f'{out_f}/{sid}__td.sdf', removeHs=False)))
++            d = max(float(np.abs(x - y).max()) for x, y in zip(A, B))
++            assert d == 0.0, (sid, d)
++            res.append(sid)
++        return f"{', '.join(res)}: nothing locked, td identical under --ez_policy lock and free (max |dx| 0)"
++    check('no stereogenic double bond (C=O, ring C=C, none): lock policy changes nothing', lock_irrelevant)
++
+     def sdf():
+         n = 0
+         with tempfile.TemporaryDirectory() as d:
+--- /dev/null	2026-10-01 10:39:19.495748032 +0530
++++ slurm_jmcg/cg_smoke5.sbatch	2026-10-28 22:39:09.302371099 +0530
+@@ -0,0 +1,137 @@
++#!/bin/bash
++#SBATCH --job-name=jmcg_cgsmoke5
++#SBATCH --partition=plafnet2
++#SBATCH --account=plafnet2
++#SBATCH --nodelist=gnode118
++#SBATCH --ntasks=1
++#SBATCH --cpus-per-task=4
++#SBATCH --mem=16G
++#SBATCH --time=01:00:00
++#SBATCH --output=/home2/nishanth.r/jmcg_stage/logs/%x_%j.log
++# Conditional (explicit-state) conformer generation, smoke test 5 = smoke 4 with the E/Z lock as run default (--ez_policy lock:
++# only double bonds whose E/Z the input specifies; unlocked TD kept as td_free via --free_arm). NOT committed: the job
++# writes the working-tree diff vs HEAD (619a181) for review and a fixed-seed comparison against the smoke-4 outputs. Smoke 4 was: smoke 3 with the drift fix (df5210a: TD imported under a
++# fixed numpy seed so the torus score-norm table is identical in every process). Checkpoint PINNED to
++# pretrained/qm9_default (sha256 6a9a6ee9...; smoke 1/2 auto-picked qm9_1order). Wrapper fidelity vs TD on this checkpoint: CG_fidelity. CPU only. Frozen TD checkout + venv used read-only.
++# Separate from N1 / T pilot: own package jmcg/condgen, own outputs results/cond_gen/, research/experiments/CG_smoke/.
++P=/scratch/nishanth.r/jmcg; STAGE=/home2/nishanth.r/jmcg_stage; TD=/scratch/nishanth.r/tordiff
++echo "job $SLURM_JOB_ID on $(hostname) start $(date -u '+%F %T UTC') / $(TZ=Asia/Kolkata date '+%F %T IST')"
++set -euo pipefail
++rsync -a $STAGE/jmcg/condgen/ $P/jmcg/condgen/; rsync -a $STAGE/slurm_jmcg/ $P/slurm_jmcg/
++source $TD/venv/bin/activate
++cd $P
++export PYTHONPATH=$P TD_REPO=$TD/torsional-diffusion OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK CUDA_VISIBLE_DEVICES=""
++OUT=$P/results/cond_gen/smoke5; rm -rf $OUT; mkdir -p $OUT
++D=$STAGE/research/experiments/CG_smoke/run5; mkdir -p $D
++echo "=== 0: provenance"
++(cd $P && echo "jmcg HEAD $(git rev-parse HEAD)" && git log -1 --format='%h %s' && echo "uncommitted (tracked):" && git status --short --untracked-files=no | head -20)
++for f in td_backend.py run.py validate.py states.py; do echo "staging vs scratch $f: $(cmp -s $STAGE/jmcg/condgen/$f $P/jmcg/condgen/$f && echo same || echo DIFFERENT)"; done
++grep -n "TORUS_IMPORT_SEED =" jmcg/condgen/td_backend.py
++sha256sum jmcg/condgen/smoke_states.csv
++echo "=== 0b: working-tree diff vs HEAD (not committed)"
++(cd $P && git diff --stat -- jmcg slurm_jmcg && git diff -- jmcg slurm_jmcg > $D/diff_vs_HEAD.patch \
++  && for f in $(git ls-files --others --exclude-standard -- jmcg slurm_jmcg); do diff -u /dev/null $f >> $D/diff_vs_HEAD.patch || true; echo "untracked: $f"; done)
++echo "=== 0: env"
++python -c 'import torch, rdkit, torch_geometric, e3nn; print("torch", torch.__version__, "rdkit", rdkit.__version__, "pyg", torch_geometric.__version__, "e3nn", e3nn.__version__)
++from rdkit.Chem import rdDetermineBonds; print("rdDetermineBonds ok")'
++(cd $TD/torsional-diffusion && git rev-parse HEAD && git status --short | head)
++echo "=== 1: unit tests (states)"
++python -m jmcg.condgen.test_states || echo "TEST_STATES FAILED (exit $?)"
++echo "=== 2: checkpoint inventory + QM9 charge prevalence"
++python -m jmcg.condgen.inventory --workdir $TD/workdir --qm9_raw $TD/data/QM9/qm9/ --qm9_split $TD/data/QM9/split.npy \
++  --out $OUT/inventory.json
++QM9_DIR=$TD/workdir/pretrained/qm9_default  # pinned (not auto-picked)
++echo "$(sha256sum $QM9_DIR/best_model.pt)"; sha256sum $QM9_DIR/best_model.pt | grep -q "^6a9a6ee9b0e51bda" || { echo "CHECKPOINT SHA MISMATCH"; exit 1; }
++DRUGS_DIR=$(python - <<EOF
++import json; c=[x for x in json.load(open("$OUT/inventory.json"))["checkpoints"] if x["dataset"]=="drugs" and x["best_model_sha256"]]
++print(c[0]["dir"] if c else "")
++EOF
++)
++echo "qm9 checkpoint: ${QM9_DIR:-NONE}   drugs checkpoint: ${DRUGS_DIR:-NONE}"
++test -n "$QM9_DIR"
++echo "=== 2b: backend / SDF / geometry-validation tests"
++python -m jmcg.condgen.test_backend --model_dir $QM9_DIR --states_csv jmcg/condgen/smoke_states.csv || echo "TEST_BACKEND FAILED (exit $?)"
++echo "=== 3: smoke generation (released QM9 checkpoint), 8 confs, seed 0"
++python -m jmcg.condgen.run --model_dir $QM9_DIR --out $OUT/qm9 --states_csv jmcg/condgen/smoke_states.csv \
++  --n_confs 8 --seed 0 --free_arm
++if [[ -n "$DRUGS_DIR" ]]; then
++  echo "=== 3b: same states with the drugs checkpoint"
++  python -m jmcg.condgen.run --model_dir $DRUGS_DIR --out $OUT/drugs --states_csv jmcg/condgen/smoke_states.csv \
++    --n_confs 8 --seed 0 --free_arm || echo "drugs run failed (see above)"
++fi
++echo "=== 3c: whole smoke run again in a second process (same seed) + SDF re-read validation"
++python -m jmcg.condgen.run --model_dir $QM9_DIR --out $OUT/qm9_proc2 --states_csv jmcg/condgen/smoke_states.csv \
++  --n_confs 8 --seed 0 --free_arm > $OUT/qm9_proc2.log 2>&1 || echo "PROCESS 2 RUN FAILED (exit $?)"
++python - <<PYCMP
++import glob, os, json, numpy as np
++from rdkit import Chem
++def xyz(p): return [m.GetConformer().GetPositions() for m in Chem.SDMolSupplier(p, removeHs=False)]
++n_files, worst, bad = 0, 0.0, []
++for f in sorted(glob.glob("$OUT/qm9/*.sdf")):
++    g = f.replace("/qm9/", "/qm9_proc2/")
++    if not os.path.exists(g): bad.append(os.path.basename(f) + " missing in process 2"); continue
++    A, B = xyz(f), xyz(g)
++    if len(A) != len(B): bad.append(f"{os.path.basename(f)} n {len(A)} vs {len(B)}"); continue
++    d = max(float(np.abs(a - b).max()) for a, b in zip(A, B)); worst = max(worst, d); n_files += 1
++    if d > 0: bad.append(f"{os.path.basename(f)} max|dx| {d:.1e}")
++print(f"CROSS_PROCESS {n_files} SDF files compared, max|dx| = {worst:.1e} A, mismatches: {bad or 'none'}")
++t1 = json.load(open("$OUT/qm9/run_info.json"))["generator"]["torus_score_norm_sha256"]
++t2 = json.load(open("$OUT/qm9_proc2/run_info.json"))["generator"]["torus_score_norm_sha256"]
++print("TORUS_TABLE process1", t1, "process2", t2, "same" if t1 == t2 else "DIFFERENT")
++PYCMP
++python -m jmcg.condgen.revalidate --run_dir $OUT/qm9 --out $OUT/qm9_reread | tail -1
++echo "=== 4: reproducibility (same seed twice) + seed sensitivity"
++python - <<'EOF' > $OUT/repro_states.csv
++import pandas as pd
++d = pd.read_csv('jmcg/condgen/smoke_states.csv', comment='#')
++print(d[d.id.isin(['glycine_zwitterion', 'acac_Z_enol', 'histamine_dication'])].to_csv(index=False), end='')
++EOF
++for tag in rep_a rep_b; do python -m jmcg.condgen.run --model_dir $QM9_DIR --out $OUT/$tag --states_csv $OUT/repro_states.csv --n_confs 8 --seed 0 > $OUT/$tag.log; done
++python -m jmcg.condgen.run --model_dir $QM9_DIR --out $OUT/rep_seed1 --states_csv $OUT/repro_states.csv --n_confs 8 --seed 1 > $OUT/rep_seed1.log
++python - <<EOF
++import glob, os, numpy as np
++from rdkit import Chem
++def xyz(p): return [m.GetConformer().GetPositions() for m in Chem.SDMolSupplier(p, removeHs=False)]
++for f in sorted(glob.glob("$OUT/rep_a/*.sdf")):
++    b = f.replace("rep_a", "rep_b"); s1 = f.replace("rep_a", "rep_seed1")
++    A, B, C = xyz(f), xyz(b), xyz(s1)
++    dab = max(float(np.abs(x - y).max()) for x, y in zip(A, B))
++    dac = max(float(np.abs(x - y).max()) for x, y in zip(A, C))
++    print(f"{os.path.basename(f):40s} seed0 two processes max|dx|={dab:.1e} A  seed0 vs seed1 max|dx|={dac:.2f} A")
++EOF
++echo "=== 4b: fixed-seed comparison against smoke 4 (619a181 outputs, run4/qm9; read-only)"
++python - <<PYCMP | tee $OUT/compare_vs_smoke4.txt
++import glob, json, os, numpy as np
++from rdkit import Chem
++S4, S5 = "$STAGE/research/experiments/CG_smoke/run4/qm9", "$OUT/qm9"
++def confs(p): return list(Chem.SDMolSupplier(p, removeHs=False)) if os.path.exists(p) else None
++pairs = []
++for f in sorted(glob.glob(S5 + "/*__*.sdf")):
++    sid, m5 = os.path.basename(f)[:-4].split("__")
++    lock = json.load(open(f"{S5}/{sid}.json")).get("ez_lock", {}).get("effective")
++    m4 = {"td": "td_lockdb", "td_free": "td"}.get(m5, m5) if lock else m5
++    pairs.append((sid, m5, m4))
++n_ident = 0
++for sid, m5, m4 in pairs:
++    A, B = confs(f"{S5}/{sid}__{m5}.sdf"), confs(f"{S4}/{sid}__{m4}.sdf")
++    if B is None: print(f"NEW      {sid:22s} {m5:9s} (no smoke-4 counterpart)"); continue
++    d = max(float(np.abs(a.GetConformer().GetPositions() - b.GetConformer().GetPositions()).max()) for a, b in zip(A, B))
++    va = [a.GetProp("valid") for a in A]; vb = [b.GetProp("valid") for b in B]
++    same = d == 0.0 and va == vb and len(A) == len(B); n_ident += same
++    print(f"{'SAME' if same else 'CHANGED':8s} {sid:22s} smoke5 {m5:9s} vs smoke4 {m4:9s} max|dx|={d:.1e} "
++          f"valid {va.count('True')}/{len(va)} vs {vb.count('True')}/{len(vb)}")
++s4 = {os.path.basename(f)[:-4] for f in glob.glob(S4 + "/*__*.sdf")}
++covered = {f"{sid}__{m4}" for sid, _, m4 in pairs}
++print("smoke-4 files without a smoke-5 counterpart:", sorted(s4 - covered) or "none")
++print(f"COMPARE {n_ident}/{len(pairs)} (state, method) outputs bit-identical with identical verdicts")
++PYCMP
++python - <<PYEZ | tee $OUT/ez_lock_per_state.txt
++import glob, json
++for f in sorted(glob.glob("$OUT/qm9/*.json")):
++    r = json.load(open(f))
++    if "ez_lock" in r: print(f"{r['state_id']:22s} effective={r['ez_lock']['effective']!s:5s} locked={r['ez_lock']['locked_bonds']} reason: {r['ez_lock']['reason']}")
++PYEZ
++echo "=== 5: copy small outputs to staging"
++rsync -a --include '*/' --include '*.json' --include '*.csv' --include '*.sdf' --include '*.log' --include '*.txt' --exclude '*' $OUT/ $D/
++du -sh $D
++echo "end $(date -u '+%F %T UTC') / $(TZ=Asia/Kolkata date '+%F %T IST')"

@@ -8,8 +8,11 @@ differences from TD's generate_confs.py are:
     embedded on its own with RDKit randomSeed = conformer_seeds(seed, n)[k], drawn from numpy's generator. Passing
     randomSeed=seed to EmbedMultipleConfs is NOT used: with seed 0 RDKit returned n identical conformers (smoke 1,
     2026-10-28). Same default embedding parameters as TD otherwise;
-  - optional `lock_stereo_double_bonds`: drop non-ring stereo double bonds from the torsion set, so E/Z cannot flip.
-    Off by default (TD behaviour); the model's per-bond readout for the remaining bonds is unchanged.
+  - optional `lock_stereo_double_bonds`: drop double bonds with a specified E/Z (STEREOE/Z/CIS/TRANS; never
+    STEREONONE or STEREOANY) from the torsion set, so their E/Z cannot flip. True = every such bond; a collection of
+    atom-index pairs = only those bonds. Only the locked bonds leave the torsion set: neighbouring single bonds stay
+    rotatable and the model's per-bond readout for the remaining bonds is unchanged. Off by default here (TD
+    behaviour, used by the wrapper-fidelity check); the run-level default is set in run.py (--ez_policy).
 """
 import hashlib
 import os
@@ -49,6 +52,8 @@ def torus_table_sha():
     return hashlib.sha256(np.ascontiguousarray(td_torus.score_norm_).tobytes()).hexdigest()[:16]
 
 TYPES = {'qm9': qm9_types, 'drugs': drugs_types}
+EZ_SPECIFIED = (Chem.BondStereo.STEREOE, Chem.BondStereo.STEREOZ, Chem.BondStereo.STEREOCIS,
+                Chem.BondStereo.STEREOTRANS)
 CHARGE_BUCKETS = (-1, 0, 1)  # TD featurize_mol: one-hot over these + "other"
 
 
@@ -113,14 +118,17 @@ class TDGenerator:
         edge_mask, mask_rotate = get_transformation_mask(data)
         locked = []
         if lock_stereo_double_bonds:
+            want = None if lock_stereo_double_bonds is True else {frozenset(map(int, p)) for p in lock_stereo_double_bonds}
             ei = data.edge_index.T.numpy()
             rows = np.flatnonzero(edge_mask)
             keep = np.ones(len(rows), dtype=bool)
             for k, e in enumerate(rows):
-                b = mol.GetBondBetweenAtoms(int(ei[e, 0]), int(ei[e, 1]))
-                if b.GetBondType() == Chem.BondType.DOUBLE and b.GetStereo() != Chem.BondStereo.STEREONONE:
+                i, j = int(ei[e, 0]), int(ei[e, 1])
+                b = mol.GetBondBetweenAtoms(i, j)
+                if (b.GetBondType() == Chem.BondType.DOUBLE and b.GetStereo() in EZ_SPECIFIED
+                        and (want is None or frozenset((i, j)) in want)):
                     keep[k] = False
-                    locked.append((int(ei[e, 0]), int(ei[e, 1])))
+                    locked.append((i, j))
             edge_mask = edge_mask.copy()
             edge_mask[rows[~keep]] = False
             mask_rotate = mask_rotate[keep]

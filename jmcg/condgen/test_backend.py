@@ -15,7 +15,7 @@ from rdkit.Chem import rdMolTransforms
 
 from jmcg.condgen import states as st
 from jmcg.condgen import validate as va
-from jmcg.condgen.run import write_sdf
+from jmcg.condgen.run import run_state, write_sdf
 from jmcg.condgen.td_backend import TDGenerator, embed_n, etkdg_baseline, featurize_mol
 
 RESULTS = []
@@ -127,6 +127,89 @@ def main():
         assert gi['locked_double_bonds'] and all(ok_l), (gi['locked_double_bonds'], ok_l)
         return f'locked: {sum(ok_l)}/8 correct E/Z; unlocked TD: {sum(ok_u)}/8 correct E/Z'
     check('E/Z lock keeps the specified double-bond configuration', lock)
+
+    def run_methods(sid=None, row=None, **kw):
+        ns = argparse.Namespace(seed=0, n_confs=8, ez_policy='lock', free_arm=False, out=tempfile.mkdtemp())
+        vars(ns).update(kw)
+        row = row or table[table.id == sid].iloc[0].to_dict()
+        rec, rows = run_state(gen, row, ns)
+        return rec, {r['method']: r for r in rows}, ns.out
+
+    def torsion_pairs(m, lock):
+        data, _ = gen.torsion_data(m, lock)
+        ei = data.edge_index.T.numpy()
+        return {tuple(sorted(map(int, ei[e]))) for e in np.flatnonzero(data.edge_mask.numpy())}
+
+    def ez_ok(out, sid, method):
+        return [m.GetProp('stereo_ok') for m in Chem.SDMolSupplier(f'{out}/{sid}__{method}.sdf', removeHs=False)]
+
+    def lock_acac_regression():
+        # smoke 4 (seed 0): unlocked TD flipped conformers 0 and 4 of the acac Z-enol to E; run default must not.
+        rec, rows, out = run_methods('acac_Z_enol', free_arm=True)
+        ez = rec['ez_lock']
+        assert ez['effective'] and len(ez['locked_bonds']) == 1 and not ez['requested_not_td_torsion'], ez
+        assert set(rows) == {'etkdg_v3', 'td', 'td_free'}, set(rows)
+        assert rows['td']['n_stereo'] == 8, rows['td']
+        flips = [k for k, v in enumerate(ez_ok(out, 'acac_Z_enol', 'td_free')) if v != 'True']
+        assert flips == [0, 4], flips  # the documented smoke-4 failures reproduce without the lock
+        m = built['acac_Z_enol'][0]
+        free, locked = torsion_pairs(m, False), torsion_pairs(m, ez['requested_bonds'])
+        assert free - locked == {tuple(ez['locked_bonds'][0])} and locked < free, (free, locked)
+        return (f"default td: E/Z {rows['td']['n_stereo']}/8 kept (valid {rows['td']['n_valid']}/8); td_free flips "
+                f"confs {flips}; torsions {len(free)} -> {len(locked)} (only the C=C removed, C-O/C-C stay free)")
+    check('E/Z lock regression: acac Z-enol seed 0 flips (confs 0, 4) only without the default lock', lock_acac_regression)
+
+    def lock_explicit_e_z():
+        out = []
+        for sid, smi, parent in [('acac_E_enol', r'C/C(O)=C\C(C)=O', 'CC(=O)CC(C)=O'),
+                                 ('pent2ene_Z', r'C/C=C\CC', None), ('pent2ene_E', 'C/C=C/CC', None)]:
+            rec, rows, _ = run_methods(row=dict(id=sid, parent_smiles=parent or '', state_smiles=smi))
+            ez = rec['ez_lock']
+            assert ez['effective'] and len(ez['locked_bonds']) == 1, (sid, ez)
+            assert rows['td']['n_stereo'] == 8 and rows['etkdg_v3']['n_stereo'] == 8, (sid, rows['td'])
+            m, _ = st.build_state(smi, parent)
+            free, locked = torsion_pairs(m, False), torsion_pairs(m, ez['requested_bonds'])
+            assert free - locked == {tuple(ez['locked_bonds'][0])}, (sid, free, locked)
+            out.append(f"{sid}: locked {ez['locked_bonds']}, E/Z kept {rows['td']['n_stereo']}/8, "
+                       f"torsions {len(free)}->{len(locked)}")
+        return '; '.join(out)
+    check('E/Z lock applies to explicit E and Z input states and removes only the specified C=C torsion', lock_explicit_e_z)
+
+    def lock_unspecified():
+        try:
+            st.build_state('CC=CCC')
+            raise AssertionError('unspecified C=C accepted under policy require')
+        except st.StateError:
+            pass
+        isomers = st.expand_stereo('CC=CCC')
+        assert len(isomers) == 2, isomers
+        res = []
+        for k, smi in enumerate(isomers):
+            rec, rows, _ = run_methods(row=dict(id=f'pent2ene__st{k}', parent_smiles='', state_smiles=smi,
+                                                input_state_smiles='CC=CCC', stereo_enumerated=True), free_arm=True)
+            ez = rec['ez_lock']
+            assert not ez['effective'] and 'enumeration' in ez['reason'] and rows['td']['locked'] == 0, ez
+            assert set(rows) == {'etkdg_v3', 'td'}, set(rows)  # no td_free arm when nothing is locked
+            m, _ = st.build_state(smi)
+            assert torsion_pairs(m, ez['requested_bonds'] or False) == torsion_pairs(m, False)
+            res.append(f"{smi}: not locked ({ez['reason']}), E/Z kept {rows['td']['n_stereo']}/8")
+        return 'require: rejected; enumerate: 2 isomers, ' + '; '.join(res)
+    check('unspecified double-bond stereo: rejected (require) or enumerated but never locked (enumerate)', lock_unspecified)
+
+    def lock_irrelevant():
+        res = []
+        for sid in ['gaba_neutral', 'acac_diketo', 'pyridine', 'ibuprofen_S_neutral']:
+            rec, rows, out_l = run_methods(sid)
+            _, _, out_f = run_methods(sid, ez_policy='free')
+            ez = rec['ez_lock']
+            assert not ez['effective'] and ez['n_stereo_double_bonds'] == 0 and 'no stereogenic' in ez['reason'], ez
+            A = xyz(list(Chem.SDMolSupplier(f'{out_l}/{sid}__td.sdf', removeHs=False)))
+            B = xyz(list(Chem.SDMolSupplier(f'{out_f}/{sid}__td.sdf', removeHs=False)))
+            d = max(float(np.abs(x - y).max()) for x, y in zip(A, B))
+            assert d == 0.0, (sid, d)
+            res.append(sid)
+        return f"{', '.join(res)}: nothing locked, td identical under --ez_policy lock and free (max |dx| 0)"
+    check('no stereogenic double bond (C=O, ring C=C, none): lock policy changes nothing', lock_irrelevant)
 
     def sdf():
         n = 0
