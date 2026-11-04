@@ -7,6 +7,12 @@ state's own minimum, so no cross-state energy comparison is made):
   phi1 = -ln N_eff, N_eff = exp(-sum w ln w)         (dimensionless)
   phi2 = <n_IMHB>  polar H (on N/O) .. N/O acceptor in [1.5, 2.5] A, acceptor >= 3 bonds from the donor heavy atom
   phi3 = <polar SASA> / 100 A^2  (N, O and H on N/O; FreeSASA, probe 1.4 A)
+EXPLORATORY unminimised path (path='unmin', added 2026-10-29 for the M5 feature-extraction blocker; NOT part of the
+E2 pre-registration): the same ETKDGv3 conformers (same seeds) without MMFF minimisation, validated with the same
+unchanged thresholds, and weighted UNIFORMLY (the ETKDG draws are treated as samples of p(x|z); MMFF single points of
+unrelaxed geometries are strain-dominated and are not used as weights). With uniform weights phi1 = -ln n_valid, so
+phi1 carries no conformational information on this path. features_from_conformers() computes the same descriptors
+for externally generated conformers (e.g. TD SDFs), also uniformly weighted.
 psi (2D only): psi1 = rotatable bonds, psi2 = topological donor-acceptor pairs 4-7 bonds apart, psi3 = TPSA / 100 A^2.
 """
 import math
@@ -54,13 +60,45 @@ def _polar_sasa(m, conf_id):
     return tot
 
 
-def ensemble_features(smiles, n_confs=30, seed=0, max_iters=2000, return_ensemble=False):
+def _phi(m, keep, w, dist_path):
+    H = float(-(w[w > 0] * np.log(w[w > 0])).sum())
+    return dict(phi1=-H,  # -ln N_eff
+                phi2=float(sum(wi * _imhb_count(m, c, dist_path) for wi, c in zip(w, keep))),
+                phi3=float(sum(wi * _polar_sasa(m, c) for wi, c in zip(w, keep))) / 100.0)
+
+
+def features_from_conformers(m, target, cids=None, return_ensemble=False):
+    """Validate the given conformers of Mol m (explicit H, the state's own graph) against target (canonical heavy-atom
+    isomeric SMILES) and return phi with uniform weights over the valid ones (exploratory, see module docstring)."""
+    cids = [c.GetId() for c in m.GetConformers()] if cids is None else list(cids)
+    out = dict(n_generated=len(cids), n_valid=0, failures=[])
+    bounds = rdDistGeom.GetMoleculeBoundsMatrix(m)
+    keep = []
+    for cid in cids:
+        chk = va.check_conformer(Chem.Mol(m, confId=cid), target, bounds)
+        if chk['valid']:
+            keep.append(cid)
+        else:
+            out['failures'].append('invalid: ' + ','.join(k for k in va.CHECKS[1:] if chk.get(k) is False))
+    out['n_valid'] = len(keep)
+    if keep:
+        w = np.full(len(keep), 1.0 / len(keep))
+        out.update(_phi(m, keep, w, Chem.GetDistanceMatrix(m)))
+        if return_ensemble:
+            out['ensemble'] = (m, keep, w)
+    return out
+
+
+def ensemble_features(smiles, n_confs=30, seed=0, max_iters=2000, return_ensemble=False, path='mmff'):
     """dict(phi1, phi2, phi3, n_valid, n_generated, failures) for one microstate SMILES. return_ensemble=True adds
-    'ensemble': (Mol holding the minimised conformers, valid conformer ids, Boltzmann weights) for the sampler."""
+    'ensemble': (Mol holding the minimised conformers, valid conformer ids, Boltzmann weights) for the sampler.
+    path='mmff' (default, pre-registered E2 definition) or 'unmin' (exploratory: no minimisation, uniform weights)."""
+    if path not in ('mmff', 'unmin'):
+        raise ValueError(f'unknown feature path {path!r}')
     m = Chem.AddHs(Chem.MolFromSmiles(smiles))
     target = Chem.MolToSmiles(Chem.MolFromSmiles(smiles))
     out = dict(n_generated=0, n_valid=0, failures=[])
-    if not AllChem.MMFFHasAllMoleculeParams(m):
+    if path == 'mmff' and not AllChem.MMFFHasAllMoleculeParams(m):
         out['failures'].append('MMFF94s parameters missing')
         return out
     cids = []
@@ -74,6 +112,10 @@ def ensemble_features(smiles, n_confs=30, seed=0, max_iters=2000, return_ensembl
     if not cids:
         out['failures'].append('ETKDGv3 embedding failed for every seed')
         return out
+    if path == 'unmin':
+        r = features_from_conformers(m, target, cids, return_ensemble)
+        r['failures'] = [f.replace('invalid:', 'invalid unminimised:') for f in r['failures']]
+        return r
     bounds = rdDistGeom.GetMoleculeBoundsMatrix(m)
     dist_path = Chem.GetDistanceMatrix(m)
     # MMFF typing rewrites bond types to MMFF aromaticity in place (e.g. 2-pyridone ring -> Kekule single/double), so
@@ -100,10 +142,7 @@ def ensemble_features(smiles, n_confs=30, seed=0, max_iters=2000, return_ensembl
     E = np.array(E)
     w = np.exp(-(E - E.min()) / KT_298)
     w /= w.sum()
-    H = float(-(w[w > 0] * np.log(w[w > 0])).sum())
-    out['phi1'] = -H  # -ln N_eff
-    out['phi2'] = float(sum(wi * _imhb_count(m, c, dist_path) for wi, c in zip(w, keep)))
-    out['phi3'] = float(sum(wi * _polar_sasa(m, c) for wi, c in zip(w, keep))) / 100.0
+    out.update(_phi(m, keep, w, dist_path))
     out['E_range_kcal'] = float(E.max() - E.min())
     if return_ensemble:
         out['ensemble'] = (m, keep, w)

@@ -1,0 +1,1080 @@
+P00000                   parent               etkdg_v3: valid 30/30 clusters 1  FAIL[td: atom types ['Br'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00001                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 5, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00002                   parent               etkdg_v3: valid 30/30 clusters 1  FAIL[td: atom types ['Br'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00003                   parent               etkdg_v3: valid 10/30 clusters 30 td: valid 10/30 clusters 30
+P00004                   parent               etkdg_v3: valid 13/30 clusters 29 td: valid 5/30 clusters 30
+P00005                   parent               etkdg_v3: valid 11/30 clusters 30 td: valid 7/30 clusters 30
+P00006                   parent               etkdg_v3: valid 11/30 clusters 30 td: valid 5/30 clusters 30
+P00007                   parent               etkdg_v3: valid 19/30 clusters 30 td: valid 3/30 clusters 30
+P00008                   parent               etkdg_v3: valid 13/30 clusters 30 td: valid 10/30 clusters 30
+P00009                   parent               etkdg_v3: valid 14/30 clusters 30 td: valid 7/30 clusters 30
+P00010                   parent               etkdg_v3: valid 13/30 clusters 30 td: valid 4/30 clusters 30
+P00011                   parent               etkdg_v3: valid 17/30 clusters 30 td: valid 6/30 clusters 30
+P00012                   parent               etkdg_v3: valid 16/30 clusters 30 td: valid 4/30 clusters 30
+P00013                   parent               etkdg_v3: valid 17/30 clusters 30 td: valid 1/30 clusters 30
+P00014                   parent               etkdg_v3: valid 20/30 clusters 30 td: valid 1/30 clusters 29
+P00015                   parent               etkdg_v3: valid 9/30 clusters 30 td: valid 2/30 clusters 30
+P00016                   parent               etkdg_v3: valid 20/30 clusters 29 td: valid 6/30 clusters 30
+P00017                   parent               etkdg_v3: valid 30/30 clusters 1  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00018                   parent               etkdg_v3: valid 30/30 clusters 2  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00019                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 7/30 clusters 1
+P00020                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 14/30 clusters 1
+P00021                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00022                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00023                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 19/30 clusters 2
+P00024                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00025                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 28/30 clusters 1
+P00026                   parent               etkdg_v3: valid 26/30 clusters 2 td: valid 24/30 clusters 3
+P00027                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 2
+P00028                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 2
+P00029                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 24/30 clusters 1
+P00030                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 29/30 clusters 1
+P00031                   parent               etkdg_v3: valid 30/30 clusters 5 td: valid 28/30 clusters 13
+P00032                   -                      FAIL[state: unassigned stereo elements [{'kind': 'double_bond', 'centered_on': 3, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00033                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00034                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 26/30 clusters 1
+P00035                   parent               etkdg_v3: valid 30/30 clusters 3 td: valid 29/30 clusters 2
+P00036                   parent               etkdg_v3: valid 30/30 clusters 3 td: valid 29/30 clusters 3
+P00037                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 29/30 clusters 5
+P00038                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 20/30 clusters 2
+P00039                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 30/30 clusters 3
+P00040                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00041                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00042                   parent               etkdg_v3: valid 30/30 clusters 1  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00043                   parent               etkdg_v3: valid 30/30 clusters 29 td: valid 5/30 clusters 30
+P00044                   parent               etkdg_v3: valid 30/30 clusters 29 td: valid 7/30 clusters 30
+P00045                   parent               etkdg_v3: valid 29/30 clusters 30 td: valid 4/30 clusters 30
+P00046                   parent               etkdg_v3: valid 29/30 clusters 30 td: valid 4/30 clusters 29
+P00047                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00048                   -                      FAIL[state: not a protomer/tautomer of the parent: heavy-atom skeleton differs]
+P00049                   parent               etkdg_v3: valid 0/30 clusters 1 td: valid 0/30 clusters 6
+P00050                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 26/30 clusters 4
+P00051                   parent               etkdg_v3: valid 30/30 clusters 3 td: valid 23/30 clusters 2
+P00052                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 13/30 clusters 3
+P00053                   parent               etkdg_v3: valid 30/30 clusters 3 td: valid 28/30 clusters 3
+P00054                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 4/30 clusters 3
+P00055                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 28/30 clusters 1
+P00056                   parent               etkdg_v3: valid 30/30 clusters 3 td: valid 30/30 clusters 3
+P00057                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 28/30 clusters 2
+P00058                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 25/30 clusters 5
+P00059                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 3, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00060                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 3, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00061                   parent               etkdg_v3: valid 30/30 clusters 3 td: valid 30/30 clusters 3
+P00062                   parent               etkdg_v3: valid 30/30 clusters 4 td: valid 29/30 clusters 5
+P00063                   parent               etkdg_v3: valid 30/30 clusters 5 td: valid 30/30 clusters 4
+P00064                   -                      FAIL[state: parent SMILES does not parse/sanitise: CC(=O)N1CCN(c2ccc(OCc3cc4c[nH+]c(C]
+P00065                   -                      FAIL[state: parent SMILES does not parse/sanitise: CC(=O)N1CCN(c2ccc(OCc3cc4cnc(C]
+P00066                   -                      FAIL[state: parent SMILES does not parse/sanitise: CC(=O)N1CC[NH+](c2ccc(OCc3cc4cnc(C]
+P00067                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 13/30 clusters 2
+P00068                   parent               etkdg_v3: valid 30/30 clusters 1  FAIL[td: RuntimeError: ETKDG seed embedding failed]
+P00069                   parent               etkdg_v3: valid 30/30 clusters 16 td: valid 1/30 clusters 28
+P00070                   -                      FAIL[state: parent SMILES does not parse/sanitise: CC(=O)Nc1cccc([N-]c2nc(Nc3ccccc3)n3ncc(C]
+P00071                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 21, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00072                   parent               etkdg_v3: valid 30/30 clusters 19  FAIL[td: atom types ['Cl', 'S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00073                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 12/30 clusters 2
+P00074                   parent               etkdg_v3: valid 30/30 clusters 4 td: valid 7/30 clusters 4
+P00075                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 27/30 clusters 6
+P00076                   -                      FAIL[state: parent SMILES does not parse/sanitise: CC(=O)[N-]c1cccc([N-]c2nc(Nc3ccccc3)n3ncc(C]
+P00077                   parent               etkdg_v3: valid 30/30 clusters 22  FAIL[td: atom types ['Cl', 'S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00078                   parent               etkdg_v3: valid 30/30 clusters 25  FAIL[td: atom types ['Cl', 'S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00079                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 3, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00080                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 21/30 clusters 2
+P00081                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 2
+P00082                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00083                   parent               etkdg_v3: valid 30/30 clusters 9 td: valid 16/30 clusters 16
+P00084                   parent               etkdg_v3: valid 30/30 clusters 8 td: valid 19/30 clusters 16
+P00085                   parent               etkdg_v3: valid 30/30 clusters 1  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00086                   -                      FAIL[state: parent SMILES does not parse/sanitise: CC(=[OH+])N1CC[NH+](c2ccc(OCc3cc4cnc(C]
+P00087                   -                      FAIL[state: parent SMILES does not parse/sanitise: CC(=[OH+])N1CC[NH+](c2ccc(OCc3cc4cnc(C]
+P00088                   parent               etkdg_v3: valid 30/30 clusters 18 td: valid 3/30 clusters 21
+P00089                   -                      FAIL[state: parent SMILES does not parse/sanitise: CC(=[OH+])Nc1cccc(Nc2nc(Nc3ccccc3)n3ncc(C]
+P00090                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00091                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00092                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00093                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00094                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00095                   -                      FAIL[state: parent SMILES does not parse/sanitise: CC(C)(C)Cn1c(CN2C(=O)C3(CCNCC3)CC2=[OH+])cc2c[nH+]c(C]
+P00096                   -                      FAIL[state: parent SMILES does not parse/sanitise: CC(C)(C)Cn1c(Cc2ccc(NS(N)(=O)=O)cc2)cc2cnc(C]
+P00097                   -                      FAIL[state: parent SMILES does not parse/sanitise: CC(C)(C)Cn1c(Cc2ccc(NS([NH-])(=O)=O)cc2)cc2cnc(C]
+P00098                   -                      FAIL[state: parent SMILES does not parse/sanitise: CC(C)(C)Cn1c(Cc2ccc([N-]S(N)(=O)=O)cc2)cc2cnc(C]
+P00099                   -                      FAIL[state: parent SMILES does not parse/sanitise: CC(C)(C)Cn1c(Cc2ccc([N-]S([NH-])(=O)=O)cc2)cc2cnc(C]
+P00100                   -                      FAIL[state: parent SMILES does not parse/sanitise: CC(C)(C)Cn1c(Cc2ccc([NH2+]S(N)(=O)=O)cc2)cc2c[nH+]c(C]
+P00101                   -                      FAIL[state: parent SMILES does not parse/sanitise: CC(C)(C)Cn1c([CH-]c2ccc([N-]S(N)(=O)=O)cc2)cc2cnc(C]
+P00102                   parent               etkdg_v3: valid 30/30 clusters 11  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00103                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 14, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00104                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 8, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00105                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 8, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00106                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 8, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00107                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 8, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00108                   parent               etkdg_v3: valid 30/30 clusters 3 td: valid 23/30 clusters 3
+P00109                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00110                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 25/30 clusters 3
+P00111                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00112                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00113                   parent               etkdg_v3: valid 30/30 clusters 3 td: valid 29/30 clusters 4
+P00114                   parent               etkdg_v3: valid 30/30 clusters 6 td: valid 24/30 clusters 5
+P00115                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 29/30 clusters 2
+P00116                   parent               etkdg_v3: valid 30/30 clusters 30 td: valid 8/30 clusters 29
+P00117                   parent               etkdg_v3: valid 30/30 clusters 27 td: valid 8/30 clusters 30
+P00118                   parent               etkdg_v3: valid 30/30 clusters 29 td: valid 7/30 clusters 30
+P00119                   parent               etkdg_v3: valid 30/30 clusters 4 td: valid 29/30 clusters 5
+P00120                   parent               etkdg_v3: valid 30/30 clusters 5 td: valid 30/30 clusters 13
+P00121                   parent               etkdg_v3: valid 30/30 clusters 9 td: valid 26/30 clusters 15
+P00122                   parent               etkdg_v3: valid 21/30 clusters 3 td: valid 20/30 clusters 6
+P00123                   parent               etkdg_v3: valid 27/30 clusters 3 td: valid 20/30 clusters 6
+P00124                   parent               etkdg_v3: valid 28/30 clusters 29 td: valid 0/30 clusters 30
+P00125                   parent               etkdg_v3: valid 30/30 clusters 29 td: valid 1/30 clusters 30
+P00126                   parent               etkdg_v3: valid 30/30 clusters 30 td: valid 1/30 clusters 30
+P00127                   parent               etkdg_v3: valid 29/30 clusters 30 td: valid 0/30 clusters 30
+P00128                   parent               etkdg_v3: valid 30/30 clusters 30 td: valid 2/30 clusters 30
+P00129                   parent               etkdg_v3: valid 30/30 clusters 29 td: valid 2/30 clusters 30
+P00130                   parent               etkdg_v3: valid 28/30 clusters 30 td: valid 5/30 clusters 30
+P00131                   parent               etkdg_v3: valid 29/30 clusters 30 td: valid 5/30 clusters 30
+P00132                   parent               etkdg_v3: valid 30/30 clusters 29 td: valid 17/30 clusters 30
+P00133                   parent               etkdg_v3: valid 30/30 clusters 26  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00134                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 3, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00135                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 3, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00136                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 3, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00137                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 3, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00138                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 11/30 clusters 2
+P00139                   parent               etkdg_v3: valid 30/30 clusters 27 td: valid 7/30 clusters 30
+P00140                   parent               etkdg_v3: valid 29/30 clusters 26 td: valid 11/30 clusters 30
+P00141                   parent               etkdg_v3: valid 30/30 clusters 28 td: valid 6/30 clusters 30
+P00142                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00143                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00144                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 25/30 clusters 1
+P00145                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00146                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00147                   parent               etkdg_v3: valid 30/30 clusters 7 td: valid 2/30 clusters 21
+P00148                   parent               etkdg_v3: valid 30/30 clusters 3 td: valid 30/30 clusters 2
+P00149                   parent               etkdg_v3: valid 30/30 clusters 3 td: valid 24/30 clusters 3
+P00150                   parent               etkdg_v3: valid 30/30 clusters 4 td: valid 24/30 clusters 7
+P00151                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 30/30 clusters 2
+P00152                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00153                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00154                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00155                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00156                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 13, 'specified': False}, {'kind': 'Atom_SquarePlanar', 'centered_on': 14, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00157                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 13, 'specified': False}, {'kind': 'Atom_SquarePlanar', 'centered_on': 14, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00158                   parent               etkdg_v3: valid 30/30 clusters 4 td: valid 28/30 clusters 4
+P00159                   parent               etkdg_v3: valid 30/30 clusters 4 td: valid 24/30 clusters 4
+P00160                   parent               etkdg_v3: valid 30/30 clusters 3  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00161                   parent               etkdg_v3: valid 30/30 clusters 16  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00162                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 5, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00163                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 27/30 clusters 1
+P00164                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00165                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 30/30 clusters 2
+P00166                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00167                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00168                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 30/30 clusters 2
+P00169                   parent               etkdg_v3: valid 30/30 clusters 6 td: valid 28/30 clusters 7
+P00170                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 2, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00171                   parent               etkdg_v3: valid 30/30 clusters 7 td: valid 28/30 clusters 5
+P00172                   parent               etkdg_v3: valid 30/30 clusters 7 td: valid 20/30 clusters 8
+P00173                   parent               etkdg_v3: valid 30/30 clusters 4 td: valid 29/30 clusters 5
+P00174                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 2, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00175                   parent               etkdg_v3: valid 30/30 clusters 30  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00176                   parent               etkdg_v3: valid 30/30 clusters 29  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00177                   parent               etkdg_v3: valid 25/30 clusters 30 td: valid 10/30 clusters 30
+P00178                   parent               etkdg_v3: valid 29/30 clusters 30 td: valid 9/30 clusters 30
+P00179                   parent               etkdg_v3: valid 28/30 clusters 30 td: valid 18/30 clusters 30
+P00180                   parent               etkdg_v3: valid 27/30 clusters 30 td: valid 11/30 clusters 30
+P00181                   parent               etkdg_v3: valid 26/30 clusters 30 td: valid 10/30 clusters 30
+P00182                   parent               etkdg_v3: valid 28/30 clusters 30 td: valid 13/30 clusters 30
+P00183                   parent               etkdg_v3: valid 30/30 clusters 12 td: valid 29/30 clusters 11
+P00184                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 30/30 clusters 2
+P00185                   parent               etkdg_v3: valid 30/30 clusters 4 td: valid 30/30 clusters 5
+P00186                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 30/30 clusters 2
+P00187                   -                      FAIL[state: parent SMILES does not parse/sanitise: CCN1c2ccc(C]
+P00188                   -                      FAIL[state: parent SMILES does not parse/sanitise: CCN1c2ccc(C]
+P00189                   -                      FAIL[state: not a protomer/tautomer of the parent: heavy-atom skeleton differs]
+P00190                   parent               etkdg_v3: valid 30/30 clusters 6 td: valid 27/30 clusters 11
+P00191                   parent               etkdg_v3: valid 30/30 clusters 5  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00192                   parent               etkdg_v3: valid 30/30 clusters 5 td: valid 21/30 clusters 8
+P00193                   parent               etkdg_v3: valid 30/30 clusters 6  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00194                   parent               etkdg_v3: valid 22/30 clusters 8  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00195                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 5, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00196                   -                      FAIL[state: not a protomer/tautomer of the parent: heavy-atom skeleton differs]
+P00197                   parent               etkdg_v3: valid 30/30 clusters 15 td: valid 30/30 clusters 18
+P00198                   parent               etkdg_v3: valid 30/30 clusters 17  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00199                   parent               etkdg_v3: valid 30/30 clusters 14 td: valid 30/30 clusters 15
+P00200                   parent               etkdg_v3: valid 30/30 clusters 5 td: valid 18/30 clusters 17
+P00201                   parent               etkdg_v3: valid 30/30 clusters 7 td: valid 11/30 clusters 15
+P00202                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 27, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00203                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 27, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00204                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 27, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00205                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 27, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00206                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 27, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00207                   parent               etkdg_v3: valid 30/30 clusters 11 td: valid 26/30 clusters 7
+P00208                   parent               etkdg_v3: valid 29/30 clusters 30 td: valid 5/30 clusters 30
+P00209                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 27, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00210                   parent               etkdg_v3: valid 30/30 clusters 3 td: valid 30/30 clusters 5
+P00211                   parent               etkdg_v3: valid 30/30 clusters 3 td: valid 30/30 clusters 4
+P00212                   parent               etkdg_v3: valid 30/30 clusters 29  FAIL[td: atom types ['Cl', 'S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00213                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 2, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00214                   parent               etkdg_v3: valid 30/30 clusters 27  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00215                   parent               etkdg_v3: valid 28/30 clusters 24  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00216                   parent               etkdg_v3: valid 28/30 clusters 30  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00217                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 28/30 clusters 1
+P00218                   -                      FAIL[state: parent SMILES does not parse/sanitise: CC[NH+]1c2ccc(C]
+P00219                   -                      FAIL[state: parent SMILES does not parse/sanitise: CC[NH+]1c2ccc(C]
+P00220                   -                      FAIL[state: parent SMILES does not parse/sanitise: CC[NH+]1c2ccc(C]
+P00221                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 25/30 clusters 2
+P00222                   parent               etkdg_v3: valid 30/30 clusters 15 td: valid 10/30 clusters 23
+P00223                   parent               etkdg_v3: valid 30/30 clusters 12 td: valid 9/30 clusters 29
+P00224                   parent               etkdg_v3: valid 30/30 clusters 4  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00225                   parent               etkdg_v3: valid 30/30 clusters 4  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00226                   parent               etkdg_v3: valid 30/30 clusters 4  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00227                   parent               etkdg_v3: valid 26/30 clusters 30 td: valid 7/30 clusters 30
+P00228                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 4, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00229                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 3, 'specified': False}, {'kind': 'atom', 'centered_on': 7, 'specified': False}, {'kind': 'atom', 'centered_on': 17, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00230                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 3, 'specified': False}, {'kind': 'atom', 'centered_on': 7, 'specified': False}, {'kind': 'atom', 'centered_on': 17, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00231                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 3, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00232                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 3, 'specified': False}, {'kind': 'atom', 'centered_on': 7, 'specified': False}, {'kind': 'Atom_SquarePlanar', 'centered_on': 17, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00233                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 3, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00234                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 30/30 clusters 2
+P00235                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 30/30 clusters 1
+P00236                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 30/30 clusters 1
+P00237                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 30/30 clusters 2
+P00238                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 12, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00239                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 12, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00240                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 12, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00241                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 12, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00242                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 12, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00243                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 15, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00244                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 20/30 clusters 2
+P00245                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00246                   parent               etkdg_v3: valid 27/30 clusters 28 td: valid 1/30 clusters 30
+P00247                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00248                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00249                   -                      FAIL[state: parent SMILES does not parse/sanitise: CN1c2ccc(C]
+P00250                   -                      FAIL[state: parent SMILES does not parse/sanitise: CN1c2ccc(C]
+P00251                   -                      FAIL[state: parent SMILES does not parse/sanitise: CN1c2ccc(C]
+P00252                   -                      FAIL[state: parent SMILES does not parse/sanitise: CN1c2ccc(C]
+P00253                   -                      FAIL[state: parent SMILES does not parse/sanitise: CN1c2ccc(C]
+P00254                   -                      FAIL[state: parent SMILES does not parse/sanitise: CN1c2ccc(C]
+P00255                   -                      FAIL[state: parent SMILES does not parse/sanitise: CN1c2ccc(C]
+P00256                   -                      FAIL[state: parent SMILES does not parse/sanitise: CN1c2ccc(C]
+P00257                   -                      FAIL[state: parent SMILES does not parse/sanitise: CNC(=O)c1c(NCC2CCC3(CCC3)CC2)[nH+]c(C]
+P00258                   -                      FAIL[state: parent SMILES does not parse/sanitise: CNC(=O)c1c(NCC2CCC3(CCC3)CC2)nc(C]
+P00259                   -                      FAIL[state: parent SMILES does not parse/sanitise: CNC(=O)c1c(NCC2CCC3(CCC3)CC2)nc(C]
+P00260                   -                      FAIL[state: parent SMILES does not parse/sanitise: CNC(=O)c1c(OC2CC(C)(C)NC(C)(C)C2)nc(C]
+P00261                   -                      FAIL[state: parent SMILES does not parse/sanitise: CNC(=O)c1c(OCC2CCN(C)CC2)nc(C]
+P00262                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 13, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00263                   -                      FAIL[state: parent SMILES does not parse/sanitise: CNC(=[OH+])c1c(NCC2CCC3(CCC3)CC2)nc(C]
+P00264                   -                      FAIL[state: parent SMILES does not parse/sanitise: CNC(=[OH+])c1c(NCC2CCC3(CCC3)CC2)nc(C]
+P00265                   parent               etkdg_v3: valid 29/30 clusters 23  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00266                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 13, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00267                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 13, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00268                   parent               etkdg_v3: valid 29/30 clusters 2 td: valid 30/30 clusters 2
+P00269                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 30/30 clusters 2
+P00270                   parent               etkdg_v3: valid 30/30 clusters 3 td: valid 30/30 clusters 4
+P00271                   parent               etkdg_v3: valid 30/30 clusters 3 td: valid 30/30 clusters 3
+P00272                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 23/30 clusters 2
+P00273                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 24/30 clusters 3
+P00274                   parent               etkdg_v3: valid 30/30 clusters 4 td: valid 29/30 clusters 5
+P00275                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 30/30 clusters 4
+P00276                   parent               etkdg_v3: valid 28/30 clusters 8 td: valid 29/30 clusters 16
+P00277                   parent               etkdg_v3: valid 30/30 clusters 29 td: valid 8/30 clusters 30
+P00278                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 28/30 clusters 7
+P00279                   parent               etkdg_v3: valid 30/30 clusters 28 td: valid 21/30 clusters 30
+P00280                   parent               etkdg_v3: valid 30/30 clusters 3  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00281                   parent               etkdg_v3: valid 30/30 clusters 29 td: valid 18/30 clusters 30
+P00282                   parent               etkdg_v3: valid 29/30 clusters 1  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00283                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 2, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00284                   parent               etkdg_v3: valid 30/30 clusters 4 td: valid 30/30 clusters 8
+P00285                   parent               etkdg_v3: valid 29/30 clusters 4 td: valid 25/30 clusters 6
+P00286                   parent               etkdg_v3: valid 30/30 clusters 11 td: valid 30/30 clusters 6
+P00287                   parent               etkdg_v3: valid 30/30 clusters 6 td: valid 25/30 clusters 24
+P00288                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 2, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00289                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 22/30 clusters 2
+P00290                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 25/30 clusters 2
+P00291                   parent               etkdg_v3: valid 28/30 clusters 30 td: valid 5/30 clusters 30
+P00292                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 5, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00293                   parent               etkdg_v3: valid 28/30 clusters 6 td: valid 10/30 clusters 27
+P00294                   parent               etkdg_v3: valid 27/30 clusters 8 td: valid 13/30 clusters 25
+P00295                   parent               etkdg_v3: valid 27/30 clusters 6 td: valid 12/30 clusters 24
+P00296                   parent               etkdg_v3: valid 28/30 clusters 6 td: valid 13/30 clusters 22
+P00297                   parent               etkdg_v3: valid 27/30 clusters 4 td: valid 10/30 clusters 23
+P00298                   parent               etkdg_v3: valid 29/30 clusters 2 td: valid 10/30 clusters 21
+P00299                   parent               etkdg_v3: valid 30/30 clusters 5 td: valid 12/30 clusters 23
+P00300                   parent               etkdg_v3: valid 27/30 clusters 6 td: valid 14/30 clusters 23
+P00301                   parent               etkdg_v3: valid 29/30 clusters 5 td: valid 10/30 clusters 21
+P00302                   parent               etkdg_v3: valid 24/30 clusters 6 td: valid 18/30 clusters 23
+P00303                   parent               etkdg_v3: valid 28/30 clusters 5 td: valid 15/30 clusters 26
+P00304                   parent               etkdg_v3: valid 27/30 clusters 5 td: valid 13/30 clusters 18
+P00305                   parent               etkdg_v3: valid 30/30 clusters 5 td: valid 12/30 clusters 24
+P00306                   parent               etkdg_v3: valid 28/30 clusters 5 td: valid 12/30 clusters 26
+P00307                   parent               etkdg_v3: valid 28/30 clusters 8 td: valid 14/30 clusters 21
+P00308                   parent               etkdg_v3: valid 29/30 clusters 6 td: valid 9/30 clusters 28
+P00309                   parent               etkdg_v3: valid 29/30 clusters 6 td: valid 14/30 clusters 19
+P00310                   parent               etkdg_v3: valid 30/30 clusters 5 td: valid 2/30 clusters 11
+P00311                   parent               etkdg_v3: valid 30/30 clusters 16 td: valid 10/30 clusters 23
+P00312                   parent               etkdg_v3: valid 30/30 clusters 7 td: valid 20/30 clusters 28
+P00313                   parent               etkdg_v3: valid 27/30 clusters 9 td: valid 17/30 clusters 27
+P00314                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 11, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00315                   parent               etkdg_v3: valid 30/30 clusters 3 td: valid 17/30 clusters 7
+P00316                   parent               etkdg_v3: valid 30/30 clusters 14 td: valid 3/30 clusters 23
+P00317                   parent               etkdg_v3: valid 30/30 clusters 1  FAIL[td: atom types ['Br'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00318                   -                      FAIL[state: parent SMILES does not parse/sanitise: COc1ccc(C]
+P00319                   -                      FAIL[state: parent SMILES does not parse/sanitise: COc1ccc(C]
+P00320                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 29/30 clusters 2
+P00321                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 28/30 clusters 3
+P00322                   parent               td: valid 3/30 clusters 30  FAIL[etkdg_v3: RuntimeError: ETKDGv3 embedded 26/30]
+P00323                   parent               etkdg_v3: valid 27/30 clusters 30 td: valid 2/30 clusters 30
+P00324                   parent               etkdg_v3: valid 26/30 clusters 30  FAIL[td: RuntimeError: ETKDG seed embedding failed]
+P00325                   parent                 FAIL[etkdg_v3: RuntimeError: ETKDGv3 embedded 15/30; td: RuntimeError: ETKDG seed embedding failed]
+P00326                   parent               etkdg_v3: valid 25/30 clusters 30 td: valid 2/30 clusters 30
+P00327                   parent                 FAIL[etkdg_v3: RuntimeError: ETKDGv3 embedded 12/30; td: RuntimeError: ETKDG seed embedding failed]
+P00328                   parent                 FAIL[etkdg_v3: RuntimeError: ETKDGv3 embedded 3/30; td: RuntimeError: ETKDG seed embedding failed]
+P00329                   parent                 FAIL[etkdg_v3: RuntimeError: ETKDGv3 embedded 18/30; td: RuntimeError: ETKDG seed embedding failed]
+P00330                   parent                 FAIL[etkdg_v3: RuntimeError: ETKDGv3 embedded 6/30; td: RuntimeError: ETKDG seed embedding failed]
+P00331                   parent               etkdg_v3: valid 30/30 clusters 28  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00332                   parent               etkdg_v3: valid 30/30 clusters 28  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00333                   parent               etkdg_v3: valid 30/30 clusters 13 td: valid 24/30 clusters 8
+P00334                   parent               etkdg_v3: valid 27/30 clusters 12  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00335                   parent               etkdg_v3: valid 23/30 clusters 8  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00336                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 9, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00337                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 9, 'specified': False}, {'kind': 'atom', 'centered_on': 12, 'specified': False}, {'kind': 'atom', 'centered_on': 15, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00338                   parent               etkdg_v3: valid 30/30 clusters 12 td: valid 13/30 clusters 7
+P00339                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 6, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00340                   parent               etkdg_v3: valid 30/30 clusters 28 td: valid 22/30 clusters 30
+P00341                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 17, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00342                   parent               etkdg_v3: valid 30/30 clusters 5  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00343                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 17, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00344                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 17, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00345                   parent               etkdg_v3: valid 30/30 clusters 17  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00346                   parent               etkdg_v3: valid 30/30 clusters 11 td: valid 15/30 clusters 21
+P00347                   parent               etkdg_v3: valid 28/30 clusters 15  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00348                   parent               etkdg_v3: valid 28/30 clusters 14  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00349                   parent               etkdg_v3: valid 28/30 clusters 13  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00350                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 2
+P00351                   -                      FAIL[state: parent SMILES does not parse/sanitise: COc1cccc(C(=O)Cn2c[nH+]c3c(C]
+P00352                   -                      FAIL[state: parent SMILES does not parse/sanitise: COc1cccc(C(=O)Cn2c[nH+]c3c(C]
+P00353                   -                      FAIL[state: parent SMILES does not parse/sanitise: COc1cccc(C(=O)Cn2cnc3c(C]
+P00354                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 28, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00355                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 28, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00356                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 28, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00357                   parent               etkdg_v3: valid 28/30 clusters 7  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00358                   parent               etkdg_v3: valid 28/30 clusters 6  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00359                   parent               etkdg_v3: valid 27/30 clusters 26  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00360                   parent               etkdg_v3: valid 28/30 clusters 26  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00361                   parent               etkdg_v3: valid 30/30 clusters 16 td: valid 15/30 clusters 15
+P00362                   parent               etkdg_v3: valid 30/30 clusters 3 td: valid 9/30 clusters 10
+P00363                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 8, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00364                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 7, 'specified': False}, {'kind': 'atom', 'centered_on': 10, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00365                   parent               etkdg_v3: valid 30/30 clusters 25  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00366                   parent               etkdg_v3: valid 30/30 clusters 26  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00367                   parent               etkdg_v3: valid 30/30 clusters 23  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00368                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 29/30 clusters 1
+P00369                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00370                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00371                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00372                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00373                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00374                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00375                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00376                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00377                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00378                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 1, 'specified': False}, {'kind': 'atom', 'centered_on': 5, 'specified': False}, {'kind': 'atom', 'centered_on': 15, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00379                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 1, 'specified': False}, {'kind': 'atom', 'centered_on': 5, 'specified': False}, {'kind': 'atom', 'centered_on': 15, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00380                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00381                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00382                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00383                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00384                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00385                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00386                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 1, 'specified': False}, {'kind': 'atom', 'centered_on': 5, 'specified': False}, {'kind': 'atom', 'centered_on': 15, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00387                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00388                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00389                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00390                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00391                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00392                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00393                   parent               etkdg_v3: valid 30/30 clusters 5  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00394                   parent               etkdg_v3: valid 30/30 clusters 6  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00395                   parent               etkdg_v3: valid 30/30 clusters 4  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00396                   parent               etkdg_v3: valid 30/30 clusters 5  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00397                   parent               etkdg_v3: valid 30/30 clusters 4  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00398                   parent               etkdg_v3: valid 30/30 clusters 6  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00399                   parent               etkdg_v3: valid 30/30 clusters 9  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00400                   parent               etkdg_v3: valid 30/30 clusters 4 td: valid 9/30 clusters 3
+P00401                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 30, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00402                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 28, 'specified': False}, {'kind': 'Atom_SquarePlanar', 'centered_on': 30, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00403                   -                      FAIL[state: parent SMILES does not parse/sanitise: C[N-]C(=O)c1c(NCC2CCC3(CCC3)CC2)nc(C]
+P00404                   parent               etkdg_v3: valid 30/30 clusters 28  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00405                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 13, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00406                   parent               etkdg_v3: valid 30/30 clusters 18  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00407                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 3, 'specified': False}, {'kind': 'atom', 'centered_on': 7, 'specified': False}, {'kind': 'atom', 'centered_on': 17, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00408                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00409                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 1, 'specified': False}, {'kind': 'Atom_SquarePlanar', 'centered_on': 12, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00410                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00411                   -                      FAIL[state: parent SMILES does not parse/sanitise: C[NH+]1c2ccc(C]
+P00412                   -                      FAIL[state: parent SMILES does not parse/sanitise: C[NH+]1c2ccc(C]
+P00413                   -                      FAIL[state: parent SMILES does not parse/sanitise: C[NH+]1c2ccc(C]
+P00414                   -                      FAIL[state: parent SMILES does not parse/sanitise: C[NH+]1c2ccc(C]
+P00415                   -                      FAIL[state: parent SMILES does not parse/sanitise: C[NH+]1c2ccc(C]
+P00416                   -                      FAIL[state: parent SMILES does not parse/sanitise: C[NH+]1c2ccc(C]
+P00417                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00418                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00419                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 10, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00420                   parent               etkdg_v3: valid 30/30 clusters 14  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00421                   parent               etkdg_v3: valid 26/30 clusters 13  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00422                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 10, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00423                   parent               etkdg_v3: valid 30/30 clusters 28  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00424                   parent               etkdg_v3: valid 30/30 clusters 1  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00425                   parent               etkdg_v3: valid 29/30 clusters 30 td: valid 2/30 clusters 30
+P00426                   parent               etkdg_v3: valid 28/30 clusters 30 td: valid 3/30 clusters 30
+P00427                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 16, 'specified': False}, {'kind': 'atom', 'centered_on': 19, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00428                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 2
+P00429                   parent               etkdg_v3: valid 30/30 clusters 30 td: valid 20/30 clusters 30
+P00430                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 22/30 clusters 2
+P00431                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00432                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 14, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00433                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 14, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00434                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00435                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 14, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00436                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00437                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00438                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 27/30 clusters 1
+P00439                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00440                   parent               etkdg_v3: valid 30/30 clusters 1  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00441                   parent               etkdg_v3: valid 30/30 clusters 29 td: valid 24/30 clusters 19
+P00442                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 11, 'specified': False}, {'kind': 'atom', 'centered_on': 14, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00443                   parent               etkdg_v3: valid 30/30 clusters 27 td: valid 21/30 clusters 30
+P00444                   parent               etkdg_v3: valid 30/30 clusters 28 td: valid 16/30 clusters 30
+P00445                   parent               etkdg_v3: valid 30/30 clusters 27 td: valid 16/30 clusters 30
+P00446                   parent               etkdg_v3: valid 30/30 clusters 27 td: valid 14/30 clusters 30
+P00447                   parent               etkdg_v3: valid 30/30 clusters 26 td: valid 20/30 clusters 30
+P00448                   parent               etkdg_v3: valid 30/30 clusters 30 td: valid 5/30 clusters 30
+P00449                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 7, 'specified': False}, {'kind': 'atom', 'centered_on': 10, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00450                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 7, 'specified': False}, {'kind': 'atom', 'centered_on': 10, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00451                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 7, 'specified': False}, {'kind': 'atom', 'centered_on': 10, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00452                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 7, 'specified': False}, {'kind': 'atom', 'centered_on': 10, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00453                   parent               etkdg_v3: valid 30/30 clusters 8 td: valid 12/30 clusters 18
+P00454                   parent               etkdg_v3: valid 30/30 clusters 7 td: valid 16/30 clusters 19
+P00455                   parent               etkdg_v3: valid 30/30 clusters 9 td: valid 19/30 clusters 17
+P00456                   parent               etkdg_v3: valid 30/30 clusters 7 td: valid 16/30 clusters 16
+P00457                   parent               etkdg_v3: valid 30/30 clusters 9 td: valid 20/30 clusters 13
+P00458                   parent               etkdg_v3: valid 30/30 clusters 9 td: valid 18/30 clusters 16
+P00459                   parent               etkdg_v3: valid 30/30 clusters 6 td: valid 15/30 clusters 19
+P00460                   parent               etkdg_v3: valid 30/30 clusters 8 td: valid 19/30 clusters 14
+P00461                   parent               etkdg_v3: valid 30/30 clusters 7 td: valid 18/30 clusters 14
+P00462                   parent               etkdg_v3: valid 30/30 clusters 10 td: valid 16/30 clusters 15
+P00463                   parent               etkdg_v3: valid 30/30 clusters 9 td: valid 16/30 clusters 15
+P00464                   parent               etkdg_v3: valid 30/30 clusters 7 td: valid 19/30 clusters 18
+P00465                   parent               etkdg_v3: valid 30/30 clusters 9 td: valid 19/30 clusters 15
+P00466                   parent               etkdg_v3: valid 30/30 clusters 7 td: valid 14/30 clusters 15
+P00467                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00468                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00469                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00470                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00471                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 18, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00472                   parent               etkdg_v3: valid 29/30 clusters 29 td: valid 12/30 clusters 30
+P00473                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 21/30 clusters 3
+P00474                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 20/30 clusters 2
+P00475                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 22/30 clusters 2
+P00476                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 16/30 clusters 3
+P00477                   parent               etkdg_v3: valid 30/30 clusters 1  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00478                   parent               etkdg_v3: valid 30/30 clusters 1  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00479                   parent               etkdg_v3: valid 30/30 clusters 10  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00480                   parent               etkdg_v3: valid 30/30 clusters 14  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00481                   parent               etkdg_v3: valid 30/30 clusters 14 td: valid 8/30 clusters 27
+P00482                   parent               etkdg_v3: valid 29/30 clusters 15 td: valid 11/30 clusters 25
+P00483                   parent               etkdg_v3: valid 29/30 clusters 7  FAIL[td: atom types ['Cl', 'S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00484                   parent               etkdg_v3: valid 30/30 clusters 12  FAIL[td: atom types ['Cl', 'S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00485                   parent               etkdg_v3: valid 30/30 clusters 16 td: valid 12/30 clusters 25
+P00486                   parent               etkdg_v3: valid 30/30 clusters 26 td: valid 8/30 clusters 26
+P00487                   parent               etkdg_v3: valid 30/30 clusters 26 td: valid 16/30 clusters 30
+P00488                   parent               etkdg_v3: valid 30/30 clusters 12  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00489                   parent               etkdg_v3: valid 30/30 clusters 8  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00490                   -                      FAIL[state: parent SMILES does not parse/sanitise: Cc1ccc(OC(C)(C)C(=O)N[C@@H](C)[C@@H](Cc2ccc(OCCF)cc2)c2cccc(C]
+P00491                   -                      FAIL[state: parent SMILES does not parse/sanitise: Cc1ccc(OC(C)(C)C(=O)[N-][C@@H](C)[C@@H](Cc2ccc(OCCF)cc2)c2cccc(C]
+P00492                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 5, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00493                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 5, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00494                   parent               etkdg_v3: valid 30/30 clusters 26 td: valid 9/30 clusters 28
+P00495                   parent               etkdg_v3: valid 29/30 clusters 26  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00496                   parent               etkdg_v3: valid 30/30 clusters 15  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00497                   parent               etkdg_v3: valid 29/30 clusters 4 td: valid 12/30 clusters 10
+P00498                   parent               etkdg_v3: valid 29/30 clusters 3 td: valid 10/30 clusters 11
+P00499                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 5/30 clusters 7
+P00500                   parent               etkdg_v3: valid 30/30 clusters 4 td: valid 7/30 clusters 11
+P00501                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 5/30 clusters 8
+P00502                   parent               etkdg_v3: valid 30/30 clusters 3 td: valid 25/30 clusters 5
+P00503                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 10/30 clusters 2
+P00504                   parent               etkdg_v3: valid 30/30 clusters 9  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00505                   -                      FAIL[state: parent SMILES does not parse/sanitise: Cc1nc(-c2ccc(OCC(C)C)c(C]
+P00506                   -                      FAIL[state: parent SMILES does not parse/sanitise: Cc1nc(-c2ccc(OCC(C)C)c(C]
+P00507                   -                      FAIL[state: parent SMILES does not parse/sanitise: Cc1nc(-c2ccc(OCC(C)C)c(C]
+P00508                   parent               etkdg_v3: valid 30/30 clusters 14  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00509                   parent               etkdg_v3: valid 30/30 clusters 28  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00510                   -                      FAIL[state: parent SMILES does not parse/sanitise: Cc1nc(C]
+P00511                   parent               etkdg_v3: valid 29/30 clusters 11  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00512                   parent               etkdg_v3: valid 30/30 clusters 30  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00513                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 28/30 clusters 2
+P00514                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00515                   parent               etkdg_v3: valid 30/30 clusters 1  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00516                   parent               etkdg_v3: valid 29/30 clusters 20 td: valid 7/30 clusters 30
+P00517                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 21, 'specified': False}, {'kind': 'atom', 'centered_on': 24, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00518                   parent               etkdg_v3: valid 29/30 clusters 30 td: valid 4/30 clusters 30
+P00519                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 16, 'specified': False}, {'kind': 'atom', 'centered_on': 19, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00520                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 16, 'specified': False}, {'kind': 'atom', 'centered_on': 19, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00521                   parent               etkdg_v3: valid 30/30 clusters 24 td: valid 15/30 clusters 29
+P00522                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00523                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00524                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00525                   parent               etkdg_v3: valid 30/30 clusters 1  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00526                   -                      FAIL[state: parent SMILES does not parse/sanitise: Cc1sc(Nc2ccc(C]
+P00527                   -                      FAIL[state: parent SMILES does not parse/sanitise: Cc1sc(Nc2ccc(C]
+P00528                   -                      FAIL[state: parent SMILES does not parse/sanitise: Cc1sc(Nc2ccc(C]
+P00529                   -                      FAIL[state: parent SMILES does not parse/sanitise: Cc1sc([N-]c2ccc(C]
+P00530                   -                      FAIL[state: parent SMILES does not parse/sanitise: Cc1sc([N-]c2ccc(C]
+P00531                   -                      FAIL[state: parent SMILES does not parse/sanitise: Cc1sc([NH2+]c2ccc(C]
+P00532                   -                      FAIL[state: parent SMILES does not parse/sanitise: Cc1sc([NH2+]c2ccc(C]
+P00533                   -                      FAIL[state: parent SMILES does not parse/sanitise: Cc1sc([NH2+]c2ccc(C]
+P00534                   -                      FAIL[state: parent SMILES does not parse/sanitise: Cc1sc([NH2+]c2ccc(C]
+P00535                   parent               etkdg_v3: valid 30/30 clusters 1  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00536                   parent               etkdg_v3: valid 29/30 clusters 4  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00537                   parent               etkdg_v3: valid 30/30 clusters 20  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00538                   parent               etkdg_v3: valid 30/30 clusters 1  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00539                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 20/30 clusters 4
+P00540                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00541                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00542                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00543                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 28/30 clusters 1
+P00544                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00545                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 6, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00546                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00547                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 19/30 clusters 4
+P00548                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00549                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00550                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00551                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00552                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00553                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00554                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00555                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 29/30 clusters 1
+P00556                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00557                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00558                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 29/30 clusters 2
+P00559                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 30/30 clusters 2
+P00560                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00561                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 29/30 clusters 1
+P00562                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00563                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00564                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00565                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00566                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00567                   parent               etkdg_v3: valid 30/30 clusters 18 td: valid 16/30 clusters 21
+P00568                   parent               etkdg_v3: valid 30/30 clusters 16 td: valid 25/30 clusters 19
+P00569                   parent               etkdg_v3: valid 30/30 clusters 13 td: valid 23/30 clusters 20
+P00570                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 28/30 clusters 3
+P00571                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 27/30 clusters 4
+P00572                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 26/30 clusters 2
+P00573                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 29/30 clusters 2
+P00574                   parent               etkdg_v3: valid 30/30 clusters 3  FAIL[td: atom types ['I'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00575                   parent               etkdg_v3: valid 30/30 clusters 2  FAIL[td: atom types ['I'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00576                   -                      FAIL[state: not a protomer/tautomer of the parent: heavy-atom skeleton differs]
+P00577                   -                      FAIL[state: not a protomer/tautomer of the parent: heavy-atom skeleton differs]
+P00578                   -                      FAIL[state: not a protomer/tautomer of the parent: heavy-atom skeleton differs]
+P00579                   -                      FAIL[state: not a protomer/tautomer of the parent: heavy-atom skeleton differs]
+P00580                   -                      FAIL[state: not a protomer/tautomer of the parent: heavy-atom skeleton differs]
+P00581                   -                      FAIL[state: not a protomer/tautomer of the parent: heavy-atom skeleton differs]
+P00582                   -                      FAIL[state: not a protomer/tautomer of the parent: heavy-atom skeleton differs]
+P00583                   -                      FAIL[state: not a protomer/tautomer of the parent: heavy-atom skeleton differs]
+P00584                   -                      FAIL[state: not a protomer/tautomer of the parent: heavy-atom skeleton differs]
+P00585                   -                      FAIL[state: not a protomer/tautomer of the parent: heavy-atom skeleton differs]
+P00586                   -                      FAIL[state: not a protomer/tautomer of the parent: heavy-atom skeleton differs]
+P00587                   -                      FAIL[state: not a protomer/tautomer of the parent: heavy-atom skeleton differs]
+P00588                   -                      FAIL[state: not a protomer/tautomer of the parent: heavy-atom skeleton differs]
+P00589                   -                      FAIL[state: not a protomer/tautomer of the parent: heavy-atom skeleton differs]
+P00590                   -                      FAIL[state: not a protomer/tautomer of the parent: heavy-atom skeleton differs]
+P00591                   -                      FAIL[state: not a protomer/tautomer of the parent: heavy-atom skeleton differs]
+P00592                   -                      FAIL[state: not a protomer/tautomer of the parent: heavy-atom skeleton differs]
+P00593                   -                      FAIL[state: not a protomer/tautomer of the parent: heavy-atom skeleton differs]
+P00594                   -                      FAIL[state: not a protomer/tautomer of the parent: heavy-atom skeleton differs]
+P00595                   -                      FAIL[state: not a protomer/tautomer of the parent: heavy-atom skeleton differs]
+P00596                   -                      FAIL[state: not a protomer/tautomer of the parent: heavy-atom skeleton differs]
+P00597                   -                      FAIL[state: not a protomer/tautomer of the parent: heavy-atom skeleton differs]
+P00598                   -                      FAIL[state: not a protomer/tautomer of the parent: heavy-atom skeleton differs]
+P00599                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00600                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00601                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00602                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00603                   parent               etkdg_v3: valid 30/30 clusters 1  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00604                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00605                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00606                   parent               etkdg_v3: valid 30/30 clusters 1  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00607                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00608                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00609                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00610                   parent               etkdg_v3: valid 28/30 clusters 1  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00611                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00612                   parent               etkdg_v3: valid 30/30 clusters 1  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00613                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 2
+P00614                   parent               etkdg_v3: valid 29/30 clusters 1  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00615                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00616                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00617                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00618                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00619                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00620                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00621                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00622                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00623                   parent               etkdg_v3: valid 29/30 clusters 17 td: valid 22/30 clusters 21
+P00624                   parent               etkdg_v3: valid 28/30 clusters 15 td: valid 16/30 clusters 24
+P00625                   parent               etkdg_v3: valid 30/30 clusters 22 td: valid 8/30 clusters 19
+P00626                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00627                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00628                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00629                   parent               etkdg_v3: valid 30/30 clusters 6 td: valid 30/30 clusters 7
+P00630                   parent               etkdg_v3: valid 30/30 clusters 6 td: valid 30/30 clusters 6
+P00631                   parent               etkdg_v3: valid 30/30 clusters 7 td: valid 30/30 clusters 7
+P00632                   parent               etkdg_v3: valid 29/30 clusters 3 td: valid 26/30 clusters 5
+P00633                   parent               etkdg_v3: valid 30/30 clusters 11 td: valid 22/30 clusters 11
+P00634                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00635                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00636                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00637                   parent               etkdg_v3: valid 30/30 clusters 10  FAIL[td: atom types ['Br'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00638                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00639                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00640                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00641                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00642                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00643                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00644                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00645                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00646                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00647                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00648                   parent               etkdg_v3: valid 30/30 clusters 1  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00649                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 30/30 clusters 2
+P00650                   parent               etkdg_v3: valid 30/30 clusters 17  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00651                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00652                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00653                   parent               etkdg_v3: valid 30/30 clusters 1  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00654                   parent               etkdg_v3: valid 30/30 clusters 16  FAIL[td: atom types ['Br'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00655                   parent               etkdg_v3: valid 30/30 clusters 7  FAIL[td: atom types ['Br'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00656                   parent               etkdg_v3: valid 30/30 clusters 6  FAIL[td: atom types ['Br'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00657                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00658                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00659                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00660                   parent               etkdg_v3: valid 30/30 clusters 1  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00661                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 30/30 clusters 3
+P00662                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00663                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00664                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00665                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00666                   parent               etkdg_v3: valid 28/30 clusters 1  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00667                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00668                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00669                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00670                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 30/30 clusters 1
+P00671                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00672                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00673                   parent               etkdg_v3: valid 30/30 clusters 1  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00674                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 2
+P00675                   parent               etkdg_v3: valid 29/30 clusters 1  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00676                   parent               etkdg_v3: valid 30/30 clusters 4 td: valid 17/30 clusters 3
+P00677                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 9/30 clusters 2
+P00678                   parent               etkdg_v3: valid 30/30 clusters 4 td: valid 6/30 clusters 2
+P00679                   parent               etkdg_v3: valid 30/30 clusters 4 td: valid 7/30 clusters 3
+P00680                   parent               etkdg_v3: valid 30/30 clusters 4 td: valid 9/30 clusters 3
+P00681                   parent               etkdg_v3: valid 30/30 clusters 3  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00682                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 9/30 clusters 2
+P00683                   parent               etkdg_v3: valid 30/30 clusters 4 td: valid 4/30 clusters 2
+P00684                   parent               etkdg_v3: valid 30/30 clusters 3 td: valid 23/30 clusters 3
+P00685                   parent               etkdg_v3: valid 30/30 clusters 4 td: valid 9/30 clusters 3
+P00686                   parent               etkdg_v3: valid 30/30 clusters 5 td: valid 5/30 clusters 5
+P00687                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 5/30 clusters 2
+P00688                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 19/30 clusters 4
+P00689                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 24/30 clusters 2
+P00690                   parent               etkdg_v3: valid 22/30 clusters 4 td: valid 8/30 clusters 14
+P00691                   parent               etkdg_v3: valid 27/30 clusters 3 td: valid 24/30 clusters 7
+P00692                   parent               etkdg_v3: valid 27/30 clusters 3 td: valid 24/30 clusters 9
+P00693                   parent               etkdg_v3: valid 28/30 clusters 3 td: valid 22/30 clusters 9
+P00694                   parent               etkdg_v3: valid 30/30 clusters 2  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00695                   parent               etkdg_v3: valid 30/30 clusters 7 td: valid 8/30 clusters 9
+P00696                   parent               etkdg_v3: valid 30/30 clusters 10  FAIL[td: atom types ['Cl', 'S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00697                   parent               etkdg_v3: valid 23/30 clusters 10  FAIL[td: atom types ['Cl', 'S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00698                   parent               etkdg_v3: valid 30/30 clusters 2  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00699                   parent               etkdg_v3: valid 30/30 clusters 2  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00700                   parent               etkdg_v3: valid 30/30 clusters 6  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00701                   parent               etkdg_v3: valid 30/30 clusters 25  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00702                   parent               etkdg_v3: valid 30/30 clusters 30  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00703                   parent               etkdg_v3: valid 30/30 clusters 30  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00704                   parent               etkdg_v3: valid 28/30 clusters 4 td: valid 29/30 clusters 8
+P00705                   parent               etkdg_v3: valid 30/30 clusters 5 td: valid 29/30 clusters 11
+P00706                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 13, 'specified': False}, {'kind': 'atom', 'centered_on': 16, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00707                   parent               etkdg_v3: valid 30/30 clusters 4 td: valid 30/30 clusters 6
+P00708                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 27/30 clusters 13
+P00709                   parent               etkdg_v3: valid 30/30 clusters 5 td: valid 30/30 clusters 12
+P00710                   parent               etkdg_v3: valid 30/30 clusters 6 td: valid 30/30 clusters 9
+P00711                   parent               etkdg_v3: valid 30/30 clusters 3  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00712                   parent               etkdg_v3: valid 30/30 clusters 3 td: valid 29/30 clusters 9
+P00713                   parent               etkdg_v3: valid 30/30 clusters 4 td: valid 29/30 clusters 15
+P00714                   parent               etkdg_v3: valid 30/30 clusters 6 td: valid 30/30 clusters 11
+P00715                   parent               etkdg_v3: valid 30/30 clusters 6 td: valid 29/30 clusters 13
+P00716                   parent               etkdg_v3: valid 30/30 clusters 7 td: valid 22/30 clusters 17
+P00717                   parent               etkdg_v3: valid 30/30 clusters 3 td: valid 30/30 clusters 7
+P00718                   parent               etkdg_v3: valid 30/30 clusters 4 td: valid 30/30 clusters 11
+P00719                   parent               etkdg_v3: valid 30/30 clusters 30 td: valid 7/30 clusters 30
+P00720                   parent               etkdg_v3: valid 2/30 clusters 1 td: valid 11/30 clusters 3
+P00721                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 23/30 clusters 3
+P00722                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 15/30 clusters 3
+P00723                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 14, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00724                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 14, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00725                   parent               etkdg_v3: valid 30/30 clusters 12  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00726                   parent               etkdg_v3: valid 30/30 clusters 4  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00727                   parent               etkdg_v3: valid 30/30 clusters 4  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00728                   parent               etkdg_v3: valid 30/30 clusters 4  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00729                   parent               etkdg_v3: valid 30/30 clusters 2  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00730                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 17/30 clusters 3
+P00731                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 19/30 clusters 4
+P00732                   parent               etkdg_v3: valid 30/30 clusters 3 td: valid 21/30 clusters 15
+P00733                   parent               etkdg_v3: valid 30/30 clusters 14 td: valid 20/30 clusters 29
+P00734                   parent               etkdg_v3: valid 30/30 clusters 4  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00735                   parent               etkdg_v3: valid 30/30 clusters 10  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00736                   parent               etkdg_v3: valid 29/30 clusters 12  FAIL[td: atom types ['Cl', 'S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00737                   parent               etkdg_v3: valid 28/30 clusters 4  FAIL[td: atom types ['Cl', 'S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00738                   parent               etkdg_v3: valid 25/30 clusters 10  FAIL[td: atom types ['Cl', 'S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00739                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00740                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 29/30 clusters 2
+P00741                   parent               etkdg_v3: valid 29/30 clusters 3 td: valid 29/30 clusters 1
+P00742                   parent               etkdg_v3: valid 30/30 clusters 6 td: valid 29/30 clusters 7
+P00743                   parent               etkdg_v3: valid 30/30 clusters 10  FAIL[td: atom types ['Br', 'S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00744                   parent               etkdg_v3: valid 30/30 clusters 6 td: valid 26/30 clusters 8
+P00745                   parent               etkdg_v3: valid 30/30 clusters 4  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00746                   parent               etkdg_v3: valid 30/30 clusters 11  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00747                   parent               etkdg_v3: valid 30/30 clusters 21 td: valid 28/30 clusters 30
+P00748                   parent               etkdg_v3: valid 30/30 clusters 8 td: valid 14/30 clusters 17
+P00749                   parent               etkdg_v3: valid 30/30 clusters 12 td: valid 17/30 clusters 21
+P00750                   parent               etkdg_v3: valid 30/30 clusters 14 td: valid 11/30 clusters 23
+P00751                   parent               etkdg_v3: valid 5/30 clusters 1 td: valid 6/30 clusters 2
+P00752                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 26/30 clusters 2
+P00753                   parent               etkdg_v3: valid 30/30 clusters 3 td: valid 29/30 clusters 4
+P00754                   parent               etkdg_v3: valid 30/30 clusters 29 td: valid 6/30 clusters 30
+P00755                   parent               etkdg_v3: valid 30/30 clusters 24  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00756                   parent               etkdg_v3: valid 30/30 clusters 25  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00757                   parent               etkdg_v3: valid 30/30 clusters 20  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00758                   parent               etkdg_v3: valid 30/30 clusters 23  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00759                   parent               etkdg_v3: valid 28/30 clusters 20 td: valid 14/30 clusters 17
+P00760                   parent               etkdg_v3: valid 30/30 clusters 29 td: valid 9/30 clusters 29
+P00761                   parent               etkdg_v3: valid 30/30 clusters 29  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00762                   parent               etkdg_v3: valid 30/30 clusters 26  FAIL[td: atom types ['Cl', 'S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00763                   parent               etkdg_v3: valid 30/30 clusters 29  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00764                   parent               etkdg_v3: valid 30/30 clusters 9  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00765                   parent               etkdg_v3: valid 28/30 clusters 12  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00766                   parent               etkdg_v3: valid 30/30 clusters 6 td: valid 29/30 clusters 8
+P00767                   parent               etkdg_v3: valid 30/30 clusters 6 td: valid 30/30 clusters 8
+P00768                   parent               etkdg_v3: valid 30/30 clusters 12  FAIL[td: atom types ['Br', 'S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00769                   parent               etkdg_v3: valid 30/30 clusters 11  FAIL[td: atom types ['Br', 'S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00770                   parent               etkdg_v3: valid 30/30 clusters 9  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00771                   parent               etkdg_v3: valid 30/30 clusters 16  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00772                   parent               etkdg_v3: valid 30/30 clusters 9  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00773                   parent               etkdg_v3: valid 26/30 clusters 13  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00774                   parent               etkdg_v3: valid 30/30 clusters 5 td: valid 28/30 clusters 8
+P00775                   parent               etkdg_v3: valid 30/30 clusters 6  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00776                   parent               etkdg_v3: valid 29/30 clusters 2  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00777                   parent               etkdg_v3: valid 30/30 clusters 4  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00778                   parent               etkdg_v3: valid 29/30 clusters 1 td: valid 29/30 clusters 1
+P00779                   parent               etkdg_v3: valid 28/30 clusters 2  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00780                   parent               etkdg_v3: valid 30/30 clusters 8  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00781                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 9, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00782                   parent               etkdg_v3: valid 29/30 clusters 20  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00783                   parent               etkdg_v3: valid 30/30 clusters 21 td: valid 28/30 clusters 28
+P00784                   parent               etkdg_v3: valid 30/30 clusters 22  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00785                   parent               etkdg_v3: valid 30/30 clusters 21 td: valid 24/30 clusters 28
+P00786                   parent               etkdg_v3: valid 30/30 clusters 23 td: valid 22/30 clusters 28
+P00787                   parent               etkdg_v3: valid 30/30 clusters 5 td: valid 10/30 clusters 19
+P00788                   parent               etkdg_v3: valid 30/30 clusters 7 td: valid 8/30 clusters 17
+P00789                   parent               etkdg_v3: valid 30/30 clusters 14  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00790                   parent               etkdg_v3: valid 30/30 clusters 8 td: valid 10/30 clusters 15
+P00791                   parent               etkdg_v3: valid 30/30 clusters 10 td: valid 15/30 clusters 21
+P00792                   parent               etkdg_v3: valid 30/30 clusters 14 td: valid 17/30 clusters 23
+P00793                   parent               etkdg_v3: valid 30/30 clusters 19  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00794                   parent               etkdg_v3: valid 30/30 clusters 14 td: valid 15/30 clusters 24
+P00795                   parent               etkdg_v3: valid 30/30 clusters 6 td: valid 21/30 clusters 23
+P00796                   parent               etkdg_v3: valid 30/30 clusters 17  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00797                   parent               etkdg_v3: valid 30/30 clusters 6 td: valid 20/30 clusters 21
+P00798                   parent               etkdg_v3: valid 30/30 clusters 3 td: valid 29/30 clusters 7
+P00799                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 26/30 clusters 2
+P00800                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 30/30 clusters 1
+P00801                   parent               etkdg_v3: valid 30/30 clusters 7 td: valid 30/30 clusters 6
+P00802                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00803                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00804                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00805                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00806                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00807                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00808                   parent               etkdg_v3: valid 30/30 clusters 1  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00809                   parent               etkdg_v3: valid 30/30 clusters 4 td: valid 14/30 clusters 5
+P00810                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00811                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00812                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00813                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00814                   parent               etkdg_v3: valid 30/30 clusters 25 td: valid 23/30 clusters 29
+P00815                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 5, 'specified': False}, {'kind': 'atom', 'centered_on': 8, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00816                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 5, 'specified': False}, {'kind': 'atom', 'centered_on': 10, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00817                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00818                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 6, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00819                   parent               etkdg_v3: valid 30/30 clusters 4 td: valid 30/30 clusters 4
+P00820                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00821                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00822                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00823                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00824                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00825                   parent               etkdg_v3: valid 30/30 clusters 3 td: valid 29/30 clusters 1
+P00826                   parent               etkdg_v3: valid 30/30 clusters 3 td: valid 30/30 clusters 2
+P00827                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00828                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00829                   parent               etkdg_v3: valid 30/30 clusters 1  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00830                   parent               etkdg_v3: valid 30/30 clusters 1  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00831                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 2
+P00832                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00833                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00834                   parent               etkdg_v3: valid 30/30 clusters 1  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00835                   parent               etkdg_v3: valid 30/30 clusters 27 td: valid 22/30 clusters 30
+P00836                   parent               etkdg_v3: valid 30/30 clusters 30 td: valid 24/30 clusters 30
+P00837                   parent               etkdg_v3: valid 30/30 clusters 29 td: valid 21/30 clusters 29
+P00838                   parent               etkdg_v3: valid 30/30 clusters 29 td: valid 21/30 clusters 30
+P00839                   parent               etkdg_v3: valid 30/30 clusters 2  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00840                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 11, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00841                   parent               etkdg_v3: valid 30/30 clusters 4 td: valid 25/30 clusters 5
+P00842                   parent               etkdg_v3: valid 30/30 clusters 4 td: valid 30/30 clusters 4
+P00843                   parent               etkdg_v3: valid 30/30 clusters 2  FAIL[td: atom types ['Br'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00844                   parent               etkdg_v3: valid 30/30 clusters 2  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00845                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 27/30 clusters 4
+P00846                   parent               etkdg_v3: valid 30/30 clusters 2  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00847                   parent               etkdg_v3: valid 28/30 clusters 14 td: valid 5/30 clusters 26
+P00848                   parent               etkdg_v3: valid 30/30 clusters 20 td: valid 6/30 clusters 27
+P00849                   parent               etkdg_v3: valid 30/30 clusters 4 td: valid 30/30 clusters 3
+P00850                   parent               etkdg_v3: valid 30/30 clusters 3 td: valid 30/30 clusters 3
+P00851                   parent               etkdg_v3: valid 29/30 clusters 1 td: valid 29/30 clusters 1
+P00852                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 13, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00853                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 4, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00854                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00855                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 30/30 clusters 1
+P00856                   parent               etkdg_v3: valid 30/30 clusters 9  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00857                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 30/30 clusters 1
+P00858                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00859                   parent               etkdg_v3: valid 30/30 clusters 3 td: valid 30/30 clusters 2
+P00860                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 9, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00861                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00862                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00863                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 9, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00864                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 23/30 clusters 5
+P00865                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00866                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 30/30 clusters 2
+P00867                   parent               etkdg_v3: valid 30/30 clusters 5 td: valid 30/30 clusters 3
+P00868                   parent               etkdg_v3: valid 30/30 clusters 2  FAIL[td: atom types ['Br'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00869                   parent               etkdg_v3: valid 30/30 clusters 28 td: valid 14/30 clusters 30
+P00870                   parent               etkdg_v3: valid 30/30 clusters 30 td: valid 11/30 clusters 30
+P00871                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00872                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00873                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00874                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00875                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00876                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00877                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00878                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 1, 'specified': False}, {'kind': 'atom', 'centered_on': 4, 'specified': False}, {'kind': 'atom', 'centered_on': 14, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00879                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 1, 'specified': False}, {'kind': 'atom', 'centered_on': 4, 'specified': False}, {'kind': 'atom', 'centered_on': 14, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00880                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00881                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00882                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00883                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00884                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00885                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 1, 'specified': False}, {'kind': 'atom', 'centered_on': 4, 'specified': False}, {'kind': 'Atom_SquarePlanar', 'centered_on': 14, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P00886                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 2/30 clusters 1
+P00887                   parent               etkdg_v3: valid 30/30 clusters 3 td: valid 29/30 clusters 2
+P00888                   parent               etkdg_v3: valid 30/30 clusters 7 td: valid 25/30 clusters 6
+P00889                   parent               etkdg_v3: valid 30/30 clusters 4 td: valid 30/30 clusters 6
+P00890                   parent               etkdg_v3: valid 30/30 clusters 1  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00891                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00892                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00893                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00894                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00895                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 2
+P00896                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00897                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 2
+P00898                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 2
+P00899                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 2
+P00900                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 29/30 clusters 1
+P00901                   parent               etkdg_v3: valid 30/30 clusters 1  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00902                   parent               etkdg_v3: valid 30/30 clusters 4 td: valid 29/30 clusters 5
+P00903                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 30/30 clusters 2
+P00904                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 30/30 clusters 2
+P00905                   parent               etkdg_v3: valid 30/30 clusters 7  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00906                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 2
+P00907                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 3
+P00908                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00909                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00910                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 27/30 clusters 1
+P00911                   parent               etkdg_v3: valid 30/30 clusters 29  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00912                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 18/30 clusters 2
+P00913                   parent               etkdg_v3: valid 30/30 clusters 1  FAIL[td: atom types ['Br'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00914                   parent               etkdg_v3: valid 30/30 clusters 1  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00915                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00916                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 29/30 clusters 1
+P00917                   parent               etkdg_v3: valid 30/30 clusters 8 td: valid 27/30 clusters 11
+P00918                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 30/30 clusters 2
+P00919                   parent               etkdg_v3: valid 30/30 clusters 9  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00920                   parent               etkdg_v3: valid 30/30 clusters 8  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00921                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 30/30 clusters 2
+P00922                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00923                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00924                   parent               etkdg_v3: valid 30/30 clusters 1  FAIL[td: atom types ['Br'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00925                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00926                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00927                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00928                   parent               etkdg_v3: valid 30/30 clusters 1  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00929                   parent               etkdg_v3: valid 30/30 clusters 22  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00930                   parent               etkdg_v3: valid 30/30 clusters 1  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00931                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00932                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00933                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00934                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00935                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00936                   parent               etkdg_v3: valid 30/30 clusters 1  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00937                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00938                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00939                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00940                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00941                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 2
+P00942                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00943                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00944                   parent               etkdg_v3: valid 30/30 clusters 1  FAIL[td: atom types ['I'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00945                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00946                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00947                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00948                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00949                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00950                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00951                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00952                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00953                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00954                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00955                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00956                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 26/30 clusters 4
+P00957                   parent               etkdg_v3: valid 29/30 clusters 7 td: valid 28/30 clusters 8
+P00958                   parent               etkdg_v3: valid 29/30 clusters 15  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00959                   parent               etkdg_v3: valid 30/30 clusters 5 td: valid 16/30 clusters 29
+P00960                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 22/30 clusters 1
+P00961                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00962                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00963                   parent               etkdg_v3: valid 29/30 clusters 2 td: valid 29/30 clusters 2
+P00964                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00965                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00966                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00967                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00968                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00969                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 21/30 clusters 2
+P00970                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 23/30 clusters 1
+P00971                   parent               etkdg_v3: valid 30/30 clusters 13 td: valid 30/30 clusters 27
+P00972                   parent               etkdg_v3: valid 30/30 clusters 12 td: valid 30/30 clusters 29
+P00973                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00974                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 23/30 clusters 2
+P00975                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 28/30 clusters 2
+P00976                   parent               etkdg_v3: valid 22/30 clusters 5 td: valid 30/30 clusters 4
+P00977                   parent               etkdg_v3: valid 30/30 clusters 1  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00978                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00979                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00980                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00981                   parent               etkdg_v3: valid 30/30 clusters 1  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00982                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00983                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 2
+P00984                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00985                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00986                   parent               etkdg_v3: valid 30/30 clusters 1  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00987                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00988                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00989                   parent               etkdg_v3: valid 30/30 clusters 1  FAIL[td: atom types ['I'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00990                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00991                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00992                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00993                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00994                   parent               etkdg_v3: valid 30/30 clusters 1  FAIL[td: atom types ['Br'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00995                   parent               etkdg_v3: valid 30/30 clusters 1  FAIL[td: atom types ['I'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00996                   parent               etkdg_v3: valid 30/30 clusters 4 td: valid 15/30 clusters 3
+P00997                   parent               etkdg_v3: valid 30/30 clusters 1  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P00998                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P00999                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P01000                   parent               etkdg_v3: valid 27/30 clusters 1  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P01001                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P01002                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P01003                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P01004                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P01005                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P01006                   parent               etkdg_v3: valid 29/30 clusters 1  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P01007                   parent               etkdg_v3: valid 27/30 clusters 1  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P01008                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 29/30 clusters 3
+P01009                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P01010                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P01011                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P01012                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P01013                   parent               etkdg_v3: valid 26/30 clusters 30 td: valid 10/30 clusters 30
+P01014                   -                      FAIL[state: parent has radical electrons: [NH+]]
+P01015                   -                      FAIL[state: parent has radical electrons: [NH+]]
+P01016                   -                      FAIL[state: parent has radical electrons: [NH+]]
+P01017                   -                      FAIL[state: parent has radical electrons: [NH+]]
+P01018                   -                      FAIL[state: parent has radical electrons: [NH+]]
+P01019                   -                      FAIL[state: parent has radical electrons: [NH+]]
+P01020                   -                      FAIL[state: parent has radical electrons: [NH+]]
+P01021                   -                      FAIL[state: parent has radical electrons: [NH+]]
+P01022                   -                      FAIL[state: parent has radical electrons: [NH+]]
+P01023                   -                      FAIL[state: parent has radical electrons: [NH+]]
+P01024                   -                      FAIL[state: parent has radical electrons: [NH+]]
+P01025                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P01026                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 1, 'specified': False}, {'kind': 'atom', 'centered_on': 13, 'specified': False}, {'kind': 'atom', 'centered_on': 15, 'specified': False}, {'kind': 'atom', 'centered_on': 17, 'specified': False}, {'kind': 'atom', 'centered_on': 20, 'specified': False}, {'kind': 'double_bond', 'centered_on': 11, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P01027                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P01028                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 10, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P01029                   -                      FAIL[state: unassigned stereo elements [{'kind': 'atom', 'centered_on': 10, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P01030                   parent               etkdg_v3: valid 30/30 clusters 14  FAIL[td: atom types ['Br'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P01031                   parent               etkdg_v3: valid 30/30 clusters 9  FAIL[td: atom types ['Br'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P01032                   parent               etkdg_v3: valid 30/30 clusters 9  FAIL[td: atom types ['Br'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P01033                   parent               etkdg_v3: valid 30/30 clusters 8 td: valid 14/30 clusters 8
+P01034                   parent               etkdg_v3: valid 30/30 clusters 5  FAIL[td: atom types ['Br'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P01035                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 30/30 clusters 2
+P01036                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 30/30 clusters 4
+P01037                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P01038                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P01039                   parent               etkdg_v3: valid 30/30 clusters 7 td: valid 29/30 clusters 5
+P01040                   parent               etkdg_v3: valid 30/30 clusters 6 td: valid 30/30 clusters 5
+P01041                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P01042                   -                      FAIL[state: unassigned stereo elements [{'kind': 'Atom_SquarePlanar', 'centered_on': 1, 'specified': False}]: specify them, or expand the state with expand_stereo (policy "enumerate") so each stereoisomer is its own explicit state]
+P01043                   parent               etkdg_v3: valid 30/30 clusters 1  FAIL[td: atom types ['Cl'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P01044                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 30/30 clusters 3
+P01045                   parent               etkdg_v3: valid 30/30 clusters 4 td: valid 18/30 clusters 6
+P01046                   parent               etkdg_v3: valid 30/30 clusters 3 td: valid 28/30 clusters 6
+P01047                   parent               etkdg_v3: valid 30/30 clusters 1  FAIL[td: atom types ['I'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P01048                   parent               etkdg_v3: valid 30/30 clusters 1  FAIL[td: atom types ['I'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P01049                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 27/30 clusters 2
+P01050                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 25/30 clusters 2
+P01051                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P01052                   parent               etkdg_v3: valid 28/30 clusters 14  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P01053                   parent               etkdg_v3: valid 30/30 clusters 27 td: valid 20/30 clusters 30
+P01054                   parent               etkdg_v3: valid 30/30 clusters 29 td: valid 25/30 clusters 29
+P01055                   parent               etkdg_v3: valid 30/30 clusters 15  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P01056                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 2
+P01057                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P01058                   parent               etkdg_v3: valid 30/30 clusters 1  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P01059                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 9/30 clusters 3
+P01060                   parent               etkdg_v3: valid 30/30 clusters 1  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P01061                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 3/30 clusters 1
+P01062                   parent               etkdg_v3: valid 26/30 clusters 1  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P01063                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 10/30 clusters 2
+P01064                   parent               etkdg_v3: valid 30/30 clusters 4  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P01065                   parent               etkdg_v3: valid 30/30 clusters 6  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P01066                   parent               etkdg_v3: valid 30/30 clusters 2 td: valid 30/30 clusters 6
+P01067                   parent               etkdg_v3: valid 30/30 clusters 5 td: valid 24/30 clusters 3
+P01068                   parent               etkdg_v3: valid 30/30 clusters 23 td: valid 13/30 clusters 25
+P01069                   parent               etkdg_v3: valid 28/30 clusters 23 td: valid 10/30 clusters 25
+P01070                   parent               etkdg_v3: valid 29/30 clusters 6  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P01071                   parent               etkdg_v3: valid 30/30 clusters 5 td: valid 26/30 clusters 2
+P01072                   parent               etkdg_v3: valid 30/30 clusters 6  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P01073                   parent               etkdg_v3: valid 30/30 clusters 5 td: valid 25/30 clusters 2
+P01074                   parent               etkdg_v3: valid 25/30 clusters 7  FAIL[td: atom types ['S'] not in the qm9 checkpoint vocabulary ['C', 'F', 'H', 'N', 'O']]
+P01075                   parent               etkdg_v3: valid 30/30 clusters 17 td: valid 28/30 clusters 22
+P01076                   parent               etkdg_v3: valid 30/30 clusters 4 td: valid 30/30 clusters 4
+P01077                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P01078                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1
+P01079                   parent               etkdg_v3: valid 30/30 clusters 1 td: valid 30/30 clusters 1

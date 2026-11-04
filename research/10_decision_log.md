@@ -91,3 +91,73 @@
   - Open blocker: the validator rejects MMFF minima of zwitterions and carboxylates/phenolates, so the coupled model
     cannot score the dominant physiological states. A design decision for the user.
 - **E4 not run:** no pH-resolved data.
+
+## 2026-10-29 — P1 unminimised feature path (exploratory); P2 audit of the modified conformer model and EXP-1 M0
+- **P1 (jobs 46561, 46673; `experiments/P1_unmin/RESULTS.md`), exploratory, not pre-registered:**
+  - The MMFF path is kept as the control and reproduces E2 features_v2 exactly. Validator thresholds are unchanged.
+  - With unminimised ETKDGv3 conformers, the share of states with features rises:
+    - carboxylate 0.17 → 0.96;
+    - phenolate 0.43 → 0.95;
+    - carboxylate zwitterions 0.03 → 0.73;
+    - neutral 0.84 → 0.97.
+  - Cause measured: MMFF94s C–O⁻ (and C–N⁺, nitro N⁺–O⁻) minima fall outside the validator's distance-geometry
+    bounds; the same conformers before minimisation pass.
+  - φ3 agrees across paths (r = 0.994); φ2 (IMHB) does not (MMFF creates salt bridges).
+  - On the 206 pairs eligible under unmin, J1 shows no gain over S1 (Δ_S 0.03 [−0.25, 0.27]).
+  - M5 demo with the unmin path: no θ = 0 fallback levels and no pairs without a conformer.
+  - TD covers only 621/1,080 panel states (QM9 vocabulary, state-builder checks).
+  - **Decision for the user:** adopt the unmin path (and which φ terms) as the joint-model definition. That needs a
+    new pre-registration before any confirmatory use. The E2 result and reports are unchanged.
+- **P2 audit (`experiments/P2_conformer_arch/AUDIT.md`):**
+  - No modified conformer architecture exists in code: `flexitors/models` and `flexitors/training` are stubs. EXP-1
+    V2 was specified, not built.
+  - The trained variants (round 1/2) are TD-architecture recipe changes, plus S4's λ input. None improved real use.
+  - The E1 reference stays frozen TD `qm9_default` on the 183 common E1 molecules.
+- **EXP-1 M0 (job 46664; `experiments/EXP1_M0/RESULTS.md`): PASS by the pre-declared rule.**
+  - Validation cache, 30,420 primary pairs: recovery 99.6 %, skip share 4.74 % (limit 5 %), 0 flipped centres.
+  - W drift after restoration ≤ 3e-15 rad; ring-dihedral > 10° share 41.7 % → 0.6 %.
+  - No model, training run or GPU use. Next: build the V2 geometry head and a 1-epoch smoke, pending the user's GPU
+    decision.
+
+## 2026-10-29 — EXP-1 V2 built; training smoke FAIL on S2 (exploratory)
+- Built (staging, uncommitted): batched torch projector, paired joint transform, TD model + 1o geometry head,
+  projected loss, training loop, τ-frozen read-out, tests (`flexitors/tests/test_v2.py`), smoke checker.
+- GPU smoke 46725 never ran (plafnet2 GPU-minute quota exhausted); CPU fallback 46744 + checks 46848.
+- Smoke (`experiments/EXP1_V2_smoke/RESULTS.md`): S1, S3, S4, S5 PASS; **S2 FAIL** (val geo 0.01302 vs Δ̂=0 base 0.01288).
+- Overfit diagnostic 46855 (32 mols, 400 iters): w_τ 0 reaches 0.856 × base (pass, narrowly); w_τ 1 0.913 (fail).
+  Leading hypothesis: loss-scale imbalance (L_geo ≈ L_τ/80). Not tested.
+- **Decision:** per the brief, no controlled training or E1 evaluation (smoke did not pass); Gate 0 not started.
+  Next step needs the user: which fix to pre-declare (L_geo normalisation / w_geo) and where to run (GPU quota).
+- Re-smoke 46998 with `--geo_norm base` (pre-declared, criteria unchanged): **S2 FAIL again** (val geo/base 0.989).
+  Head gradient now stays O(1), so loss-scale imbalance is not the main cause. Still no controlled run, Gate 0 or E1.
+- Re-smoke 3 (47102), `--l_head_init zero`: **PASS** (val geo/base 0.703; read-out closer 61 %, ring > 10° 56 % → 25 %).
+- **Decision: train.** EXP1-V2-T1 pre-declared in `experiments/EXP1_V2_train/DESIGN.md`: geometry-only (w_τ 0), arms
+  projector on / off (targeted ablation), 10 epochs on CPU (GPU quota exhausted), validation-selected checkpoints;
+  E1 post-processing of frozen-TD samples vs TD, MMFF control and ETKDGv3, primary = MAT-R (TD+L) − TD.
+  First submission 47158/47159 hit the 1 h default time limit (no `--time`); resubmitted 47246/47247; E1 job 47249
+  queued on afterok.
+- EXP1-V2-T1 finished (2026-10-31; `experiments/EXP1_V2_train/RESULTS.md`). Primary: MAT-R (TD + L(proj)) − TD =
+  −0.0547 Å [−0.0628, −0.0473] seed 0, −0.0557 seed 1 → **improves on TD** under the pre-declared rule. Beats the MMFF
+  control by ≈ 0.045 Å. Projector ablation: proj − noproj −0.0009 [−0.0020, 0.0002] on seed 0 → **projector not shown
+  to matter**. Torsions unchanged (drift ≤ 2e-13°), so the gain is local geometry only. Exploratory (one training seed,
+  CPU, 10 epochs, not converged).
+- Addendum A (pre-declared in `EXP1_V2_train/DESIGN.md`, job 49899, CPU; GPU still blocked): torsion-constrained
+  GFN2-xTB of the same TD conformers gives MAT-R 0.097 / 0.089 vs TD + L(proj)fix 0.111 / 0.106; L − xTB = +0.014
+  [0.008, 0.019] seed 0, +0.017 seed 1 → **head does not beat xTB**, and is ~4.7× slower on CPU (1.67 vs 0.36 s per
+  conformer). Read-out fixed for rigid molecules (0 errors). **Decision (user agreed 2026-10-31): stop the V2 geometry head as a QM9
+  contribution**; adopt TD + constrained xTB as the baseline any geometry method must beat.
+- EXP1-V2-T2 (2026-10-31; user brief "post-training scientific validation"; design and results in
+  `experiments/EXP1_V2_T2/`). Reopens the stopped V2 line for verification and a pre-declared longer, three-seed run.
+  Audit (49955): all T1 E1 outputs complete and every reported mean and CI reproduced exactly. OOM (49957): worker
+  start-up kills only; re-run bit-identical, nothing truncated. Rigid molecules: root cause is TD's
+  `out_nodes or n_atoms` fallback; fix + 3 tests; corrected complete evaluation = T1 fix arms. Geometry decomposition
+  (49960): constrained xTB beats the head on bond, angle, ring and acyclic-dihedral error and validity; xTB bond MAE vs
+  references 0.0027 Å, consistent with the references being xTB geometries. Training T2 (20 epochs, proj/noproj × seeds
+  0–2, CPU) running: 49962–49972, resume jobs 49974–49979.
+- EXP1-V2-T2 final (2026-11-04). Six 20-epoch runs completed (last 2026-11-04 03:39 UTC); final evaluation run once
+  (57155, 8 CPUs / 6 workers per addendum D, 2 CPUs left free for other users). Seed-averaged MAT-R, 184 paired
+  molecules: head − TD −0.063 [−0.072, −0.055] (3 / 3 seeds, both TD seeds); proj − noproj −0.0002 [−0.0013, +0.0011];
+  head − constrained xTB +0.009 [+0.004, +0.014]; 20 vs 10 epochs −0.004 [−0.006, −0.002]; head 4.1× xTB CPU cost.
+  H1 supported, H2 failed, H3 supported, H4 failed, H5 failed. **Decision (pre-declared rule, addendum B): C — freeze
+  FlexiTors V2 as a completed negative result and prioritise joint microstate–conformer generation.** Not a methods
+  paper; a benchmark note would need other refiners and GEOM-DRUGS. `experiments/EXP1_V2_T2/RESEARCH_DECISION.md`.

@@ -1,4 +1,2 @@
-"""Training (Stage A milestone 2+: the EXP-1 §10.1 paired transform and x1-prediction loss).
-
-Empty in milestone 1 by design (round5/PLAN.md, no dead code).
-"""
+"""Training for EXP-1 V2: ``transforms`` (§10.1 paired joint transform), ``losses`` (TD torsion DSM + projected
+endpoint loss), ``loop`` (training CLI with its own configuration and checkpoint directory)."""

@@ -10,7 +10,9 @@ ensemble (no phi) is scored with theta = 0 and listed in run_info.fallback_level
 neutral tautomer ratios only and is applied to every charge level; nothing here validates conformer populations.
 
 Run (jmcg venv): python -m jmcg.joint.sample --state_dir <state_stage out> --coef <e2_result.json> --arm J1
-                    --ph 7.4 --out <dir> [--n_pairs 20 --seed 0]
+                    --ph 7.4 --out <dir> [--n_pairs 20 --seed 0 --feature_path mmff|unmin]
+--feature_path unmin (EXPLORATORY, P1): unminimised ETKDGv3 conformers, uniform weights (features.ensemble_features);
+use it only with coefficients fitted on the same path (p1_unmin compare writes coef_unmin.json).
 """
 import argparse
 import json
@@ -47,6 +49,7 @@ def main():
     ap.add_argument('--out', required=True)
     ap.add_argument('--n_pairs', type=int, default=20)
     ap.add_argument('--seed', type=int, default=0)
+    ap.add_argument('--feature_path', choices=['mmff', 'unmin'], default='mmff')
     a = ap.parse_args()
     os.makedirs(a.out, exist_ok=True)
     ens = pd.read_csv(os.path.join(a.state_dir, 'ensembles.csv'))
@@ -60,7 +63,7 @@ def main():
         GU = G[g.smiles].to_numpy()
         feats, X = [], {}
         for s in g.smiles:
-            f = ft.ensemble_features(s, return_ensemble=True)
+            f = ft.ensemble_features(s, return_ensemble=True, path=a.feature_path)
             f.update(ft.graph_features(s))
             X[s] = f.pop('ensemble', None)
             feats.append(f)
@@ -107,7 +110,7 @@ def main():
     pd.DataFrame(rows).to_csv(os.path.join(a.out, 'joint_state_populations.csv'), index=False)
     pd.DataFrame(pairs).to_csv(os.path.join(a.out, 'sampled_pairs.csv'), index=False)
     sdf.close()
-    json.dump(dict(arm=a.arm, coefficients=coef, ph=a.ph, seed=a.seed, fallback_levels_theta0=fallback_levels,
+    json.dump(dict(arm=a.arm, coefficients=coef, ph=a.ph, seed=a.seed, feature_path=a.feature_path, coef_file=a.coef, fallback_levels_theta0=fallback_levels,
                    n_pairs_without_conformer=int(sum(not q['has_conformer'] for q in pairs))),
               open(os.path.join(a.out, 'run_info.json'), 'w'), indent=1)
     print(pd.DataFrame(rows).groupby('parent').apply(lambda d: d.sort_values('p_joint', ascending=False).head(3)
